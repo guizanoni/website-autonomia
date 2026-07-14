@@ -163,6 +163,27 @@ header .btn{padding:10px 22px;font-size:14px}
 .toolsnote{font-family:var(--head);font-size:clamp(23px,3.4vw,35px);font-weight:600;line-height:1.22;color:var(--navy)}
 .toolsnote .g{color:var(--blue)}
 
+/* possibilidades */
+.poss{display:grid;gap:14px;margin:38px 0 10px}
+@media(min-width:640px){.poss{grid-template-columns:1fr 1fr}}
+@media(min-width:940px){.poss{grid-template-columns:1fr 1fr 1fr}}
+.pcard{border-radius:16px;padding:26px;border:1.5px solid var(--sand);background:rgba(255,255,255,.55);transition:transform .2s}
+.pcard:hover{transform:translateY(-4px)}
+.pcard h3{font-family:var(--head);font-size:17.5px;font-weight:600;color:var(--navy);margin-bottom:14px}
+.pcard .chips{display:flex;flex-wrap:wrap;gap:8px}
+.pcard .chips span{font-size:13.5px;color:#4d5560;background:var(--pale);border:1px solid var(--sand);border-radius:999px;padding:5px 13px;line-height:1.4}
+.pcard:nth-child(6n+1) .chips span{background:var(--sky);border-color:transparent}
+.pcard:nth-child(6n+2) .chips span{background:var(--pale);border-color:var(--sand)}
+.pcard:nth-child(6n+3) .chips span{background:var(--lav);border-color:transparent}
+.pcard:nth-child(6n+4) .chips span{background:var(--peach);border-color:transparent}
+.pcard:nth-child(6n+5) .chips span{background:var(--lav);border-color:transparent}
+.pcard.dream{background:var(--navy);border-color:var(--navy)}
+.pcard.dream h3{color:#fff}
+.pcard.dream p{color:#c9d2e8;font-size:14.5px;line-height:1.55}
+.pcard.dream p b{color:var(--bluelt)}
+.possfoot{text-align:center;margin-top:36px}
+.possfoot .btn{margin-top:26px}
+
 /* antes/depois */
 .adgrid{display:grid;gap:16px;margin:40px 0 26px}
 @media(min-width:840px){.adgrid{grid-template-columns:1fr 1fr;align-items:stretch}}
@@ -449,10 +470,31 @@ footer a{color:var(--bluedk);font-weight:500}
   </div>
 </section>
 
-<!-- 04 · ANTES E DEPOIS -->
+<!-- 04 · POSSIBILIDADES -->
 <section style="padding-top:0">
   <div class="wrap">
-    <span class="kicker">04 · Antes e depois</span>
+    <span class="kicker">04 · Possibilidades</span>
+    <h2>&ldquo;Mas será que serve pro meu negócio?&rdquo; <span class="g">Escolhe na lista.</span></h2>
+    <p class="lead" style="margin-top:16px">As ferramentas dos 3 dias são só o começo. Com o método na mão, tudo isso vira projeto de fim de semana — <b>construído por você, sem mensalidade:</b></p>
+    <div class="poss">
+      <div class="pcard"><h3>Vendas &amp; Marketing</h3><div class="chips"><span>CRM sob medida</span><span>Landing pages que convertem</span><span>Propostas e orçamentos em minutos</span><span>Follow-up automático de leads</span><span>Calculadora de precificação</span></div></div>
+      <div class="pcard"><h3>Atendimento &amp; Clientes</h3><div class="chips"><span>Gestão de atendimento com fila e prioridade</span><span>Suporte com IA no repetitivo</span><span>Atendente de WhatsApp</span><span>Portal do cliente</span><span>Pesquisa de satisfação (NPS)</span></div></div>
+      <div class="pcard"><h3>Operação</h3><div class="chips"><span>To-dos e demandas do time</span><span>Controle de estoque</span><span>Agendamento online</span><span>Checklists e processos</span><span>Projetos e prazos</span></div></div>
+      <div class="pcard"><h3>Financeiro &amp; Gestão</h3><div class="chips"><span>Fluxo de caixa na sua tela</span><span>Régua de cobrança</span><span>Relatórios automáticos</span><span>Painel de indicadores (KPIs)</span></div></div>
+      <div class="pcard"><h3>Pessoas &amp; Conhecimento</h3><div class="chips"><span>Onboarding de clientes e equipe</span><span>Triagem de currículos</span><span>Base de conhecimento da empresa</span><span>Treinamento interno</span></div></div>
+      <div class="pcard dream"><h3>E o que só existe na sua cabeça</h3><p>Aquele sistema que nenhum software de prateleira faz do jeito que o seu negócio precisa? <b>É exatamente esse que você constrói primeiro.</b></p></div>
+    </div>
+    <div class="possfoot">
+      <p class="punch">Hoje você paga mensalidade pra caber no software dos outros.<br/><span class="g">Aqui você constrói o software que cabe no seu negócio.</span></p>
+      <a class="btn" href="#investimento">Quero construir o meu</a>
+    </div>
+  </div>
+</section>
+
+<!-- 05 · ANTES E DEPOIS -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <span class="kicker">05 · Antes e depois</span>
     <h2>Sua empresa hoje.<br/><span class="g">Sua empresa em 30 dias.</span></h2>
     <p class="lead" style="margin-top:16px">Coloca a sua na coluna da esquerda. Vê se dói.</p>
     <div class="adgrid">
@@ -480,10 +522,10 @@ footer a{color:var(--bluedk);font-weight:500}
   </div>
 </section>
 
-<!-- 05 · COMO FUNCIONA -->
+<!-- 06 · COMO FUNCIONA -->
 <section style="padding-top:0">
   <div class="wrap">
-    <span class="kicker">05 · Como funciona</span>
+    <span class="kicker">06 · Como funciona</span>
     <h2>3 dias. Assim:</h2>
     <div class="tl">
       <div class="node"><span class="when">Sexta, 21/08 · 19h às 22h</span><h3>Diagnóstico + Estratégia</h3><p>Você apresenta seu negócio. A gente calcula o número que ninguém calcula: quanto custa, por mês, ser inquilino da própria empresa. E você fecha a noite posicionado: qual problema resolve, pra quem, por que você — e com a estratégia do fim de semana traçada.</p></div>
@@ -494,11 +536,11 @@ footer a{color:var(--bluedk);font-weight:500}
   </div>
 </section>
 
-<!-- 06 · QUEM CONDUZ (banda navy) -->
+<!-- 07 · QUEM CONDUZ (banda navy) -->
 <section class="guia">
   <div class="wrap">
     <div class="band">
-      <span class="kicker">06 · Quem conduz</span>
+      <span class="kicker">07 · Quem conduz</span>
       <h2>Quem é Gui Zanoni?</h2>
       <div class="grid">
         <figure><img src="images/gui-retrato-estudio.jpg" alt="Gui Zanoni" loading="lazy"/></figure>
@@ -536,10 +578,10 @@ footer a{color:var(--bluedk);font-weight:500}
   </div>
 </section>
 
-<!-- 07 · A SALA -->
+<!-- 08 · A SALA -->
 <section class="sala" style="padding-top:0">
   <div class="wrap">
-    <span class="kicker">07 · A rede</span>
+    <span class="kicker">08 · A rede</span>
     <h2>30 empreendedores. <span class="g">Nenhum curioso.</span></h2>
     <p class="lead" style="margin-top:16px">A sala é filtrada no onboarding: dono de negócio estabelecido, que veio construir. <b>Gente que fatura como você e trava nos mesmos gargalos.</b></p>
     <div class="pontos">
@@ -550,10 +592,10 @@ footer a{color:var(--bluedk);font-weight:500}
   </div>
 </section>
 
-<!-- 08 · INVESTIMENTO -->
+<!-- 09 · INVESTIMENTO -->
 <section class="inv" id="investimento" style="padding-top:0">
   <div class="wrap">
-    <span class="kicker">08 · Investimento</span>
+    <span class="kicker">09 · Investimento</span>
     <h2>Preço único. <span class="g">Sem lote, sem desconto.</span></h2>
     <p class="lead" style="margin-top:14px">O que expira é cadeira e bônus. <b>O preço, nunca.</b></p>
     <div class="offer">
@@ -584,10 +626,10 @@ footer a{color:var(--bluedk);font-weight:500}
   </div>
 </section>
 
-<!-- 09 · FAQ -->
+<!-- 10 · FAQ -->
 <section class="faq" style="padding-top:0">
   <div class="wrap" style="max-width:840px">
-    <span class="kicker">09 · FAQ</span>
+    <span class="kicker">10 · FAQ</span>
     <h2 style="margin-bottom:36px">Perguntas diretas,<br/>respostas diretas.</h2>
     <details><summary>&ldquo;Não sei programar. Vou conseguir acompanhar?&rdquo;</summary><p>Se você usa WhatsApp e e-mail, consegue. Ninguém programa no bootcamp: a IA escreve, você decide. E a construção é assistida o tempo todo.</p></details>
     <details><summary>&ldquo;Já uso ChatGPT todo dia. Vou aprender algo novo?&rdquo;</summary><p>Você usa IA. Aqui você passa a construir com ela. É a diferença entre alugar e ter escritura.</p></details>
