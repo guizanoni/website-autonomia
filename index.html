@@ -184,6 +184,21 @@ header .btn{padding:10px 22px;font-size:14px}
 .possfoot{text-align:center;margin-top:36px}
 .possfoot .btn{margin-top:26px}
 
+/* local */
+.local{display:grid;gap:16px;margin-top:38px}
+@media(min-width:840px){.local{grid-template-columns:1fr 1fr;align-items:stretch}}
+.localcard{border-radius:16px;padding:38px;background:var(--sky);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.localcard h3{font-family:var(--head);font-size:clamp(22px,3vw,30px);font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:12px}
+.localcard p{color:#4d5560;font-size:15.5px}
+.localcard .addr{margin-bottom:8px}
+.localcard .note{margin-bottom:24px}
+.localmap{border-radius:16px;overflow:hidden;min-height:340px;border:1.5px solid var(--sand)}
+.localmap iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+
+/* urgencia */
+.urg{font-family:var(--btnf);font-size:14px;font-weight:600;color:var(--bluedk);margin-bottom:18px}
+.pricecard .urg{color:var(--bluelt)}
+
 /* antes/depois */
 .adgrid{display:grid;gap:16px;margin:40px 0 26px}
 @media(min-width:840px){.adgrid{grid-template-columns:1fr 1fr;align-items:stretch}}
@@ -340,7 +355,7 @@ footer a{color:var(--bluedk);font-weight:500}
 <header>
   <div class="wrap">
     <a class="brand" href="#top"><img src="brand/AUTONOMIA_horizontal_cor.png" alt="AUTONOM/IA"/></a>
-    <span class="meta">CURITIBA · 21–23 AGO 2026</span>
+    <span class="meta">CURITIBA · 21–23 AGO 2026<span class="urgspan"> · FALTAM <span class="dleft">–</span> DIAS</span></span>
     <a class="btn" href="#investimento">Quero minha vaga</a>
   </div>
 </header>
@@ -591,10 +606,27 @@ footer a{color:var(--bluedk);font-weight:500}
   </div>
 </section>
 
-<!-- 09 · INVESTIMENTO -->
+<!-- 09 · O LOCAL -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <span class="kicker">09 · O local</span>
+    <h2>Batel, Curitiba. <br/><span class="g">Fácil de chegar, difícil de esquecer.</span></h2>
+    <div class="local">
+      <div class="localcard">
+        <h3>Slaviero Hotel Curitiba Shopping</h3>
+        <p class="addr"><b>Rua Dr. Pedrosa, 208 · Batel · Curitiba – PR</b><br/>CEP 80420-120</p>
+        <p class="note">Estrutura de hotel no coração da cidade: quem é de Curitiba chega em minutos, quem vem de fora dorme no andar de cima da sala onde vai construir sua ferramenta.</p>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Slaviero+Hotel+Curitiba+Shopping,+Rua+Dr.+Pedrosa,+208,+Batel,+Curitiba" target="_blank" rel="noopener">Como chegar</a>
+      </div>
+      <div class="localmap"><iframe src="https://www.google.com/maps?q=Slaviero%20Hotel%20Curitiba%20Shopping%2C%20Rua%20Dr.%20Pedrosa%2C%20208%2C%20Batel%2C%20Curitiba&amp;output=embed" loading="lazy" title="Mapa do Slaviero Hotel Curitiba Shopping" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · INVESTIMENTO -->
 <section class="inv" id="investimento" style="padding-top:0">
   <div class="wrap">
-    <span class="kicker">09 · Investimento</span>
+    <span class="kicker">10 · Investimento</span>
     <h2>Preço único. <span class="g">Sem lote, sem desconto.</span></h2>
     <p class="lead" style="margin-top:14px">O que expira é cadeira e bônus. <b>O preço, nunca.</b></p>
     <div class="offer">
@@ -603,12 +635,13 @@ footer a{color:var(--bluedk);font-weight:500}
         <p class="price">R$ 3.997</p>
         <p class="install">à vista no PIX ou em 12x no cartão</p>
         <ul>
-          <li>3 dias presenciais em Curitiba (21–23 ago)</li>
+          <li>3 dias presenciais no Slaviero Hotel, Batel, Curitiba (21–23 ago)</li>
           <li>Diagnóstico individual da sua operação</li>
           <li>Construção assistida das primeiras ferramentas</li>
           <li>Hub de Soluções + plano de 90 dias</li>
           <li>Onboarding individual pós-compra</li>
         </ul>
+        <p class="urg urgspan">Faltam <b class="dleft">–</b> dias pro bootcamp — e pro seu roadmap de 90 dias começar.</p>
         <a class="btn" href="#todo-checkout">Quero minha vaga na AUTONOM/IA</a>
       </div>
       <div class="bonuscard">
@@ -625,10 +658,10 @@ footer a{color:var(--bluedk);font-weight:500}
   </div>
 </section>
 
-<!-- 10 · FAQ -->
+<!-- 11 · FAQ -->
 <section class="faq" style="padding-top:0">
   <div class="wrap" style="max-width:840px">
-    <span class="kicker">10 · FAQ</span>
+    <span class="kicker">11 · FAQ</span>
     <h2 style="margin-bottom:36px">Perguntas diretas,<br/>respostas diretas.</h2>
     <details><summary>&ldquo;Não sei programar. Vou conseguir acompanhar?&rdquo;</summary><p>Se você usa WhatsApp e e-mail, consegue. Ninguém programa no bootcamp: a IA escreve, você decide. E a construção é assistida o tempo todo.</p></details>
     <details><summary>&ldquo;Já uso ChatGPT todo dia. Vou aprender algo novo?&rdquo;</summary><p>Você usa IA. Aqui você passa a construir com ela. É a diferença entre alugar e ter escritura.</p></details>
@@ -650,7 +683,7 @@ footer a{color:var(--bluedk);font-weight:500}
   <div class="wrap">
     <h2>Daqui a um ano, sua empresa<br/><span class="g">ainda estará viva?</span></h2>
     <p class="alt">Mais 12 meses de boleto, ou o primeiro ativo de software da sua empresa?</p>
-    <p class="facts">AUTONOM/IA · 21–23 DE AGOSTO · CURITIBA · R$ 3.997</p>
+    <p class="facts">AUTONOM/IA · 21–23 DE AGOSTO · CURITIBA · R$ 3.997<span class="urgspan"> · FALTAM <span class="dleft">–</span> DIAS</span></p>
     <a class="btn" href="#investimento">Quero minha vaga na AUTONOM/IA</a>
     <p class="fine">Sobrou dúvida? Manda DM no <a href="https://instagram.com/gui.zanoni" target="_blank" rel="noopener">@gui.zanoni</a>. Eu mesmo respondo.</p>
   </div>
@@ -686,6 +719,13 @@ footer a{color:var(--bluedk);font-weight:500}
 </a>
 
 <script>
+/* contagem regressiva ate a sexta do bootcamp; some tudo se a data ja passou */
+(()=>{
+const d=Math.ceil((new Date('2026-08-21T19:00:00-03:00')-Date.now())/864e5);
+if(d>0){document.querySelectorAll('.dleft').forEach(e=>e.textContent=d)}
+else{document.querySelectorAll('.urgspan').forEach(e=>e.style.display='none')}
+})();
+
 const hd=document.querySelector('header'),pg=document.getElementById('prog');
 const onScroll=()=>{const h=document.documentElement;pg.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';hd.classList.toggle('scrolled',h.scrollTop>320)};
 addEventListener('scroll',onScroll,{passive:true});onScroll();
