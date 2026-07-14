@@ -9,9 +9,27 @@
 <meta name="description" content="Todo mundo falando de IA e o meu negócio ainda rodando no improviso... Bootcamp presencial de negócios e IA: 3 dias em Curitiba. Vagas limitadas."/>
 <meta property="og:title" content="AUTONOM/IA · o bootcamp presencial de Gui Zanoni"/>
 <meta property="og:description" content="Você entra fazendo perguntas para a IA. Sai construindo com ela! Curitiba, 21 a 23 de agosto. Vagas limitadas."/>
-<meta property="og:url" content="https://guizanoni.com/autonomia/v11/"/>
-<meta property="og:image" content="https://guizanoni.com/autonomia/brand/AUTONOMIA_horizontal_cor.png"/>
+<meta property="og:url" content="https://autonomia.vc/"/>
+<meta property="og:image" content="https://autonomia.vc/brand/AUTONOMIA_horizontal_cor.png"/>
+<!-- Verificacao de dominio da Meta: descomente e cole o codigo do Business Manager (Configuracoes > Seguranca da marca > Dominios) -->
+<!-- <meta name="facebook-domain-verification" content="COLE_O_CODIGO_AQUI"/> -->
 <link rel="icon" href="brand/AUTONOMIA_simbolo_cor.png"/>
+<!-- Meta Pixel · cole o ID do Events Manager em META_PIXEL_ID abaixo; o codigo so ativa com um ID numerico valido -->
+<script>
+window.META_PIXEL_ID='COLE_O_ID_AQUI';
+if(/^\d{10,}$/.test(window.META_PIXEL_ID)){
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init',window.META_PIXEL_ID);
+fbq('track','PageView');
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700&family=Public+Sans:wght@300;400;600;700&family=Poppins:wght@500;600&display=swap" rel="stylesheet"/>
@@ -724,6 +742,18 @@ footer a{color:var(--bluedk);font-weight:500}
 const d=Math.ceil((new Date('2026-08-21T19:00:00-03:00')-Date.now())/864e5);
 if(d>0){document.querySelectorAll('.dleft').forEach(e=>e.textContent=d)}
 else{document.querySelectorAll('.urgspan').forEach(e=>e.style.display='none')}
+})();
+
+/* Meta Pixel — eventos de conversao (so roda se o pixel estiver ativo no head) */
+(()=>{
+if(typeof fbq!=='function')return;
+/* Contact: clique em qualquer link de WhatsApp */
+document.querySelectorAll('a[href*="wa.me"]').forEach(a=>a.addEventListener('click',()=>fbq('track','Contact',{content_name:'whatsapp'})));
+/* InitiateCheckout: clique no botao de compra do card */
+document.querySelectorAll('a[href="#todo-checkout"]').forEach(a=>a.addEventListener('click',()=>fbq('track','InitiateCheckout',{content_name:'card-investimento',value:3997,currency:'BRL'})));
+/* ViewContent: visitante chegou de fato na secao de investimento */
+const inv=document.getElementById('investimento');
+if(inv&&'IntersectionObserver'in window){const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){fbq('track','ViewContent',{content_name:'secao-investimento',value:3997,currency:'BRL'});io.disconnect()}})},{threshold:.3});io.observe(inv)}
 })();
 
 const hd=document.querySelector('header'),pg=document.getElementById('prog');
