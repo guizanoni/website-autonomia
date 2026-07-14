@@ -446,7 +446,7 @@ footer a{color:var(--bluedk);font-weight:500}
     <h1>Todo mundo falando de IA <br/><span class="g">e o meu negócio ainda rodando no improviso...</span></h1>
     <p class="sub"><b>AUTONOM/IA é um bootcamp presencial de negócios e IA.</b> <br/>Você vai sair sabendo como alavancar <b>SEU NEGÓCIO</b> com o uso da IA.</p>
     <p class="nem">Não é curso de IA. Não precisa de TI, nem saber programar.</p>
-    <!-- checkout ainda nao existe: CTAs levam ao investimento; botao do card usa o placeholder #todo-checkout -->
+    <!-- CTAs do hero e do final levam a secao de investimento; a compra sai pelo botao do card (checkout Cakto) -->
     <a class="btn" href="#investimento">Quero minha vaga na AUTONOM/IA</a>
     <p class="herowa">Ainda na dúvida? <a href="https://wa.me/5541998939735?text=Oi%20Gui!%20T%C3%B4%20na%20p%C3%A1gina%20da%20AUTONOM%2FIA%20e%20ainda%20tenho%20uma%20d%C3%BAvida%20sobre%20o%20bootcamp.%20Pode%20me%20ajudar%3F" target="_blank" rel="noopener">Me chama no WhatsApp</a></p>
     <div class="trust">
@@ -720,7 +720,7 @@ footer a{color:var(--bluedk);font-weight:500}
           <li>Onboarding individual pós-compra</li>
         </ul>
         <p class="urg urgspan">Faltam <b class="dleft">–</b> dias pro bootcamp — e pro seu roadmap de 90 dias começar.</p>
-        <a class="btn" href="#todo-checkout">Quero minha vaga na AUTONOM/IA</a>
+        <a class="btn" href="https://pay.cakto.com.br/rgoox78_978919">Quero minha vaga na AUTONOM/IA</a>
       </div>
       <div class="bonuscard">
         <span class="flag">Os Primeiros 15</span>
@@ -810,7 +810,7 @@ if(typeof fbq!=='function')return;
 /* Contact: clique em qualquer link de WhatsApp */
 document.querySelectorAll('a[href*="wa.me"]').forEach(a=>a.addEventListener('click',()=>fbq('track','Contact',{content_name:'whatsapp'})));
 /* InitiateCheckout: clique no botao de compra do card */
-document.querySelectorAll('a[href="#todo-checkout"]').forEach(a=>a.addEventListener('click',()=>fbq('track','InitiateCheckout',{content_name:'card-investimento',value:3997,currency:'BRL'})));
+document.querySelectorAll('a[href*="pay.cakto.com.br"]').forEach(a=>a.addEventListener('click',()=>fbq('track','InitiateCheckout',{content_name:'card-investimento',value:3997,currency:'BRL'})));
 /* ViewContent: visitante chegou de fato na secao de investimento */
 const inv=document.getElementById('investimento');
 if(inv&&'IntersectionObserver'in window){const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){fbq('track','ViewContent',{content_name:'secao-investimento',value:3997,currency:'BRL'});io.disconnect()}})},{threshold:.3});io.observe(inv)}
