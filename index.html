@@ -50,12 +50,14 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;heigh
 header img{height:40px;width:auto}
 header .brand{opacity:0;transform:translateY(-8px);transition:opacity .25s,transform .25s;pointer-events:none}
 header.scrolled .brand{opacity:1;transform:none;pointer-events:auto}
-header .meta{display:none;color:var(--mut);font-family:var(--btnf);font-size:12.5px;font-weight:500;letter-spacing:.1em}
+header .meta{display:none;color:var(--mut);font-family:var(--btnf);font-size:12.5px;font-weight:500;letter-spacing:.1em;opacity:0;transform:translateY(-8px);transition:opacity .25s,transform .25s}
+header.scrolled .meta{opacity:1;transform:none}
 @media(min-width:860px){header .meta{display:block}}
 header .btn{padding:10px 22px;font-size:14px}
 
 /* hero */
 .hero{padding:150px 0 84px;text-align:center}
+.hero .badge{display:inline-flex;align-items:center;font-family:var(--btnf);font-size:clamp(13px,1.7vw,15.5px);font-weight:600;letter-spacing:.14em;color:var(--navy);background:var(--sky);border:1.5px solid var(--blue);border-radius:999px;padding:10px 26px;margin-bottom:30px}
 .hero .logo{height:60px;width:auto;margin:0 auto 46px}
 .hero h1{font-family:var(--head);font-size:clamp(34px,5.4vw,62px);font-weight:600;letter-spacing:-.015em;line-height:1.1;color:var(--navy);max-width:960px;margin:0 auto}
 .hero h1 .g{color:var(--blue)}
@@ -325,9 +327,10 @@ footer a{color:var(--bluedk);font-weight:500}
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="wrap">
+    <span class="badge">CURITIBA · 21–23 AGO 2026 · 30 VAGAS</span>
     <img class="logo" src="brand/AUTONOMIA_horizontal_cor.png" alt="AUTONOM/IA"/>
     <h1>Todo mundo falando de IA <br/><span class="g">e o meu negócio ainda rodando no improviso...</span></h1>
-    <p class="sub"><b>AUTONOM/IA é um bootcamp presencial de negócios e IA.</b> Curitiba, 21 a 23 de agosto. Você vai sair sabendo como alavancar <b>SEU NEGÓCIO</b> com o uso da IA.</p>
+    <p class="sub"><b>AUTONOM/IA é um bootcamp presencial de negócios e IA.</b> <br/>Você vai sair sabendo como alavancar <b>SEU NEGÓCIO</b> com o uso da IA.</p>
     <p class="nem">Não é curso de IA. Não precisa de TI, nem saber programar.</p>
     <!-- checkout ainda nao existe: CTAs levam ao investimento; botao do card usa o placeholder #todo-checkout -->
     <a class="btn" href="#investimento">Quero minha vaga na AUTONOM/IA</a>
