@@ -1,0 +1,37 @@
+name: Deploy para HostGator
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Um deploy por vez: dois syncs FTP simultâneos corrompem o state file
+# (mesma lição aprendida nos repos do site principal e do antihype).
+concurrency:
+  group: deploy-website-autonomia
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Sync FTPS para HostGator
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositorio
+        uses: actions/checkout@v4
+
+      # Site estático puro (index.html + brand/ + images/), sem build.
+      # A conta FTP deve ter a pasta apontada pro document root do domínio
+      # no cPanel — mesmo padrão do antihype (github@antihype.ai → /public_html/).
+      - name: Deploy via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /public_html/
+          protocol: ftps
+          port: 21
+          state-name: .ftp-deploy-sync-state-website-autonomia-v1.json
+          exclude: |
+            **/.git*
+            **/.git*/**
