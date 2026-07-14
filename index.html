@@ -365,6 +365,66 @@ footer a{color:var(--bluedk);font-weight:500}
 .stick .p b{display:block;color:var(--navy);font-size:15px}
 .stick .btn{padding:11px 20px;font-size:14px;flex-shrink:0}
 @media(min-width:860px){.stick{display:none}}
+
+/* ===== mobile ≤640px — quebras naturais, respiro e CTAs cheios ===== */
+@media(max-width:640px){
+  body{font-size:16.5px}
+  .wrap{padding:0 20px}
+  section{padding:64px 0}
+  /* títulos: some com as quebras fixas de desktop e equilibra as linhas */
+  h1,h2,.big,.anchor,.punch,.toolsnote,.bonuscard h3,.final h2{text-wrap:balance}
+  .lead,.hero .sub{text-wrap:pretty}
+  h1 br,h2 br,.big br,.anchor br,.punch br,.toolsnote br,.bonuscard h3 br,.hero .sub br{display:none}
+  h2{font-size:28px}
+  header .btn{white-space:nowrap;padding:9px 16px;font-size:13px}
+  /* hero */
+  .hero{padding:118px 0 60px}
+  .hero .badge{font-size:12px;letter-spacing:.09em;padding:9px 18px;margin-bottom:24px;line-height:1.5}
+  .hero .logo{height:46px;margin-bottom:34px}
+  .hero h1{font-size:31px}
+  .hero .sub{margin-top:24px}
+  .hero .nem{margin-bottom:28px}
+  /* CTAs principais em largura cheia, texto centralizado */
+  .hero .btn,.possfoot .btn,.final .btn,.pricecard .btn,.localcard .btn{width:100%;max-width:420px;justify-content:center;text-align:center}
+  /* bandas e cards: padding proporcional à tela */
+  .video{padding:0 0 60px}
+  .manifesto{padding:0 0 60px}
+  .virada,.guia{padding:0 0 60px}
+  .manifesto .band,.virada .band,.guia .band{padding:34px 22px;border-radius:20px}
+  .chk{padding:18px 20px;font-size:15.5px}
+  .verd{padding:24px 22px;font-size:15.5px}
+  .math{padding:22px 20px;font-size:15.5px}
+  .qcard{padding:22px}
+  .qcard p{font-size:19px}
+  .tcard{padding:22px}
+  .pcard{padding:20px}
+  .localcard{padding:28px 22px}
+  .adcol{padding:26px 22px}
+  .pricecard,.bonuscard{padding:28px 22px}
+  .invmath{padding:22px 20px;font-size:15px}
+  .garline{padding:18px 20px;font-size:14.5px}
+  .prereq{padding:18px 20px;font-size:15px}
+  .video .demo{padding:12px 18px}
+  .press{padding:18px 20px}
+  .gstat{padding:18px 12px}
+  .gstat .l{font-size:11px}
+  .guia figure{margin:0 auto}
+  /* timeline: gutter menor sobra mais coluna pro texto */
+  .node{padding:0 0 36px 46px}
+  .tl::before{left:14px}
+  .node::before{left:6px;width:16px;height:16px}
+  /* faq */
+  .faq summary{padding:18px;font-size:15px}
+  .faq details p{padding:0 18px 18px;font-size:14.5px}
+  /* fechamento: linha de fatos sem quebra torta */
+  .final{padding:70px 0 84px}
+  .final .facts{letter-spacing:.06em;line-height:2}
+  /* barra fixa inferior mais compacta */
+  .stick{padding:10px 14px}
+  .stick .p{font-size:11.5px;line-height:1.35}
+  .stick .p b{font-size:14px}
+  .stick .btn{padding:10px 16px;font-size:13px;white-space:nowrap}
+}
 </style>
 </head>
 <body>
@@ -439,7 +499,7 @@ footer a{color:var(--bluedk);font-weight:500}
 <section class="manifesto">
   <div class="wrap">
     <div class="band">
-      <p class="big">Isto não é um curso de IA.<br/><span class="g">É um bootcamp de negócios.</span></p>
+      <p class="big">Isto não é um curso de IA. <br/><span class="g">É um bootcamp de negócios.</span></p>
       <p class="s">Você entra fazendo perguntas para a IA. Sai construindo com ela!</p>
     </div>
   </div>
@@ -479,7 +539,7 @@ footer a{color:var(--bluedk);font-weight:500}
         <div class="qcard"><span class="tag">A pergunta antiga</span><p>&ldquo;Qual ferramenta eu assino?&rdquo;</p></div>
         <div class="qcard new"><span class="tag">A pergunta nova</span><p>&ldquo;Por que eu ainda pago por algo que posso criar pro meu negócio?&rdquo;</p></div>
       </div>
-      <p class="anchor">Vantagem competitiva não é usar IA.<br/>É <span class="g">(re)construir</span> a empresa com ela.</p>
+      <p class="anchor">Vantagem competitiva não é usar IA. <br/>É <span class="g">(re)construir</span> a empresa com ela.</p>
     </div>
   </div>
 </section>
@@ -517,7 +577,7 @@ footer a{color:var(--bluedk);font-weight:500}
       <div class="pcard dream"><h3>E o que só existe na sua cabeça</h3><p>Aquele sistema que nenhum software de prateleira faz do jeito que o seu negócio precisa? <b>É exatamente esse que você constrói primeiro.</b></p></div>
     </div>
     <div class="possfoot">
-      <p class="punch">Hoje você paga mensalidade pra caber no software dos outros.<br/><span class="g">Aqui você constrói o software que cabe no seu negócio.</span></p>
+      <p class="punch">Hoje você paga mensalidade pra caber no software dos outros. <br/><span class="g">Aqui você constrói o software que cabe no seu negócio.</span></p>
       <a class="btn" href="#investimento">Quero construir o meu</a>
     </div>
   </div>
@@ -527,7 +587,7 @@ footer a{color:var(--bluedk);font-weight:500}
 <section style="padding-top:0">
   <div class="wrap">
     <span class="kicker">05 · Antes e depois</span>
-    <h2>Sua empresa hoje.<br/><span class="g">Sua empresa em 30 dias.</span></h2>
+    <h2>Sua empresa hoje. <br/><span class="g">Sua empresa em 30 dias.</span></h2>
     <p class="lead" style="margin-top:16px">Coloca a sua na coluna da esquerda. Vê se dói.</p>
     <div class="adgrid">
       <div class="adcol hj">
@@ -564,7 +624,7 @@ footer a{color:var(--bluedk);font-weight:500}
       <div class="node"><span class="when">Sábado, 22/08 · 9h às 18h</span><h3>Construção + Validação</h3><p>Setup guiado, passo a passo, sem pânico. Fluxo do SEU negócio desenhado, gargalos marcados. Mão no teclado: a primeira ferramenta nasce na tela e é validada no seu caso real ainda no sábado.</p></div>
       <div class="node"><span class="when">Domingo, 23/08 · 9h às 18h</span><h3>Melhorias e Roadmap</h3><p>Manhã pra lapidar, com apoio um a um: melhorias e ajustes finos na sua ferramenta. À tarde, criação do seu roadmap de 90 dias: o que implementar no seu negócio, em que ordem e como medir. Você volta pra casa com ativo funcionando e plano claro.</p></div>
     </div>
-    <p class="punch">Sexta você chega com o problema.<br/><span class="g">Domingo apresenta a solução, feita por você.</span></p>
+    <p class="punch">Sexta você chega com o problema. <br/><span class="g">Domingo apresenta a solução, feita por você.</span></p>
   </div>
 </section>
 
@@ -664,7 +724,7 @@ footer a{color:var(--bluedk);font-weight:500}
       </div>
       <div class="bonuscard">
         <span class="flag">Os Primeiros 15</span>
-        <h3>1 hora individual comigo,<br/>depois do bootcamp.</h3>
+        <h3>1 hora individual comigo, <br/>depois do bootcamp.</h3>
         <p>Pra revisar a ferramenta que você construiu, destravar o que travou e ajustar o plano de 90 dias.</p>
         <p class="expire">Só pros 15 primeiros. Depois o bônus some. O preço continua o mesmo.</p>
       </div>
@@ -680,7 +740,7 @@ footer a{color:var(--bluedk);font-weight:500}
 <section class="faq" style="padding-top:0">
   <div class="wrap" style="max-width:840px">
     <span class="kicker">11 · FAQ</span>
-    <h2 style="margin-bottom:36px">Perguntas diretas,<br/>respostas diretas.</h2>
+    <h2 style="margin-bottom:36px">Perguntas diretas, <br/>respostas diretas.</h2>
     <details><summary>&ldquo;Não sei programar. Vou conseguir acompanhar?&rdquo;</summary><p>Se você usa WhatsApp e e-mail, consegue. Ninguém programa no bootcamp: a IA escreve, você decide. E a construção é assistida o tempo todo.</p></details>
     <details><summary>&ldquo;Já uso ChatGPT todo dia. Vou aprender algo novo?&rdquo;</summary><p>Você usa IA. Aqui você passa a construir com ela. É a diferença entre alugar e ter escritura.</p></details>
     <details><summary>&ldquo;Já fiz curso de IA e nada mudou.&rdquo;</summary><p>Isto não é curso. Você sai com ferramenta rodando na sua operação, não com apostila.</p></details>
@@ -699,9 +759,9 @@ footer a{color:var(--bluedk);font-weight:500}
 <!-- FINAL -->
 <section class="final" style="padding-top:20px">
   <div class="wrap">
-    <h2>Daqui a um ano, sua empresa<br/><span class="g">ainda estará viva?</span></h2>
+    <h2>Daqui a um ano, sua empresa <br/><span class="g">ainda estará viva?</span></h2>
     <p class="alt">Mais 12 meses de boleto, ou o primeiro ativo de software da sua empresa?</p>
-    <p class="facts">AUTONOM/IA · 21–23 DE AGOSTO · CURITIBA · R$ 3.997<span class="urgspan"> · FALTAM <span class="dleft">–</span> DIAS</span></p>
+    <p class="facts">AUTONOM/IA · 21–23 DE AGOSTO · CURITIBA · R$&nbsp;3.997<span class="urgspan"> · FALTAM&nbsp;<span class="dleft">–</span>&nbsp;DIAS</span></p>
     <a class="btn" href="#investimento">Quero minha vaga na AUTONOM/IA</a>
     <p class="fine">Sobrou dúvida? Manda DM no <a href="https://instagram.com/gui.zanoni" target="_blank" rel="noopener">@gui.zanoni</a>. Eu mesmo respondo.</p>
   </div>
