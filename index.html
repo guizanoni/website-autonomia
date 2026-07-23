@@ -263,9 +263,16 @@ header .btn{padding:10px 22px;font-size:14px}
 .guia figure img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
 .guia .grid p{color:#b8c0d8;font-size:16.5px;margin-top:14px}
 .guia .grid p b{color:#fff}
-.palcos{display:grid;grid-template-columns:1fr;gap:14px;margin-top:44px}
-@media(min-width:780px){.palcos{grid-template-columns:1fr 1fr 1fr}}
-.palcos img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:14px;display:block}
+.palcos-wrap{position:relative;margin-top:44px}
+.palcos{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.palcos::-webkit-scrollbar{display:none}
+.palcos img{flex:0 0 calc((100% - 28px)/3);width:calc((100% - 28px)/3);aspect-ratio:3/2;object-fit:cover;border-radius:14px;display:block;scroll-snap-align:start}
+.pnav{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--sand);background:rgba(254,255,239,.94);color:var(--navy);font-family:var(--head);font-size:22px;line-height:1;display:grid;place-items:center;cursor:pointer;box-shadow:0 6px 22px rgba(30,37,67,.22);transition:background .2s,transform .2s,opacity .2s,border-color .2s}
+.pnav:hover{background:var(--sky);border-color:var(--bluelt);transform:translateY(-50%) scale(1.07)}
+.pnav.prev{left:-10px}
+.pnav.next{right:-10px}
+.pnav[disabled]{opacity:.3;cursor:default;pointer-events:none}
+@media(max-width:780px){.palcos img{flex-basis:84%;width:84%}.pnav.prev{left:6px}.pnav.next{right:6px}}
 .gstats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:40px 0 0}
 @media(min-width:880px){.gstats{grid-template-columns:repeat(4,1fr)}}
 .gstat{background:var(--bg);border-radius:14px;padding:24px;text-align:center}
@@ -657,10 +664,24 @@ footer a{color:var(--bluedk);font-weight:500}
           <p class="gclients"><b>Já contrataram:</b> Grupo Boticário, Vale, Embraer, Bosch, Electrolux, Globo, Stone, Sicredi e VTEX. <b>Na mídia:</b> <a href="https://guizanoni.com/imprensa/" target="_blank" rel="noopener">Band News, Jovem Pan, Gazeta do Povo e Carta Capital — veja tudo na página de imprensa ↗</a></p>
         </div>
       </div>
-      <div class="palcos">
-        <img src="images/gui-palco-marca.jpg" alt="Gui Zanoni no palco com o telão Cultura + IA" loading="lazy"/>
-        <img src="images/gui-palco-mahle.jpg" alt="Palestra do Gui Zanoni para a MAHLE, plateia corporativa" loading="lazy"/>
-        <img src="images/gui-palco-plateia.jpg" alt="Plateia lotada em palestra do Gui Zanoni" loading="lazy"/>
+      <div class="palcos-wrap">
+        <button class="pnav prev" type="button" id="palcoPrev" aria-label="Fotos anteriores">‹</button>
+        <div class="palcos" id="palcosTrack">
+          <img src="images/gui-palco-marca.jpg" alt="Gui Zanoni no palco com o telão Cultura + IA" loading="lazy"/>
+          <img src="images/gui-palco-mahle.jpg" alt="Palestra do Gui Zanoni para a MAHLE, plateia corporativa" loading="lazy"/>
+          <img src="images/gui-palco-plateia.jpg" alt="Plateia lotada em palestra do Gui Zanoni" loading="lazy"/>
+          <img src="images/palco-09.webp" alt="Gui Zanoni no palco apontando para a plateia" loading="lazy"/>
+          <img src="images/palco-13.webp" alt="Gui Zanoni palestrando sobre IAs generativas" loading="lazy"/>
+          <img src="images/palco-03.webp" alt="Gui Zanoni no palco do Encontrão Operação 4.0, Grupo Boticário" loading="lazy"/>
+          <img src="images/palco-01.webp" alt="Gui Zanoni palestrando com plateia atenta" loading="lazy"/>
+          <img src="images/palco-10.webp" alt="Gui Zanoni no púlpito com o telão O Futuro Já é Passado" loading="lazy"/>
+          <img src="images/palco-05.webp" alt="Gui Zanoni em bate-papo no palco sobre imaginação" loading="lazy"/>
+          <img src="images/palco-06.webp" alt="Gui Zanoni no palco em formato de painel" loading="lazy"/>
+          <img src="images/palco-11.webp" alt="Gui Zanoni sorrindo com microfone durante palestra" loading="lazy"/>
+          <img src="images/palco-08.webp" alt="Auditório lotado em palestra do Gui Zanoni" loading="lazy"/>
+          <img src="images/palco-07.webp" alt="Gui Zanoni no palco diante da plateia" loading="lazy"/>
+        </div>
+        <button class="pnav next" type="button" id="palcoNext" aria-label="Próximas fotos">›</button>
       </div>
       <div class="gstats">
         <a class="gstat" href="https://guizanoni.com/nps/publico/" target="_blank" rel="noopener"><span class="n">+95</span><span class="l">NPS geral · zona de excelência ↗</span></a>
@@ -804,6 +825,19 @@ footer a{color:var(--bluedk);font-weight:500}
 const d=Math.ceil((new Date('2026-09-18T19:00:00-03:00')-Date.now())/864e5);
 if(d>0){document.querySelectorAll('.dleft').forEach(e=>e.textContent=d)}
 else{document.querySelectorAll('.urgspan').forEach(e=>e.style.display='none')}
+})();
+
+/* carrossel de fotos do palco — setas prev/next */
+(()=>{
+const t=document.getElementById('palcosTrack'),p=document.getElementById('palcoPrev'),n=document.getElementById('palcoNext');
+if(!t||!p||!n)return;
+const step=()=>{const i=t.querySelector('img');return i?i.getBoundingClientRect().width+14:t.clientWidth};
+const sync=()=>{const max=t.scrollWidth-t.clientWidth-2;p.disabled=t.scrollLeft<=2;n.disabled=t.scrollLeft>=max};
+p.addEventListener('click',()=>t.scrollBy({left:-step(),behavior:'smooth'}));
+n.addEventListener('click',()=>t.scrollBy({left:step(),behavior:'smooth'}));
+t.addEventListener('scroll',sync,{passive:true});
+window.addEventListener('resize',sync);
+sync();
 })();
 
 /* Meta Pixel — eventos de conversao (so roda se o pixel estiver ativo no head) */
