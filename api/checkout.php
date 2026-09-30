@@ -59,17 +59,19 @@ if ($e1 || $e2 || $e3) {
 }
 if (empty($b['aceite'])) json_out(['ok' => false, 'erro' => 'Marque que você leu as condições pra continuar.'], 422);
 
-// ---- cliente no Asaas (reaproveita se o documento já existir) ----
+// ---- cliente no Asaas: SEMPRE uma nova, marcada como AUTONOM/IA ----
+// A conta Asaas é compartilhada com o pipo.guru, cujo webhook procura o dono do pagamento pela
+// cliente. Reaproveitar uma cliente do pipo faria ele tratar esta compra como renovação de plano.
 $doc = $cnpj ?: $p1['cpf'];
-$r = asaas('GET', '/customers?cpfCnpj=' . $doc . '&limit=1');
-$customerId = $r['data']['data'][0]['id'] ?? null;
-if (!$customerId) {
+$customerId = null;
+{
     $r = asaas('POST', '/customers', array_filter([
         'name'        => $cnpj ? $razao : $p1['nome'],
         'cpfCnpj'     => $doc,
         'email'       => $p1['email'],
         'mobilePhone' => $p1['whatsapp'],
-        'observations'=> $cnpj ? 'Contato: ' . $p1['nome'] : null,
+        'observations'=> 'AUTONOM/IA Mulheres' . ($cnpj ? ' · contato: ' . $p1['nome'] : ''),
+        'externalReference' => 'autonomia',
     ], fn($v) => $v !== null));
     $customerId = $r['data']['id'] ?? null;
     if (!$customerId) json_out(['ok' => false, 'erro' => asaas_erro($r)], 502);
