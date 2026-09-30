@@ -37,6 +37,9 @@ function cfg(): array
             'cupons'         => [],               // 'CODIGO' => ['preco' => 997, 'nome' => 'Comunidade X', 'limite' => 20]
             'grupo_whatsapp' => '',
             'site'           => 'https://autonomia.vc',
+            // O Asaas só aceita retorno no domínio cadastrado na conta (a conta é da Futurefy, site pipo.guru).
+            // A ponte pipo.guru/autonomia-retorno.php redireciona pra autonomia.vc/obrigado/.
+            'retorno_url'    => 'https://pipo.guru/autonomia-retorno.php',
             'notificar_url'  => 'https://guizanoni.com/enviar.php',
         ];
     }

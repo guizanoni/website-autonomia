@@ -84,7 +84,7 @@ $pay = [
     'dueDate'           => date('Y-m-d', strtotime('+' . EVENTO['vencimento_dias'] . ' days')),
     'description'       => mb_substr($desc, 0, 480),
     'externalReference' => $id,
-    'callback'          => ['successUrl' => rtrim(cfg()['site'], '/') . '/obrigado/?pedido=' . $id, 'autoRedirect' => true],
+    'callback'          => ['successUrl' => (cfg()['retorno_url'] ?: rtrim(cfg()['site'], '/') . '/obrigado/') . '?pedido=' . $id, 'autoRedirect' => true],
 ];
 if ($forma === 'cartao' && $calc['parcelas'] > 1) {
     $pay['installmentCount'] = $calc['parcelas'];
@@ -94,6 +94,12 @@ if ($forma === 'cartao' && $calc['parcelas'] > 1) {
 }
 $r = asaas('POST', '/payments', $pay);
 $url = $r['data']['invoiceUrl'] ?? null;
+if (!$url && $r['code'] === 400) {
+    // se o Asaas recusar o endereço de retorno (domínio), cria a cobrança sem ele: a venda não pode travar por isso
+    unset($pay['callback']);
+    $r = asaas('POST', '/payments', $pay);
+    $url = $r['data']['invoiceUrl'] ?? null;
+}
 if (!$url) json_out(['ok' => false, 'erro' => asaas_erro($r)], 502);
 
 pedido_salvar([
