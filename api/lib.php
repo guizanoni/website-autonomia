@@ -7,6 +7,7 @@ declare(strict_types=1);
 date_default_timezone_set('America/Sao_Paulo');
 error_reporting(0);
 ini_set('display_errors', '0');
+ini_set('serialize_precision', '-1');   // HostGator usa 17: sem isso 1232.15 vira 1232.1500000000001 no JSON (e no Asaas)
 
 // ---- o que muda de turma pra turma ---------------------------------------
 const EVENTO = [
