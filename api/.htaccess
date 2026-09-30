@@ -1,0 +1,11 @@
+# Nada que comece com "_" (config secreta, dados dos pedidos) é servido ao público.
+<FilesMatch "^_">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Deny from all
+  </IfModule>
+</FilesMatch>
+RedirectMatch 404 ^/api/_data(/.*)?$
+Options -Indexes

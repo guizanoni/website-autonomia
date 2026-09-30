@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AUTONOMIA//Mulheres//PT
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:autonomia-mulheres-t1-20261111@autonomia.vc
+DTSTAMP:20261001T000000Z
+DTSTART;TZID=America/Sao_Paulo:20261111T080000
+DTEND;TZID=America/Sao_Paulo:20261111T183000
+SUMMARY:AUTONOM/IA Mulheres · Turma 1
+LOCATION:Hard Rock Café Curitiba
+DESCRIPTION:Leve seu notebook e o carregador. Dúvidas: https://wa.me/5541991097011
+URL:https://autonomia.vc/
+END:VEVENT
+END:VCALENDAR

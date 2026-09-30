@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="robots" content="noindex"/>
+<title>Vaga garantida | AUTONOM/IA Mulheres</title>
+<link rel="icon" href="../brand/favicon.svg" type="image/svg+xml"/>
+<script>
+window.META_PIXEL_ID='1382602147129782';
+if(/^\d{10,}$/.test(window.META_PIXEL_ID)){
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init',window.META_PIXEL_ID);fbq('track','PageView');
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap"/>
+<style>
+:root{--bg:#fff;--soft:#f4f4f2;--ink:#191c1f;--mut:#6b6e73;--line:#e3e3df;--sig:#ff5b2e;--sigdk:#e0441a;--ok:#127a3a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--soft);color:var(--ink);font-family:"Geist",system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding-inline:16px;padding-block:28px 64px}
+.logo{font-weight:600;font-size:24px;letter-spacing:-.04em;text-decoration:none;color:inherit}
+.logo .s{color:var(--sig)}
+.card{background:#fff;border-radius:28px;padding:clamp(24px,5vw,44px);margin-top:28px}
+.badge{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;padding:7px 14px;border-radius:999px;background:rgba(18,122,58,.1);color:var(--ok)}
+.badge.wait{background:rgba(255,91,46,.12);color:var(--sigdk)}
+h1{font-size:clamp(32px,6vw,48px);line-height:1.05;letter-spacing:-.04em;font-weight:600;margin-top:16px;text-wrap:balance}
+.lead{color:var(--mut);margin-top:12px;font-size:18px}
+.steps{list-style:none;margin-top:28px;display:grid;gap:12px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:36px minmax(0,1fr);gap:4px 14px;background:var(--soft);border-radius:18px;padding:16px 18px}
+.steps li::before{counter-increment:s;content:counter(s);grid-row:span 2;width:36px;height:36px;border-radius:50%;background:var(--ink);color:var(--sig);display:grid;place-items:center;font-weight:700}
+.steps b{font-weight:600}
+.steps span{color:var(--mut);font-size:16px}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:inherit;font-weight:500;font-size:16px;padding:14px 24px;border-radius:999px;border:0;background:var(--ink);color:#fff;text-decoration:none;margin-top:10px}
+.pill.wa{background:#25d366}
+.pill.sig{background:var(--sig)}
+.fine{margin-top:24px;font-size:14px;color:var(--mut)}
+.fine a{color:var(--ink)}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="logo" href="/mulheres/">autonom<span class="s">.</span>ia<span class="s">/</span>mulheres</a>
+
+  <div class="card" id="pago" hidden>
+    <span class="badge">✓ Pagamento confirmado</span>
+    <h1 id="titulo">Sua vaga está garantida.</h1>
+    <p class="lead">Nos vemos no dia <b>11 de novembro</b>, às 8h, no Hard Rock Café Curitiba. Agora é só seguir estes passos:</p>
+    <ol class="steps">
+      <li><b>Entre no grupo da turma</b><span id="grupoTxt">É por lá que vão os avisos, o material e o link do kit. <br/><a class="pill wa" id="grupoBtn" href="#" target="_blank" rel="noopener" hidden>Entrar no grupo do WhatsApp</a></span></li>
+      <li><b>Salve a data na agenda</b><span>Quarta, 11/11, das 8h às 18h30. <br/><a class="pill" href="../agenda-autonomia-11-11.ics">Adicionar à agenda</a></span></li>
+      <li><b>Separe o notebook e o carregador</b><span>Qualquer notebook que acesse a internet serve. Não precisa instalar nada antes. Não tem notebook? Venha mesmo assim, dá pra fazer boa parte pelo celular.</span></li>
+      <li><b>Chame uma amiga</b><span>Quanto mais gente conhecida na sala, melhor fica a rodada de negócios.</span></li>
+    </ol>
+    <p class="fine">Você também recebe o comprovante do Asaas por e-mail. Dúvida? <a class="js-wa" href="#" target="_blank" rel="noopener">Fale com a Maria no WhatsApp</a>.</p>
+  </div>
+
+  <div class="card" id="aguardando" hidden>
+    <span class="badge wait">Aguardando pagamento</span>
+    <h1>Falta só o pagamento.</h1>
+    <p class="lead">Seu pedido foi criado, mas o pagamento ainda não caiu. No PIX leva alguns segundos. No cartão, alguns minutos. Esta página atualiza sozinha.</p>
+    <a class="pill sig" id="pagarBtn" href="#" hidden>Voltar pro pagamento</a>
+    <p class="fine">Já pagou e nada mudou depois de 10 minutos? <a class="js-wa" href="#" target="_blank" rel="noopener">Fale com a Maria no WhatsApp</a> e a gente confere.</p>
+  </div>
+
+  <div class="card" id="semPedido" hidden>
+    <span class="badge">Obrigada!</span>
+    <h1>Recebemos seu pedido.</h1>
+    <p class="lead">Se o pagamento foi concluído, você recebe o comprovante do Asaas por e-mail e a Maria entra em contato pelo WhatsApp.</p>
+    <p class="fine"><a class="js-wa" href="#" target="_blank" rel="noopener">Fale com a Maria no WhatsApp</a> · <a href="/mulheres/">Voltar pra página</a></p>
+  </div>
+</div>
+<script>
+const WA = 'https://wa.me/5541991097011?text=' + encodeURIComponent('Oi Maria! Acabei de fazer minha inscrição na AUTONOM/IA Mulheres (11/11) e tenho uma dúvida.');
+document.querySelectorAll('.js-wa').forEach(a => a.href = WA);
+const id = new URLSearchParams(location.search).get('pedido');
+const show = el => ['pago','aguardando','semPedido'].forEach(k => document.getElementById(k).hidden = k !== el);
+let tries = 0;
+async function check() {
+  if (!id) return show('semPedido');
+  try {
+    const r = await fetch('../api/pedido.php?id=' + encodeURIComponent(id), { cache: 'no-store' });
+    const j = await r.json();
+    if (!j.ok) return show('semPedido');
+    if (j.pago) {
+      show('pago');
+      if (j.nome) document.getElementById('titulo').textContent = j.nome + ', sua vaga está garantida.';
+      const g = document.getElementById('grupoBtn');
+      if (j.grupo) { g.href = j.grupo; g.hidden = false; }
+      else document.getElementById('grupoTxt').innerHTML = 'A Maria vai te adicionar no grupo da turma pelo WhatsApp em até 24 horas.';
+      try {
+        const k = 'autonomia-purchase-' + id;
+        if (!localStorage.getItem(k) && typeof fbq === 'function') { fbq('track', 'Purchase', { value: j.total, currency: 'BRL', num_items: j.vagas }); localStorage.setItem(k, '1'); }
+      } catch (_) {}
+      return;
+    }
+    show('aguardando');
+    if (j.url) { const b = document.getElementById('pagarBtn'); b.href = j.url; b.hidden = false; }
+    if (tries++ < 60) setTimeout(check, 5000);
+  } catch (_) { show('semPedido'); }
+}
+check();
+</script>
+</body>
+</html>

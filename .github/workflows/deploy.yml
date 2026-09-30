@@ -19,7 +19,33 @@ jobs:
       - name: Checkout do repositorio
         uses: actions/checkout@v4
 
-      # Site estático puro (index.html + brand/ + images/), sem build.
+      # Chaves do Asaas e cupons vêm dos secrets do repositório (o repo é público).
+      # O arquivo gerado vai só pro servidor; nunca é commitado.
+      - name: Gerar config secreta do checkout
+        env:
+          ASAAS_ENV: ${{ secrets.ASAAS_ENV }}
+          ASAAS_API_KEY: ${{ secrets.ASAAS_API_KEY }}
+          ASAAS_WEBHOOK_TOKEN: ${{ secrets.ASAAS_WEBHOOK_TOKEN }}
+          ADMIN_KEY: ${{ secrets.ADMIN_KEY }}
+          GRUPO_WHATSAPP: ${{ secrets.GRUPO_WHATSAPP }}
+          CUPONS_JSON: ${{ secrets.CUPONS_JSON }}
+        run: |
+          php -r '
+            $c = json_decode(getenv("CUPONS_JSON") ?: "{}", true);
+            if (!is_array($c)) { fwrite(STDERR, "CUPONS_JSON invalido\n"); exit(1); }
+            $cfg = [
+              "env" => getenv("ASAAS_ENV") === "production" ? "production" : "sandbox",
+              "asaas_key" => (string) getenv("ASAAS_API_KEY"),
+              "webhook_token" => (string) getenv("ASAAS_WEBHOOK_TOKEN"),
+              "admin_key" => (string) getenv("ADMIN_KEY"),
+              "grupo_whatsapp" => (string) getenv("GRUPO_WHATSAPP"),
+              "cupons" => $c,
+            ];
+            file_put_contents("api/_config-secret.php", "<?php\nreturn " . var_export($cfg, true) . ";\n");
+            echo "config gerada: ambiente ", $cfg["env"], ", ", count($c), " cupom(ns)\n";
+          '
+
+      # Site estático (index.html + brand/ + images/) + PHP do checkout em api/, sem build.
       # A conta FTP deve ter a pasta apontada pro document root do domínio
       # no cPanel — mesmo padrão do antihype (github@antihype.ai → /public_html/).
       - name: Deploy via FTPS
@@ -35,3 +61,4 @@ jobs:
           exclude: |
             **/.git*
             **/.git*/**
+            api/_data/**
