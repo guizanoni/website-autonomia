@@ -17,11 +17,13 @@ $aviso = $erro = null;
 // ---------- login / logout ----------
 if (($_POST['acao'] ?? '') === 'login') {
     $u = (string)($_POST['usuario'] ?? ''); $s = (string)($_POST['senha'] ?? '');
-    $hash = (string)(cfg()['admin_pass_hash'] ?? '');
+    $users = admin_usuarios();
+    $conta = $users[strtolower(trim($u))] ?? null;
     if (!limitar('login', 8, 900)) $erro = 'Muitas tentativas. Espere 15 minutos.';
-    elseif ($hash !== '' && hash_equals((string)(cfg()['admin_user'] ?? ''), $u) && password_verify($s, $hash)) {
+    elseif ($conta && !empty($conta['hash']) && password_verify($s, (string)$conta['hash'])) {
         session_regenerate_id(true);
         $_SESSION['ok'] = 1; $_SESSION['ate'] = time() + 8 * 3600; $_SESSION['csrf'] = bin2hex(random_bytes(16));
+        $_SESSION['user'] = strtolower(trim($u)); $_SESSION['papel'] = ($conta['papel'] ?? '') === 'admin' ? 'admin' : 'leitura';
         header('Location: /admin/'); exit;
     } else $erro = 'Usuário ou senha incorretos.';
 }
@@ -31,6 +33,10 @@ if ($logado && ($_POST['acao'] ?? '') === 'sair' && hash_equals($csrf, (string)(
 
 if (!$logado): ?>
 <!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<link rel="icon" href="/brand/favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="/favicon.ico" sizes="32x32"/>
+<link rel="apple-touch-icon" href="/brand/apple-touch-icon.png"/>
+<meta name="theme-color" content="#111111"/>
 <title>Entrar · AUTONOM/IA</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap">
 <style>
@@ -38,6 +44,7 @@ if (!$logado): ?>
 *{box-sizing:border-box;margin:0}body{min-height:100vh;display:grid;place-items:center;background:var(--soft);font:16px/1.5 "Geist",system-ui,sans-serif;color:var(--ink);padding:16px}
 form{background:#fff;border-radius:24px;padding:32px;width:100%;max-width:380px;display:grid;gap:10px}
 .logo{font-weight:600;font-size:22px;letter-spacing:-.04em;margin-bottom:6px}.logo i{font-style:normal;color:var(--sig)}
+.tag{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:#fff;padding:3px 8px;border-radius:999px;vertical-align:4px;margin-left:4px}
 h1{font-size:24px;letter-spacing:-.03em;margin-bottom:8px}
 label{font-size:14px;font-weight:500}input{font:inherit;padding:13px 14px;border:1.5px solid var(--line);border-radius:14px}
 input:focus{outline:none;border-color:var(--ink)}
@@ -45,7 +52,7 @@ button{font:inherit;font-weight:500;padding:14px;border:0;border-radius:999px;ba
 .err{color:#b42318;font-size:14px}
 </style></head><body>
 <form method="post" autocomplete="on">
-  <div class="logo">autonom<i>.</i>ia<i>/</i>admin</div>
+  <div class="logo">autonom<i>.</i>ia<i>/</i>mulheres <span class="tag">admin</span></div>
   <h1>Painel financeiro</h1>
   <?php if ($erro): ?><p class="err"><?= $h($erro) ?></p><?php endif; ?>
   <input type="hidden" name="acao" value="login">
@@ -57,19 +64,41 @@ button{font:inherit;font-weight:500;padding:14px;border:0;border-radius:999px;ba
 
 // ---------- ações (POST com CSRF) ----------
 $acao = $_POST['acao'] ?? '';
+$user = $_SESSION['user'] ?? 'gui';
+$isAdmin = ($_SESSION['papel'] ?? 'admin') === 'admin';
 if ($acao && !hash_equals($csrf, (string)($_POST['csrf'] ?? ''))) { $erro = 'Sessão expirada. Recarregue a página.'; $acao = ''; }
+if ($acao === 'sacar' && empty(cfg()['saque_habilitado'])) { $erro = 'O saque por aqui está desligado. Use o painel financeiro da empresa.'; $acao = ''; }
+if (in_array($acao, ['estornar', 'sacar'], true) && !$isAdmin) { $erro = 'Seu usuário é só de visualização: saque e estorno ficam com o administrador.'; $acao = ''; }
+if ($acao === 'sacar') {
+    // aceita "1.234,56", "1234,56" e "1234.56"; com vírgula, ponto é milhar; sem vírgula, ponto é decimal
+    $v = preg_replace('/[^0-9.,]/', '', (string)($_POST['valor'] ?? '0'));
+    $v = str_contains($v, ',') ? str_replace(',', '.', str_replace('.', '', $v)) : $v;
+    $centavos = substr_count($v, '.') > 1 ? 0 : (int)round(((float)$v) * 100);
+    $conta = admin_usuarios()[$user] ?? null;
+    $rb0 = asaas('GET', '/finance/balance');
+    $disp = (int)round(((float)($rb0['data']['balance'] ?? 0)) * 100);
+    if (!$conta || !password_verify((string)($_POST['senha'] ?? ''), (string)$conta['hash'])) $erro = 'Senha incorreta. O saque não foi feito.';
+    elseif (!limitar('saque', 5, 3600)) $erro = 'Muitos saques seguidos. Espere uma hora.';
+    elseif ($centavos < 100) $erro = 'Valor mínimo de saque: R$ 1,00.';
+    elseif ($centavos > $disp) $erro = 'Valor maior que o saldo disponível (' . brl($disp / 100) . ').';
+    else {
+        $r = saque_criar($centavos);
+        if ($r['ok']) $aviso = 'Saque de ' . brl($centavos / 100) . ' solicitado. O Pix sai em instantes para a chave cadastrada.';
+        else $erro = 'O saque não foi aceito: ' . $r['erro'];
+    }
+}
 if ($acao === 'sincronizar') {
     $n = 0;
     foreach (pedidos_todos() as $p) { if (in_array($p['status'], ['aguardando', 'pago', 'vencido'], true)) { sincronizar_pedido($p); $n++; } }
-    $aviso = "Sincronizado com o Asaas: $n pedido(s) conferido(s).";
+    $aviso = "Pagamentos atualizados: $n pedido(s) conferido(s).";
 }
 if ($acao === 'estornar') {
     $p = pedido_ler((string)($_POST['pedido'] ?? ''));
     if (!$p || $p['status'] !== 'pago') $erro = 'Esse pedido não está pago.';
     else {
         $r = $p['asaas_parcelamento'] ? asaas('POST', '/installments/' . $p['asaas_parcelamento'] . '/refund') : asaas('POST', '/payments/' . $p['asaas_cobranca'] . '/refund');
-        if ($r['code'] === 200) { $p['estorno_pedido_em'] = date('c'); pedido_salvar($p); sincronizar_pedido($p); $aviso = 'Estorno solicitado ao Asaas para ' . $p['p1']['nome'] . '.'; }
-        else $erro = 'O Asaas recusou o estorno: ' . asaas_erro($r);
+        if ($r['code'] === 200) { $p['estorno_pedido_em'] = date('c'); pedido_salvar($p); sincronizar_pedido($p); $aviso = 'Estorno solicitado para ' . $p['p1']['nome'] . '.'; }
+        else $erro = 'O estorno não foi aceito: ' . asaas_erro($r);
     }
 }
 if (($_GET['csv'] ?? '') === '1') {
@@ -92,6 +121,13 @@ $sit = situacao_vagas();
 $saldo = null;
 $rb = asaas('GET', '/finance/balance');
 if ($rb['code'] === 200) $saldo = (float)($rb['data']['balance'] ?? 0);
+$transfers = []; $extrato = [];
+$rt = asaas('GET', '/transfers?limit=10');
+if ($rt['code'] === 200) $transfers = $rt['data']['data'] ?? [];
+$re = asaas('GET', '/financialTransactions?limit=15');
+if ($re['code'] === 200) $extrato = $re['data']['data'] ?? [];
+$destino = saque_destino();
+$stTr = ['PENDING' => 'pendente', 'BANK_PROCESSING' => 'no banco', 'DONE' => 'concluído', 'CANCELLED' => 'cancelado', 'FAILED' => 'falhou', 'AWAITING_AUTHORIZATION' => 'aguardando autorização'];
 $filtro = $_GET['status'] ?? 'todos';
 $lista = array_values(array_filter($pedidos, fn($p) => $filtro === 'todos' || $p['status'] === $filtro));
 $conv = $fin['criados'] ? round(100 * $fin['pagos'] / $fin['criados']) : 0;
@@ -105,6 +141,10 @@ $max = max(1, max($dias));
 ?>
 <!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<link rel="icon" href="/brand/favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="/favicon.ico" sizes="32x32"/>
+<link rel="apple-touch-icon" href="/brand/apple-touch-icon.png"/>
+<meta name="theme-color" content="#111111"/>
 <title>Financeiro · AUTONOM/IA</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
 <style>
@@ -113,7 +153,8 @@ $max = max(1, max($dias));
 body{background:var(--soft);color:var(--ink);font:15px/1.5 "Geist",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 .wrap{max-width:1240px;margin:0 auto;padding:20px clamp(16px,3vw,32px) 60px}
 header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}
-.logo{font-weight:600;font-size:22px;letter-spacing:-.04em}.logo i{font-style:normal;color:var(--sig)}
+.logo{font-weight:600;font-size:24px;letter-spacing:-.04em}.logo i{font-style:normal;color:var(--sig)}
+.tag{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:#fff;padding:3px 8px;border-radius:999px;vertical-align:4px;margin-left:4px}
 .top{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .btn{font:inherit;font-size:14px;font-weight:500;padding:10px 16px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
 .btn.dark{background:var(--ink);color:#fff;border-color:var(--ink)}
@@ -154,15 +195,23 @@ td a{color:var(--ink)}
 .acts{display:flex;gap:6px;flex-wrap:wrap}
 .acts .btn{padding:6px 10px;font-size:12.5px}
 .note{font-size:12.5px;color:var(--mut);margin-top:10px}
+.btn.sig{background:var(--sig);border-color:var(--sig);color:#fff}
+dialog{border:0;border-radius:24px;padding:26px;width:min(440px,92vw);box-shadow:0 30px 80px rgba(0,0,0,.3)}
+dialog::backdrop{background:rgba(14,15,17,.5);backdrop-filter:blur(4px)}
+dialog h2{font-size:22px;letter-spacing:-.03em;margin-bottom:6px}
+dialog form{display:grid;gap:8px}
+dialog label{font-size:14px;font-weight:500;margin-top:6px}
+dialog input{font:inherit;padding:12px 14px;border:1.5px solid var(--line);border-radius:14px}
 @media(max-width:900px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.grid2{grid-template-columns:1fr}}
 </style></head><body><div class="wrap">
 
 <header>
-  <div><div class="logo">autonom<i>.</i>ia<i>/</i>admin</div><p class="sub"><?= $h(EVENTO['nome']) ?> · Asaas <?= $h(cfg()['env'] === 'production' ? 'produção' : 'sandbox') ?></p></div>
+  <div><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres <span class="tag">admin</span></div><p class="sub"><?= $h(EVENTO['nome']) ?><?= cfg()['env'] === 'production' ? '' : ' · modo de teste' ?></p></div>
   <div class="top">
-    <form method="post"><input type="hidden" name="csrf" value="<?= $h($csrf) ?>"><input type="hidden" name="acao" value="sincronizar"><button class="btn">↻ Sincronizar com o Asaas</button></form>
+    <form method="post"><input type="hidden" name="csrf" value="<?= $h($csrf) ?>"><input type="hidden" name="acao" value="sincronizar"><button class="btn">↻ Atualizar pagamentos</button></form>
     <a class="btn" href="?csv=1">Baixar planilha</a>
-    <a class="btn" href="https://www.asaas.com/dashboard/home" target="_blank" rel="noopener">Abrir Asaas</a>
+    <?php if ($isAdmin): ?><button class="btn sig" type="button" onclick="document.getElementById('saque').showModal()">Sacar</button><?php endif; ?>
+    <span class="sub"><?= $h($user) ?> · <?= $isAdmin ? 'administrador' : 'visualização' ?></span>
     <form method="post"><input type="hidden" name="csrf" value="<?= $h($csrf) ?>"><input type="hidden" name="acao" value="sair"><button class="btn dark">Sair</button></form>
   </div>
 </header>
@@ -173,8 +222,8 @@ td a{color:var(--ink)}
 <div class="kpis">
   <div class="k hl"><span>Vagas vendidas</span><b><?= $sit['vendidas'] ?> de <?= $sit['vagas'] ?></b><small><?= $sit['restantes'] ?> restantes</small><div class="bar" style="background:#2b2f33"><i style="width:<?= min(100, round(100 * $sit['vendidas'] / max(1, $sit['vagas']))) ?>%"></i></div></div>
   <div class="k"><span>Faturamento bruto</span><b><?= $h(brl($fin['bruto'])) ?></b><small><?= $fin['pagos'] ?> pedido(s) pago(s)</small></div>
-  <div class="k"><span>Líquido (depois das taxas do Asaas)</span><b><?= $h(brl($fin['liquido'])) ?></b><small><?= $fin['liquido_conhecido'] ? 'valores do Asaas' : 'clique em Sincronizar pra completar' ?></small></div>
-  <div class="k"><span>Saldo da conta Asaas</span><b><?= $saldo === null ? '—' : $h(brl($saldo)) ?></b><small>conta Futurefy (inclui pipo.guru)</small></div>
+  <div class="k"><span>Líquido (depois das taxas)</span><b><?= $h(brl($fin['liquido'])) ?></b><small><?= $fin['liquido_conhecido'] ? 'já descontadas as taxas de pagamento' : 'clique em Atualizar pagamentos' ?></small></div>
+  <div class="k"><span>Saldo em conta</span><b><?= $saldo === null ? '—' : $h(brl($saldo)) ?></b><small>conta da empresa (inclui outros produtos)</small></div>
   <div class="k"><span>A receber (cartão)</span><b><?= $h(brl($fin['a_receber'])) ?></b><small>aprovado, ainda não caiu</small></div>
   <div class="k"><span>Aguardando pagamento</span><b><?= $fin['aguardando'] ?></b><small><?= $h(brl($fin['aguardando_valor'])) ?> em aberto</small></div>
   <div class="k"><span>Conversão</span><b><?= $conv ?>%</b><small>pedidos criados que viraram pagos</small></div>
@@ -219,7 +268,7 @@ td a{color:var(--ink)}
   <td><?= !empty($p['nota_cnpj']) ? $h($p['nota_cnpj']) . '<small>' . $h($p['nota_razao']) . '</small>' : '<span class="sub">CPF</span>' ?></td>
   <td><div class="acts">
     <?php if (!empty($p['invoice_url'])): ?><a class="btn" href="<?= $h($p['invoice_url']) ?>" target="_blank" rel="noopener">Fatura</a><?php endif; ?>
-    <?php if ($p['status'] === 'pago'): ?>
+    <?php if ($p['status'] === 'pago' && $isAdmin): ?>
     <form method="post" onsubmit="return confirm('Estornar <?= $h(brl((float)$p['total'])) ?> para <?= $h(addslashes($p['p1']['nome'])) ?>? O dinheiro volta pra cliente e a vaga é liberada.')">
       <input type="hidden" name="csrf" value="<?= $h($csrf) ?>"><input type="hidden" name="acao" value="estornar"><input type="hidden" name="pedido" value="<?= $h($p['id']) ?>">
       <button class="btn danger">Estornar</button></form>
@@ -228,5 +277,52 @@ td a{color:var(--ink)}
 </tr>
 <?php endforeach; ?>
 </table></div>
-<p class="note">Os números vêm dos pedidos feitos pelo site e dos avisos do Asaas. "Sincronizar" confere cada pedido direto no Asaas, útil se algum aviso se perdeu. O saldo é da conta inteira da Futurefy no Asaas.</p>
+<div class="grid2" style="margin-top:12px">
+  <div class="card">
+    <h2>Extrato da conta</h2>
+    <div class="rows">
+    <?php if (!$extrato): ?><div><span class="sub">Sem movimentações por enquanto.</span></div><?php endif; ?>
+    <?php foreach ($extrato as $t): $v = (float)($t['value'] ?? 0); ?>
+      <div><span><?= $h(date('d/m', strtotime($t['date'] ?? 'now'))) ?> · <?= $h(mb_strimwidth((string)($t['description'] ?? $t['type'] ?? ''), 0, 60, '…')) ?></span><b style="color:<?= $v < 0 ? '#b42318' : 'var(--ok)' ?>"><?= $h(($v < 0 ? '− ' : '+ ') . brl(abs($v))) ?></b></div>
+    <?php endforeach; ?>
+    </div>
+    <p class="note">Extrato da conta da empresa (inclui outros produtos).</p>
+  </div>
+  <div class="card">
+    <h2>Saques</h2>
+    <p class="sub" style="margin-bottom:8px">Destino fixo: <?= $destino ? $h(saque_mascara($destino)) : 'não configurado' ?></p>
+    <div class="rows">
+    <?php if (!$transfers): ?><div><span class="sub">Nenhum saque ainda.</span></div><?php endif; ?>
+    <?php foreach ($transfers as $t): $daqui = saque_criado((string)$t['id']); ?>
+      <div><span><?= $h(date('d/m H:i', strtotime($t['dateCreated'] ?? 'now'))) ?> · <?= $h($stTr[$t['status'] ?? ''] ?? strtolower((string)($t['status'] ?? ''))) ?><?= $daqui ? ' · AUTONOM/IA' : '' ?></span><b><?= $h(brl((float)($t['value'] ?? 0))) ?></b></div>
+    <?php endforeach; ?>
+    </div>
+  </div>
+</div>
+
+<?php if ($isAdmin): ?>
+<dialog id="saque">
+  <form method="post">
+    <input type="hidden" name="csrf" value="<?= $h($csrf) ?>"><input type="hidden" name="acao" value="sacar">
+    <h2>Sacar pro banco</h2>
+    <?php if (empty(cfg()['saque_habilitado'])): ?>
+      <p class="sub">Por segurança, o saque é feito no painel financeiro da empresa, que usa a mesma conta e o mesmo saldo.</p>
+      <div class="acts" style="margin-top:14px;justify-content:flex-end"><button class="btn" type="button" onclick="this.closest('dialog').close()">Fechar</button><a class="btn sig" href="https://pipo.guru/financeiro" target="_blank" rel="noopener">Abrir painel financeiro</a></div>
+    <?php elseif (!$destino): ?>
+      <p class="sub">A chave Pix de destino ainda não foi configurada (secrets SAQUE_PIX_CHAVE e SAQUE_PIX_TIPO).</p>
+      <div class="acts" style="margin-top:14px"><button class="btn" type="button" onclick="this.closest('dialog').close()">Fechar</button></div>
+    <?php else: ?>
+      <p class="sub">Disponível: <b><?= $saldo === null ? '—' : $h(brl($saldo)) ?></b> · destino <?= $h(saque_mascara($destino)) ?></p>
+      <label for="valor">Valor (R$)</label>
+      <div style="display:flex;gap:8px"><input id="valor" name="valor" inputmode="decimal" placeholder="0,00" required style="flex:1"><button class="btn" type="button" onclick="document.getElementById('valor').value='<?= $saldo ? number_format($saldo, 2, ',', '.') : '0,00' ?>'">Tudo</button></div>
+      <label for="senha">Sua senha, pra confirmar</label>
+      <input id="senha" name="senha" type="password" autocomplete="current-password" required>
+      <div class="acts" style="margin-top:14px;justify-content:flex-end"><button class="btn" type="button" onclick="this.closest('dialog').close()">Cancelar</button><button class="btn sig">Confirmar saque</button></div>
+      <p class="note">O saldo é da conta da empresa. O Pix sai sempre pra chave acima, que não pode ser mudada por aqui.</p>
+    <?php endif; ?>
+  </form>
+</dialog>
+<?php endif; ?>
+
+<p class="note">Os números vêm dos pedidos feitos pelo site e são atualizados sozinhos a cada pagamento. "Atualizar pagamentos" confere tudo de novo, caso algo não tenha chegado.</p>
 </div></body></html>

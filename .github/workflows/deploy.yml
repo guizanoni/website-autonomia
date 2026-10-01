@@ -29,12 +29,17 @@ jobs:
           ADMIN_KEY: ${{ secrets.ADMIN_KEY }}
           ADMIN_USER: ${{ secrets.ADMIN_USER }}
           ADMIN_PASS_HASH: ${{ secrets.ADMIN_PASS_HASH }}
+          ADMIN_USERS_JSON: ${{ secrets.ADMIN_USERS_JSON }}
+          SAQUE_PIX_CHAVE: ${{ secrets.SAQUE_PIX_CHAVE }}
+          SAQUE_PIX_TIPO: ${{ secrets.SAQUE_PIX_TIPO }}
           GRUPO_WHATSAPP: ${{ secrets.GRUPO_WHATSAPP }}
           CUPONS_JSON: ${{ secrets.CUPONS_JSON }}
         run: |
           php -r '
             $c = json_decode(getenv("CUPONS_JSON") ?: "{}", true);
             if (!is_array($c)) { fwrite(STDERR, "CUPONS_JSON invalido\n"); exit(1); }
+            $u = json_decode(getenv("ADMIN_USERS_JSON") ?: "{}", true);
+            if (!is_array($u)) { fwrite(STDERR, "ADMIN_USERS_JSON invalido\n"); exit(1); }
             $cfg = [
               "env" => getenv("ASAAS_ENV") === "production" ? "production" : "sandbox",
               "asaas_key" => (string) getenv("ASAAS_API_KEY"),
@@ -42,11 +47,14 @@ jobs:
               "admin_key" => (string) getenv("ADMIN_KEY"),
               "admin_user" => (string) getenv("ADMIN_USER"),
               "admin_pass_hash" => (string) getenv("ADMIN_PASS_HASH"),
+              "admin_users" => $u,
+              "saque_pix_chave" => (string) getenv("SAQUE_PIX_CHAVE"),
+              "saque_pix_tipo" => (string) getenv("SAQUE_PIX_TIPO"),
               "grupo_whatsapp" => (string) getenv("GRUPO_WHATSAPP"),
               "cupons" => $c,
             ];
             file_put_contents("api/_config-secret.php", "<?php\nreturn " . var_export($cfg, true) . ";\n");
-            echo "config gerada: ambiente ", $cfg["env"], ", ", count($c), " cupom(ns)\n";
+            echo "config gerada: ambiente ", $cfg["env"], ", ", count($c), " cupom(ns), ", count($u), " usuario(s)\n";
           '
 
       # Site estático (index.html + brand/ + images/) + PHP do checkout em api/, sem build.

@@ -36,6 +36,14 @@ function cfg(): array
             'admin_key'      => '',
             'admin_user'     => '',
             'admin_pass_hash'=> '',            // bcrypt (password_hash); a senha em si nunca fica em lugar nenhum
+            // Vários usuários: ['gui' => ['hash' => bcrypt, 'papel' => 'admin'|'leitura'], ...]
+            'admin_users'    => [],
+            // Saque: o Pix sai SEMPRE pra esta chave (definida nos secrets, nunca editável pela tela).
+            'saque_pix_chave'=> '',
+            'saque_pix_tipo' => '',            // CPF | CNPJ | EMAIL | PHONE | EVP
+            // Desligado: o validador de saque da conta (pipo.guru) recusa transferências que não nasceram
+            // no painel dele. Enquanto isso, o saque é feito em pipo.guru/financeiro (mesma conta, mesmo saldo).
+            'saque_habilitado' => false,
             'cupons'         => [],               // 'CODIGO' => ['preco' => 997, 'nome' => 'Comunidade X', 'limite' => 20]
             'grupo_whatsapp' => '',
             'site'           => 'https://autonomia.vc',
@@ -370,4 +378,67 @@ function financeiro(array $pedidos): array
     }
     ksort($f['dias']);
     return $f;
+}
+
+// ---- saque (transferência Pix pra chave fixa) ------------------------------
+// A conta Asaas é compartilhada com o pipo.guru, que tem o mecanismo "validação de saque via
+// webhook": toda transferência via API só sai se o pipo.guru aprovar. Ele aprova as do próprio
+// painel e, pra estas, consulta api/saque-confirma.php, que só confirma o que foi registrado aqui
+// (id + valor), ou seja, o que nasceu do /admin com login e senha.
+function saque_destino(): ?array
+{
+    $chave = trim((string)cfg()['saque_pix_chave']);
+    $tipo = strtoupper(trim((string)cfg()['saque_pix_tipo']));
+    if ($chave === '' || !in_array($tipo, ['CPF', 'CNPJ', 'EMAIL', 'PHONE', 'EVP'], true)) return null;
+    return ['chave' => $chave, 'tipo' => $tipo];
+}
+
+function saque_mascara(array $d): string
+{
+    $c = $d['chave'];
+    return $d['tipo'] . ' ' . (strlen($c) > 6 ? substr($c, 0, 3) . str_repeat('•', max(3, strlen($c) - 6)) . substr($c, -3) : $c);
+}
+
+function saques_arquivo(): string { return data_dir() . '/saques-criados.json'; }
+
+function saque_registrar(string $id, int $centavos): void
+{
+    $f = saques_arquivo();
+    $j = json_decode((string)@file_get_contents($f), true) ?: [];
+    $j[$id] = ['centavos' => $centavos, 'em' => date('c')];
+    file_put_contents($f, json_encode($j, JSON_PRETTY_PRINT), LOCK_EX);
+}
+
+function saque_criado(string $id): ?array
+{
+    $j = json_decode((string)@file_get_contents(saques_arquivo()), true) ?: [];
+    return $j[$id] ?? null;
+}
+
+function saque_criar(int $centavos): array
+{
+    $d = saque_destino();
+    if (!$d) return ['ok' => false, 'erro' => 'Chave Pix de destino não configurada.'];
+    $r = asaas('POST', '/transfers', [
+        'value'             => round($centavos / 100, 2),
+        'operationType'     => 'PIX',
+        'pixAddressKey'     => $d['chave'],
+        'pixAddressKeyType' => $d['tipo'],
+        'description'       => 'AUTONOM/IA · saque via painel',
+    ]);
+    $id = $r['data']['id'] ?? null;
+    if (!$id) return ['ok' => false, 'erro' => asaas_erro($r)];
+    saque_registrar($id, $centavos);
+    return ['ok' => true, 'id' => $id, 'status' => $r['data']['status'] ?? ''];
+}
+
+// ---- usuários do /admin ------------------------------------------------------
+function admin_usuarios(): array
+{
+    $u = is_array(cfg()['admin_users']) ? cfg()['admin_users'] : [];
+    // compatibilidade com o primeiro formato (um usuário só, administrador)
+    if (cfg()['admin_user'] && cfg()['admin_pass_hash'] && !isset($u[cfg()['admin_user']])) {
+        $u[cfg()['admin_user']] = ['hash' => cfg()['admin_pass_hash'], 'papel' => 'admin'];
+    }
+    return $u;
 }
