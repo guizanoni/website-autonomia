@@ -42,6 +42,14 @@ table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;ove
   <div><b><?= $h(brl($receita)) ?></b>recebido (bruto)</div>
   <div><b><?= count(array_filter($pedidos, fn($p) => $p['status'] === 'aguardando')) ?></b>aguardando pagamento</div>
 </div>
+<?php
+$evs = glob(data_dir('eventos') . '/*.json') ?: [];
+usort($evs, fn($a, $b) => filemtime($b) <=> filemtime($a));
+$evs = array_slice($evs, 0, 8);
+?>
+<p class="sub">Últimos avisos do Asaas recebidos: <?php if (!$evs): ?>nenhum ainda.<?php else: foreach ($evs as $f): $e = json_decode((string)file_get_contents($f), true); ?>
+  <br>· <?= $h(date('d/m H:i:s', filemtime($f))) ?> · <?= $h($e['event'] ?? '?') ?> · <?= $h($e['payment']['externalReference'] ?? '') ?>
+<?php endforeach; endif; ?></p>
 <div class="wrap"><table>
 <tr><th>Status</th><th>Quando</th><th>Compradora</th><th>Amiga</th><th>Pagamento</th><th>Código</th><th>Nota</th></tr>
 <?php foreach ($pedidos as $p): ?>
