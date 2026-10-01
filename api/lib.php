@@ -34,6 +34,8 @@ function cfg(): array
             'asaas_key'      => '',
             'webhook_token'  => '',
             'admin_key'      => '',
+            'admin_user'     => '',
+            'admin_pass_hash'=> '',            // bcrypt (password_hash); a senha em si nunca fica em lugar nenhum
             'cupons'         => [],               // 'CODIGO' => ['preco' => 997, 'nome' => 'Comunidade X', 'limite' => 20]
             'grupo_whatsapp' => '',
             'site'           => 'https://autonomia.vc',
@@ -300,4 +302,72 @@ function notificar_equipe(array $p, string $titulo): void
     ]);
     curl_exec($ch);
     curl_close($ch);
+}
+
+// ---- financeiro: espelho dos pagamentos do Asaas dentro de cada pedido -----
+const PAGO_STATUS = ['RECEIVED', 'CONFIRMED', 'RECEIVED_IN_CASH'];
+
+function pagamento_resumo(array $pay): array
+{
+    return [
+        'id'        => $pay['id'] ?? '',
+        'status'    => $pay['status'] ?? '',
+        'forma'     => $pay['billingType'] ?? '',
+        'valor'     => (float)($pay['value'] ?? 0),
+        'liquido'   => (float)($pay['netValue'] ?? 0),
+        'parcela'   => $pay['installmentNumber'] ?? null,
+        'vencimento'=> $pay['dueDate'] ?? null,
+        'credito_previsto' => $pay['estimatedCreditDate'] ?? null,
+        'creditado_em'     => $pay['creditDate'] ?? null,
+        'fatura'    => $pay['invoiceUrl'] ?? null,
+    ];
+}
+
+// Busca no Asaas todas as cobranças do pedido (inclui parcelas) e recalcula o status.
+function sincronizar_pedido(array $p): array
+{
+    $r = asaas('GET', '/payments?externalReference=' . urlencode($p['id']) . '&limit=100');
+    if ($r['code'] !== 200) return $p;
+    $lista = $r['data']['data'] ?? [];
+    $p['pagamentos'] = [];
+    foreach ($lista as $pay) $p['pagamentos'][$pay['id']] = pagamento_resumo($pay);
+    $st = array_column($p['pagamentos'], 'status');
+    $pago = (bool)array_intersect($st, PAGO_STATUS);
+    $estornado = $st && !array_diff($st, ['REFUNDED', 'REFUND_REQUESTED', 'REFUND_IN_PROGRESS', 'CHARGEBACK_REQUESTED', 'CHARGEBACK_DISPUTE']);
+    if ($estornado) $p['status'] = 'estornado';
+    elseif ($pago) { if ($p['status'] !== 'pago') { $p['status'] = 'pago'; $p['pago_em'] = $p['pago_em'] ?? date('c'); } }
+    elseif (in_array('OVERDUE', $st, true) && $p['status'] === 'aguardando') $p['status'] = 'vencido';
+    elseif (!$lista && $p['status'] === 'aguardando') $p['status'] = 'cancelado';
+    $p['sincronizado_em'] = date('c');
+    pedido_salvar($p);
+    return $p;
+}
+
+function financeiro(array $pedidos): array
+{
+    $f = ['pagos' => 0, 'vagas' => 0, 'bruto' => 0.0, 'liquido' => 0.0, 'liquido_conhecido' => true, 'a_receber' => 0.0,
+          'recebido' => 0.0, 'aguardando' => 0, 'aguardando_valor' => 0.0, 'estornados' => 0, 'criados' => 0,
+          'pix' => 0.0, 'cartao' => 0.0, 'cupons' => [], 'dias' => []];
+    foreach ($pedidos as $p) {
+        if (($p['p1']['email'] ?? '') === '' ) continue;
+        $f['criados']++;
+        if ($p['status'] === 'aguardando') { $f['aguardando']++; $f['aguardando_valor'] += (float)$p['total']; }
+        if ($p['status'] === 'estornado') $f['estornados']++;
+        if ($p['status'] !== 'pago') continue;
+        $f['pagos']++; $f['vagas'] += (int)$p['vagas']; $f['bruto'] += (float)$p['total'];
+        $f[$p['forma'] === 'pix' ? 'pix' : 'cartao'] += (float)$p['total'];
+        $cup = $p['cupom'] ?: 'sem código';
+        $f['cupons'][$cup] = ($f['cupons'][$cup] ?? ['vagas' => 0, 'valor' => 0.0]);
+        $f['cupons'][$cup]['vagas'] += (int)$p['vagas']; $f['cupons'][$cup]['valor'] += (float)$p['total'];
+        $dia = substr($p['pago_em'] ?? $p['criado_em'], 0, 10);
+        $f['dias'][$dia] = ($f['dias'][$dia] ?? 0) + (float)$p['total'];
+        if (empty($p['pagamentos'])) { $f['liquido_conhecido'] = false; continue; }
+        foreach ($p['pagamentos'] as $pg) {
+            if (!in_array($pg['status'], PAGO_STATUS, true)) continue;
+            $f['liquido'] += $pg['liquido'];
+            if ($pg['status'] === 'CONFIRMED') $f['a_receber'] += $pg['liquido']; else $f['recebido'] += $pg['liquido'];
+        }
+    }
+    ksort($f['dias']);
+    return $f;
 }

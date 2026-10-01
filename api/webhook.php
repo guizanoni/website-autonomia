@@ -43,6 +43,7 @@ switch ($ev['event']) {
         $pedido['status'] = $ev['event'] === 'PAYMENT_DELETED' && $pedido['status'] !== 'pago' ? 'cancelado' : 'estornado';
         break;
 }
+if (!empty($pay['id'])) $pedido['pagamentos'][$pay['id']] = pagamento_resumo($pay);   // espelho financeiro (valor, líquido, previsão de crédito)
 $pedido['eventos'][] = ['evento' => $ev['event'], 'em' => date('c')];
 pedido_salvar($pedido);
 

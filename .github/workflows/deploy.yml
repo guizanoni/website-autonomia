@@ -27,6 +27,8 @@ jobs:
           ASAAS_API_KEY: ${{ secrets.ASAAS_API_KEY }}
           ASAAS_WEBHOOK_TOKEN: ${{ secrets.ASAAS_WEBHOOK_TOKEN }}
           ADMIN_KEY: ${{ secrets.ADMIN_KEY }}
+          ADMIN_USER: ${{ secrets.ADMIN_USER }}
+          ADMIN_PASS_HASH: ${{ secrets.ADMIN_PASS_HASH }}
           GRUPO_WHATSAPP: ${{ secrets.GRUPO_WHATSAPP }}
           CUPONS_JSON: ${{ secrets.CUPONS_JSON }}
         run: |
@@ -38,6 +40,8 @@ jobs:
               "asaas_key" => (string) getenv("ASAAS_API_KEY"),
               "webhook_token" => (string) getenv("ASAAS_WEBHOOK_TOKEN"),
               "admin_key" => (string) getenv("ADMIN_KEY"),
+              "admin_user" => (string) getenv("ADMIN_USER"),
+              "admin_pass_hash" => (string) getenv("ADMIN_PASS_HASH"),
               "grupo_whatsapp" => (string) getenv("GRUPO_WHATSAPP"),
               "cupons" => $c,
             ];

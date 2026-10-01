@@ -60,7 +60,7 @@ Secrets necessários no GitHub: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
   pedido como pago, conta vagas (esgota sozinho em 50) e avisa a equipe via `enviar.php`
   do guizanoni.com. Pedidos ficam em `api/_data/` (bloqueado por `.htaccess`, fora do git
   e fora do deploy).
-- Painel: `/api/admin.php?key=ADMIN_KEY` (e `&csv=1`). Pós-pagamento: `/obrigado/?pedido=ID`.
+- Painel financeiro: `/admin/` (login `ADMIN_USER` + `ADMIN_PASS_HASH` bcrypt, sessão, CSRF, trava após 8 tentativas): KPIs, saldo Asaas, vendas por dia, sincronizar, estornar, CSV. Pós-pagamento: `/obrigado/?pedido=ID`.
 - Segredos **só** nos secrets do GitHub: `ASAAS_ENV` (sandbox|production), `ASAAS_API_KEY`,
   `ASAAS_WEBHOOK_TOKEN`, `ADMIN_KEY`, `GRUPO_WHATSAPP`, `CUPONS_JSON`
   (ex.: `{"CODIGO":{"preco":997,"nome":"Comunidade X","limite":20}}`). O deploy gera
