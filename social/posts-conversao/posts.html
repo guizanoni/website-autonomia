@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>AUTONOM/IA Mulheres · posts de conversão</title>
+<!-- Molde dos posts. Uso: posts.html?p=1|2|3&f=ig|li  (ig = 1080x1350, li = 1080x1080) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --soft:#f4f4f2; --ink:#191c1f; --mut:#6b6e73; --line:#e3e3df;
+  --dark:#0e0f11; --dark2:#1a1c1f; --dmut:#9a9ca1;
+  --sig:#ff5b2e;
+  --glass:rgba(255,255,255,.16); --glassb:rgba(255,255,255,.38);
+  --f:"Geist",system-ui,-apple-system,sans-serif; --m:"Geist Mono",ui-monospace,Menlo,monospace;
+  --h:1350px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:var(--h);overflow:hidden;font-family:var(--f);-webkit-font-smoothing:antialiased}
+body.li{--h:1080px}
+.post{display:none;position:relative;width:1080px;height:var(--h);padding:72px;flex-direction:column}
+body.p1 .p1,body.p2 .p2,body.p3 .p3{display:flex}
+
+.logo{font-weight:600;font-size:40px;letter-spacing:-.04em;line-height:1;white-space:nowrap}
+.logo i{font-style:normal;color:var(--sig)}
+.top{display:flex;justify-content:space-between;align-items:center}
+.tag{font-family:var(--m);font-size:22px;letter-spacing:.02em;text-transform:uppercase}
+.pills{display:flex;gap:14px;flex-wrap:wrap}
+.pill{font-size:26px;font-weight:500;padding:16px 26px;border-radius:999px;white-space:nowrap}
+.cta{display:inline-flex;align-items:center;gap:14px;background:var(--sig);color:#fff;font-weight:600;font-size:32px;padding:26px 38px;border-radius:999px;white-space:nowrap}
+h1{font-weight:600;letter-spacing:-.045em;line-height:.98}
+h1 em{font-style:normal;color:var(--sig)}
+
+/* 1 · resultado */
+.p1{color:#fff;background:#111 url(../../images/mulheres/p3.jpg) center 62%/cover}
+.p1::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.12) 34%,rgba(0,0,0,.2) 52%,rgba(0,0,0,.9) 100%)}
+.p1>*{position:relative}
+.p1 h1{font-size:104px;margin-top:54px}
+.card{position:absolute;backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);background:var(--glass);border:1.5px solid var(--glassb);border-radius:28px;padding:22px 28px;min-width:330px}
+.card small{display:block;font-family:var(--m);font-size:18px;text-transform:uppercase;opacity:.85;margin-bottom:8px}
+.card b{display:block;font-size:42px;font-weight:600;letter-spacing:-.03em;line-height:1.05}
+.card span{display:block;font-size:22px;opacity:.9;margin-top:6px}
+.p1 .c1{left:72px;top:590px}
+.p1 .c2{right:72px;top:760px}
+.p1 .foot{margin-top:auto}
+.p1 .foot p{font-size:36px;line-height:1.25;font-weight:500;letter-spacing:-.02em;margin-bottom:30px;max-width:900px}
+.p1 .pill{background:var(--glass);border:1.5px solid var(--glassb)}
+body.li .p1{background-position:center 40%}
+body.li .p1 h1{font-size:86px;margin-top:36px}
+body.li .p1 .c1{top:440px}
+body.li .p1 .c2{top:596px;right:auto;left:72px}
+body.li .p1 .foot p{font-size:32px;margin-bottom:24px}
+
+/* 2 · garantia */
+.p2{background:var(--dark);color:#fff}
+.p2 .tag{color:var(--dmut)}
+.p2 .mid{margin:auto 0}
+.p2 .selo{display:inline-flex;align-items:center;gap:14px;border:1.5px solid #3a3d42;color:#fff;font-size:26px;font-weight:500;padding:14px 26px;border-radius:999px;margin-bottom:44px}
+.p2 .selo::before{content:"";width:14px;height:14px;border-radius:50%;background:var(--sig)}
+.p2 h1{font-size:136px}
+.p2 .sub{font-size:38px;line-height:1.28;color:#d6d7da;letter-spacing:-.02em;margin-top:44px;max-width:880px}
+.p2 .sub b{color:#fff;font-weight:600}
+.p2 .foot{display:flex;justify-content:space-between;align-items:flex-end;border-top:1.5px solid #2a2c30;padding-top:34px}
+.p2 .foot div{font-size:26px;line-height:1.35;color:var(--dmut)}
+.p2 .foot div b{display:block;color:#fff;font-weight:600;font-size:30px}
+body.li .p2 h1{font-size:112px}
+body.li .p2 .selo{margin-bottom:30px}
+body.li .p2 .sub{font-size:32px;margin-top:30px}
+body.li .p2 .foot div b{font-size:26px}
+body.li .p2 .foot div{font-size:23px}
+
+/* 3 · fundadoras */
+.p3{background:var(--soft);color:var(--ink)}
+.p3 .tag{color:var(--mut)}
+.p3 h1{font-size:128px;margin-top:64px}
+.p3 .grid{display:grid;grid-template-columns:repeat(10,1fr);gap:14px;margin-top:50px}
+.p3 .grid i{aspect-ratio:1;border-radius:50%;border:2.5px solid #c9c9c4}
+.p3 .grid i.eu{background:var(--sig);border-color:var(--sig)}
+.p3 .leg{font-size:30px;font-weight:500;letter-spacing:-.02em;margin-top:26px;display:flex;align-items:center;gap:14px}
+.p3 .leg::before{content:"";width:24px;height:24px;border-radius:50%;background:var(--sig)}
+.p3 .foot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:30px}
+.p3 .preco small{display:block;font-size:26px;color:var(--mut);margin-bottom:6px}
+.p3 .preco b{display:block;font-size:76px;font-weight:600;letter-spacing:-.045em;line-height:1}
+.p3 .preco span{display:block;font-size:26px;color:var(--mut);margin-top:10px}
+.p3 .linha{font-size:26px;color:var(--mut);border-top:1.5px solid var(--line);margin-top:34px;padding-top:26px;display:flex;justify-content:space-between}
+body.li .p3 h1{font-size:100px;margin-top:30px}
+body.li .p3 .grid{gap:12px;margin-top:30px;width:540px}
+body.li .p3 .leg{margin-top:18px;font-size:26px}
+body.li .p3 .linha{margin-top:24px;padding-top:20px}
+</style>
+</head>
+<body>
+
+<section class="post p1">
+  <div class="top"><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div><div class="tag">Curitiba · 11/11</div></div>
+  <h1>Você chega com<br>uma ideia. Sai com<br>ela <em>funcionando.</em></h1>
+  <div class="card c1"><small>Exemplo: seus posts do mês</small><b>30 posts</b><span>Prontos pra postar</span></div>
+  <div class="card c2"><small>Exemplo: sua página</small><b>No ar</b><span>Feita por você, com link</span></div>
+  <div class="foot">
+    <p>Um dia inteiro de IA, só pra mulheres. Com o notebook aberto e gente do lado pra ajudar.</p>
+    <div class="pills"><span class="pill">Quarta, 11/11</span><span class="pill">Hard Rock Café Curitiba</span><span class="pill">Apenas 50 vagas</span></div>
+  </div>
+</section>
+
+<section class="post p2">
+  <div class="top"><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div><div class="tag">Curitiba · 11/11</div></div>
+  <div class="mid">
+    <div class="selo">Garantia até o almoço</div>
+    <h1>Não gostou<br>até o almoço?<br><em>Seu dinheiro<br>volta.</em></h1>
+    <p class="sub">Fique a manhã toda. Se até as 12h30 sentir que não é pra você, é só avisar. <b>A gente devolve 100% do valor.</b></p>
+  </div>
+  <div class="foot">
+    <div><b>Um dia inteiro de IA, só pra mulheres</b>Hard Rock Café Curitiba · 8h às 18h30</div>
+    <span class="cta">Link na bio →</span>
+  </div>
+</section>
+
+<section class="post p3">
+  <div class="top"><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div><div class="tag">Turma 1 · 11.11.2026</div></div>
+  <h1>As fundadoras.<br><em>Só 50 cadeiras.</em></h1>
+  <div class="grid" id="grid"></div>
+  <div class="leg">Uma dessas pode ser a sua.</div>
+  <div class="foot">
+    <div class="preco"><small>Um dia inteiro, com almoço e kit pra levar</small><b>10x de R$ 129,70</b><span>ou R$ 1.232,15 à vista no PIX</span></div>
+    <span class="cta">Garantir vaga →</span>
+  </div>
+  <div class="linha"><span>Quarta, 11 de novembro · Hard Rock Café Curitiba</span><span>autonomia.vc/mulheres</span></div>
+</section>
+
+<script>
+const q=new URLSearchParams(location.search);
+document.body.className='p'+(q.get('p')||1)+' '+(q.get('f')||'ig');
+if(q.get('f')==='li')document.querySelectorAll('.p2 .cta').forEach(e=>e.textContent='autonomia.vc/mulheres');
+const g=document.getElementById('grid');
+for(let n=0;n<50;n++){const d=document.createElement('i');if(n===27)d.className='eu';g.appendChild(d)}
+</script>
+</body>
+</html>
