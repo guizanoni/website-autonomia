@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>AUTONOM/IA Mulheres · vitrine dos posts</title>
+<link rel="icon" href="/brand/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --soft:#f4f4f2; --ink:#191c1f; --mut:#6b6e73; --line:#e3e3df;
+  --dark:#0e0f11; --sig:#ff5b2e; --ok:#127a3a;
+  --f:"Geist",system-ui,-apple-system,sans-serif; --m:"Geist Mono",ui-monospace,Menlo,monospace;
+  --r:28px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--f);background:var(--soft);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.5}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{padding:28px 0 20px}
+.logo{font-weight:600;font-size:24px;letter-spacing:-.04em;line-height:1}
+.logo i{font-style:normal;color:var(--sig)}
+h1{font-size:clamp(34px,6vw,64px);font-weight:600;letter-spacing:-.045em;line-height:1;margin-top:28px}
+h1 em{font-style:normal;color:var(--sig)}
+.lead{color:var(--mut);font-size:18px;margin-top:14px;max-width:620px}
+.bar{position:sticky;top:0;z-index:5;background:rgba(244,244,242,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:12px 0}
+.seg{display:inline-flex;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px}
+.seg button{font:500 16px var(--f);color:var(--mut);background:none;border:0;border-radius:999px;padding:10px 20px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--dark);color:#fff}
+.post{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:28px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;margin:24px 0;align-items:start}
+.post figure img{display:block;width:100%;height:auto;border-radius:18px;border:1px solid var(--line)}
+.num{font-family:var(--m);font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}
+.post h2{font-size:28px;font-weight:600;letter-spacing:-.035em;line-height:1.1;margin:6px 0 16px}
+.cap{white-space:pre-wrap;font-size:16px;line-height:1.55;background:var(--soft);border-radius:18px;padding:20px;overflow-wrap:anywhere}
+.acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.btn{font:600 16px var(--f);border-radius:999px;padding:13px 22px;cursor:pointer;text-decoration:none;border:1px solid var(--line);background:#fff;color:var(--ink)}
+.btn.pri{background:var(--sig);border-color:var(--sig);color:#fff}
+.btn.ok{background:var(--ok);border-color:var(--ok);color:#fff}
+footer{color:var(--mut);font-size:14px;padding:8px 0 48px}
+footer a{color:inherit}
+@media(max-width:820px){
+  .post{grid-template-columns:1fr;padding:16px;gap:18px}
+  .seg{display:flex}.seg button{flex:1}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div>
+    <h1>3 posts pra <em>fechar vaga.</em></h1>
+    <p class="lead">Imagem e legenda de cada post, por rede. Escolha a rede, copie a legenda e baixe a imagem.</p>
+  </header>
+</div>
+
+<div class="bar"><div class="wrap">
+  <div class="seg" role="group" aria-label="Rede">
+    <button type="button" data-rede="instagram" aria-pressed="true">Instagram · 4:5</button>
+    <button type="button" data-rede="linkedin" aria-pressed="false">LinkedIn · 1:1</button>
+  </div>
+</div></div>
+
+<main class="wrap" id="lista"></main>
+
+<div class="wrap"><footer>Destino das legendas: <a href="https://autonomia.vc/mulheres/">autonomia.vc/mulheres</a> · Texto em <a href="legendas.md">legendas.md</a> · Molde das imagens em <a href="posts.html?p=1&f=ig">posts.html</a></footer></div>
+
+<script>
+// As legendas vêm do legendas.md, que é a fonte única do texto.
+var REDES={instagram:'Instagram',linkedin:'LinkedIn'}, rede='instagram', posts=[];
+
+function ler(md){
+  return md.split(/^## /m).slice(1).map(function(bloco,i){
+    var p={n:i+1,titulo:bloco.split('\n')[0].replace(/^Post \d+ · /,''),leg:{}};
+    bloco.split(/^### /m).slice(1).forEach(function(parte){
+      var nome=parte.split('\n')[0].trim().toLowerCase();
+      p.leg[nome]=parte.slice(parte.indexOf('\n')).replace(/\n---\s*$/,'').trim();
+    });
+    return p;
+  });
+}
+
+function pintar(){
+  document.getElementById('lista').innerHTML=posts.map(function(p){
+    var img='post-'+p.n+'-'+rede+'.png';
+    return '<article class="post"><figure><img src="'+img+'" alt="Post '+p.n+' para '+REDES[rede]+': '+p.titulo+'"></figure>'+
+      '<div><div class="num">Post '+p.n+' · '+REDES[rede]+'</div><h2>'+p.titulo+'</h2>'+
+      '<div class="cap" id="cap'+p.n+'"></div>'+
+      '<div class="acts"><button type="button" class="btn pri" data-copia="'+p.n+'">Copiar legenda</button>'+
+      '<a class="btn" href="'+img+'" download>Baixar imagem</a></div></div></article>';
+  }).join('');
+  posts.forEach(function(p){document.getElementById('cap'+p.n).textContent=p.leg[rede]||''});
+}
+
+document.addEventListener('click',function(e){
+  var b=e.target.closest('[data-rede]');
+  if(b){
+    rede=b.dataset.rede;
+    document.querySelectorAll('[data-rede]').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+    pintar();return;
+  }
+  var c=e.target.closest('[data-copia]');
+  if(c){
+    var txt=document.getElementById('cap'+c.dataset.copia).textContent;
+    var fim=function(){c.textContent='Copiada';c.classList.add('ok');setTimeout(function(){c.textContent='Copiar legenda';c.classList.remove('ok')},1800)};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(fim)}
+    else{var t=document.createElement('textarea');t.value=txt;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();fim()}
+  }
+});
+
+fetch('legendas.md').then(function(r){return r.text()}).then(function(md){posts=ler(md);pintar()})
+  .catch(function(){document.getElementById('lista').innerHTML='<p style="padding:24px 0">Não deu pra carregar as legendas. Abra <a href="legendas.md">legendas.md</a>.</p>'});
+</script>
+</body>
+</html>
