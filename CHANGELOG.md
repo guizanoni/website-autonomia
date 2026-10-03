@@ -7,6 +7,12 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
+## 2026-10-03 — Seção de aprendizado integrada ao visual da página
+
+- As seis entregas passam a formar três etapas do encontro, em um painel claro com divisórias e laranja restrito aos detalhes. Removidos os cartões com gradientes e os estilos antigos de bandeja/hover.
+- A aba do kit organiza quatro materiais e destaca o acesso sem prazo. Conteúdo preservado, com leitura em colunas no desktop e fluxo vertical no celular.
+- Abas com foco visível e navegação por setas, Home e End. Conferidos os dois painéis, a agenda e o encaixe entre 320 e 1440 pixels, incluindo os limites do layout de tablet.
+
 ## 2026-10-02 — Chamada principal com IA explícita
 
 - Nova abertura: “Use a IA para tirar ideias do papel e automatizar tarefas do seu negócio.” Título de compartilhamento atualizado e tipografia ajustada para desktop e celular.

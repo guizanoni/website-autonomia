@@ -189,28 +189,57 @@ header.solid .nav-toggle{background:var(--soft);border-color:var(--line)}
 .manif p.big s{color:var(--mut);text-decoration-color:var(--sig);text-decoration-thickness:.08em}
 .manif p.big em{font-style:normal;color:var(--sig)}
 
-/* ---------- toolkit (bandeja com cards) ---------- */
-.kit{overflow:hidden;padding-bottom:0}
-.tray-wrap{position:relative;margin-top:28px;height:clamp(300px,34vw,430px);perspective:1400px}
-.tray{position:absolute;left:50%;bottom:-40px;width:min(1040px,120%);height:88%;transform:translateX(-50%) rotateX(24deg);transform-origin:50% 100%;border-radius:36px 36px 0 0;background:linear-gradient(180deg,#3a3d42 0%,#1d1f22 40%,#121315 100%);box-shadow:inset 0 2px 0 rgba(255,255,255,.25),inset 0 0 0 1px rgba(255,255,255,.08),0 -30px 80px rgba(255,91,46,.12)}
-.tray::before{content:"";position:absolute;inset:18px 18px 0;border-radius:24px 24px 0 0;background:linear-gradient(180deg,#0b0c0d,#16181a);box-shadow:inset 0 10px 30px rgba(0,0,0,.8)}
-.kcards{position:absolute;left:50%;bottom:0;transform:translateX(-50%);display:flex;gap:clamp(8px,1.2vw,16px);width:min(1120px,112%);justify-content:center;padding-bottom:6%}
-.kc{flex:0 0 clamp(112px,14.4vw,170px);aspect-ratio:.63;border-radius:18px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;transform:translateY(var(--ky,0)) rotate(var(--kr,0));transition:transform .6s cubic-bezier(.2,.8,.2,1),filter .4s,box-shadow .4s;box-shadow:0 20px 40px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.25);position:relative;overflow:hidden}
-.kc::after{content:"";position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.22) 0%,rgba(255,255,255,0) 35%);pointer-events:none}
-.kc .k1{font-size:12px;font-family:var(--m);letter-spacing:.08em;text-transform:uppercase;opacity:.75}
-.kc .k2{font-size:clamp(16px,1.6vw,21px);font-weight:600;letter-spacing:-.03em;line-height:1.1;hyphens:manual;-webkit-hyphens:manual}
-.kc .k3{font-size:13px;opacity:.8;line-height:1.35}
-.kc.a{background:linear-gradient(160deg,#ff7a4d,#ff5b2e 45%,#b8300c)}
-.kc.b{background:linear-gradient(160deg,#4a4e55,#23262a)}
-.kc.c{background:linear-gradient(160deg,#2b2e33,#0f1012)}
-.kc.d{background:linear-gradient(160deg,#6d7078,#393c42)}
-.kc.e{background:linear-gradient(160deg,#1f2124,#050506)}
-.kc:nth-child(1){--kr:-4deg;--ky:16px}.kc:nth-child(2){--kr:-2deg;--ky:4px}.kc:nth-child(3){--kr:-.5deg;--ky:-6px}.kc:nth-child(4){--kr:.5deg;--ky:-6px}.kc:nth-child(5){--kr:2deg;--ky:4px}.kc:nth-child(6){--kr:4deg;--ky:16px}
-.kit-tabs{display:flex;justify-content:center;gap:10px;margin-top:28px;flex-wrap:wrap}
+/* ---------- aprendizado: três etapas, uma mesma linguagem visual ---------- */
+.kit{background:var(--soft)}
+.kit-head{display:grid;grid-template-columns:1.3fr 1fr;align-items:end;gap:64px}
+.kit-head h2{font-size:clamp(34px,4.5vw,56px)}
+.kit-head .lead{font-size:18px;line-height:1.6;max-width:35ch;margin:0 0 3px}
+.kit-tabs{display:inline-flex;gap:4px;padding:5px;margin-top:36px;border:1px solid var(--line);border-radius:999px;background:#eaeae7}
+.kit-tabs button{border:0;border-radius:999px;padding:13px 22px;background:transparent;color:var(--mut);font:500 15px/1.25 var(--f);cursor:pointer;transition:background .2s,color .2s,box-shadow .2s}
+.kit-tabs button:hover{color:var(--ink)}
+.kit-tabs button[aria-selected="true"]{background:#fff;color:var(--ink);box-shadow:0 1px 5px rgba(0,0,0,.07)}
+.kit-panel{margin-top:28px;border:1px solid var(--line);border-radius:var(--r);background:#fff;overflow:hidden}
+.kit-panel[hidden]{display:none}
+.kit-stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:36px 0}
+.kit-stage{padding:0 32px;min-width:0}
+.kit-stage+.kit-stage{border-left:1px solid var(--line)}
+.kit-stage-meta{display:flex;align-items:center;gap:12px;margin-bottom:20px;font-size:13px;font-weight:500;color:var(--mut)}
+.kit-step{display:grid;place-items:center;flex:none;width:38px;height:38px;border:1px solid rgba(255,91,46,.24);border-radius:50%;color:var(--sigdk);font:13px var(--m)}
+.kit-stage>h3{font-size:27px;line-height:1.12;max-width:14ch;min-height:2.24em;margin-bottom:28px}
+.kit-item+.kit-item{border-top:1px solid var(--line);padding-top:24px;margin-top:24px}
+.kit-item h4{font-size:18px;line-height:1.3;font-weight:600;letter-spacing:-.02em}
+.kit-item p{font-size:15px;line-height:1.6;color:var(--mut);margin-top:10px}
+.kit-resources{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
+.kit-resource-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;padding:36px}
+.kit-resource-list .kit-item+.kit-item{border:0;padding:0;margin:0}
+.kit-resource-icon{display:grid;place-items:center;width:42px;height:42px;margin-bottom:18px;border:1px solid var(--line);border-radius:12px;color:var(--ink)}
+.kit-resource-icon svg{width:21px;height:21px}
+.kit-access{margin:12px;padding:32px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;border-radius:20px;background:var(--soft)}
+.kit-access>svg{width:56px;height:36px;color:var(--sigdk);margin-bottom:32px}
+.kit-access .eyebrow{font-size:13px;margin-bottom:12px}
+.kit-access h3{font-size:32px;line-height:1.1}
+.kit-access p{font-size:15px;line-height:1.6;color:var(--mut);margin-top:16px}
+.kit-access small{font-size:13px;color:var(--ink);margin-top:26px;padding-top:20px;border-top:1px solid var(--line);width:100%}
+@media(max-width:1000px){.kit-head{gap:32px}.kit-stage{padding-inline:24px}.kit-stage>h3{font-size:24px}.kit-resource-list{gap:28px;padding:28px}.kit-access{padding:24px}}
+@media(max-width:900px){
+  .kit-head{grid-template-columns:1fr;gap:20px}.kit-head .lead{font-size:17px;max-width:50ch}
+  .kit-stages{grid-template-columns:1fr;padding:0 28px}.kit-stage{padding:28px 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px}
+  .kit-stage+.kit-stage{border-left:0;border-top:1px solid var(--line)}
+  .kit-stage-meta,.kit-stage>h3{grid-column:1/-1}.kit-stage-meta{margin-bottom:14px}.kit-stage>h3{min-height:0;max-width:none;margin-bottom:24px}
+  .kit-stage .kit-item+.kit-item{border:0;margin:0;padding:0}
+  .kit-resources{grid-template-columns:1fr}.kit-access{margin:0 12px 12px;padding:28px}.kit-access>svg{margin-bottom:20px}
+}
+@media(max-width:480px){
+  .kit-tabs{display:flex;width:100%;border-radius:22px;margin-top:28px}.kit-tabs button{flex:1;min-width:0;padding:12px 10px;font-size:14px;border-radius:17px}
+  .kit-panel{margin-top:22px;border-radius:24px}.kit-stages{padding-inline:24px}.kit-stage{display:block}
+  .kit-stage .kit-item+.kit-item{border-top:1px solid var(--line);padding-top:20px;margin-top:20px}
+  .kit-resource-list{grid-template-columns:1fr;gap:24px;padding:24px}.kit-resource-list .kit-item+.kit-item{border-top:1px solid var(--line);padding-top:24px}
+}
+
+/* Abas da agenda sobre fotografia. */
 .tabs .pill{padding:11px 20px;font-size:15px}
 .dk .tabs .pill{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.6)}
 .dk .tabs .pill[aria-selected="true"]{background:#fff;color:var(--ink);box-shadow:none}
-@media(max-width:700px){.kc:nth-child(n+4){display:none}.kc{flex-basis:30%}}
 
 /* ---------- o dia (foto cheia + pílulas) ---------- */
 .day{position:relative;min-height:min(920px,110vh);padding:0;color:#fff;overflow:hidden;display:flex;flex-direction:column}
@@ -394,26 +423,10 @@ footer a{color:#fff}
 .h0 #t0,.h1 #t1,.h2 #t2{transform:translateY(-12px) scale(1.03)}
 .caps small.more{color:var(--sig);font-weight:600;max-height:0;opacity:0;overflow:hidden;transition:opacity .3s,max-height .3s}
 .h0 #k0 .more,.h1 #k1 .more,.h2 #k2 .more{opacity:1;max-height:2em}
-.kc{cursor:pointer;outline:none}
-.kc .k4{font-size:13.5px;line-height:1.4;max-height:0;opacity:0;overflow:hidden;transition:max-height .45s,opacity .3s}
-.kc .k4 b{font-weight:600;display:block;font-size:12px;font-family:var(--m);letter-spacing:.06em;text-transform:uppercase;opacity:.8;margin-bottom:4px}
-.kc:hover,.kc:focus-visible{--ky:-44px;--kr:0deg;z-index:3;box-shadow:0 30px 60px rgba(0,0,0,.6),0 0 0 2px rgba(255,255,255,.5)}
-.kc:hover .k4,.kc:focus-visible .k4{max-height:10em;opacity:1}
-.kc:hover .k3,.kc:focus-visible .k3{display:none}
-.kcards:hover .kc:not(:hover){filter:brightness(.5) saturate(.7)}
 .dk .lead .hov{color:#fff}
 @media(hover:none){
   .dk .lead .hov{display:none}
-  .kc .k4{max-height:none;opacity:1}.kc .k3{display:none}
   .caps small.more{max-height:2em;opacity:1}
-}
-@media(max-width:700px){
-  .tray-wrap{height:470px}
-  .kcards{left:0;transform:none;width:100%;justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 16px 40px;gap:12px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-  .kcards::-webkit-scrollbar{display:none}
-  .kc,.kc:nth-child(n+4){display:flex;flex:0 0 64%;scroll-snap-align:center;--ky:0px!important;--kr:0deg!important}
-  .kc .k2{font-size:22px}
-  .kcards:hover .kc:not(:hover){filter:none}
 }
 .badge{cursor:default;transition:box-shadow .3s}
 .badge:hover{animation-play-state:paused;transform:translateY(-22px) scale(1.07)!important;box-shadow:0 40px 60px rgba(0,0,0,.6),0 0 0 3px var(--sig)}
@@ -546,7 +559,7 @@ section[id]{scroll-margin-top:84px}
 .audience-card .pill{margin-top:auto;white-space:normal;line-height:1.25;text-align:center}
 .audience-note{max-width:76ch;margin:26px auto 0;text-align:center;font-size:16px;color:var(--mut)}
 .audience-note b{color:var(--ink)}
-.example{background:var(--soft)}
+.example{background:var(--bg)}
 .example-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:38px}
 .example-grid>article{padding:28px;background:#fff;border:1px solid var(--line);border-radius:24px;min-width:0}
 .example-step{font:12px var(--m);letter-spacing:.06em;color:var(--sigdk)}
@@ -565,19 +578,8 @@ section[id]{scroll-margin-top:84px}
 .final-details b{color:var(--ink)}
 .final-guarantee{margin-top:18px}
 
-/* As entregas ficam visíveis também sem hover e sem rolagem horizontal. */
-.kit{padding-bottom:clamp(72px,8vw,100px)}
-.kit .tray-wrap{height:auto;perspective:none;margin:36px auto 0;max-width:1200px;padding-inline:clamp(16px,4vw,40px)}
-.kit .tray{display:none}
-.kit .kcards{position:static;transform:none;width:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding:0;overflow:visible}
-.kit .kcards[hidden]{display:none}
-.kit .kc,.kit .kc:nth-child(n){display:flex;aspect-ratio:auto;min-height:252px;padding:26px;transform:none;cursor:default;box-shadow:inset 0 1px 0 rgba(255,255,255,.14);justify-content:flex-start;filter:none;gap:18px}
-.kit .kc .k2{font-size:24px;line-height:1.15}
-.kit .kc .k4{max-height:none;opacity:1;overflow:visible;font-size:15px;line-height:1.5}
-.kit .kc:hover,.kit .kc:focus-visible{transform:none;filter:none}
-.kit .kcards:hover .kc:not(:hover){filter:none}
-@media(max-width:900px){.example-grid{grid-template-columns:1fr}.example-page{max-width:360px}.kit .kcards{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:700px){.audience-grid{grid-template-columns:1fr}.kit .kcards{grid-template-columns:1fr}.kit .kc{min-height:0}.audience-card .pill{width:100%}.hero-tx .kick{font-size:12px;line-height:1.35}.hero-tx h1{font-size:clamp(38px,9.5vw,56px)}.hero-tx p{font-size:16px}.hero-tx .row{align-items:flex-start;flex-direction:column;gap:12px}.hero-tx .row .small{font-size:13px}.hero-tx .meta{gap:6px}.hero-tx .meta span{font-size:11px}.example-grid>article{padding:24px}}
+@media(max-width:900px){.example-grid{grid-template-columns:1fr}.example-page{max-width:360px}}
+@media(max-width:700px){.audience-grid{grid-template-columns:1fr}.audience-card .pill{width:100%}.hero-tx .kick{font-size:12px;line-height:1.35}.hero-tx h1{font-size:clamp(38px,9.5vw,56px)}.hero-tx p{font-size:16px}.hero-tx .row{align-items:flex-start;flex-direction:column;gap:12px}.hero-tx .row .small{font-size:13px}.hero-tx .meta{gap:6px}.hero-tx .meta span{font-size:11px}.example-grid>article{padding:24px}}
 
 /* Em telas pequenas e com movimento reduzido, a leitura segue o fluxo normal. */
 @media(max-width:700px),(max-height:760px),(prefers-reduced-motion:reduce){
@@ -714,33 +716,70 @@ section[id]{scroll-margin-top:84px}
   </div>
 </section>
 
-<!-- TOOLKIT (bandeja de cards) -->
-<section class="kit dk" id="toolkit">
-  <div class="wrap center">
-    <span class="eyebrow">O que você constrói no dia</span>
-    <h2>Abra o notebook.<br/>Avance no seu negócio.</h2>
-    <p class="lead">Cada etapa usa o seu projeto. Você escreve, revisa e publica com orientação, e aprende a repetir o processo depois.</p>
-    <div class="tabs kit-tabs" role="tablist" aria-label="O que você leva">
-      <button class="pill" role="tab" aria-selected="true" aria-controls="kitA" id="kitTabA">O que você faz no dia</button>
-      <button class="pill" role="tab" aria-selected="false" aria-controls="kitB" id="kitTabB">O kit que vai pra casa</button>
+<!-- APRENDIZADO: etapas do encontro e materiais para continuar -->
+<section class="kit" id="toolkit">
+  <div class="wrap">
+    <div class="kit-head">
+      <div>
+        <span class="eyebrow">O que você constrói no dia</span>
+        <h2>Abra o notebook.<br/>Avance no seu negócio.</h2>
+      </div>
+      <p class="lead">Cada etapa usa o seu projeto. Você escreve, revisa e publica com orientação, e aprende a repetir o processo depois.</p>
     </div>
-  </div>
-  <div class="tray-wrap">
-    <div class="tray" aria-hidden="true"></div>
-    <div class="kcards" role="tabpanel" id="kitA" aria-labelledby="kitTabA">
-      <div class="kc a"><span class="k1">Manhã</span><h3 class="k2">Uma assistente com seu contexto</h3><p class="k4">Você informa o que faz, quem atende e como escreve. A IA ajuda a preparar respostas e textos para você revisar e usar.</p></div>
-      <div class="kc b"><span class="k1">Manhã</span><h3 class="k2">Seu conteúdo do mês</h3><p class="k4">Um calendário de temas e as legendas escritas no seu tom. Você leva os textos para produzir e publicar seus posts.</p></div>
-      <div class="kc d"><span class="k1">Tarde</span><h3 class="k2">Seu diferencial em palavras</h3><p class="k4">Para quem você trabalha, qual problema resolve e o que faz sua oferta ser relevante. Uma base para se apresentar com clareza.</p></div>
-      <div class="kc c"><span class="k1">Tarde</span><h3 class="k2">Sua oferta e seu preço</h3><p class="k4">Organize o que está incluso e defina um preço inicial para apresentar e testar. Vale para um serviço atual ou uma primeira oferta.</p></div>
-      <div class="kc a"><span class="k1">Tarde</span><h3 class="k2">Sua página de vendas no ar</h3><p class="k4">Uma página simples com sua oferta, preço e botão de WhatsApp. Publicada com um link para compartilhar, sem precisar programar.</p></div>
-      <div class="kc e"><span class="k1">Fim do dia</span><h3 class="k2">Conversas que podem continuar</h3><p class="k4">Apresente seu trabalho em grupos pequenos. Conheça mulheres de outras áreas para trocar contatos, ideias e possíveis parcerias.</p></div>
+    <div class="kit-tabs" role="tablist" aria-label="O que você leva">
+      <button type="button" role="tab" aria-selected="true" aria-controls="kitA" id="kitTabA">O que você faz no dia</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="kitB" id="kitTabB" tabindex="-1">O kit que vai pra casa</button>
     </div>
-    <div class="kcards" role="tabpanel" id="kitB" aria-labelledby="kitTabB" hidden>
-      <div class="kc a"><span class="k1">No kit</span><h3 class="k2">Assistentes para adaptar</h3><p class="k4">Modelos para preparar propostas, respostas e conteúdos. Você adapta as informações ao seu negócio.</p></div>
-      <div class="kc b"><span class="k1">No kit</span><h3 class="k2">Pedidos prontos para a IA</h3><p class="k4">Os prompts: instruções para copiar, completar com seu contexto e usar. Um ponto de partida para as próximas tarefas.</p></div>
-      <div class="kc c"><span class="k1">No kit</span><h3 class="k2">Guias para consultar</h3><p class="k4">Passo a passo com imagens e materiais de apoio para retomar o que aprendeu quando precisar.</p></div>
-      <div class="kc d"><span class="k1">No kit</span><h3 class="k2">Seu plano de 30 dias</h3><p class="k4">Uma sequência de próximos passos para aplicar o que construiu e incluir a IA na rotina.</p></div>
-      <div class="kc e"><span class="k1">No kit</span><h3 class="k2">Acesso sem prazo</h3><p class="k4">O kit continua com você depois do evento. Sem mensalidade e sem data para expirar.</p></div>
+    <div class="kit-panel" role="tabpanel" id="kitA" aria-labelledby="kitTabA" tabindex="0">
+      <div class="kit-stages">
+        <div class="kit-stage">
+          <div class="kit-stage-meta"><span class="kit-step" aria-hidden="true">01</span><span>Manhã</span></div>
+          <h3>Comece com a IA.</h3>
+          <article class="kit-item"><h4>Uma assistente com seu contexto</h4><p>Você informa o que faz, quem atende e como escreve. A IA ajuda a preparar respostas e textos para você revisar e usar.</p></article>
+          <article class="kit-item"><h4>Seu conteúdo do mês</h4><p>Um calendário de temas e as legendas escritas no seu tom. Você leva os textos para produzir e publicar seus posts.</p></article>
+        </div>
+        <div class="kit-stage">
+          <div class="kit-stage-meta"><span class="kit-step" aria-hidden="true">02</span><span>Tarde</span></div>
+          <h3>Dê forma à sua oferta.</h3>
+          <article class="kit-item"><h4>Seu diferencial em palavras</h4><p>Para quem você trabalha, qual problema resolve e o que faz sua oferta ser relevante. Uma base para se apresentar com clareza.</p></article>
+          <article class="kit-item"><h4>Sua oferta e seu preço</h4><p>Organize o que está incluso e defina um preço inicial para apresentar e testar. Vale para um serviço atual ou uma primeira oferta.</p></article>
+        </div>
+        <div class="kit-stage">
+          <div class="kit-stage-meta"><span class="kit-step" aria-hidden="true">03</span><span>Tarde · Encerramento</span></div>
+          <h3>Publique e se conecte.</h3>
+          <article class="kit-item"><h4>Sua página de vendas no ar</h4><p>Uma página simples com sua oferta, preço e botão de WhatsApp. Publicada com um link para compartilhar, sem precisar programar.</p></article>
+          <article class="kit-item"><h4>Conversas que podem continuar</h4><p>Apresente seu trabalho em grupos pequenos. Conheça mulheres de outras áreas para trocar contatos, ideias e possíveis parcerias.</p></article>
+        </div>
+      </div>
+    </div>
+    <div class="kit-panel" role="tabpanel" id="kitB" aria-labelledby="kitTabB" tabindex="0" hidden>
+      <div class="kit-resources">
+        <div class="kit-resource-list">
+          <article class="kit-item">
+            <span class="kit-resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H5l-3 3V11.5A7.5 7.5 0 0 1 9.5 4H12M17 2v6m-3-3h6M7 11h7m-7 4h4"/></svg></span>
+            <h4>Assistentes para adaptar</h4><p>Modelos para preparar propostas, respostas e conteúdos. Você adapta as informações ao seu negócio.</p>
+          </article>
+          <article class="kit-item">
+            <span class="kit-resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="m7 9 3 3-3 3m6 0h4"/></svg></span>
+            <h4>Pedidos prontos para a IA</h4><p>Os prompts: instruções para copiar, completar com seu contexto e usar. Um ponto de partida para as próximas tarefas.</p>
+          </article>
+          <article class="kit-item">
+            <span class="kit-resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5C9 3 5 3 2 4v15c3-1 7-1 10 1 3-2 7-2 10-1V4c-3-1-7-1-10 1Zm0 0v15M6 8h2m8 0h2M6 12h2m8 0h2"/></svg></span>
+            <h4>Guias para consultar</h4><p>Passo a passo com imagens e materiais de apoio para retomar o que aprendeu quando precisar.</p>
+          </article>
+          <article class="kit-item">
+            <span class="kit-resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4m10-4v4M3 10h18m-14 5 3 3 7-5"/></svg></span>
+            <h4>Seu plano de 30 dias</h4><p>Uma sequência de próximos passos para aplicar o que construiu e incluir a IA na rotina.</p>
+          </article>
+        </div>
+        <aside class="kit-access">
+          <svg viewBox="0 0 56 36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M28 18C22 10 19 7 13 7a11 11 0 0 0 0 22c6 0 9-3 15-11S37 7 43 7a11 11 0 0 1 0 22c-6 0-9-3-15-11Z"/></svg>
+          <span class="eyebrow">Para seguir no seu ritmo</span>
+          <h3>Acesso<br/>sem prazo.</h3>
+          <p>O kit continua com você depois do evento. Volte aos materiais sempre que precisar.</p>
+          <small>Sem mensalidade. Sem data para expirar.</small>
+        </aside>
+      </div>
     </div>
   </div>
 </section>
@@ -1292,17 +1331,29 @@ document.querySelectorAll('.js-wa').forEach(a => {
   layout();
 })();
 
-/* pílulas que trocam conteúdo (toolkit e o dia) */
+/* Abas acessíveis por clique, setas, Home e End. */
 document.querySelectorAll('[role=tablist]').forEach(list => {
   const tabs = [...list.querySelectorAll('[role=tab]')];
-  tabs.forEach(tab => tab.addEventListener('click', () => {
+  function select(tab) {
     tabs.forEach(t => {
       const on = t === tab;
       t.setAttribute('aria-selected', on);
+      t.tabIndex = on ? 0 : -1;
       document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
     });
     if (tab.dataset.bg) document.querySelectorAll('.day-bg img').forEach(img => img.classList.toggle('on', img.dataset.bg === tab.dataset.bg));
-  }));
+  }
+  tabs.forEach((tab, i) => {
+    tab.tabIndex = tab.getAttribute('aria-selected') === 'true' ? 0 : -1;
+    tab.addEventListener('click', () => select(tab));
+    tab.addEventListener('keydown', event => {
+      const index = event.key === 'ArrowRight' ? (i + 1) % tabs.length : event.key === 'ArrowLeft' ? (i + tabs.length - 1) % tabs.length : event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : -1;
+      if (index < 0) return;
+      event.preventDefault();
+      select(tabs[index]);
+      tabs[index].focus();
+    });
+  });
 });
 
 /* cadeiras da Turma 1 */
