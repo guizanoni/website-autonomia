@@ -7,6 +7,10 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
+## 2026-10-02 — Chamada principal com IA explícita
+
+- Nova abertura: “Use a IA para tirar ideias do papel e automatizar tarefas do seu negócio.” Título de compartilhamento atualizado e tipografia ajustada para desktop e celular.
+
 ## 2026-10-02 — Menu com hierarquia visual
 
 - Navegação agrupada em uma faixa arredondada, com estados de hover e seção ativa; inscrição em laranja para destacar a ação principal. Mantidos os quatro rótulos solicitados.
