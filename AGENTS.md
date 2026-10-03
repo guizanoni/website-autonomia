@@ -78,8 +78,11 @@ Secrets necessários no GitHub: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
 - Referência de desktop indicada pelo usuário: https://www.revolut.com/.
   O primeiro scroll dispara uma transição de cerca de 1,1 s: foto e moldura
   recuam juntas, os cards laterais entram e a segunda chamada aparece na
-  área branca. Voltar ao topo reverte o movimento. Não prender a rolagem
-  num longo recorte sobre a foto ampliada. Preservar o enquadramento do rosto,
+  área branca. Voltar ao topo reverte o movimento. A cena fica presa (sticky)
+  por 60% da altura da janela enquanto a transição acontece: sem isso a
+  página rola junto e os cards somem atrás do menu. Não alongar esse curso
+  nem prender a rolagem sobre a foto ampliada. O menu de desktop tem um
+  indicador que desliza até o link sob o mouse e volta para a seção em leitura. Preservar o enquadramento do rosto,
   menu centralizado e leitura completa em janelas baixas.
 - Commits em **pt-BR**, uma frase que conta a história da mudança.
 - O copy é a maior parte do trabalho aqui. Mudança de texto é mudança de
