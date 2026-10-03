@@ -7,6 +7,12 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
+## 2026-10-02 — Mais três posts de conversão
+
+- A vitrine `/social/posts-conversao/` passa de três para seis posts, com novos argumentos sobre começar do zero, comprar em dupla e reservar tempo para o próprio negócio.
+- Cada novo post tem legenda para Instagram e LinkedIn, arte nos formatos 1080×1350 e 1080×1080 e molde editável em HTML. Os três posts anteriores foram preservados.
+- Perfil editorial da edição registrado em `social/brand-profile.md`, com condições conferidas na página publicada e no código do checkout.
+
 ## 2026-07-27
 
 - Adiciona `.gitignore` (`.DS_Store`) — o repo rodou 13 dias sem um.

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>AUTONOM/IA Mulheres · posts de conversão</title>
-<!-- Molde dos posts. Uso: posts.html?p=1|2|3&f=ig|li  (ig = 1080x1350, li = 1080x1080) -->
+<!-- Molde dos posts. Uso: posts.html?p=1|2|3|4|5|6&f=ig|li  (ig = 1080x1350, li = 1080x1080) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -19,7 +19,7 @@
 html,body{width:1080px;height:var(--h);overflow:hidden;font-family:var(--f);-webkit-font-smoothing:antialiased}
 body.li{--h:1080px}
 .post{display:none;position:relative;width:1080px;height:var(--h);padding:72px;flex-direction:column}
-body.p1 .p1,body.p2 .p2,body.p3 .p3{display:flex}
+body.p1 .p1,body.p2 .p2,body.p3 .p3,body.p4 .p4,body.p5 .p5,body.p6 .p6{display:flex}
 
 .logo{font-weight:600;font-size:40px;letter-spacing:-.04em;line-height:1;white-space:nowrap}
 .logo i{font-style:normal;color:var(--sig)}
@@ -87,6 +87,91 @@ body.li .p3 h1{font-size:100px;margin-top:30px}
 body.li .p3 .grid{gap:12px;margin-top:30px;width:540px}
 body.li .p3 .leg{margin-top:18px;font-size:26px}
 body.li .p3 .linha{margin-top:24px;padding-top:20px}
+
+/* 4–6 · começar do zero, vir em dupla, reservar tempo */
+.new .eyebrow{font:500 22px var(--m);letter-spacing:.03em;text-transform:uppercase}
+.new .sub{font-size:34px;line-height:1.3;letter-spacing:-.02em}
+.new .foot{margin-top:auto;border-top:1.5px solid var(--line);padding-top:28px}
+.new .foot-row{display:flex;justify-content:space-between;align-items:center;gap:24px}
+.new .event{font-size:25px;line-height:1.4}
+.new .event b{display:block;font-weight:600}
+.new .fine{font-size:21px;line-height:1.4;margin-top:22px}
+.new .cta{font-size:29px;padding:23px 32px}
+.new .destination{display:block;font:22px var(--m);margin-top:24px}
+body.li .new .cta{font-size:27px;padding:22px 30px}
+body.li .new .destination{margin-top:18px}
+
+.p4{background:var(--soft);color:var(--ink)}
+.p4 .tag{color:var(--mut)}
+.p4 .eyebrow{color:var(--mut);margin-top:72px}
+.p4 h1{font-size:150px;margin-top:24px}
+.p4 .support{margin-top:50px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.p4 .step{padding:30px;border-radius:28px;background:#fff;border:1.5px solid var(--line)}
+.p4 .step b{display:block;font-size:38px;line-height:1.1;font-weight:600;letter-spacing:-.025em}
+.p4 .step span{display:block;font-size:27px;line-height:1.3;color:var(--mut);margin-top:12px}
+.p4 .sub{margin-top:30px;max-width:810px}
+.p4 .fine{color:var(--mut)}
+body.li .p4 .eyebrow{margin-top:28px}
+body.li .p4 h1{font-size:110px;margin-top:20px}
+body.li .p4 .support{margin-top:24px}
+body.li .p4 .step{padding:20px}
+body.li .p4 .step b{font-size:32px}
+body.li .p4 .step span{font-size:23px}
+body.li .p4 .sub{font-size:28px;margin-top:20px}
+
+.p5{background:var(--sig);color:var(--dark)}
+.p5 .logo i{color:#fff}
+.p5 .tag{color:var(--dark)}
+.p5 h1{font-size:120px;margin-top:54px}
+.p5 h1 em{color:#fff}
+.p5 .dupla{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:38px}
+.p5 .ticket{border:1.5px solid rgba(14,15,17,.2);border-radius:28px;padding:26px;background:#fff}
+.p5 .ticket .who{font:22px var(--m);text-transform:uppercase;letter-spacing:.04em}
+.p5 .ticket b{display:block;font-size:84px;letter-spacing:-.06em;line-height:1;margin-top:22px;font-weight:600}
+.p5 .ticket .discount{font-size:28px;display:block;margin-top:4px}
+.p5 .ticket .amount{display:block;font-size:32px;font-weight:600;letter-spacing:-.03em;border-top:1.5px dashed #ccc;padding-top:20px;margin-top:22px}
+.p5 .ticket small{display:block;font-size:22px;color:var(--mut);margin-top:4px}
+.p5 .plus{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;width:62px;height:62px;font-size:44px;background:var(--dark);color:#fff;border:5px solid var(--sig);font-weight:400}
+.p5 .sub{margin-top:26px;max-width:860px;font-size:32px}
+.p5 .foot{border-color:rgba(14,15,17,.3)}
+.p5 .cta{background:var(--dark);color:#fff}
+body.li .p5 h1{font-size:84px;margin-top:22px}
+body.li .p5 .dupla{margin-top:24px}
+body.li .p5 .ticket{padding:20px 30px}
+body.li .p5 .ticket .who{font-size:20px}
+body.li .p5 .ticket b{font-size:64px;margin-top:16px}
+body.li .p5 .ticket .discount{font-size:26px}
+body.li .p5 .ticket .amount{font-size:30px;margin-top:14px;padding-top:14px}
+body.li .p5 .ticket small{font-size:20px}
+body.li .p5 .sub{font-size:26px;margin-top:20px}
+body.li .p5 .fine{font-size:20px;margin-top:12px}
+body.li .p5 .foot{padding-top:24px}
+body.li .p5 .event{font-size:22px}
+body.li .p5 .cta{font-size:25px;padding:20px 28px}
+
+.p6{background:var(--dark);color:#fff}
+.p6 .tag{color:var(--dmut)}
+.p6 h1{font-size:128px;margin-top:64px}
+.p6 .workday{display:grid;grid-template-columns:300px 1fr;gap:36px;align-items:center;margin-top:52px}
+.p6 .calendar{border-radius:28px;overflow:hidden;background:var(--soft);color:var(--ink);text-align:center;transform:rotate(-3deg)}
+.p6 .calendar .month{background:var(--sig);color:var(--dark);padding:16px;font:500 23px var(--m);letter-spacing:.07em}
+.p6 .calendar b{display:block;font-size:174px;font-weight:600;letter-spacing:-.07em;line-height:1;padding:10px 8px 0 0}
+.p6 .calendar .day{display:block;font:22px var(--m);padding:0 15px 22px}
+.p6 .tasks{list-style:none;font-size:34px;line-height:1.2;letter-spacing:-.02em}
+.p6 .tasks li{padding:22px 0;border-bottom:1.5px solid #33363b}
+.p6 .tasks li:first-child{padding-top:0}
+.p6 .tasks span{color:var(--sig);margin-right:14px}
+.p6 .sub{color:#d6d7da;margin-top:44px;max-width:860px}
+.p6 .foot{border-color:#33363b}
+.p6 .fine{color:var(--dmut)}
+body.li .p6 h1{font-size:96px;margin-top:30px}
+body.li .p6 .workday{margin-top:24px;grid-template-columns:260px 1fr}
+body.li .p6 .calendar b{font-size:132px}
+body.li .p6 .calendar .month{padding:12px;font-size:21px}
+body.li .p6 .calendar .day{padding-bottom:18px;font-size:20px}
+body.li .p6 .tasks{font-size:31px}
+body.li .p6 .tasks li{padding:18px 0}
+body.li .p6 .sub{font-size:28px;margin-top:22px}
 </style>
 </head>
 <body>
@@ -127,10 +212,58 @@ body.li .p3 .linha{margin-top:24px;padding-top:20px}
   <div class="linha"><span>Quarta, 11 de novembro · Hard Rock Café Curitiba</span><span>autonomia.vc/mulheres</span></div>
 </section>
 
+<section class="post new p4">
+  <div class="top"><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div><div class="tag">Curitiba · 11/11</div></div>
+  <div class="eyebrow">Pra quem começa do zero</div>
+  <h1>Nunca<br>usou IA?<br><em>Pode vir.</em></h1>
+  <div class="support">
+    <div class="step"><b>Travou? Chama.</b><span>Monitoras com você,<br>no seu notebook.</span></div>
+    <div class="step"><b>Uma IA. Grátis.</b><span>Passo a passo,<br>sem precisar programar.</span></div>
+  </div>
+  <p class="sub">Você aprende usando o seu negócio.<br>Com ajuda, do começo ao fim.</p>
+  <div class="foot">
+    <div class="foot-row"><div class="event"><b>11/11 · Hard Rock Café Curitiba</b>8h às 18h30 · Almoço incluso</div><span class="cta" data-cta-li="Garanta sua vaga →">Link na bio →</span></div>
+    <p class="fine">R$ 1.297 em até 10x · ou R$ 1.232,15 no PIX</p>
+    <span class="destination">autonomia.vc/mulheres</span>
+  </div>
+</section>
+
+<section class="post new p5">
+  <div class="top"><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div><div class="tag">Curitiba · 11/11</div></div>
+  <h1>Chama<br>uma amiga.<br><em>Vem de dupla.</em></h1>
+  <div class="dupla">
+    <div class="ticket"><span class="who">Você</span><b>−5%</b><span class="discount">na sua vaga</span><span class="amount">R$ 1.232,15</span><small>por pessoa, na dupla</small></div>
+    <span class="plus" aria-hidden="true">+</span>
+    <div class="ticket"><span class="who">Sua amiga</span><b>−5%</b><span class="discount">na vaga dela</span><span class="amount">R$ 1.232,15</span><small>por pessoa, na dupla</small></div>
+  </div>
+  <p class="sub">Vocês aprendem juntas.<br>Cada uma faz o seu projeto.</p>
+  <div class="foot">
+    <div class="foot-row"><div class="event"><b>11/11 · Hard Rock Café Curitiba</b>Um dia inteiro de IA, só pra mulheres</div><span class="cta" data-cta-li="Comprar em dupla →">Dupla no link da bio →</span></div>
+    <p class="fine">De R$ 1.297 por R$ 1.232,15 por pessoa, na compra em dupla.<br>Total: R$ 2.464,30 pelas duas vagas. Os descontos não se somam.</p>
+    <span class="destination">autonomia.vc/mulheres</span>
+  </div>
+</section>
+
+<section class="post new p6">
+  <div class="top"><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div><div class="tag">Curitiba · 11/11</div></div>
+  <h1>Seu negócio<br>vive ficando<br><em>pra depois?</em></h1>
+  <div class="workday">
+    <div class="calendar"><div class="month">NOVEMBRO · 2026</div><b>11</b><span class="day">QUARTA-FEIRA</span></div>
+    <ul class="tasks"><li><span>→</span> Seus posts do mês</li><li><span>→</span> Sua oferta e seu preço</li><li><span>→</span> Sua página de vendas</li></ul>
+  </div>
+  <p class="sub">Reserve um dia pra fazer.<br>Com IA, notebook aberto e ajuda do lado.</p>
+  <div class="foot">
+    <div class="foot-row"><div class="event"><b>Hard Rock Café Curitiba</b>8h às 18h30 · Almoço e kit inclusos</div><span class="cta" data-cta-li="Garanta sua vaga →">Sua vaga no link da bio →</span></div>
+    <p class="fine">R$ 1.297 em até 10x · ou R$ 1.232,15 no PIX</p>
+    <span class="destination">autonomia.vc/mulheres</span>
+  </div>
+</section>
+
 <script>
 const q=new URLSearchParams(location.search);
 document.body.className='p'+(q.get('p')||1)+' '+(q.get('f')||'ig');
 if(q.get('f')==='li')document.querySelectorAll('.p2 .cta').forEach(e=>e.textContent='autonomia.vc/mulheres');
+if(q.get('f')==='li')document.querySelectorAll('[data-cta-li]').forEach(e=>e.textContent=e.dataset.ctaLi);
 const g=document.getElementById('grid');
 for(let n=0;n<50;n++){const d=document.createElement('i');if(n===27)d.className='eu';g.appendChild(d)}
 </script>

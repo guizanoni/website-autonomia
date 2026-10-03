@@ -50,7 +50,7 @@ footer a{color:inherit}
 <div class="wrap">
   <header>
     <div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div>
-    <h1>3 posts pra <em>fechar vaga.</em></h1>
+    <h1>6 posts pra <em>fechar vaga.</em></h1>
     <p class="lead">Imagem e legenda de cada post, por rede. Escolha a rede, copie a legenda e baixe a imagem.</p>
   </header>
 </div>
@@ -84,7 +84,7 @@ function ler(md){
 function pintar(){
   document.getElementById('lista').innerHTML=posts.map(function(p){
     var img='post-'+p.n+'-'+rede+'.png';
-    return '<article class="post"><figure><img src="'+img+'" alt="Post '+p.n+' para '+REDES[rede]+': '+p.titulo+'"></figure>'+
+    return '<article class="post" id="post-'+p.n+'"><figure><img src="'+img+'" alt="Post '+p.n+' para '+REDES[rede]+': '+p.titulo+'"></figure>'+
       '<div><div class="num">Post '+p.n+' · '+REDES[rede]+'</div><h2>'+p.titulo+'</h2>'+
       '<div class="cap" id="cap'+p.n+'"></div>'+
       '<div class="acts"><button type="button" class="btn pri" data-copia="'+p.n+'">Copiar legenda</button>'+
