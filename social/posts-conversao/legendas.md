@@ -25,7 +25,7 @@ Não precisa entender de tecnologia. Se você usa WhatsApp e Instagram, consegue
 Quarta, 11/11 · Hard Rock Café Curitiba · 8h às 18h30
 São só 50 vagas, pra dar tempo de ajudar cada uma de perto.
 
-R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.232,15 no PIX.
+R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.167,30 no PIX (10% de desconto).
 
 Garanta a sua pelo link na bio.
 Ficou com dúvida? Manda mensagem aqui que a gente responde.
@@ -47,7 +47,7 @@ Serve pra quem já tem negócio e faz tudo sozinha, pra quem está pensando em m
 Quem conduz é o Gui Zanoni, que trabalha com IA desde 2016 e tem nota média 9,6 de 10, dada por 1.734 pessoas que já fizeram os treinamentos dele.
 
 Quarta, 11/11 · Hard Rock Café Curitiba · 8h às 18h30
-R$ 1.297 em até 10x, ou R$ 1.232,15 no PIX. Nota fiscal no CPF ou no CNPJ.
+R$ 1.297 em até 10x, ou R$ 1.167,30 no PIX (10% de desconto). Nota fiscal no CPF ou no CNPJ.
 
 Garanta a sua vaga: https://autonomia.vc/mulheres/
 
@@ -70,7 +70,7 @@ E se aparecer um imprevisto antes, dá pra cancelar até 09/11 e receber tudo de
 O risco fica com a gente. Com você fica o dia inteiro mão na massa, o almoço no Hard Rock e um kit pra continuar usando a IA depois.
 
 Quarta, 11/11 · Hard Rock Café Curitiba
-R$ 1.297 em até 10x, ou R$ 1.232,15 no PIX.
+R$ 1.297 em até 10x, ou R$ 1.167,30 no PIX (10% de desconto).
 
 São só 50 vagas. Garanta a sua pelo link na bio.
 
@@ -87,7 +87,7 @@ Se surgir um imprevisto antes, o cancelamento com reembolso integral vale até 0
 Dá pra oferecer isso porque o dia foi feito pra entregar resultado cedo: você vê coisa pronta na sua tela ainda de manhã. À tarde vêm o seu diferencial, o que vender, o preço e a sua página de vendas no ar.
 
 Quarta, 11/11 · Hard Rock Café Curitiba · 8h às 18h30 · 50 vagas
-R$ 1.297 em até 10x, ou R$ 1.232,15 no PIX. Se a empresa pagar, a nota sai no CNPJ dela.
+R$ 1.297 em até 10x, ou R$ 1.167,30 no PIX (10% de desconto). Se a empresa pagar, a nota sai no CNPJ dela.
 
 Garanta a sua vaga: https://autonomia.vc/mulheres/
 
@@ -111,9 +111,9 @@ O que está incluso:
 → rodada de negócios e grupo da turma no WhatsApp
 → certificado, foto oficial e brinde
 
-10x de R$ 129,70 no cartão, ou R$ 1.232,15 à vista no PIX.
+10x de R$ 129,70 no cartão, ou R$ 1.167,30 à vista no PIX (10% de desconto).
 
-Vem com uma amiga? Na compra em dupla, cada uma ganha 5% de desconto. Marca aqui aquela que vive dizendo que precisa aprender isso.
+Vem com uma amiga? Na compra em dupla, cada uma ganha 5% de desconto no cartão. Marca aqui aquela que vive dizendo que precisa aprender isso.
 
 Garanta a sua vaga pelo link na bio.
 
@@ -131,7 +131,7 @@ O que está incluso:
 • Kit com assistentes prontas, pedidos prontos pra copiar e colar na IA, guias e plano de 30 dias, com acesso vitalício
 • Grupo da turma no WhatsApp, certificado, foto oficial e brinde
 
-R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.232,15 à vista no PIX. Na compra em dupla, cada uma ganha 5% de desconto (os descontos não se somam).
+R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.167,30 à vista no PIX (10% de desconto). Na compra em dupla, cada uma ganha 5% de desconto no cartão (os descontos não se somam).
 
 E tem garantia: se até o almoço você sentir que não é pra você, devolvemos 100%.
 
@@ -161,7 +161,7 @@ Se você usa WhatsApp e Instagram, já tem por onde começar. Aqui, você aprend
 Leve seu notebook e carregador. Não precisa instalar nada antes.
 
 Quarta, 11/11 · Hard Rock Café Curitiba · 8h às 18h30
-R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.232,15 no PIX. Almoço incluso.
+R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.167,30 no PIX (10% de desconto). Almoço incluso.
 
 Garanta sua vaga pelo link na bio. Pode vir do zero.
 
@@ -186,7 +186,7 @@ Também serve pra quem ainda não tem um negócio e quer transformar o que sabe 
 Leve seu notebook com carregador. Não precisa instalar nada antes.
 
 Quarta, 11 de novembro · Hard Rock Café Curitiba · 8h às 18h30
-R$ 1.297 em até 10x, ou R$ 1.232,15 no PIX. Almoço incluso.
+R$ 1.297 em até 10x, ou R$ 1.167,30 no PIX (10% de desconto). Almoço incluso.
 
 Comece com ajuda. Garanta sua vaga: https://autonomia.vc/mulheres/
 
@@ -206,9 +206,9 @@ Na AUTONOM/IA Mulheres, cada uma trabalha no próprio projeto, com o notebook ab
 
 Pode ser a sócia, a irmã ou uma amiga de outra área. E tem um motivo a mais pra combinar agora:
 
-Na compra em dupla, cada uma ganha 5% de desconto.
+Na compra em dupla, cada uma ganha 5% de desconto no cartão.
 De R$ 1.297 por R$ 1.232,15 por pessoa.
-Total das duas vagas: R$ 2.464,30. Os descontos não se somam.
+Total das duas vagas no cartão: R$ 2.464,30. No PIX, são 10% de desconto: R$ 1.167,30 por pessoa, R$ 2.334,60 no total. Os descontos não se somam.
 
 Como fazer: abram o link na bio, escolham "Comprar em dupla" e paguem as duas vagas juntas. Se preferirem pagar separadamente, falem com a equipe pelo WhatsApp da página.
 
@@ -227,11 +227,12 @@ No dia 11 de novembro, a AUTONOM/IA Mulheres reúne mulheres em Curitiba para um
 
 Cada participante trabalha no próprio projeto: assistente de IA, posts do mês, oferta, preço e página de vendas. Há monitoras na sala durante todo o dia e, no fim da tarde, uma rodada de negócios para conhecer outras participantes.
 
-A compra em dupla dá 5% de desconto para cada uma:
+A compra em dupla dá 5% de desconto no cartão para cada uma:
 
 • Valor individual sem desconto: R$ 1.297.
-• Na dupla: R$ 1.232,15 por pessoa.
-• Total das duas vagas: R$ 2.464,30.
+• Na dupla no cartão: R$ 1.232,15 por pessoa.
+• Total das duas vagas no cartão: R$ 2.464,30.
+• No PIX, 10% de desconto: R$ 1.167,30 por pessoa, total de R$ 2.334,60.
 
 Os descontos não se somam. Almoço e kit com acesso vitalício estão inclusos para as duas.
 
@@ -263,7 +264,7 @@ Pra continuar em casa: kit com acesso vitalício e plano de 30 dias.
 
 Quarta, 11/11 · Hard Rock Café Curitiba · 8h às 18h30
 Almoço e cafés inclusos.
-R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.232,15 no PIX.
+R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.167,30 no PIX (10% de desconto).
 
 Reserve esse dia pro seu negócio. Garanta sua vaga pelo link na bio.
 
@@ -287,6 +288,6 @@ O trabalho continua depois: você leva um kit com assistentes, pedidos prontos p
 
 Quarta, 11 de novembro · Hard Rock Café Curitiba · 8h às 18h30
 Almoço e cafés inclusos.
-R$ 1.297 em até 10x, ou R$ 1.232,15 no PIX. Nota fiscal no CPF ou no CNPJ.
+R$ 1.297 em até 10x, ou R$ 1.167,30 no PIX (10% de desconto). Nota fiscal no CPF ou no CNPJ.
 
 Reserve um dia para avançar no seu negócio: https://autonomia.vc/mulheres/

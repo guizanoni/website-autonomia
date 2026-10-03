@@ -15,7 +15,7 @@ const EVENTO = [
     'descricao'      => 'AUTONOM/IA Mulheres · Turma 1 · 11/11/2026, 8h às 18h30 · Hard Rock Café Curitiba',
     'vagas'          => 50,
     'preco'          => 1297.00,   // por vaga, no cartão
-    'desconto_pix'   => 0.05,
+    'desconto_pix'   => 0.10,
     'desconto_dupla' => 0.05,      // por vaga, na compra em dupla
     'max_parcelas'   => 10,
     'vencimento_dias'=> 2,         // prazo da cobrança PIX
@@ -114,7 +114,7 @@ function wa_numero(string $n): string
 function email_valido(string $e): bool { return (bool)filter_var($e, FILTER_VALIDATE_EMAIL); }
 
 // ---- preço -----------------------------------------------------------------
-// Regras: sem cupom, PIX e dupla dão 5% cada, e os descontos NÃO se somam (vale o maior).
+// Regras: sem cupom, PIX dá 10% e dupla dá 5%; os descontos NÃO se somam (vale o maior).
 // Com cupom de comunidade, o preço do cupom é o preço final da vaga (sem outro desconto),
 // a menos que o cupom tenha 'acumula_pix' => true.
 function cupom_info(?string $codigo): ?array
@@ -144,8 +144,8 @@ function calcular(string $tipo, string $forma, ?string $cupom, int $parcelas): a
         $rotulo = 'Código ' . $c['codigo'] . (isset($c['nome']) ? ' · ' . $c['nome'] : '');
     } else {
         $desc = 0.0; $rotulo = null;
-        if ($forma === 'pix') { $desc = EVENTO['desconto_pix']; $rotulo = '5% de desconto no PIX'; }
-        if ($vagas === 2 && EVENTO['desconto_dupla'] >= $desc) { $desc = EVENTO['desconto_dupla']; $rotulo = '5% de desconto pra cada uma (dupla)'; }
+        if ($forma === 'pix') { $desc = EVENTO['desconto_pix']; $rotulo = ($desc * 100) . '% de desconto no PIX'; }
+        if ($vagas === 2 && EVENTO['desconto_dupla'] >= $desc) { $desc = EVENTO['desconto_dupla']; $rotulo = ($desc * 100) . '% de desconto pra cada uma (dupla)'; }
         $unit = EVENTO['preco'] * (1 - $desc);
     }
     $unit = round($unit, 2);

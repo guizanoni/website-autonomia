@@ -68,7 +68,7 @@ footer a{color:inherit}
 
 <script>
 // As legendas vêm do legendas.md, que é a fonte única do texto.
-var REDES={instagram:'Instagram',linkedin:'LinkedIn'}, rede='instagram', posts=[];
+var REDES={instagram:'Instagram',linkedin:'LinkedIn'}, rede='instagram', posts=[], versaoOferta='20261003-pix10';
 
 function ler(md){
   return md.split(/^## /m).slice(1).map(function(bloco,i){
@@ -83,7 +83,7 @@ function ler(md){
 
 function pintar(){
   document.getElementById('lista').innerHTML=posts.map(function(p){
-    var img='post-'+p.n+'-'+rede+'.png';
+    var img='post-'+p.n+'-'+rede+'.png?v='+versaoOferta;
     return '<article class="post" id="post-'+p.n+'"><figure><img src="'+img+'" alt="Post '+p.n+' para '+REDES[rede]+': '+p.titulo+'"></figure>'+
       '<div><div class="num">Post '+p.n+' · '+REDES[rede]+'</div><h2>'+p.titulo+'</h2>'+
       '<div class="cap" id="cap'+p.n+'"></div>'+
@@ -109,7 +109,7 @@ document.addEventListener('click',function(e){
   }
 });
 
-fetch('legendas.md').then(function(r){return r.text()}).then(function(md){posts=ler(md);pintar()})
+fetch('legendas.md?v='+versaoOferta).then(function(r){return r.text()}).then(function(md){posts=ler(md);pintar()})
   .catch(function(){document.getElementById('lista').innerHTML='<p style="padding:24px 0">Não deu pra carregar as legendas. Abra <a href="legendas.md">legendas.md</a>.</p>'});
 </script>
 </body>

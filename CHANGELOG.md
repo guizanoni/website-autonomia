@@ -7,6 +7,13 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
+## 2026-10-03 — PIX com 10% de desconto
+
+- PIX individual passa a R$ 1.167,30, com economia de R$ 129,70. Atualizados abertura, oferta, FAQ, fechamento, barra do celular e checkout.
+- No servidor e na estimativa local, a dupla aplica o maior desconto: 10% no PIX (R$ 2.334,60 no total) ou 5% no cartão (R$ 2.464,30). Mantidas as regras específicas dos cupons.
+- Checkout envia ao Asaas o total calculado no servidor. Conferidos os quatro cenários com uma API local simulada, sem criar cobranças reais; 14 cenários de preço e cupons passam a ser verificados antes do deploy.
+- Sincronizados perfil editorial, legendas e oito artes dos posts de conversão que exibiam preços. Conferidos o checkout em desktop/celular e o cálculo de contingência quando a API não responde.
+
 ## 2026-10-03 — Seção de aprendizado integrada ao visual da página
 
 - As seis entregas passam a formar três etapas do encontro, em um painel claro com divisórias e laranja restrito aos detalhes. Removidos os cartões com gradientes e os estilos antigos de bandeja/hover.

@@ -55,7 +55,7 @@ Secrets necessários no GitHub: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
   que calcula o preço **no servidor**, cria a cliente e a cobrança no Asaas e devolve o
   `invoiceUrl` (página segura do Asaas; dado de cartão nunca passa pelo nosso site).
 - Regras de preço em `api/lib.php` (`EVENTO` e `calcular()`): R$ 1.297 no cartão até 10x,
-  PIX -5%, dupla -5% cada, descontos não se somam; cupom de comunidade define o preço final.
+  PIX -10%, dupla -5% cada no cartão; vale o maior desconto, sem acumular; cupom de comunidade define o preço final.
 - `api/webhook.php` recebe PAYMENT_CONFIRMED/RECEIVED (header `asaas-access-token`), marca o
   pedido como pago, conta vagas (esgota sozinho em 50) e avisa a equipe via `enviar.php`
   do guizanoni.com. Pedidos ficam em `api/_data/` (bloqueado por `.htaccess`, fora do git

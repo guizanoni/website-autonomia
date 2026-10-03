@@ -19,6 +19,9 @@ jobs:
       - name: Checkout do repositorio
         uses: actions/checkout@v4
 
+      - name: Conferir regras de preço
+        run: php tests/preco.php
+
       # Chaves do Asaas e cupons vêm dos secrets do repositório (o repo é público).
       # O arquivo gerado vai só pro servidor; nunca é commitado.
       - name: Gerar config secreta do checkout
@@ -74,3 +77,4 @@ jobs:
             **/.git*
             **/.git*/**
             api/_data/**
+            tests/**
