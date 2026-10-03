@@ -91,9 +91,9 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-
 header.solid{background:rgba(255,255,255,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:var(--ink);box-shadow:0 1px 0 var(--line)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
 header nav{display:none;gap:28px;font-size:15.5px;font-weight:500}
-header nav a{text-decoration:none;opacity:.9}
+header nav a{text-decoration:none;opacity:.9;white-space:nowrap}
 header nav a:hover{opacity:1}
-@media(min-width:960px){header nav{display:flex}}
+@media(min-width:1200px){header nav{display:flex}}
 header .pill{padding:11px 20px;font-size:15px;background:#fff;color:var(--ink)}
 header.solid .pill{background:var(--ink);color:#fff}
 header .pill:hover{background:#fff;color:var(--ink);opacity:.88}
@@ -572,10 +572,10 @@ section[id]{scroll-margin-top:84px}
   <div class="wrap">
     <a class="logo" href="#" aria-label="AUTONOM/IA Mulheres, voltar ao topo">autonom<span class="dot">.</span>ia<span class="sl">/</span><span class="ed">mulheres</span><span class="caret" aria-hidden="true"></span></a>
     <nav aria-label="Seções">
-      <a href="#toolkit">O que você leva</a>
-      <a href="#dia">O dia</a>
-      <a href="#gui">Quem conduz</a>
-      <a href="#faq">Dúvidas</a>
+      <a href="#toolkit">O que você aprenderá</a>
+      <a href="#dia">Agenda do dia</a>
+      <a href="#gui">Conheça o seu instrutor</a>
+      <a href="#faq">Dúvidas gerais</a>
     </nav>
     <a class="pill js-buy" href="#investimento">Garantir vaga</a>
   </div>
