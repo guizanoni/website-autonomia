@@ -25,7 +25,7 @@ No Instagram: abertura curta, parágrafos breves, lista com setas quando útil e
 - Referência principal: `/mulheres/index.html`, oferta atualizada em 03/10/2026. As condições de preço também estão em `/api/lib.php`.
 - Turma 1: 11/11/2026, quarta-feira, das 8h às 18h30, Hard Rock Café Curitiba. Capacidade anunciada: 50 participantes; não é contagem de vagas restantes.
 - Monitoras durante o dia; almoço e cafés; kit com acesso vitalício e plano de 30 dias; rodada de negócios; grupo da turma.
-- Individual: R$ 1.297 em até 10x de R$ 129,70; PIX com 10% de desconto: R$ 1.167,30 (economia de R$ 129,70). Dupla no cartão: 5% para cada uma, R$ 1.232,15 por pessoa, total de R$ 2.464,30 em até 10x. Dupla no PIX: 10% para cada uma, R$ 1.167,30 por pessoa, total de R$ 2.334,60. Vale o maior desconto; eles não se somam. Cupons mantêm suas próprias regras.
+- Individual: R$ 1.297 em até 10x de R$ 129,70; PIX com 10% de desconto: R$ 1.167,30 (economia de R$ 129,70). Dupla no cartão: 8% para cada uma, R$ 1.193,24 por pessoa, total de R$ 2.386,48 em até 10x. Dupla no PIX: 10% para cada uma, R$ 1.167,30 por pessoa, total de R$ 2.334,60. Vale o maior desconto; eles não se somam. Cupons mantêm suas próprias regras.
 - CTA principal: garantir vaga em https://autonomia.vc/mulheres/. Dupla: selecionar “Comprar em dupla”; pagamentos separados são orientados pela equipe no WhatsApp da página.
 - Credenciais publicadas referem-se aos treinamentos anteriores de Gui Zanoni, não a resultados desta turma.
 

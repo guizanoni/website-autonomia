@@ -212,9 +212,9 @@ Agora vocês podem reservar um dia para colocá-las em prática.
 
 Na AUTONOM/IA Mulheres, cada uma trabalha no próprio projeto, com IA, notebook aberto e monitoras por perto. Pode vir com a sócia, a irmã ou uma amiga de outra área.
 
-E a compra em dupla tem 5% de desconto para cada uma no cartão:
-→ R$ 1.232,15 por pessoa
-→ R$ 2.464,30 pelas duas vagas
+E a compra em dupla tem 8% de desconto para cada uma no cartão:
+→ R$ 1.193,24 por pessoa
+→ R$ 2.386,48 pelas duas vagas
 
 Preferem PIX? São 10% de desconto:
 → R$ 1.167,30 por pessoa
@@ -240,7 +240,7 @@ Na AUTONOM/IA Mulheres, você pode vir com uma sócia, colega, irmã ou amiga. C
 Há monitoras na sala durante o dia e uma rodada de negócios para conhecer outras participantes.
 
 A compra em dupla tem condições próprias:
-• Cartão: 5% de desconto para cada uma. R$ 1.232,15 por pessoa, total de R$ 2.464,30.
+• Cartão: 8% de desconto para cada uma. R$ 1.193,24 por pessoa, total de R$ 2.386,48.
 • PIX: 10% de desconto para cada uma. R$ 1.167,30 por pessoa, total de R$ 2.334,60.
 
 Os descontos não se somam. Almoço, cafés e toolkit com acesso vitalício estão inclusos para as duas.

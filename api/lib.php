@@ -16,7 +16,7 @@ const EVENTO = [
     'vagas'          => 50,
     'preco'          => 1297.00,   // por vaga, no cartão
     'desconto_pix'   => 0.10,
-    'desconto_dupla' => 0.05,      // por vaga, na compra em dupla
+    'desconto_dupla' => 0.08,      // por vaga, na compra em dupla
     'max_parcelas'   => 10,
     'vencimento_dias'=> 2,         // prazo da cobrança PIX
     'vendas_ate'     => '2026-11-10 23:59:59',
@@ -114,7 +114,7 @@ function wa_numero(string $n): string
 function email_valido(string $e): bool { return (bool)filter_var($e, FILTER_VALIDATE_EMAIL); }
 
 // ---- preço -----------------------------------------------------------------
-// Regras: sem cupom, PIX dá 10% e dupla dá 5%; os descontos NÃO se somam (vale o maior).
+// Regras: sem cupom, PIX dá 10% e dupla dá 8%; os descontos NÃO se somam (vale o maior).
 // Com cupom de comunidade, o preço do cupom é o preço final da vaga (sem outro desconto),
 // a menos que o cupom tenha 'acumula_pix' => true.
 function cupom_info(?string $codigo): ?array

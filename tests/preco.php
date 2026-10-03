@@ -20,8 +20,8 @@ try {
         ['individual', 'pix', '', 10, 1167.30, 1167.30, 1, 1167.30, '10% de desconto no PIX'],
         ['dupla', 'pix', '', 10, 1167.30, 2334.60, 1, 2334.60, '10% de desconto no PIX'],
         ['individual', 'cartao', '', 10, 1297.00, 1297.00, 10, 129.70, null],
-        ['dupla', 'cartao', '', 10, 1232.15, 2464.30, 10, 246.43, '5% de desconto pra cada uma (dupla)'],
-        ['dupla', 'cartao', '', 1, 1232.15, 2464.30, 1, 2464.30, '5% de desconto pra cada uma (dupla)'],
+        ['dupla', 'cartao', '', 10, 1193.24, 2386.48, 10, 238.65, '8% de desconto pra cada uma (dupla)'],
+        ['dupla', 'cartao', '', 1, 1193.24, 2386.48, 1, 2386.48, '8% de desconto pra cada uma (dupla)'],
         ['individual', 'cartao', '', 99, 1297.00, 1297.00, 10, 129.70, null],
         ['individual', 'cartao', '', 0, 1297.00, 1297.00, 1, 1297.00, null],
         ['individual', 'pix', 'FIXO', 10, 997.00, 997.00, 1, 997.00, 'Código FIXO'],
@@ -31,11 +31,12 @@ try {
         ['dupla', 'pix', 'ACUMULA', 10, 897.30, 1794.60, 1, 1794.60, 'Código ACUMULA'],
         ['individual', 'cartao', 'ACUMULA', 10, 997.00, 997.00, 10, 99.70, 'Código ACUMULA'],
         ['individual', 'pix', 'INVALIDO', 1, 1167.30, 1167.30, 1, 1167.30, '10% de desconto no PIX'],
+        ['dupla', 'cartao', 'INVALIDO', 10, 1193.24, 2386.48, 10, 238.65, '8% de desconto pra cada uma (dupla)'],
     ];
     foreach ($cases as $i => $case) {
         [$tipo, $forma, $cupom, $parcelas, $unit, $total, $n, $valor, $desconto] = $case;
         $result = calcular($tipo, $forma, $cupom, $parcelas);
-        $expected = ['unitario' => $unit, 'total' => $total, 'parcelas' => $n,
+        $expected = ['vagas' => $tipo === 'dupla' ? 2 : 1, 'unitario' => $unit, 'total' => $total, 'parcelas' => $n,
             'valor_parcela' => $valor, 'desconto' => $desconto,
             'cupom_ok' => in_array($cupom, ['FIXO', 'ACUMULA'], true)];
         foreach ($expected as $field => $value) {

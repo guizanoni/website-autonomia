@@ -7,6 +7,35 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
+## 2026-10-03 — Cena presa durante a transição e menu com indicador deslizante
+
+- Corrigida a falha da prévia anterior: a transição disparava, mas a página rolava junto e o título dos três cards sumia atrás do menu. A cena volta a ficar presa (sticky) por 60% da altura da janela, o bastante para a animação de 1,1 s e um respiro para ver os cards. Em janela baixa, prende depois de ler a abertura inteira.
+- Menu de desktop ganha um indicador único que desliza até o link sob o mouse e volta para a seção em leitura. Troca entre cabeçalho transparente e branco agora é suave. Sem JavaScript, valem os estilos anteriores.
+- Mantidos menu centralizado, moldura e tela "Página no ar" sobre a foto na abertura, hovers dos cards, textos e mobile.
+- Conferidos 1366×650, 1440×820 e 1920×950 (abertura, meio da transição, cards, hover, volta ao topo, seção ativa) e 390 px. Sem erros de JavaScript. Publicação pendente.
+
+## 2026-10-03 — Transição de desktop revisada pela referência Revolut
+
+- Observada a referência pública no navegador, incluindo quadros intermediários e retorno ao topo. O primeiro scroll dispara uma transição de 1,1 s; não exige percorrer 160 alturas percentuais extras de rolagem.
+- Foto e moldura recuam juntas até o card central, com escala uniforme e rosto preservado. Cards laterais entram no mesmo movimento; a segunda chamada e as legendas aparecem quando há área livre, sem atravessar a foto.
+- Menu centralizado na janela, com logo e botão nas laterais. Mantidos formato do cabeçalho, textos, identidade e hovers. Cards também acessíveis pelo teclado.
+- Enquadramento inicial considera largura e altura. Abertura limitada a 1120 px em monitores muito altos; em janelas baixas, cresce o necessário para ler a oferta antes da transição. Mobile e movimento reduzido mantêm sua composição estática.
+- A tentativa local anterior, baseada apenas no recorte/zoom do histórico `221b01c`, foi substituída após a indicação explícita da referência. Conferência visual passa a incluir a animação real, além das medidas finais.
+- Conferidos 15 tamanhos de desktop (900–2560 px), retorno ao topo, reversão durante a transição, hover sem sobreposição, menu centralizado, teclado e movimento reduzido. Regressão mobile em 320, 390 e 768 px; 15 cenários de preço passaram. Prévia local pronta, publicação pendente.
+
+## 2026-10-03 — Desconto de 8% para cada participante na dupla
+
+- Dupla no cartão passa de 5% para 8% por vaga: R$ 1.193,24 por participante e R$ 2.386,48 pelas duas. Mantida uma única compra e cobrança, com os dados das duas participantes.
+- PIX continua com 10%: R$ 1.167,30 por participante e R$ 2.334,60 pela dupla. Sempre vale o maior desconto, sem acumular; regras próprias de cupons preservadas.
+- Atualizados cálculo no servidor, estimativa local, seletor do checkout, oferta, FAQ, perfil editorial, legendas e as duas artes do post da dupla com suas prévias.
+- Passaram 15 cenários de preço e oito combinações no checkout, cobrindo API e estimativa local, compra individual/dupla e PIX/cartão. Nenhuma cobrança enviada.
+
+## 2026-10-03 — Troca de olhar no retrato do facilitador
+
+- Mantida a foto atual de Gui como padrão. Ao passar o mouse, aparece a foto do mesmo ensaio olhando para a frente; ao sair, volta à original, com transição suave e o zoom existente.
+- Efeito também disponível ao focar o link do Instagram pelo teclado. Em telas de toque, a foto permanece estática; a preferência por movimento reduzido é respeitada.
+- Conferidos entrada/saída do mouse, foco, celular e dimensões do retrato. Imagem original preservada sob a segunda para evitar flashes durante o carregamento.
+
 ## 2026-10-03 — Responsividade preservando o design original
 
 - Restaurados foto em tela cheia, transição para três cards, molduras, notificações e hovers. Removida a composição em duas colunas rejeitada pelo usuário; mantidos conteúdo e estrutura originais.

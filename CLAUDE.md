@@ -39,7 +39,7 @@ Secrets necessários no GitHub: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
 - `/` (`index.html`) — só redireciona (JS + meta refresh, mantendo utm) pra edição em venda.
 - `/mulheres/` (`mulheres/index.html`) — LP da edição Mulheres. Caminhos de asset
   são absolutos (`/images/`, `/api/`). Conceito original preservado: foto em
-  tela cheia que encolhe no scroll e vira um de três cards, com molduras,
+  tela cheia que recua ao primeiro scroll e vira um de três cards, com molduras,
   notificações e hover. Conteúdo com largura fluida; em janela baixa, deixa
   ler a abertura inteira antes da animação. Mobile: retrato de ponta a ponta
   com fade para a leitura abaixo do rosto. Seções alternam branco/preto.
@@ -56,7 +56,7 @@ Secrets necessários no GitHub: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
   que calcula o preço **no servidor**, cria a cliente e a cobrança no Asaas e devolve o
   `invoiceUrl` (página segura do Asaas; dado de cartão nunca passa pelo nosso site).
 - Regras de preço em `api/lib.php` (`EVENTO` e `calcular()`): R$ 1.297 no cartão até 10x,
-  PIX -10%, dupla -5% cada no cartão; vale o maior desconto, sem acumular; cupom de comunidade define o preço final.
+  PIX -10%, dupla -8% cada no cartão; vale o maior desconto, sem acumular; cupom de comunidade define o preço final.
 - `api/webhook.php` recebe PAYMENT_CONFIRMED/RECEIVED (header `asaas-access-token`), marca o
   pedido como pago, conta vagas (esgota sozinho em 50) e avisa a equipe via `enviar.php`
   do guizanoni.com. Pedidos ficam em `api/_data/` (bloqueado por `.htaccess`, fora do git
@@ -75,6 +75,12 @@ Secrets necessários no GitHub: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
   O usuário rejeitou a substituição por duas colunas e cards estáticos em
   03/10/2026. No desktop, ajustar medidas e enquadramento; no mobile, adaptar
   a composição mantendo a identidade.
+- Referência de desktop indicada pelo usuário: https://www.revolut.com/.
+  O primeiro scroll dispara uma transição de cerca de 1,1 s: foto e moldura
+  recuam juntas, os cards laterais entram e a segunda chamada aparece na
+  área branca. Voltar ao topo reverte o movimento. Não prender a rolagem
+  num longo recorte sobre a foto ampliada. Preservar o enquadramento do rosto,
+  menu centralizado e leitura completa em janelas baixas.
 - Commits em **pt-BR**, uma frase que conta a história da mudança.
 - O copy é a maior parte do trabalho aqui. Mudança de texto é mudança de
   produto: preservar tom, escassez e numeração das seções.
