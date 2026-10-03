@@ -5,7 +5,14 @@ Complementa [CLAUDE.md](CLAUDE.md) (como trabalhar) e [CHANGELOG.md](CHANGELOG.m
 
 ---
 
-## Produto
+## Edição atual — atualizado em 02/10/2026
+
+- A raiz redireciona para `/mulheres/`: AUTONOM/IA Mulheres, um dia presencial em 11/11/2026, das 8h às 18h30, no Hard Rock Café Curitiba. Checkout Asaas; regras comerciais em `AGENTS.md` e `api/lib.php`.
+- A copy prioriza mulheres que já empreendem; quem quer construir uma primeira oferta é o público secundário. Começar do zero em IA é uma condição transversal.
+- Promessas específicas: planejamento de conteúdo e legendas, oferta e preço inicial para testar, página simples publicada e IA com contexto para ajudar a escrever. Não anunciar artes/vídeos finalizados, vendas garantidas ou atendimento automático no WhatsApp como entregas do dia.
+- Perfil editorial e referências em `social/brand-profile.md`. Os dados abaixo documentam a edição anterior e não devem orientar a comunicação da edição Mulheres.
+
+## Produto anterior — histórico de julho de 2026
 
 - **Autonomia** (autonomia.vc) — imersão presencial de 3 dias em Curitiba.
   Empreendedores saem com sistemas de automação construídos por eles mesmos.

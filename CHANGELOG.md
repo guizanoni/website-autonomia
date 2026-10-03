@@ -7,6 +7,15 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
+## 2026-10-02 — Copy da edição Mulheres orientada aos ICPs
+
+- Abertura passa a apresentar conteúdo, oferta e página como entregas, com preço total, parcelamento e garantia perto da chamada de compra.
+- Duas entradas de identificação: quem já empreende e quem quer construir uma primeira oferta. Iniciantes têm orientação explicada antes das entregas; familiaridade com IA deixa de ser tratada como um terceiro ICP.
+- Entregas ficam visíveis em cards legíveis, sem exigir hover; exemplo de organização residencial mostra a sequência oferta → conteúdo → página e está identificado como ilustrativo.
+- FAQ distingue planejamento e legendas de artes prontas, assistência na escrita de atendimento automático e preço inicial de oferta validada. Mantidos valores, regras comerciais, checkout e tracking.
+- No celular, em telas baixas e com movimento reduzido, a abertura segue o fluxo normal de leitura. Em telas maiores, a animação apresenta as entregas.
+- Verificados seis tamanhos/modos de tela, links internos, abas, checkout individual/dupla e turma esgotada com APIs simuladas, sem criar pedidos.
+
 ## 2026-10-02 — Mais três posts de conversão
 
 - A vitrine `/social/posts-conversao/` passa de três para seis posts, com novos argumentos sobre começar do zero, comprar em dupla e reservar tempo para o próprio negócio.

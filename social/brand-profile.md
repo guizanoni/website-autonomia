@@ -4,12 +4,13 @@ Atualizado em 02/10/2026. Perfil derivado da página da edição e dos três pos
 
 ## Identidade e posicionamento
 
-Bootcamp presencial de IA para mulheres, com prática no próprio negócio e ajuda na sala. A ideia central é aprender fazendo: assistente de IA, posts, oferta, preço e página de vendas. Uma IA gratuita deve bastar para executar as atividades.
+Bootcamp presencial de IA para mulheres, com prática no próprio negócio e ajuda na sala. A ideia central é aprender fazendo: assistente com contexto do negócio, calendário de conteúdo e legendas, oferta, preço inicial e página de vendas simples publicada. Uma IA gratuita deve bastar para executar as atividades.
 
 ## Público
 
-- Mulheres que empreendem e concentram atendimento, conteúdo e gestão. Querem fazer tarefas que vivem adiando e receiam não acompanhar a tecnologia.
-- Mulheres que começam do zero ou pensam em mudar de carreira. Querem transformar o que sabem em uma oferta concreta.
+- Público principal: mulheres que empreendem e concentram atendimento, conteúdo e gestão. Querem avançar nas tarefas que vivem adiando.
+- Público secundário: mulheres que querem começar um negócio ou serviço, inclusive em transição de carreira. Querem transformar o que sabem em uma primeira oferta.
+- Nunca ter usado IA é uma condição possível nos dois públicos, não um terceiro ICP. Acolher iniciantes sem presumir medo, vergonha ou falta de competência profissional.
 
 ## Voz
 
@@ -31,6 +32,7 @@ No Instagram: abertura curta, parágrafos breves, lista com setas quando útil e
 - Identidade visual e moldes: `posts-conversao/posts.html`; vitrine: `posts-conversao/index.html`.
 - Artes para Instagram (1080×1350) e LinkedIn (1080×1080), com texto legível e descrição de imagem na vitrine.
 - Nunca inventar depoimentos, retorno financeiro, horas economizadas, resultados de alunas ou vagas restantes. Não prometer ferramentas pagas como requisito.
+- Ao anunciar conteúdo, explicitar planejamento e legendas; não prometer um mês de artes ou vídeos finalizados. A assistente ajuda a escrever para a participante revisar; a atividade não inclui atendimento automático no WhatsApp. A oferta e o preço inicial ainda serão testados no mercado.
 - Fotos do site são ilustrativas, não depoimentos de alunas. Política de avatares, clonagem de voz e novas imagens sintéticas não foi definida; não é necessária para este lote de artes tipográficas.
 - Evitar “domine a IA”, “revolucione”, “fórmula secreta”, urgência sem fundamento e promessas de renda.
 
@@ -41,3 +43,9 @@ No Instagram: abertura curta, parágrafos breves, lista com setas quando útil e
 3. Post 3, “As fundadoras, só 50 cadeiras”: explica o limite pelo acompanhamento na sala.
 
 Legendas completas em `posts-conversao/legendas.md`. Não há exemplos de voz rejeitados pelo usuário documentados.
+
+## Página de conversão
+
+Revisão de 02/10/2026: promessa concreta no topo, preço e garantia próximos do CTA, duas entradas por situação profissional, acompanhamento antes das entregas, exemplo ilustrativo e escassez limitada à capacidade real da sala. Os exemplos não são resultados de alunas. Entregas visíveis sem depender de hover.
+
+Referências de método: [leitura na web, NN/g](https://www.nngroup.com/articles/how-users-read-on-the-web/), [EAST, Behavioural Insights Team](https://www.bi.team/east-tool/methodology/) e [persuasão, Influence at Work](https://www.influenceatwork.com/7-principles-of-persuasion/). São fundamentos para a hipótese de copy, não evidência de aumento de conversão desta página.
