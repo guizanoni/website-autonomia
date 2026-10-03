@@ -1,293 +1,479 @@
-# AUTONOM/IA Mulheres · 6 posts de conversão
+# AUTONOM/IA Mulheres · 10 posts de conversão
 
-Imagens nesta pasta: `post-N-instagram.png` (1080×1350) e `post-N-linkedin.png` (1080×1080).
-Link de destino: https://autonomia.vc/mulheres/
+Revisão: 03/10/2026. Artes para Instagram (1080×1350) e LinkedIn (1080×1080).
+Destino: https://autonomia.vc/mulheres/
+Fotos ilustrativas do banco de imagens já utilizado no site; não representam participantes ou resultados desta edição.
 
 ---
 
-## Post 1 · O que você leva pra casa
-
-**Imagens:** `post-1-instagram.png` · `post-1-linkedin.png`
+## Post 1 · Sua ideia merece sair do papel
 
 ### Instagram
 
-Quantas noites deste mês foram embora pensando no que postar?
+A ideia já existe. Falta sentar e fazer.
 
-No dia 11/11 você passa um dia inteiro com o notebook aberto e gente do lado pra ajudar. E volta pra casa com:
+No dia 11/11, você reserva um dia para trabalhar nela com IA, notebook aberto e monitoras por perto.
 
-→ os posts do mês prontos, do seu jeito de falar
-→ clareza do que vender e por quanto cobrar
-→ a sua página de vendas no ar, com link pra mandar pras clientes
-→ uma assistente de IA que já conhece o seu negócio
+Na AUTONOM/IA Mulheres, você vai:
 
-Não precisa entender de tecnologia. Se você usa WhatsApp e Instagram, consegue. E tudo funciona na versão grátis da IA.
+→ preparar uma assistente de IA com o contexto do seu negócio
+→ planejar os temas do mês e escrever as legendas
+→ organizar sua oferta e um preço inicial para testar
+→ publicar uma página simples, com sua oferta e botão de contato
 
-Quarta, 11/11 · Hard Rock Café Curitiba · 8h às 18h30
-São só 50 vagas, pra dar tempo de ajudar cada uma de perto.
+É o seu projeto na tela. Pode ser o negócio que você já toca ou a primeira ideia que quer colocar no mundo.
 
+Você aprende o processo e leva um toolkit com acesso vitalício para continuar depois. Não precisa ter experiência com IA nem contratar uma ferramenta paga.
+
+11/11/2026 · 8h às 18h30
+Hard Rock Café Curitiba · Almoço incluso
+
+R$ 1.297 em até 10x de R$ 129,70.
+No PIX: R$ 1.167,30, com 10% de desconto.
+
+Traga sua ideia. Garanta sua vaga pelo link na bio.
+
+#autonomia #mulheresempreendedoras #curitiba #inteligenciaartificial
+
+### LinkedIn
+
+O que muda quando você aprende IA usando o seu próprio projeto?
+
+Cada exercício passa a responder a uma tarefa concreta: o que publicar, como apresentar seu serviço, qual preço inicial testar e onde colocar a oferta para as pessoas conhecerem.
+
+Essa é a proposta da AUTONOM/IA Mulheres, um dia de prática presencial em Curitiba, com notebook aberto e monitoras na sala.
+
+Você trabalha em quatro entregas:
+• Assistente de IA com o contexto do seu negócio, para ajudar a escrever e revisar.
+• Calendário de temas e legendas para o mês.
+• Oferta organizada e preço inicial para apresentar e testar.
+• Página simples publicada, com oferta e botão de contato.
+
+Vale para quem já empreende e para quem quer estruturar uma primeira oferta. Não é preciso saber programar ou assinar uma IA paga. O toolkit e o plano de 30 dias ajudam a continuar o trabalho depois.
+
+11/11/2026 · 8h às 18h30 · Hard Rock Café Curitiba
+Almoço e cafés inclusos.
 R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.167,30 no PIX (10% de desconto).
 
-Garanta a sua pelo link na bio.
-Ficou com dúvida? Manda mensagem aqui que a gente responde.
-
-#autonomia #mulheresempreendedoras #curitiba #inteligenciaartificial
-
-### LinkedIn
-
-A maioria dos cursos de IA termina com uma apostila. Este termina com o trabalho feito.
-
-No dia 11 de novembro, em Curitiba, a AUTONOM/IA Mulheres reúne 50 mulheres por um dia inteiro, com o notebook aberto e monitoras na sala. Cada parte do dia termina com algo pronto na tela:
-
-• Manhã: uma assistente de IA que conhece o seu negócio e um mês de posts escritos.
-• Tarde: o seu diferencial, o que vender, por quanto cobrar e a sua página de vendas no ar.
-• Fim do dia: rodada de negócios com mulheres de outras áreas.
-
-Serve pra quem já tem negócio e faz tudo sozinha, pra quem está pensando em mudar de carreira e pra quem nunca usou IA. Tudo funciona na versão gratuita. Não precisa assinar nada nem entender de tecnologia.
-
-Quem conduz é o Gui Zanoni, que trabalha com IA desde 2016 e tem nota média 9,6 de 10, dada por 1.734 pessoas que já fizeram os treinamentos dele.
-
-Quarta, 11/11 · Hard Rock Café Curitiba · 8h às 18h30
-R$ 1.297 em até 10x, ou R$ 1.167,30 no PIX (10% de desconto). Nota fiscal no CPF ou no CNPJ.
-
-Garanta a sua vaga: https://autonomia.vc/mulheres/
+Reserve um dia para avançar no seu projeto: https://autonomia.vc/mulheres/
 
 ---
 
-## Post 2 · Garantia até o almoço
-
-**Imagens:** `post-2-instagram.png` · `post-2-linkedin.png`
+## Post 2 · Experimente com garantia até o almoço
 
 ### Instagram
 
-"E se eu pagar e não for pra mim?"
+“E se eu chegar lá e perceber que não é pra mim?”
 
-Então você recebe tudo de volta.
+Você pode participar da manhã e decidir.
 
-Funciona assim: você vem, fica a manhã toda, cria a sua assistente de IA e os seus posts do mês. Se até o almoço (12h30) sentir que não é pra você, é só avisar alguém da equipe na sala. A gente devolve 100% do valor.
+Se até o almoço, às 12h30, sentir que a AUTONOM/IA Mulheres não é para você, avise a equipe na sala. Você recebe 100% do valor de volta.
 
-E se aparecer um imprevisto antes, dá pra cancelar até 09/11 e receber tudo de volta também.
+A manhã é dedicada a começar a usar IA no seu notebook, preparar uma assistente com o contexto do seu negócio e trabalhar no planejamento de conteúdo e nas legendas. Com monitoras para ajudar.
 
-O risco fica com a gente. Com você fica o dia inteiro mão na massa, o almoço no Hard Rock e um kit pra continuar usando a IA depois.
+À tarde, a prática continua com oferta, preço inicial e página de vendas. Tudo usando o seu projeto.
 
-Quarta, 11/11 · Hard Rock Café Curitiba
-R$ 1.297 em até 10x, ou R$ 1.167,30 no PIX (10% de desconto).
+Surgiu um imprevisto antes? O cancelamento com reembolso integral vale até 09/11.
 
-São só 50 vagas. Garanta a sua pelo link na bio.
+11/11/2026 · 8h às 18h30
+Hard Rock Café Curitiba · Almoço incluso
+R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.167,30 no PIX (10% off).
+
+Conheça a programação e garanta sua vaga pelo link na bio.
 
 #autonomia #mulheresempreendedoras #curitiba #inteligenciaartificial
 
 ### LinkedIn
 
-Já fez curso de IA e nada mudou? É por isso que este tem garantia até o almoço.
+Você pode conhecer a experiência por dentro antes de decidir ficar até o fim.
 
-Na AUTONOM/IA Mulheres você passa a manhã com o notebook aberto, cria uma assistente de IA que conhece o seu negócio e escreve os posts do mês. Se até as 12h30 sentir que não é pra você, avisa alguém da equipe na sala e recebe 100% do valor de volta.
+A AUTONOM/IA Mulheres tem garantia até o almoço: participe da manhã e, se até as 12h30 sentir que não é para você, avise a equipe na sala e receba 100% do valor de volta.
 
-Se surgir um imprevisto antes, o cancelamento com reembolso integral vale até 09/11.
+O começo do dia é prático. Você abre o notebook, configura a IA com ajuda e trabalha em uma assistente com contexto do seu negócio, no calendário de conteúdo e nas legendas.
 
-Dá pra oferecer isso porque o dia foi feito pra entregar resultado cedo: você vê coisa pronta na sua tela ainda de manhã. À tarde vêm o seu diferencial, o que vender, o preço e a sua página de vendas no ar.
+A tarde é dedicada à oferta, ao preço inicial e à publicação de uma página simples. Há monitoras durante o dia, e uma IA gratuita é suficiente para as atividades.
 
-Quarta, 11/11 · Hard Rock Café Curitiba · 8h às 18h30 · 50 vagas
-R$ 1.297 em até 10x, ou R$ 1.167,30 no PIX (10% de desconto). Se a empresa pagar, a nota sai no CNPJ dela.
+A garantia tem uma condição clara: comunicar a decisão à equipe até as 12h30 do evento. Se precisar cancelar antes, o reembolso integral vale até 09/11.
 
-Garanta a sua vaga: https://autonomia.vc/mulheres/
+11/11/2026 · 8h às 18h30 · Hard Rock Café Curitiba
+Almoço, cafés e toolkit inclusos.
+R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.167,30 no PIX (10% de desconto).
+
+Veja a programação e faça sua inscrição: https://autonomia.vc/mulheres/
 
 ---
 
-## Post 3 · As fundadoras, só 50 cadeiras
-
-**Imagens:** `post-3-instagram.png` · `post-3-linkedin.png`
+## Post 3 · A primeira turma tem espaço para você
 
 ### Instagram
 
-50 cadeiras. Uma pode ser a sua.
+50 mulheres. Cada uma com um projeto para fazer andar.
 
-Esta é a Turma 1 da AUTONOM/IA Mulheres. Quem entra agora é fundadora. E a sala tem no máximo 50 pessoas por um motivo: dar tempo de ajudar cada uma de perto, no seu notebook, no seu ritmo.
+A primeira turma da AUTONOM/IA Mulheres terá até 50 participantes, com monitoras na sala para ajudar durante as atividades.
 
-O que está incluso:
-→ um dia inteiro mão na massa, das 8h às 18h30
-→ café de boas-vindas, dois cafés e almoço no Hard Rock
-→ monitoras na sala o dia todo
-→ kit pra levar pra casa, sem prazo pra expirar
-→ rodada de negócios e grupo da turma no WhatsApp
-→ certificado, foto oficial e brinde
+Você chega com seu notebook e trabalha no que faz sentido para o seu momento: o negócio que já existe ou a primeira oferta que quer construir.
 
-10x de R$ 129,70 no cartão, ou R$ 1.167,30 à vista no PIX (10% de desconto).
+Na inscrição estão inclusos:
+→ um dia de prática com IA, das 8h às 18h30
+→ acompanhamento das monitoras
+→ almoço e cafés no Hard Rock
+→ toolkit com acesso vitalício e plano de 30 dias
+→ rodada de negócios e grupo da turma
 
-Vem com uma amiga? Na compra em dupla, cada uma ganha 5% de desconto no cartão. Marca aqui aquela que vive dizendo que precisa aprender isso.
+Não precisa conhecer IA antes. Pode começar aqui.
 
-Garanta a sua vaga pelo link na bio.
+11/11/2026 · Hard Rock Café Curitiba
+R$ 1.297 em até 10x de R$ 129,70.
+PIX: R$ 1.167,30 — 10% de desconto, economia de R$ 129,70.
+
+Quer fazer parte da Turma 1? Garanta sua vaga pelo link na bio.
 
 #autonomia #mulheresempreendedoras #curitiba #inteligenciaartificial
 
 ### LinkedIn
 
-A primeira turma da AUTONOM/IA Mulheres tem 50 cadeiras. Não abrimos mais porque não daria pra ajudar cada uma de perto.
+A primeira turma da AUTONOM/IA Mulheres tem capacidade para 50 participantes. O formato é presencial, com prática no próprio projeto e monitoras acompanhando as atividades.
 
-É um dia inteiro de IA, só pra mulheres, em Curitiba. Cada participante sai com uma assistente de IA que conhece o seu negócio, um mês de posts, o que vender e por quanto, e a própria página de vendas no ar. No fim do dia, uma rodada de negócios em grupos pequenos, conduzida por uma empreendedora convidada.
+Para quem já empreende, é um dia reservado para usar IA no planejamento de conteúdo, na apresentação da oferta e na construção de uma página de vendas.
 
-O que está incluso:
-• Dia inteiro mão na massa, das 8h às 18h30, com monitoras na sala
-• Café de boas-vindas, dois cafés e almoço no Hard Rock Café
-• Kit com assistentes prontas, pedidos prontos pra copiar e colar na IA, guias e plano de 30 dias, com acesso vitalício
-• Grupo da turma no WhatsApp, certificado, foto oficial e brinde
+Para quem quer começar, é a oportunidade de organizar uma primeira oferta e um preço inicial para testar, com orientação durante o processo.
 
-R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.167,30 à vista no PIX (10% de desconto). Na compra em dupla, cada uma ganha 5% de desconto no cartão (os descontos não se somam).
+A inscrição inclui:
+• Atividades das 8h às 18h30, com apoio de monitoras.
+• Almoço e cafés no Hard Rock Café Curitiba.
+• Toolkit com acesso vitalício e plano de 30 dias.
+• Rodada de negócios e grupo da turma no WhatsApp.
 
-E tem garantia: se até o almoço você sentir que não é pra você, devolvemos 100%.
+11 de novembro de 2026 · Curitiba
+R$ 1.297 em até 10x de R$ 129,70.
+À vista no PIX: R$ 1.167,30, com 10% de desconto. Economia de R$ 129,70.
 
-Quarta, 11 de novembro · Hard Rock Café Curitiba
-Garanta a sua vaga: https://autonomia.vc/mulheres/
+Faça parte da primeira turma: https://autonomia.vc/mulheres/
 
 ---
 
 ## Post 4 · Nunca usou IA? Pode vir.
 
-**Imagens:** `post-4-instagram.png` · `post-4-linkedin.png`
-
 ### Instagram
 
 Você não precisa aprender IA antes de vir aprender IA.
 
-Parece óbvio. Mas muita mulher adia a inscrição porque acha que vai ser a única da sala sem saber por onde começar.
+Se ainda não sabe por onde começar, esse pode ser o seu primeiro dia.
 
-A AUTONOM/IA Mulheres foi feita pra quem começa do zero:
+Na AUTONOM/IA Mulheres, você tem:
+→ ajuda para começar a usar IA no seu notebook
+→ monitoras por perto quando surgir uma dúvida
+→ atividades com uma IA gratuita, sem precisar programar
 
-→ o começo da manhã é pra deixar a IA funcionando no seu notebook
-→ uma monitora vem até você quando precisar de ajuda
-→ você faz tudo com uma IA, na versão gratuita
+Você pratica no seu negócio ou na ideia que quer começar: prepara uma assistente, planeja temas e legendas, organiza uma oferta e monta uma página simples para divulgá-la.
 
-Se você usa WhatsApp e Instagram, já tem por onde começar. Aqui, você aprende fazendo coisas do seu negócio: os posts, a oferta, a página de vendas.
+Leve seu notebook e carregador. O passo a passo acontece na sala.
 
-Leve seu notebook e carregador. Não precisa instalar nada antes.
+11/11/2026 · 8h às 18h30
+Hard Rock Café Curitiba · Almoço incluso
+R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.167,30 no PIX (10% off).
 
-Quarta, 11/11 · Hard Rock Café Curitiba · 8h às 18h30
-R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.167,30 no PIX (10% de desconto). Almoço incluso.
-
-Garanta sua vaga pelo link na bio. Pode vir do zero.
+Comece com ajuda. Garanta sua vaga pelo link na bio.
 
 #autonomia #mulheresempreendedoras #curitiba #inteligenciaartificial
 
 ### LinkedIn
 
-"Tenho interesse, mas nunca usei IA. Vou conseguir acompanhar?"
+“Tenho interesse, mas nunca usei IA. Como vou começar?”
 
-Essa dúvida merece uma resposta concreta: o começo da manhã da AUTONOM/IA Mulheres é dedicado a deixar a IA funcionando no seu notebook, com ajuda.
+Com o notebook aberto e ajuda na sala.
 
-Ao longo do dia, você trabalha no seu próprio negócio. Cria uma assistente de IA, escreve os posts do mês, organiza o que vender e por quanto, e monta sua página de vendas.
+Na AUTONOM/IA Mulheres, o começo da manhã é dedicado a colocar a IA para funcionar no seu notebook. Depois, você pratica usando informações do seu negócio ou da primeira oferta que deseja construir.
 
-Três escolhas tornam esse começo possível:
+O formato oferece três apoios concretos:
+• Monitoras para ajudar durante as atividades.
+• Passo a passo sem necessidade de programar.
+• Uma IA gratuita, sem assinatura obrigatória.
 
-• Monitoras na sala o dia inteiro, para ajudar no seu notebook, no seu ritmo.
-• Passo a passo em linguagem simples, sem precisar programar.
-• Uma IA só, na versão gratuita. Nenhuma assinatura obrigatória.
+As atividades passam por assistente de IA, planejamento de temas e legendas, oferta, preço inicial e uma página simples publicada. Você aprende a revisar o que a IA produz e leva um toolkit para continuar depois.
 
-Também serve pra quem ainda não tem um negócio e quer transformar o que sabe fazer em uma primeira oferta.
+Não precisa ter um negócio aberto para participar. Sua experiência e uma ideia de serviço já podem ser o ponto de partida.
 
-Leve seu notebook com carregador. Não precisa instalar nada antes.
+11/11/2026 · 8h às 18h30 · Hard Rock Café Curitiba
+Leve notebook e carregador. Almoço incluso.
+R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.167,30 no PIX (10% de desconto).
 
-Quarta, 11 de novembro · Hard Rock Café Curitiba · 8h às 18h30
-R$ 1.297 em até 10x, ou R$ 1.167,30 no PIX (10% de desconto). Almoço incluso.
-
-Comece com ajuda. Garanta sua vaga: https://autonomia.vc/mulheres/
+Comece com ajuda: https://autonomia.vc/mulheres/
 
 ---
 
 ## Post 5 · Chama uma amiga. Vem de dupla.
 
-**Imagens:** `post-5-instagram.png` · `post-5-linkedin.png`
-
 ### Instagram
 
-Sabe aquela amiga que também vive dizendo "preciso aprender a usar IA"?
+Manda pra aquela amiga com quem você vive trocando ideias de negócio.
 
-Manda este post pra ela. Vocês já têm data: 11/11, em Curitiba.
+Agora vocês podem reservar um dia para colocá-las em prática.
 
-Na AUTONOM/IA Mulheres, cada uma trabalha no próprio projeto, com o notebook aberto e monitoras por perto. Vocês aprendem juntas e levam os próprios posts, a própria oferta e a própria página de vendas.
+Na AUTONOM/IA Mulheres, cada uma trabalha no próprio projeto, com IA, notebook aberto e monitoras por perto. Pode vir com a sócia, a irmã ou uma amiga de outra área.
 
-Pode ser a sócia, a irmã ou uma amiga de outra área. E tem um motivo a mais pra combinar agora:
+E a compra em dupla tem 5% de desconto para cada uma no cartão:
+→ R$ 1.232,15 por pessoa
+→ R$ 2.464,30 pelas duas vagas
 
-Na compra em dupla, cada uma ganha 5% de desconto no cartão.
-De R$ 1.297 por R$ 1.232,15 por pessoa.
-Total das duas vagas no cartão: R$ 2.464,30. No PIX, são 10% de desconto: R$ 1.167,30 por pessoa, R$ 2.334,60 no total. Os descontos não se somam.
+Preferem PIX? São 10% de desconto:
+→ R$ 1.167,30 por pessoa
+→ R$ 2.334,60 pelas duas vagas
 
-Como fazer: abram o link na bio, escolham "Comprar em dupla" e paguem as duas vagas juntas. Se preferirem pagar separadamente, falem com a equipe pelo WhatsApp da página.
+Os descontos não se somam.
 
-Quarta, 11/11 · Hard Rock Café Curitiba · 8h às 18h30
-Almoço, kit pra continuar em casa e rodada de negócios inclusos.
+Para comprar, abram o link na bio e escolham “Comprar em dupla”. As duas vagas são pagas juntas. Se quiserem pagar separadamente, a equipe orienta pelo WhatsApp da página.
 
-Escolham a dupla e garantam as duas vagas pelo link na bio.
+11/11/2026 · 8h às 18h30 · Hard Rock Café Curitiba
+Almoço, toolkit e rodada de negócios inclusos para as duas.
+
+Escolham a dupla. Garantam as vagas pelo link na bio.
 
 #autonomia #mulheresempreendedoras #curitiba #inteligenciaartificial
 
 ### LinkedIn
 
-Uma conversa com a sócia pode colocar o aprendizado de IA na agenda das duas.
+Quem você convidaria para passar um dia colocando ideias de negócio em prática com IA?
 
-No dia 11 de novembro, a AUTONOM/IA Mulheres reúne mulheres em Curitiba para um dia de prática com IA. Você pode vir com uma colega, uma amiga ou alguém com quem divide o negócio.
+Na AUTONOM/IA Mulheres, você pode vir com uma sócia, colega, irmã ou amiga. Cada participante trabalha no próprio projeto: assistente de IA, calendário e legendas, oferta, preço inicial e página de vendas.
 
-Cada participante trabalha no próprio projeto: assistente de IA, posts do mês, oferta, preço e página de vendas. Há monitoras na sala durante todo o dia e, no fim da tarde, uma rodada de negócios para conhecer outras participantes.
+Há monitoras na sala durante o dia e uma rodada de negócios para conhecer outras participantes.
 
-A compra em dupla dá 5% de desconto no cartão para cada uma:
+A compra em dupla tem condições próprias:
+• Cartão: 5% de desconto para cada uma. R$ 1.232,15 por pessoa, total de R$ 2.464,30.
+• PIX: 10% de desconto para cada uma. R$ 1.167,30 por pessoa, total de R$ 2.334,60.
 
-• Valor individual sem desconto: R$ 1.297.
-• Na dupla no cartão: R$ 1.232,15 por pessoa.
-• Total das duas vagas no cartão: R$ 2.464,30.
-• No PIX, 10% de desconto: R$ 1.167,30 por pessoa, total de R$ 2.334,60.
+Os descontos não se somam. Almoço, cafés e toolkit com acesso vitalício estão inclusos para as duas.
 
-Os descontos não se somam. Almoço e kit com acesso vitalício estão inclusos para as duas.
+Escolha “Comprar em dupla” no site para pagar as duas vagas juntas. Para pagamentos separados, fale com a equipe pelo WhatsApp disponível na página.
 
-Para comprar, escolha "Comprar em dupla" no site e pague as duas vagas de uma vez. Se cada uma preferir pagar a sua, a equipe orienta pelo WhatsApp disponível na página. Há emissão de nota fiscal no CPF ou no CNPJ.
-
-Quarta, 11/11 · Hard Rock Café Curitiba · 8h às 18h30
+11/11/2026 · 8h às 18h30 · Hard Rock Café Curitiba
 
 Convide sua dupla e garantam as vagas: https://autonomia.vc/mulheres/
 
 ---
 
-## Post 6 · Um dia para sair do “depois”
-
-**Imagens:** `post-6-instagram.png` · `post-6-linkedin.png`
+## Post 6 · Sua lista de “um dia eu faço” ganhou data
 
 ### Instagram
 
-Os posts ficam pro fim de semana. O preço, pra quando der. A página de vendas, pra um dia.
+As legendas ficam pro fim de semana. O preço, pra quando der. A página de vendas, pra um dia.
 
-Quem cuida de tudo no negócio conhece essa lista.
+Reconheceu alguma tarefa da sua lista?
 
-No dia 11/11, ela vira a pauta do seu dia na AUTONOM/IA Mulheres. Você abre o notebook e trabalha nessas tarefas, com IA e gente do lado pra ajudar.
+No dia 11/11, elas entram na agenda da AUTONOM/IA Mulheres. Você abre o notebook e trabalha no que já precisa resolver, usando IA e com gente do lado pra ajudar.
 
-De manhã: sua assistente de IA e os posts do mês.
-À tarde: sua oferta, seu preço e sua página de vendas.
-Pra continuar em casa: kit com acesso vitalício e plano de 30 dias.
+De manhã: assistente com o contexto do negócio, planejamento de temas e escrita das legendas.
+À tarde: oferta, preço inicial e página simples publicada.
+No fim do dia: rodada de negócios com outras mulheres.
 
-É uma quarta reservada pra fazer o que vive ficando pra depois, usando o seu próprio negócio como ponto de partida.
+Você ainda leva um toolkit com acesso vitalício e um plano de 30 dias para continuar em casa.
 
-Quarta, 11/11 · Hard Rock Café Curitiba · 8h às 18h30
-Almoço e cafés inclusos.
-R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.167,30 no PIX (10% de desconto).
+Uma quarta reservada para fazer seu projeto andar.
 
-Reserve esse dia pro seu negócio. Garanta sua vaga pelo link na bio.
+11/11/2026 · 8h às 18h30
+Hard Rock Café Curitiba · Almoço e cafés inclusos
+R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.167,30 no PIX (10% off).
+
+Reserve esse dia para o seu negócio. Inscrição no link da bio.
 
 #autonomia #mulheresempreendedoras #curitiba #inteligenciaartificial
 
 ### LinkedIn
 
-"É numa quarta. Como vou tirar um dia do negócio?"
+“É numa quarta. Como vou tirar um dia do negócio?”
 
-Se essa é a sua dúvida sobre a AUTONOM/IA Mulheres, vale olhar para o que entra na agenda do dia 11/11.
+Olhe para as tarefas que entram na agenda da AUTONOM/IA Mulheres:
 
-Você leva o notebook e trabalha no que já precisa resolver:
+• Preparar uma assistente de IA com informações do seu negócio.
+• Planejar temas e escrever legendas para o mês.
+• Organizar a oferta e definir um preço inicial para testar.
+• Publicar uma página simples com oferta e botão de contato.
 
-• De manhã, configura uma assistente de IA para o seu negócio e escreve os posts do mês.
-• À tarde, organiza sua oferta, define o preço e coloca sua página de vendas no ar.
-• No fim do dia, participa de uma rodada de negócios com outras mulheres.
+Você leva o notebook e trabalha no próprio projeto, com passo a passo e monitoras na sala. São tarefas do negócio com tempo reservado para execução.
 
-São tarefas que costumam disputar espaço com atendimento, pedidos e administração. Aqui, elas têm horário reservado, passo a passo e monitoras para ajudar.
+O dia termina com uma rodada de negócios. O trabalho pode continuar depois com o toolkit, o plano de 30 dias e o grupo da turma.
 
-O trabalho continua depois: você leva um kit com assistentes, pedidos prontos para usar na IA, guias e um plano de 30 dias, com acesso vitalício. A turma também segue em um grupo de WhatsApp.
-
-Quarta, 11 de novembro · Hard Rock Café Curitiba · 8h às 18h30
+11/11/2026 · 8h às 18h30 · Hard Rock Café Curitiba
 Almoço e cafés inclusos.
-R$ 1.297 em até 10x, ou R$ 1.167,30 no PIX (10% de desconto). Nota fiscal no CPF ou no CNPJ.
+R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.167,30 no PIX (10% de desconto).
 
-Reserve um dia para avançar no seu negócio: https://autonomia.vc/mulheres/
+Dê uma data para o que está ficando para depois: https://autonomia.vc/mulheres/
+
+---
+
+## Post 7 · Seu negócio tem você. Agora pode ter IA.
+
+### Instagram
+
+Você atende. Você divulga. Você decide o próximo passo.
+
+Quando tanta coisa depende de você, vale aprender onde a IA pode ajudar.
+
+Uma resposta para a cliente, uma legenda que não começa do zero, ideias para apresentar melhor o que você vende. Você dá o contexto, a IA ajuda a escrever e você revisa antes de usar.
+
+Na AUTONOM/IA Mulheres, você pratica essas aplicações no seu próprio negócio. Com o notebook aberto e monitoras por perto.
+
+Também organiza sua oferta, um preço inicial e uma página simples para divulgá-la. Tudo com uma IA gratuita.
+
+11/11/2026 · 8h às 18h30
+Hard Rock Café Curitiba · Almoço e toolkit inclusos
+R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.167,30 no PIX (10% off).
+
+Traga seu negócio para a prática. Garanta sua vaga no link da bio.
+
+#autonomia #mulheresempreendedoras #curitiba #inteligenciaartificial
+
+### LinkedIn
+
+Quando atendimento, conteúdo e decisões passam pela mesma pessoa, aprender a aplicar IA pode começar por uma tarefa pequena e recorrente.
+
+Preparar uma resposta a uma cliente. Escrever a primeira versão de uma legenda. Organizar as informações de uma oferta.
+
+Na AUTONOM/IA Mulheres, você pratica com o contexto do próprio negócio. A IA ajuda na escrita e na organização; você confere as informações, ajusta o tom e decide o que usar.
+
+É um dia presencial com monitoras, dedicado a assistente de IA, calendário de temas e legendas, oferta, preço inicial e página de vendas. As atividades podem ser feitas com uma IA gratuita.
+
+Não é necessário chegar sabendo usar a ferramenta. Leve seu notebook e as questões reais do seu negócio.
+
+11/11/2026 · 8h às 18h30 · Hard Rock Café Curitiba
+Almoço, cafés e toolkit com acesso vitalício inclusos.
+R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.167,30 no PIX (10% de desconto).
+
+Traga seu negócio para a prática: https://autonomia.vc/mulheres/
+
+---
+
+## Post 8 · Sua experiência pode virar uma primeira oferta
+
+### Instagram
+
+O que você sabe fazer pode ser o começo do seu próximo negócio.
+
+Se está pensando em empreender ou mudar de carreira, talvez falte organizar três coisas: para quem trabalhar, qual problema resolver e como apresentar sua oferta.
+
+No dia 11/11, você usa a IA para dar forma a essas respostas na AUTONOM/IA Mulheres.
+
+Com orientação, você trabalha em:
+→ uma primeira oferta baseada no que sabe fazer
+→ um preço inicial para apresentar e testar
+→ uma página simples, publicada com seu contato
+→ temas e legendas para começar a divulgar
+
+Você não precisa chegar com empresa aberta ou experiência em IA. Traga seu notebook e uma ideia para desenvolver.
+
+11/11/2026 · 8h às 18h30
+Hard Rock Café Curitiba · Almoço incluso
+R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.167,30 no PIX (10% off).
+
+Dê o próximo passo. Garanta sua vaga pelo link na bio.
+
+#autonomia #mulheresempreendedoras #curitiba #inteligenciaartificial
+
+### LinkedIn
+
+Uma transição de carreira também pode começar pela organização do que você já sabe fazer.
+
+Que problema sua experiência ajuda a resolver? Para quem? Em qual formato você poderia oferecer esse trabalho?
+
+Na AUTONOM/IA Mulheres, essas perguntas entram na prática com IA. Você trabalha em uma primeira oferta, define um preço inicial para testar e publica uma página simples para apresentá-la.
+
+Ao longo do dia, também prepara uma assistente com o contexto do projeto e escreve temas e legendas para a divulgação. Há monitoras para ajudar, e não é necessário ter empresa aberta, saber programar ou contratar uma IA paga.
+
+A oferta construída no encontro é um ponto de partida: depois, você a apresenta ao mercado e ajusta a partir das conversas com possíveis clientes.
+
+11/11/2026 · 8h às 18h30 · Hard Rock Café Curitiba
+Leve notebook e carregador. Almoço e toolkit inclusos.
+R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.167,30 no PIX (10% de desconto).
+
+Traga sua experiência e uma ideia para desenvolver: https://autonomia.vc/mulheres/
+
+---
+
+## Post 9 · Você não precisa começar sozinha
+
+### Instagram
+
+A primeira pergunta para a IA pode vir acompanhada de outra: “é assim mesmo que faz?”
+
+Na AUTONOM/IA Mulheres, tem gente por perto para responder.
+
+Você abre o notebook, faz os exercícios no seu projeto e chama uma monitora quando precisar. Do primeiro pedido à organização do conteúdo, da oferta e da página de vendas.
+
+O dia foi pensado para quem quer aprender fazendo, inclusive quem nunca usou IA.
+
+→ uma IA gratuita para as atividades
+→ monitoras na sala durante o dia
+→ toolkit com acesso vitalício para consultar depois
+
+E tem garantia: se até o almoço, às 12h30, sentir que não é para você, avise a equipe na sala e receba 100% do valor de volta.
+
+11/11/2026 · 8h às 18h30
+Hard Rock Café Curitiba · Almoço incluso
+R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.167,30 no PIX (10% off).
+
+Comece com ajuda. Garanta sua vaga pelo link na bio.
+
+#autonomia #mulheresempreendedoras #curitiba #inteligenciaartificial
+
+### LinkedIn
+
+Uma dúvida durante a prática merece uma resposta enquanto você está praticando.
+
+Por isso, a AUTONOM/IA Mulheres tem monitoras na sala durante o dia. Você trabalha no próprio notebook e pode pedir ajuda para continuar a atividade.
+
+O percurso começa no uso da IA e passa por uma assistente com contexto do negócio, planejamento de temas e legendas, oferta, preço inicial e página simples publicada.
+
+Não precisa saber programar ou ter experiência com IA. As atividades usam uma ferramenta gratuita, e o toolkit fica disponível com acesso vitalício para consulta depois do encontro.
+
+Há também garantia até o almoço: se até as 12h30 sentir que a experiência não é para você, comunique à equipe na sala para receber 100% do valor de volta.
+
+11/11/2026 · 8h às 18h30 · Hard Rock Café Curitiba
+Almoço e cafés inclusos.
+R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.167,30 no PIX (10% de desconto).
+
+Comece com ajuda e aplique no seu negócio: https://autonomia.vc/mulheres/
+
+---
+
+## Post 10 · Seu próximo contato pode estar na mesa ao lado
+
+### Instagram
+
+Com quem você troca ideias quando quer fazer o negócio andar?
+
+No dia 11/11, você pode ampliar essa conversa.
+
+A AUTONOM/IA Mulheres reúne mulheres que já empreendem e mulheres preparando o primeiro passo. Cada uma trabalha no seu projeto com IA, e o dia inclui uma rodada de negócios em grupos pequenos.
+
+É espaço para apresentar o que você faz, ouvir outras experiências, trocar contatos e conhecer possíveis parceiras.
+
+Antes disso, tem notebook aberto e prática: assistente de IA, temas e legendas, oferta, preço inicial e página de vendas. Com monitoras para ajudar.
+
+O almoço está incluso. E a turma segue conectada em um grupo de WhatsApp.
+
+11/11/2026 · 8h às 18h30
+Hard Rock Café Curitiba
+R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.167,30 no PIX (10% off).
+
+Traga seu projeto e faça parte da turma. Inscrição no link da bio.
+
+#autonomia #mulheresempreendedoras #curitiba #inteligenciaartificial
+
+### LinkedIn
+
+Seu próximo contato profissional pode surgir numa conversa sobre o que você está construindo.
+
+A AUTONOM/IA Mulheres combina um dia de prática com IA e uma rodada de negócios em grupos pequenos, para apresentar seu trabalho e conhecer outras mulheres.
+
+Durante as atividades, cada participante desenvolve o próprio projeto: assistente de IA, calendário de conteúdo e legendas, oferta, preço inicial e página simples de vendas. Há monitoras para ajudar ao longo do dia.
+
+Na rodada de negócios, o espaço é para trocar contatos, entender o trabalho de outras participantes e abrir conversas sobre possíveis parcerias. A turma também tem um grupo de WhatsApp para manter o contato depois.
+
+É para quem já empreende e para quem quer construir uma primeira oferta, mesmo sem experiência com IA.
+
+11/11/2026 · 8h às 18h30 · Hard Rock Café Curitiba
+Almoço, cafés e toolkit inclusos.
+R$ 1.297 em até 10x de R$ 129,70, ou R$ 1.167,30 no PIX (10% de desconto).
+
+Conheça a programação e faça parte da turma: https://autonomia.vc/mulheres/

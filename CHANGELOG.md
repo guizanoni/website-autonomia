@@ -7,6 +7,14 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
+## 2026-10-03 — Vitrine com dez posts e mais mulheres nas artes
+
+- Revisados os seis posts anteriores e criados quatro novos sobre rotina de quem empreende, primeira oferta, apoio para começar e conexões entre mulheres. Seis artes agora usam fotografias ilustrativas da própria landing page.
+- Refeitas vinte artes nos formatos Instagram 1080×1350 e LinkedIn 1080×1080, com vinte legendas específicas. Corrigidas promessas de posts finalizados; temas, legendas, oferta inicial e página publicada seguem o escopo do encontro.
+- Mantidas as condições vigentes de PIX com 10%, dupla com 5% no cartão e garantia até as 12h30. Capacidade de 50 participantes apresentada como tamanho da turma.
+- Vitrine em grade com novos posts primeiro, filtros, prévias WebP leves, acesso à arte ampliada, cópia de legenda e download do PNG. Tratamento de falha de cópia e carregamento, descrições das imagens e controles acessíveis.
+- Conferidos os vinte PNGs e suas legendas, os dois formatos de rede, filtros, cópia, download, links diretos e telas de 320 a 1440 px. Sem erros de JavaScript ou conteúdo cortado nas artes.
+
 ## 2026-10-03 — Convite de saída com apoio para começar
 
 - Popup com a mensagem “Comece com ajuda. Use no seu negócio.”, preço atual, monitoras, IA gratuita e garantia até o almoço. O botão “Quero aproveitar agora” abre a inscrição individual.

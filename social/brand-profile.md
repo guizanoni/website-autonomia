@@ -35,14 +35,14 @@ No Instagram: abertura curta, parágrafos breves, lista com setas quando útil e
 - Artes para Instagram (1080×1350) e LinkedIn (1080×1080), com texto legível e descrição de imagem na vitrine.
 - Nunca inventar depoimentos, retorno financeiro, horas economizadas, resultados de alunas ou vagas restantes. Não prometer ferramentas pagas como requisito.
 - Ao anunciar conteúdo, explicitar planejamento e legendas; não prometer um mês de artes ou vídeos finalizados. A assistente ajuda a escrever para a participante revisar; a atividade não inclui atendimento automático no WhatsApp. A oferta e o preço inicial ainda serão testados no mercado.
-- Fotos do site são ilustrativas, não depoimentos de alunas. Política de avatares, clonagem de voz e novas imagens sintéticas não foi definida; não é necessária para este lote de artes tipográficas.
+- Fotos do site são ilustrativas, não depoimentos de alunas. A coleção atual usa seis fotos já presentes no site em seis dos dez posts. Novas imagens sintéticas e depoimentos não foram usados.
 - Evitar “domine a IA”, “revolucione”, “fórmula secreta”, urgência sem fundamento e promessas de renda.
 
 ## Referências de voz existentes
 
-1. Post 1, “O que você leva pra casa”: benefícios concretos e tarefas do negócio.
+1. Post 1, “Sua ideia merece sair do papel”: benefícios concretos e tarefas do negócio.
 2. Post 2, “Garantia até o almoço”: responde à objeção com condição clara.
-3. Post 3, “As fundadoras, só 50 cadeiras”: explica o limite pelo acompanhamento na sala.
+3. Post 3, “A primeira turma tem espaço para você”: capacidade real da turma, acompanhamento e investimento.
 
 Legendas completas em `posts-conversao/legendas.md`. Formulações rejeitadas pelo usuário na landing page: “Seu guia no dia 11.” e a abertura “Seu conteúdo. Sua oferta. Sua página no ar.”.
 
@@ -57,3 +57,9 @@ Referências de método: [leitura na web, NN/g](https://www.nngroup.com/articles
 Hipótese principal de objeção: não saber por onde começar a aplicar IA no próprio negócio. O popup responde com apoio de monitoras, prática, uma ferramenta gratuita e garantia até o almoço. Chamada: “Comece com ajuda. Use no seu negócio.”; CTA: “Quero aproveitar agora”, ligado à inscrição.
 
 A hipótese é apoiada pela [pesquisa Sebrae/FGV IBRE/Google, divulgada em janeiro de 2026](https://agenciasebrae.com.br/dados/pequenos-negocios-abracam-a-inteligencia-artificial-para-otimizar-o-tempo-e-inovar/), que identifica falta de orientação e dificuldade de aplicação entre as barreiras. Não é uma medição da objeção mais frequente das visitantes desta página. Evitar afirmar que pequenos negócios são os que mais ganham com IA ou prometer vantagem competitiva garantida. A abordagem de [exit intent da NN/g](https://www.nngroup.com/articles/exit-intent-good-ux/) orienta oferecer apoio e destacar políticas úteis, com saída clara e sem mensagens que constranjam quem fecha.
+
+## Vitrine de conversão — revisão de 03/10/2026
+
+Dez posts, todos com arte e legenda próprias para Instagram e LinkedIn. Os seis anteriores foram revisados para alinhar as entregas à página; os quatro novos abordam rotina da empreendedora, primeira oferta/transição, apoio presencial e conexões entre mulheres. Há seis artes com fotografias ilustrativas já usadas na landing page.
+
+As fotos destacam mulheres em situações de trabalho e colaboração, com preto, branco e laranja da marca. Cada arte tem um argumento principal, data, local e próximo passo. Evitar sobrecarregar a imagem com a programação inteira; as condições detalhadas ficam na legenda. A vitrine permite filtrar por fotos, novos e oferta/objeções, copiar a legenda e baixar o PNG de cada rede.
