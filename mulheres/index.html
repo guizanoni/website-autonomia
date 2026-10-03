@@ -1846,7 +1846,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.clas
     if (dialog.open || CO.soldOut || Date.now() >= Date.parse(CFG.registrationEnd) || document.visibilityState !== 'visible') return false;
     if (document.querySelector('.modal.open, header.nav-open') || document.activeElement?.matches('input, textarea, select, [contenteditable="true"]')) return false;
     if (force) return true;
-    if (shown || converting || Date.now() - enteredAt < 20000) return false;
+    if (shown || converting || Date.now() - enteredAt < 3000) return false;
     try {
       const seen = Number(localStorage.getItem(seenKey));
       if (seen && Date.now() - seen < cooldown) return false;
@@ -1912,7 +1912,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.clas
     const y = Math.max(0, scrollY), upwards = y < lastY;
     maxY = Math.max(maxY, y); lastY = y;
     clearTimeout(mobileTimer);
-    if (touch.matches && upwards && maxY >= innerHeight * 1.5 && y <= innerHeight * .65 && Date.now() - enteredAt >= 25000) {
+    if (touch.matches && upwards && maxY >= innerHeight * 1.5 && y <= innerHeight * .65 && Date.now() - enteredAt >= 3000) {
       mobileTimer = setTimeout(() => { if (scrollY <= innerHeight * .65) show('mobile-return'); }, 650);
     }
   }, {passive:true});

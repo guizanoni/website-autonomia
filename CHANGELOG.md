@@ -7,6 +7,10 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
+## 2026-10-03 — Popup de saída armado 3 segundos após o acesso
+
+- A espera mínima antes de o convite de saída poder aparecer cai de 20 s (computador) e 25 s (celular) para 3 s, a pedido do Gui, para alcançar quem sai rápido. Gatilhos e limite de uma exibição a cada sete dias continuam iguais.
+
 ## 2026-10-03 — Transição da abertura roda mesmo com "reduzir movimento"
 
 - No PC do Gui o Windows está com animações desligadas, e a página trocava a abertura inteira pela versão estática: sem moldura, sem os três cards. Parecia que o efeito tinha sumido.
