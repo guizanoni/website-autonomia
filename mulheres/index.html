@@ -90,16 +90,43 @@ h3{font-size:22px;letter-spacing:-.02em;line-height:1.2}
 header{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);color:#fff;transition:background .25s,color .25s,box-shadow .25s}
 header.solid{background:rgba(255,255,255,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:var(--ink);box-shadow:0 1px 0 var(--line)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
-header nav{display:none;gap:28px;font-size:15.5px;font-weight:500}
-header nav a{text-decoration:none;opacity:.9;white-space:nowrap}
-header nav a:hover{opacity:1}
-@media(min-width:1200px){header nav{display:flex}}
-header .pill{padding:11px 20px;font-size:15px;background:#fff;color:var(--ink)}
-header.solid .pill{background:var(--ink);color:#fff}
-header .pill:hover{background:#fff;color:var(--ink);opacity:.88}
-header.solid .pill:hover{background:#000;color:#fff;opacity:1}
-header .pill{white-space:nowrap}
-@media(max-width:420px){header .pill{padding:10px 14px;font-size:14px}header .wrap{gap:10px}}
+header .logo{font-size:clamp(20px,2.2vw,28px);flex-shrink:0}
+header nav{display:none;align-items:center;gap:2px;padding:5px;border:1px solid rgba(255,255,255,.2);border-radius:999px;background:rgba(14,15,17,.3);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);font-size:14px;font-weight:500}
+header nav a{display:block;text-decoration:none;white-space:nowrap;border-radius:999px;padding:10px 13px;line-height:1.2;color:rgba(255,255,255,.82);transition:background .2s,color .2s,box-shadow .2s}
+header nav a:hover,header nav a:focus-visible{background:rgba(255,255,255,.12);color:#fff}
+header nav a[aria-current="location"]{background:#fff;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.12)}
+header.solid nav{background:var(--soft);border-color:var(--line)}
+header.solid nav a{color:var(--mut)}
+header.solid nav a:hover,header.solid nav a:focus-visible{background:#fff;color:var(--ink)}
+header.solid nav a[aria-current="location"]{color:var(--ink);background:#fff;box-shadow:0 1px 5px rgba(0,0,0,.08)}
+header .pill,header.solid .pill{padding:12px 18px;font-size:14px;background:var(--sig);color:var(--dark);white-space:nowrap;font-weight:600;flex-shrink:0;gap:10px}
+header .pill:hover,header.solid .pill:hover{background:#ff754e;color:var(--dark)}
+header .pill svg{width:15px;height:15px;transition:transform .2s}
+header .pill:hover svg{transform:translateX(2px)}
+.nav-toggle{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-left:auto;flex-shrink:0;min-height:40px;padding:9px 12px;color:inherit;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);border-radius:999px;font:500 14px var(--f);cursor:pointer}
+.nav-toggle svg{width:18px;height:18px}
+.nav-toggle .nav-close{display:none}
+.nav-toggle[aria-expanded="true"] .nav-bars{display:none}
+.nav-toggle[aria-expanded="true"] .nav-close{display:block}
+header.solid .nav-toggle{background:var(--soft);border-color:var(--line)}
+@media(min-width:1200px){header nav{display:flex;margin-left:auto}.nav-toggle{display:none}}
+@media(max-width:1199px){
+  header nav,header.solid nav{position:absolute;top:calc(100% + 8px);left:16px;right:16px;max-height:calc(100svh - 100px);overflow-y:auto;flex-direction:column;align-items:stretch;padding:8px;gap:4px;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 16px 40px rgba(0,0,0,.18);backdrop-filter:none;-webkit-backdrop-filter:none}
+  header.nav-open nav{display:flex}
+  header nav a,header.solid nav a{padding:15px 18px;border-radius:12px;white-space:normal;color:var(--ink);font-size:16px}
+  header nav a:hover,header nav a:focus-visible,header nav a[aria-current="location"],header.solid nav a:hover,header.solid nav a[aria-current="location"]{background:var(--soft);color:var(--ink);box-shadow:none}
+  header nav a[aria-current="location"]{box-shadow:inset 3px 0 var(--sig)!important}
+}
+@media(max-width:600px){
+  header .logo{font-size:22px;flex-direction:column;align-items:flex-start;gap:2px;line-height:1.05}
+  header .logo .edition{font-size:14px}
+  header .logo .caret{display:none}
+  header .pill,header.solid .pill{min-height:44px;padding:11px 12px;font-size:13px}
+  header .pill svg{display:none}
+  header .wrap{gap:8px}
+  .nav-toggle{width:44px;min-height:44px;padding:10px}
+  .nav-toggle span{display:none}
+}
 
 /* ---------- HERO (tela cheia → três cards) ---------- */
 .stage{position:relative;height:260vh;padding:0;background:var(--bg)}
@@ -570,14 +597,17 @@ section[id]{scroll-margin-top:84px}
 
 <header id="hdr">
   <div class="wrap">
-    <a class="logo" href="#" aria-label="AUTONOM/IA Mulheres, voltar ao topo">autonom<span class="dot">.</span>ia<span class="sl">/</span><span class="ed">mulheres</span><span class="caret" aria-hidden="true"></span></a>
-    <nav aria-label="Seções">
+    <a class="logo" href="#" aria-label="AUTONOM/IA Mulheres, voltar ao topo"><span>autonom<span class="dot">.</span>ia</span><span class="edition"><span class="sl">/</span><span class="ed">mulheres</span></span><span class="caret" aria-hidden="true"></span></a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><g class="nav-bars"><path d="M4 7h16M4 12h16M4 17h16"/></g><g class="nav-close"><path d="m6 6 12 12M18 6 6 18"/></g></svg><span>Menu</span>
+    </button>
+    <nav id="siteNav" aria-label="Navegação principal">
       <a href="#toolkit">O que vc vai aprende</a>
       <a href="#dia">Agenda do Dia</a>
       <a href="#gui">Conheça seu Instrutor</a>
       <a href="#faq">Duvidas Frequentes</a>
     </nav>
-    <a class="pill js-buy" href="#investimento">Garantir vaga</a>
+    <a class="pill js-buy" href="#investimento">Garantir vaga <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></a>
   </div>
 </header>
 
@@ -1112,6 +1142,46 @@ const CFG = {
 
 const track = (ev, data) => { if (typeof fbq === 'function') fbq('track', ev, data || {}); };
 const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Navegação: seção ativa e menu compacto, sem interferir no checkout. */
+(() => {
+  const header = document.getElementById('hdr'), button = document.getElementById('navToggle');
+  const nav = document.getElementById('siteNav'), links = [...nav.querySelectorAll('a')];
+  const sections = links.map(link => document.getElementById(link.hash.slice(1)));
+  const desktop = matchMedia('(min-width:1200px)');
+  function closeMenu(returnFocus = false) {
+    header.classList.remove('nav-open');
+    button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('aria-label', 'Abrir menu');
+    if (returnFocus) button.focus();
+  }
+  button.addEventListener('click', () => {
+    const open = button.getAttribute('aria-expanded') !== 'true';
+    header.classList.toggle('nav-open', open);
+    button.setAttribute('aria-expanded', String(open));
+    button.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+  });
+  header.querySelectorAll('a').forEach(link => link.addEventListener('click', () => closeMenu()));
+  document.addEventListener('click', event => { if (!header.contains(event.target)) closeMenu(); });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && header.classList.contains('nav-open')) closeMenu(true);
+  });
+  desktop.addEventListener('change', () => closeMenu());
+  let queued = false;
+  function updateCurrent() {
+    queued = false;
+    const position = Math.min(180, innerHeight * .25);
+    links.forEach((link, i) => {
+      const rect = sections[i].getBoundingClientRect();
+      if (rect.top <= position && rect.bottom > position) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  }
+  function schedule() { if (!queued) { queued = true; requestAnimationFrame(updateCurrent); } }
+  window.addEventListener('scroll', schedule, {passive:true});
+  window.addEventListener('resize', schedule);
+  updateCurrent();
+})();
 
 /* WhatsApp: um link só pra página toda */
 document.querySelectorAll('.js-wa').forEach(a => {

@@ -7,6 +7,12 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
+## 2026-10-02 — Menu com hierarquia visual
+
+- Navegação agrupada em uma faixa arredondada, com estados de hover e seção ativa; inscrição em laranja para destacar a ação principal. Mantidos os quatro rótulos solicitados.
+- Menu expansível em celulares e tablets, com fechamento por seleção, clique externo ou Escape. Marca em duas linhas nas telas menores para acomodar o botão de inscrição.
+- Conferidos encaixe e navegação em larguras de 320 a 1440 pixels, sem erros de JavaScript.
+
 ## 2026-10-02 — Abertura com foco no benefício
 
 - A chamada principal passa a ser “Tire ideias do papel. E tarefas da sua frente.”; conteúdo, oferta e página permanecem como entregas explicadas no parágrafo de apoio.
