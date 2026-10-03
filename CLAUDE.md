@@ -37,11 +37,12 @@ Secrets necessários no GitHub: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
 ## Estrutura de páginas
 
 - `/` (`index.html`) — só redireciona (JS + meta refresh, mantendo utm) pra edição em venda.
-- `/mulheres/` (`mulheres/index.html`) — LP v13 da edição Mulheres. Caminhos de asset são absolutos (`/images/`, `/api/`). Modelo conceitual da
-  home da Revolut: hero com a pessoa em tela cheia e a "tela" do que ela
-  constrói por cima; no scroll a foto encolhe (clip-path) e vira um de três
-  cards (os três perfis do ICP). Seções alternam branco/preto com um objeto
-  visual grande e pílulas que trocam conteúdo.
+- `/mulheres/` (`mulheres/index.html`) — LP da edição Mulheres. Caminhos de asset
+  são absolutos (`/images/`, `/api/`). Abertura em duas colunas, texto e foto
+  separados; no celular, título → foto → informações. Altura pelo conteúdo,
+  sem tela presa ao scroll. As três entregas seguem em uma faixa estática.
+  Seções alternam branco/preto com um objeto visual grande e pílulas que
+  trocam conteúdo.
 - `CFG` no topo do `<script>` concentra o que muda por turma: data, links de
   checkout (individual/dupla), códigos de convite (hash SHA-256 → link),
   `soldOut` (vira lista de espera) e o endpoint da lista.

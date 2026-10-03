@@ -7,6 +7,13 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
+## 2026-10-03 — Abertura responsiva com texto e foto separados
+
+- Abertura em duas colunas no computador e sequência título, foto e informações no celular. Tipografia, margens, recorte da foto e botões se adaptam à largura disponível.
+- Removida a abertura presa ao scroll e à altura da janela: a seção agora cresce com o conteúdo, sem texto sobre o rosto ou espaço vazio em monitores altos. As três entregas continuam em uma faixa estática.
+- Ajustados agenda e barra de compra para telas estreitas. Mantidos textos da oferta, preços, checkout e eventos Meta.
+- Conferidos 17 formatos de 320 a 2560 px, orientação horizontal, redimensionamento, menu, abertura/fechamento da inscrição, cabeçalho e movimento reduzido. Sem sobreposição entre texto e foto, cortes no título ou erros de JavaScript. Os 14 cenários de preço passaram; nenhum formulário enviado ou cobrança criada.
+
 ## 2026-10-03 — Vitrine com dez posts e mais mulheres nas artes
 
 - Revisados os seis posts anteriores e criados quatro novos sobre rotina de quem empreende, primeira oferta, apoio para começar e conexões entre mulheres. Seis artes agora usam fotografias ilustrativas da própria landing page.
