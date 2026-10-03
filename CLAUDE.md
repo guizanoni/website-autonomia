@@ -38,11 +38,11 @@ Secrets necessários no GitHub: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
 
 - `/` (`index.html`) — só redireciona (JS + meta refresh, mantendo utm) pra edição em venda.
 - `/mulheres/` (`mulheres/index.html`) — LP da edição Mulheres. Caminhos de asset
-  são absolutos (`/images/`, `/api/`). Abertura em duas colunas, texto e foto
-  separados; no celular, título → foto → informações. Altura pelo conteúdo,
-  sem tela presa ao scroll. As três entregas seguem em uma faixa estática.
-  Seções alternam branco/preto com um objeto visual grande e pílulas que
-  trocam conteúdo.
+  são absolutos (`/images/`, `/api/`). Conceito original preservado: foto em
+  tela cheia que encolhe no scroll e vira um de três cards, com molduras,
+  notificações e hover. Conteúdo com largura fluida; em janela baixa, deixa
+  ler a abertura inteira antes da animação. Mobile: retrato de ponta a ponta
+  com fade para a leitura abaixo do rosto. Seções alternam branco/preto.
 - `CFG` no topo do `<script>` concentra o que muda por turma: data, links de
   checkout (individual/dupla), códigos de convite (hash SHA-256 → link),
   `soldOut` (vira lista de espera) e o endpoint da lista.
@@ -71,6 +71,10 @@ Secrets necessários no GitHub: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
 
 ## Convenções
 
+- Responsividade deve preservar o conceito visual e os efeitos existentes.
+  O usuário rejeitou a substituição por duas colunas e cards estáticos em
+  03/10/2026. No desktop, ajustar medidas e enquadramento; no mobile, adaptar
+  a composição mantendo a identidade.
 - Commits em **pt-BR**, uma frase que conta a história da mudança.
 - O copy é a maior parte do trabalho aqui. Mudança de texto é mudança de
   produto: preservar tom, escassez e numeração das seções.

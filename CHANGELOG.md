@@ -7,7 +7,17 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
-## 2026-10-03 — Abertura responsiva com texto e foto separados
+## 2026-10-03 — Responsividade preservando o design original
+
+- Restaurados foto em tela cheia, transição para três cards, molduras, notificações e hovers. Removida a composição em duas colunas rejeitada pelo usuário; mantidos conteúdo e estrutura originais.
+- Retirado o limite fixo de 1200 px dos contêineres. Margens, tipografia e recorte da foto acompanham o navegador; texto fica à esquerda do rosto.
+- Janelas baixas continuam com a animação. Quando necessário, a abertura rola até mostrar todo o conteúdo antes de iniciar o efeito. Os cards e suas legendas se adaptam ao espaço disponível.
+- Mobile com foto de ponta a ponta e fade para o texto abaixo do rosto. Cabeçalho ganha fundo durante a leitura; orientação horizontal também considerada.
+- Conferidas 19 combinações de largura e altura, de 320 a 2560 px, transição para os cards, hover, redimensionamento, movimento reduzido, menu e abertura/fechamento da inscrição. Os 14 cenários de preço passaram. Nenhuma cobrança criada.
+
+## 2026-10-03 — Abertura responsiva com texto e foto separados (substituída)
+
+Esta abordagem foi rejeitada pelo usuário e substituída pela restauração do conceito original descrita acima.
 
 - Abertura em duas colunas no computador e sequência título, foto e informações no celular. Tipografia, margens, recorte da foto e botões se adaptam à largura disponível.
 - Removida a abertura presa ao scroll e à altura da janela: a seção agora cresce com o conteúdo, sem texto sobre o rosto ou espaço vazio em monitores altos. As três entregas continuam em uma faixa estática.
