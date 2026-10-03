@@ -7,6 +7,12 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
+## 2026-10-03 — Transição da abertura roda mesmo com "reduzir movimento"
+
+- No PC do Gui o Windows está com animações desligadas, e a página trocava a abertura inteira pela versão estática: sem moldura, sem os três cards. Parecia que o efeito tinha sumido.
+- A transição da abertura deixa de depender dessa preferência em telas a partir de 900 px. Hovers, cursor piscando e demais transições continuam desligados para quem pede menos movimento.
+- Conferido com a preferência emulada em 1449×900: abertura, meio da transição, cards, hover e volta ao topo.
+
 ## 2026-10-03 — Cena presa durante a transição e menu com indicador deslizante
 
 - Corrigida a falha da prévia anterior: a transição disparava, mas a página rolava junto e o título dos três cards sumia atrás do menu. A cena volta a ficar presa (sticky) por 60% da altura da janela, o bastante para a animação de 1,1 s e um respiro para ver os cards. Em janela baixa, prende depois de ler a abertura inteira.

@@ -82,7 +82,9 @@ Secrets necessários no GitHub: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
   por 60% da altura da janela enquanto a transição acontece: sem isso a
   página rola junto e os cards somem atrás do menu. Não alongar esse curso
   nem prender a rolagem sobre a foto ampliada. O menu de desktop tem um
-  indicador que desliza até o link sob o mouse e volta para a seção em leitura. Preservar o enquadramento do rosto,
+  indicador que desliza até o link sob o mouse e volta para a seção em leitura.
+  A transição da abertura roda mesmo com `prefers-reduced-motion` (decisão do
+  usuário em 03/10/2026: o Windows dele tem animações desligadas e o efeito sumia). Preservar o enquadramento do rosto,
   menu centralizado e leitura completa em janelas baixas.
 - Commits em **pt-BR**, uma frase que conta a história da mudança.
 - O copy é a maior parte do trabalho aqui. Mudança de texto é mudança de

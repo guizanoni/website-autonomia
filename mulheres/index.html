@@ -681,7 +681,8 @@ section[id]{scroll-margin-top:84px}
   .hero-tx .meta{margin-top:18px;margin-bottom:20px}
 }
 /* Movimento reduzido e mobile mantêm leitura normal; janelas baixas continuam animadas. */
-@media(max-width:899px),(prefers-reduced-motion:reduce){
+/* a transição da abertura é o conceito da página e roda mesmo com "reduzir movimento" ligado no sistema (decisão do Gui, 03/10/2026) */
+@media(max-width:899px){
   .stage{height:auto}
   .stage-pin{position:relative;height:auto;min-height:100svh;overflow:hidden}
   .hero-tx{position:relative;inset:auto;opacity:1;transform:none}
@@ -1436,7 +1437,7 @@ document.querySelectorAll('.js-wa').forEach(a => {
   const ks = [0,1,2].map(i => document.getElementById('k' + i));
   const copy = pin.querySelector('.hero-tx'), copyInner = copy.querySelector('.wrap');
   const hots = [...pin.querySelectorAll('.hot')];
-  const compact = matchMedia('(max-width:899px), (prefers-reduced-motion:reduce)');
+  const compact = matchMedia('(max-width:899px)');
   const clamp = (v, lo = 0, hi = 1) => Math.max(lo, Math.min(hi, v));
   const mix = (a, b, t) => a + (b - a) * t;
   const ease = t => 1 - Math.pow(1 - t, 4);
