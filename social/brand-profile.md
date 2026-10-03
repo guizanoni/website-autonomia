@@ -1,6 +1,6 @@
 # Perfil editorial — AUTONOM/IA Mulheres
 
-Atualizado em 02/10/2026. Perfil derivado da página da edição e dos três posts existentes; preferências não documentadas continuam em aberto.
+Atualizado em 03/10/2026. Perfil derivado da página da edição e dos posts existentes; preferências não documentadas continuam em aberto.
 
 ## Identidade e posicionamento
 
@@ -51,3 +51,9 @@ Legendas completas em `posts-conversao/legendas.md`. Formulações rejeitadas pe
 Revisão de 02/10/2026: promessa concreta no topo, preço e garantia próximos do CTA, duas entradas por situação profissional, acompanhamento antes das entregas, exemplo ilustrativo e escassez limitada à capacidade real da sala. Os exemplos não são resultados de alunas. Entregas visíveis sem depender de hover.
 
 Referências de método: [leitura na web, NN/g](https://www.nngroup.com/articles/how-users-read-on-the-web/), [EAST, Behavioural Insights Team](https://www.bi.team/east-tool/methodology/) e [persuasão, Influence at Work](https://www.influenceatwork.com/7-principles-of-persuasion/). São fundamentos para a hipótese de copy, não evidência de aumento de conversão desta página.
+
+## Convite de saída
+
+Hipótese principal de objeção: não saber por onde começar a aplicar IA no próprio negócio. O popup responde com apoio de monitoras, prática, uma ferramenta gratuita e garantia até o almoço. Chamada: “Comece com ajuda. Use no seu negócio.”; CTA: “Quero aproveitar agora”, ligado à inscrição.
+
+A hipótese é apoiada pela [pesquisa Sebrae/FGV IBRE/Google, divulgada em janeiro de 2026](https://agenciasebrae.com.br/dados/pequenos-negocios-abracam-a-inteligencia-artificial-para-otimizar-o-tempo-e-inovar/), que identifica falta de orientação e dificuldade de aplicação entre as barreiras. Não é uma medição da objeção mais frequente das visitantes desta página. Evitar afirmar que pequenos negócios são os que mais ganham com IA ou prometer vantagem competitiva garantida. A abordagem de [exit intent da NN/g](https://www.nngroup.com/articles/exit-intent-good-ux/) orienta oferecer apoio e destacar políticas úteis, com saída clara e sem mensagens que constranjam quem fecha.

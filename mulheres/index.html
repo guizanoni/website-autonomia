@@ -533,6 +533,45 @@ footer a{color:#fff}
 .mperks li{position:relative;padding-left:26px;font-size:15px;color:var(--mut)}
 .mperks li::before{content:"";position:absolute;left:0;top:.3em;width:16px;height:16px;border-radius:50%;background:rgba(255,91,46,.14) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.2l2.6 2.6L12 5.4' fill='none' stroke='%23ff5b2e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/11px no-repeat}
 
+/* ---------- convite de saída ---------- */
+.exit-dialog{margin:auto;padding:0;border:0;border-radius:28px;width:min(880px,calc(100% - 32px));max-width:none;max-height:calc(100svh - 32px);background:#fff;color:var(--ink);overflow:hidden;box-shadow:0 32px 100px rgba(0,0,0,.28)}
+.exit-dialog::backdrop{background:rgba(14,15,17,.64);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px)}
+.exit-shell{display:grid;grid-template-columns:.78fr 1.22fr}
+.exit-dialog[open] .exit-shell{animation:exit-in .22s ease-out}
+@keyframes exit-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.exit-close{position:absolute;z-index:2;right:12px;top:12px;width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--ink);cursor:pointer}
+.exit-close svg{width:18px;height:18px}
+.exit-close:hover{background:var(--soft)}
+.exit-visual{position:relative;isolation:isolate;background:var(--dark);color:#fff;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:32px}
+.exit-visual img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:48% center}
+.exit-visual::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(14,15,17,.4),rgba(14,15,17,.03) 35%,rgba(14,15,17,.86))}
+.exit-visual .logo{font-size:23px}
+.exit-visual p{font-size:36px;line-height:1.07;letter-spacing:-.04em;font-weight:600;margin-top:160px}
+.exit-visual small{display:block;margin-top:18px;font-size:14px;color:rgba(255,255,255,.8)}
+.exit-copy{padding:40px 36px 24px;max-height:calc(100svh - 32px);overflow:auto;overscroll-behavior:contain}
+.exit-copy .eyebrow{font-size:13px;max-width:calc(100% - 28px);margin-bottom:12px;color:var(--mut)}
+.exit-copy h2{font-size:clamp(30px,3.5vw,42px);line-height:1.06;letter-spacing:-.04em;text-wrap:balance;margin:0;outline:none}
+.exit-lead{font-size:16px;line-height:1.55;color:var(--mut);margin-top:18px}
+.exit-perks{list-style:none;margin-top:18px;display:grid;gap:8px;font-size:14px;font-weight:500}
+.exit-perks li{display:flex;align-items:center;gap:9px}
+.exit-perks svg{width:18px;height:18px;flex:none;color:var(--sigdk)}
+.exit-price{border-top:1px solid var(--line);padding-top:18px;margin-top:22px}
+.exit-price .exit-event{font-size:12px;color:var(--mut);margin-bottom:8px}
+.exit-price strong{font-size:30px;line-height:1.15;letter-spacing:-.04em;font-weight:600}
+.exit-price .exit-pix{display:inline-block;margin-left:8px;font-size:12px;color:var(--sigdk);font-weight:600}
+.exit-price small{display:block;font-size:12px;color:var(--mut);margin-top:5px}
+.exit-copy .exit-buy{display:flex;width:100%;gap:14px;margin-top:20px;min-height:50px;background:var(--sig);color:var(--dark);font-weight:600;font-size:16px;white-space:normal;text-align:center;line-height:1.25;padding:14px 18px}
+.exit-buy:hover{background:#ff754e}
+.exit-buy svg{width:18px;height:18px;flex:none}
+.exit-guarantee{display:flex;align-items:flex-start;gap:9px;margin-top:15px;font-size:12px;line-height:1.5;color:var(--mut)}
+.exit-guarantee svg{width:19px;height:21px;flex:none;color:var(--ink);margin-top:1px}
+.exit-guarantee b{display:block;font-weight:500;color:var(--ink)}
+.exit-dismiss{display:block;margin:14px auto 0;min-height:40px;padding:9px 14px;border:0;border-radius:10px;background:transparent;font:400 13px var(--f);color:var(--mut);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.exit-dismiss:hover{color:var(--ink);background:var(--soft)}
+@media(max-width:680px){.exit-shell{grid-template-columns:1fr}.exit-visual{display:none}.exit-copy{padding:36px 24px 18px}.exit-copy h2{font-size:34px}.exit-lead{font-size:15px;margin-top:15px}.exit-price{margin-top:18px;padding-top:16px}}
+@media(max-width:360px){.exit-copy{padding-inline:20px}.exit-copy h2{font-size:28px}.exit-copy .eyebrow{font-size:12px}.exit-price .exit-pix{margin:6px 0 0;display:block}}
+@media(prefers-reduced-motion:reduce){.exit-dialog[open] .exit-shell{animation:none}}
+
 /* ===== copy de conversão: promessa, identificação e entregas legíveis ===== */
 section[id]{scroll-margin-top:84px}
 .hero-tx h1{font-size:clamp(42px,4.6vw,68px);max-width:15ch;line-height:1.02}
@@ -1067,6 +1106,37 @@ section[id]{scroll-margin-top:84px}
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
 </a>
 
+<!-- CONVITE DE SAÍDA: a foto é ilustrativa, não um depoimento. -->
+<dialog class="exit-dialog" id="exitModal" aria-labelledby="exitTitle" aria-describedby="exitLead">
+  <button class="exit-close" type="button" data-exit-close aria-label="Fechar convite">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+  </button>
+  <div class="exit-shell">
+    <div class="exit-visual" aria-hidden="true">
+      <img src="/images/mulheres/calma.jpg" alt="" loading="lazy" decoding="async"/>
+      <span class="logo">autonom<span class="dot">.</span>ia<span class="sl">/</span></span>
+      <div><p>Do seu jeito.<br/>Com gente<br/>do lado.</p><small>IA na prática, para mulheres<br/>que empreendem ou querem começar.</small></div>
+    </div>
+    <div class="exit-copy">
+      <span class="eyebrow">Ainda não usa IA no seu negócio?</span>
+      <h2 id="exitTitle" tabindex="-1">Comece com ajuda.<br/>Use no seu negócio.</h2>
+      <p class="exit-lead" id="exitLead">Use IA no conteúdo, nas propostas e na rotina do seu negócio. Você aprende fazendo, com monitoras ao seu lado.</p>
+      <ul class="exit-perks">
+        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg>Do zero, no seu ritmo.</li>
+        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg>Uma IA gratuita basta.</li>
+      </ul>
+      <div class="exit-price">
+        <p class="exit-event">11/11 · Presencial no Hard Rock Café Curitiba</p>
+        <strong>R$ 1.167,30</strong><span class="exit-pix">no PIX · 10% de desconto</span>
+        <small>ou 10x de R$ 129,70 no cartão · R$ 1.297 no total</small>
+      </div>
+      <a class="pill exit-buy" id="exitBuy" href="#investimento">Quero aproveitar agora <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></a>
+      <p class="exit-guarantee"><svg viewBox="0 0 20 22" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2 3 5v6c0 4 7 9 7 9s7-5 7-9V5l-7-3Z"/><path d="m6.5 10.5 2.5 2.5 4.5-4.5"/></svg><span><b>Garantia até o almoço.</b>Não fez sentido até as 12h30? Avise a equipe e receba 100% de volta.</span></p>
+      <button class="exit-dismiss" type="button" data-exit-close>Continuar navegando</button>
+    </div>
+  </div>
+</dialog>
+
 <!-- MODAL: CHECKOUT -->
 <div class="modal" id="coModal" role="dialog" aria-modal="true" aria-labelledby="coTitle">
   <div class="modal-bg" data-coclose></div>
@@ -1171,6 +1241,7 @@ section[id]{scroll-margin-top:84px}
    Tudo o que muda de uma turma/edição pra outra fica aqui. */
 const CFG = {
   eventDate: '2026-11-11T08:00:00-03:00',
+  registrationEnd: '2026-11-10T23:59:59-03:00',
   soldOut: false,               // true = todos os botões de compra abrem a lista de espera
   api: '/api/',                 // checkout, preço, vagas e webhook do Asaas (PHP no mesmo servidor)
   whatsapp: 'https://wa.me/5541991097011?text=' + encodeURIComponent('Oi Maria! Tô na página da AUTONOM/IA Mulheres e tenho uma dúvida sobre o evento do dia 11/11. Pode me ajudar?'),
@@ -1416,6 +1487,7 @@ const coModal = document.getElementById('coModal');
 let coLast = null;
 function abrirCheckout(tipo) {
   if (CO.soldOut) { openWait(true); return; }
+  document.dispatchEvent(new Event('autonomia:conversion-open'));
   coLast = document.activeElement;
   CO.tipo = tipo === 'dupla' ? 'dupla' : 'individual';
   document.querySelector(`input[name="coTipo"][value="${CO.tipo}"]`).checked = true;
@@ -1502,10 +1574,11 @@ document.getElementById('coForm').addEventListener('submit', async e => {
 /* vagas: esgota sozinho em 50 e mostra "restam X" quando estiver acabando */
 function marcarEsgotado() {
   CO.soldOut = true;
+  document.dispatchEvent(new Event('autonomia:unavailable'));
   document.querySelectorAll('.js-buy, .js-checkout').forEach(a => { a.textContent = 'Esgotado · lista da Turma 2'; });
 }
 document.querySelectorAll('.js-buy').forEach(a => a.addEventListener('click', e => { if (CO.soldOut) { e.preventDefault(); openWait(true); } }));
-(async () => {
+const availabilityReady = (async () => {
   try {
     const r = await fetch(CFG.api + 'vagas.php', { cache: 'no-store' }); const j = await r.json();
     if (!j.ok) return;
@@ -1519,6 +1592,7 @@ if (CFG.soldOut) marcarEsgotado();
 const modal = document.getElementById('waitModal');
 let lastFocus = null;
 function openWait(soldOut) {
+  document.dispatchEvent(new Event('autonomia:conversion-open'));
   lastFocus = document.activeElement;
   document.getElementById('waitEyebrow').textContent = soldOut ? 'Turma 1 esgotada' : 'Lista de espera';
   modal.classList.add('open');
@@ -1564,6 +1638,101 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.clas
       msg.textContent = 'Não deu pra enviar agora. Tente de novo ou chame a gente no WhatsApp.';
     } finally { btn.disabled = false; }
   });
+})();
+
+/* Convite de saída: intenção no desktop; retorno ao topo após leitura no celular.
+   Não intercepta voltar/fechar a página. ?popup=saida permite revisar sem contar exposição. */
+(() => {
+  const dialog = document.getElementById('exitModal');
+  if (!dialog || typeof dialog.showModal !== 'function') return;
+  const seenKey = 'autonomia:mulheres:20261111:exit-seen';
+  const conversionKey = 'autonomia:mulheres:20261111:conversion-started';
+  const cooldown = 7 * 24 * 60 * 60 * 1000, enteredAt = Date.now();
+  const desktop = matchMedia('(hover: hover) and (pointer: fine)');
+  const touch = matchMedia('(pointer: coarse)');
+  const preview = new URLSearchParams(location.search).get('popup') === 'saida';
+  let shown = false, converting = false, lastFocus = null, oldOverflow = '', locked = false;
+  let lastY = scrollY, maxY = scrollY, mobileTimer = null, trigger = '';
+  try { converting = sessionStorage.getItem(conversionKey) === '1'; } catch (_) {}
+
+  function measure(action, extra = {}) {
+    if (!preview && typeof fbq === 'function') fbq('trackCustom', 'AutonomiaExit' + action, {content_name:'mulheres-comecar-com-ajuda', trigger, ...extra});
+  }
+  function eligible(force = false) {
+    if (dialog.open || CO.soldOut || Date.now() >= Date.parse(CFG.registrationEnd) || document.visibilityState !== 'visible') return false;
+    if (document.querySelector('.modal.open, header.nav-open') || document.activeElement?.matches('input, textarea, select, [contenteditable="true"]')) return false;
+    if (force) return true;
+    if (shown || converting || Date.now() - enteredAt < 20000) return false;
+    try {
+      const seen = Number(localStorage.getItem(seenKey));
+      if (seen && Date.now() - seen < cooldown) return false;
+      if (sessionStorage.getItem(conversionKey) === '1') return false;
+    } catch (_) {}
+    return true;
+  }
+  function release(returnFocus = true) {
+    if (!locked) return;
+    locked = false;
+    document.body.style.overflow = oldOverflow;
+    if (returnFocus && lastFocus?.isConnected) lastFocus.focus({preventScroll:true});
+  }
+  function close(reason = 'dismiss', returnFocus = true) {
+    if (!dialog.open) return;
+    dialog.close();
+    release(returnFocus);
+    if (reason !== 'checkout') measure('Dismiss', {method:reason});
+  }
+  function show(source, force = false) {
+    if (!eligible(force)) return;
+    trigger = source;
+    lastFocus = document.activeElement;
+    oldOverflow = document.body.style.overflow;
+    dialog.showModal();
+    document.body.style.overflow = 'hidden'; locked = true; shown = true;
+    if (!preview) { try { localStorage.setItem(seenKey, String(Date.now())); } catch (_) {} }
+    document.getElementById('exitTitle').focus({preventScroll:true});
+    measure('View');
+  }
+  function markConversion() {
+    converting = true;
+    try { sessionStorage.setItem(conversionKey, '1'); } catch (_) {}
+    close('conversion', false);
+  }
+  dialog.querySelectorAll('[data-exit-close]').forEach(button => button.addEventListener('click', () => close('button')));
+  dialog.addEventListener('cancel', event => { event.preventDefault(); close('escape'); });
+  dialog.addEventListener('close', () => release());
+  dialog.addEventListener('keydown', event => {
+    if (event.key !== 'Tab') return;
+    const controls = [...dialog.querySelectorAll('button:not([disabled]), a[href]')];
+    const first = controls[0], last = controls[controls.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+  });
+  dialog.addEventListener('click', event => {
+    const rect = dialog.getBoundingClientRect();
+    if (event.target === dialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) close('backdrop');
+  });
+  document.getElementById('exitBuy').addEventListener('click', event => {
+    event.preventDefault();
+    measure('Checkout');
+    close('checkout', false);
+    abrirCheckout('individual');
+  });
+  document.addEventListener('autonomia:conversion-open', markConversion);
+  document.addEventListener('autonomia:unavailable', () => close('unavailable'));
+  document.querySelectorAll('.js-wa').forEach(link => link.addEventListener('click', markConversion));
+  document.addEventListener('mouseout', event => {
+    if (desktop.matches && event.relatedTarget === null && event.clientY <= 0) show('desktop-exit');
+  });
+  window.addEventListener('scroll', () => {
+    const y = Math.max(0, scrollY), upwards = y < lastY;
+    maxY = Math.max(maxY, y); lastY = y;
+    clearTimeout(mobileTimer);
+    if (touch.matches && upwards && maxY >= innerHeight * 1.5 && y <= innerHeight * .65 && Date.now() - enteredAt >= 25000) {
+      mobileTimer = setTimeout(() => { if (scrollY <= innerHeight * .65) show('mobile-return'); }, 650);
+    }
+  }, {passive:true});
+  if (preview) availabilityReady.then(() => show('preview', true));
 })();
 
 /* barra fixa no mobile depois do hero; some na seção de preço */

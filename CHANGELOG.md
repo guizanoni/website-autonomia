@@ -7,6 +7,14 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
+## 2026-10-03 — Convite de saída com apoio para começar
+
+- Popup com a mensagem “Comece com ajuda. Use no seu negócio.”, preço atual, monitoras, IA gratuita e garantia até o almoço. O botão “Quero aproveitar agora” abre a inscrição individual.
+- No computador, dispara ao sair pelo topo após 20 segundos; no celular, ao voltar perto do topo depois de ler ao menos uma tela e meia e permanecer 25 segundos. Limite de uma exibição a cada sete dias por navegador.
+- Diálogo com foco contido, Escape, fechamento por botão/fundo e restauração de foco. Não disputa atenção com formulários, checkout ou lista de espera, nem aparece com inscrições encerradas/esgotadas.
+- Eventos Meta separados para exibição, fechamento e ida ao checkout. `?popup=saida` permite revisão imediata sem gravar exposição ou emitir esses eventos.
+- Conferidos cinco formatos de tela, movimento reduzido, gatilhos, repetição, indisponibilidade de storage, transição para checkout e regras de preço. Nenhuma cobrança criada nos testes.
+
 ## 2026-10-03 — PIX com 10% de desconto
 
 - PIX individual passa a R$ 1.167,30, com economia de R$ 129,70. Atualizados abertura, oferta, FAQ, fechamento, barra do celular e checkout.
