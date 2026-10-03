@@ -7,6 +7,11 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
+## 2026-10-02 — Abertura com foco no benefício
+
+- A chamada principal passa a ser “Tire ideias do papel. E tarefas da sua frente.”; conteúdo, oferta e página permanecem como entregas explicadas no parágrafo de apoio.
+- Gui passa a ser apresentado como facilitador, conforme preferência do usuário. Título de compartilhamento acompanha a nova abertura.
+
 ## 2026-10-02 — Copy da edição Mulheres orientada aos ICPs
 
 - Abertura passa a apresentar conteúdo, oferta e página como entregas, com preço total, parcelamento e garantia perto da chamada de compra.

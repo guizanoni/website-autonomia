@@ -16,6 +16,8 @@ Bootcamp presencial de IA para mulheres, com prática no próprio negócio e aju
 
 Português brasileiro, próximo e direto. Usar “você”, “pra”, “seu negócio”, “notebook aberto”, “gente do lado pra ajudar”, “garantir vaga”. Explicar termos técnicos quando necessários. Trocar abstrações por tarefas reconhecíveis: responder uma cliente, escrever posts, definir um preço.
 
+Preferência explícita do usuário: apresentar Gui como **facilitador**, não como “guia”. Na abertura, priorizar uma promessa de transformação; a lista de conteúdo, oferta e página funciona como explicação das entregas, não como título principal.
+
 No Instagram: abertura curta, parágrafos breves, lista com setas quando útil e CTA para o link na bio. No LinkedIn: argumento mais desenvolvido e link direto. Hashtags adotadas nos posts existentes: #autonomia #mulheresempreendedoras #curitiba #inteligenciaartificial.
 
 ## Provas e oferta
@@ -42,7 +44,7 @@ No Instagram: abertura curta, parágrafos breves, lista com setas quando útil e
 2. Post 2, “Garantia até o almoço”: responde à objeção com condição clara.
 3. Post 3, “As fundadoras, só 50 cadeiras”: explica o limite pelo acompanhamento na sala.
 
-Legendas completas em `posts-conversao/legendas.md`. Não há exemplos de voz rejeitados pelo usuário documentados.
+Legendas completas em `posts-conversao/legendas.md`. Formulações rejeitadas pelo usuário na landing page: “Seu guia no dia 11.” e a abertura “Seu conteúdo. Sua oferta. Sua página no ar.”.
 
 ## Página de conversão
 
