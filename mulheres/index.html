@@ -399,17 +399,24 @@ footer .bot{justify-content:flex-start;align-items:center}
 .sig-btn{font:inherit;color:inherit;background:none;border:0;padding:6px 0;cursor:pointer}
 .sig-btn b{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.35);transition:text-decoration-color .2s}
 .sig-btn:hover b,.sig-btn[aria-expanded="true"] b{text-decoration-color:var(--sig)}
-.sig-pop{position:absolute;z-index:30;left:0;bottom:calc(100% + 10px);width:min(320px,calc(100vw - 40px));display:grid;gap:10px;padding:18px;border-radius:18px;background:#fff;color:var(--ink);box-shadow:0 18px 50px rgba(0,0,0,.35);transform-origin:0 100%;animation:sigIn .28s cubic-bezier(.16,1,.3,1)}
+.sig-pop{position:absolute;z-index:30;left:0;bottom:calc(100% + 10px);width:min(330px,calc(100vw - 40px));display:grid;gap:12px;padding:22px;border-radius:20px;background:#fff;color:var(--ink);box-shadow:0 0 0 1px rgba(14,15,17,.06),0 24px 60px -8px rgba(0,0,0,.5);transform-origin:0 100%;animation:sigIn .28s cubic-bezier(.16,1,.3,1)}
 .sig-pop[hidden]{display:none}
 @keyframes sigIn{from{opacity:0;transform:translateY(8px) scale(.97)}}
-.sig-pop p{font-size:15px;font-weight:600;line-height:1.3;margin-bottom:2px}
-.sig-pop label{display:grid;gap:4px;font-size:12.5px;font-weight:500;color:var(--mut)}
-.sig-pop input,.sig-pop textarea{font:400 16px/1.35 var(--f);color:var(--ink);width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;resize:none}
-.sig-pop input:focus,.sig-pop textarea:focus{outline:2px solid var(--sig);outline-offset:1px;border-color:transparent}
+.sig-pop p{font-size:19px;font-weight:600;letter-spacing:-.02em;line-height:1.2;padding-right:28px;margin-bottom:4px}
+.sig-pop p small{display:block;margin-top:5px;font-size:14px;font-weight:400;letter-spacing:0;line-height:1.4;color:var(--mut)}
+.sig-pop label{display:grid;gap:6px;font-size:13px;font-weight:600;color:var(--ink)}
+.sig-pop input,.sig-pop textarea{font:400 16px/1.35 var(--f);color:var(--ink);width:100%;padding:11px 13px;border:1px solid rgba(14,15,17,.16);border-radius:12px;background:var(--soft);resize:none;transition:border-color .2s,background .2s,box-shadow .2s}
+.sig-pop input:hover,.sig-pop textarea:hover{border-color:rgba(14,15,17,.32)}
+.sig-pop input:focus,.sig-pop textarea:focus{outline:0;background:#fff;border-color:var(--ink);box-shadow:0 0 0 3px rgba(255,91,46,.28)}
 .sig-pop .sig-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
-.sig-pop button{font:600 15px var(--f);padding:12px 16px;border:0;border-radius:999px;background:var(--ink);color:#fff;cursor:pointer;transition:background .2s}
-.sig-pop button:hover{background:#000}
+.sig-pop button[type=submit]{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:2px;font:600 15px var(--f);padding:14px 16px;border:0;border-radius:999px;background:var(--sig);color:var(--dark);cursor:pointer;transition:background .2s}
+.sig-pop button[type=submit] svg{width:15px;height:15px;transition:transform .2s}
+.sig-pop button[type=submit]:hover{background:#ff754e}
+.sig-pop button[type=submit]:hover svg{transform:translateX(2px)}
 .sig-pop button:disabled{opacity:.6;cursor:default}
+.sig-x{position:absolute;top:14px;right:14px;width:32px;height:32px;display:grid;place-items:center;border:0;border-radius:50%;background:var(--soft);color:var(--ink);cursor:pointer;transition:background .2s}
+.sig-x:hover{background:#e6e6e2}
+.sig-x svg{width:14px;height:14px}
 .sig-msg{font-size:13px;line-height:1.35;color:var(--mut);min-height:0}
 .sig-msg:empty{display:none}
 .sig-msg.err{color:#c0341a}
@@ -1207,12 +1214,14 @@ section[id]{scroll-margin-top:84px}
       <span class="sig">
         <button class="sig-btn" id="sigBtn" type="button" aria-expanded="false" aria-controls="sigPop">Desenvolvido por: <b>skope.cc</b></button>
         <form class="sig-pop" id="sigPop" hidden novalidate aria-label="Contato com a skope.cc">
-          <p>Quer um site como este? Fale com a skope.cc.</p>
+          <button class="sig-x" type="button" id="sigClose" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+          <p>Quer um site como este?<small>Deixe seu contato e a skope.cc chama você.</small></p>
           <label>Nome<input name="nome" type="text" autocomplete="name" maxlength="120" required/></label>
-          <label>WhatsApp com DDD<input name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" maxlength="40" required/></label>
-          <label>Mensagem<textarea name="mensagem" rows="3" maxlength="2000" required></textarea></label>
+          <label>E-mail<input name="email" type="email" inputmode="email" autocomplete="email" maxlength="160" required/></label>
+          <label>WhatsApp com DDD<input name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" maxlength="24" placeholder="(41) 99999-9999" required/></label>
+          <label>Mensagem<textarea name="mensagem" rows="2" maxlength="2000" required></textarea></label>
           <input class="sig-hp" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true"/>
-          <button type="submit">Enviar</button>
+          <button type="submit"><span>Enviar</span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></button>
           <div class="sig-msg" id="sigMsg" role="status"></div>
         </form>
       </span>
@@ -1977,19 +1986,33 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.clas
     else if (focus) btn.focus({preventScroll:true});
   }
   btn.addEventListener('click', () => toggle(pop.hidden));
+  document.getElementById('sigClose').addEventListener('click', () => toggle(false));
   document.addEventListener('click', event => { if (!pop.hidden && !event.target.closest('.sig')) toggle(false, false); });
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && !pop.hidden) { event.stopPropagation(); toggle(false); } });
   function say(text, error = false) { msg.textContent = text; msg.classList.toggle('err', error); }
+  // Celular do Brasil: DDD de dois dígitos sem zero e nove dígitos começando em 9; aceita +55 na frente. Fora do Brasil, + e 8 a 15 dígitos.
+  function validWhats(value) {
+    let d = value.replace(/\D/g, '');
+    if (value.trim().startsWith('+') && !d.startsWith('55')) return d.length >= 8 && d.length <= 15;
+    if (d.length > 11 && d.startsWith('55')) d = d.slice(2);
+    if (d.startsWith('0')) d = d.slice(1);
+    return /^[1-9][1-9]9\d{8}$/.test(d) && !/^(\d)\1+$/.test(d.slice(2));
+  }
+  pop.elements.whatsapp.addEventListener('blur', event => {
+    const v = event.target.value, d = v.replace(/\D/g, '').replace(/^55(?=\d{11}$)/, '');
+    if (!v.trim().startsWith('+') && /^[1-9][1-9]9\d{8}$/.test(d)) event.target.value = `(${d.slice(0,2)}) ${d.slice(2,7)}-${d.slice(7)}`;
+  });
   pop.addEventListener('submit', async event => {
     event.preventDefault();
-    const f = pop.elements, nome = f.nome.value.trim(), whats = f.whatsapp.value.trim(), mensagem = f.mensagem.value.trim();
-    if (!nome) { say('Escreva seu nome.', true); f.nome.focus(); return; }
-    if (whats.replace(/\D/g, '').length < 10) { say('Informe o WhatsApp com DDD.', true); f.whatsapp.focus(); return; }
+    const f = pop.elements, nome = f.nome.value.trim(), email = f.email.value.trim(), whats = f.whatsapp.value.trim(), mensagem = f.mensagem.value.trim();
+    if (nome.length < 2) { say('Escreva seu nome.', true); f.nome.focus(); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email)) { say('Confira o e-mail: parece incompleto.', true); f.email.focus(); return; }
+    if (!validWhats(whats)) { say('Confira o WhatsApp: DDD e nove dígitos, como (41) 99999-9999.', true); f.whatsapp.focus(); return; }
     if (!mensagem) { say('Escreva sua mensagem.', true); f.mensagem.focus(); return; }
     const data = new FormData();
     data.append('produto', 'Assinatura skope.cc');
     data.append('origem', location.host + location.pathname);
-    data.append('nome', nome); data.append('whatsapp', whats); data.append('mensagem', mensagem);
+    data.append('nome', nome); data.append('email', email); data.append('whatsapp', whats); data.append('mensagem', mensagem);
     data.append('website', f.website.value);
     send.disabled = true; say('Enviando...');
     try {
@@ -1998,7 +2021,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.clas
       if (!j.ok) throw new Error(j.msg || '');
       pop.reset();
       say('Recebido. A skope.cc responde no seu WhatsApp.');
-      send.textContent = 'Enviado';
+      send.querySelector('span').textContent = 'Enviado';
     } catch (error) {
       send.disabled = false;
       say('Não foi possível enviar agora. Tente de novo ou escreva para sites@skope.cc.', true);
