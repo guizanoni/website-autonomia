@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<title>AUTONOM/IA Mulheres · artes de conversão · revisão 2</title>
+<!-- Fonte das artes: ?p=1…12&f=ig|li. Cada arte repete um argumento e um objeto visual da página /mulheres/
+     (notinha, mesa com crachás, escudo, notificações). Fotos ilustrativas do banco já usado na página. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* --k encolhe a tipografia no quadrado do LinkedIn; as cenas (flex:1) absorvem a diferença de altura */
+:root{--ink:#191c1f;--dark:#0e0f11;--dark2:#1a1c1f;--soft:#f4f4f0;--mut:#686c6f;--dmut:#b4b7b8;--sig:#ff5b2e;--line:#dcded8;--h:1350px;--k:1;--pad:64px;--f:'Geist',sans-serif;--m:'Geist Mono',monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:var(--h);overflow:hidden;font-family:var(--f);-webkit-font-smoothing:antialiased}
+body.li{--h:1080px;--k:.86;--pad:54px}
+.post{display:none;position:relative;width:1080px;height:var(--h);overflow:hidden;padding:var(--pad);background:var(--soft);color:var(--ink);flex-direction:column}
+.post.active{display:flex}
+.dark{background:var(--dark);color:#fff}
+.top{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:calc(36px*var(--k));font-weight:600;letter-spacing:-.055em;white-space:nowrap}.logo i{font-style:normal;color:var(--sig)}
+.tag{font:500 calc(19px*var(--k)) var(--m);text-transform:uppercase;letter-spacing:.02em}
+h1{position:relative;z-index:2;margin-top:calc(54px*var(--k));font-size:calc(var(--hs,104px)*var(--k));line-height:1.02;font-weight:600;letter-spacing:-.055em}
+h1 em{font-style:normal;color:var(--sig)}
+.eyebrow{position:relative;z-index:2;margin-top:calc(50px*var(--k));font:500 calc(20px*var(--k)) var(--m);text-transform:uppercase;letter-spacing:.035em;color:var(--mut)}
+.eyebrow + h1{margin-top:calc(20px*var(--k))}
+.dark .eyebrow{color:var(--dmut)}
+.sub{font-size:calc(30px*var(--k));line-height:1.3;letter-spacing:-.02em}
+.sub b{font-weight:600}
+.dark .sub{color:#dcdddd}.dark .sub b{color:#fff}
+.fine{font-size:calc(20px*var(--k));line-height:1.4;color:var(--mut)}.dark .fine{color:var(--dmut)}
+.footer{position:relative;z-index:2;margin-top:auto}
+.event{font-size:calc(25px*var(--k));line-height:1.45}.event b{font-weight:600}
+.cta-row{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:calc(22px*var(--k))}
+.cta{display:inline-flex;align-items:center;border-radius:999px;background:var(--sig);color:var(--dark);font-size:calc(28px*var(--k));line-height:1.2;font-weight:600;padding:calc(23px*var(--k)) calc(30px*var(--k));white-space:nowrap}
+.url{font:calc(20px*var(--k)) var(--m)}
+.rule{border-top:1px solid rgba(128,128,128,.35);padding-top:calc(24px*var(--k))}
+/* cena: ocupa o que sobra entre o título e o rodapé */
+.scene{position:relative;z-index:1;flex:1;min-height:0;margin:calc(32px*var(--k)) 0 calc(28px*var(--k));border-radius:24px;overflow:hidden}
+.scene > img{display:block;width:100%;height:100%;object-fit:cover}
+.scene + .footer{margin-top:0}
+.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* notificação, igual às da página */
+.toast{position:absolute;z-index:2;display:flex;align-items:center;gap:calc(14px*var(--k));background:rgba(255,255,255,.96);color:var(--ink);border-radius:20px;padding:calc(16px*var(--k)) calc(22px*var(--k)) calc(16px*var(--k)) calc(16px*var(--k));box-shadow:0 14px 34px rgba(0,0,0,.28)}
+.toast i{flex:none;display:grid;place-items:center;width:calc(48px*var(--k));height:calc(48px*var(--k));border-radius:50%;background:var(--ink);color:var(--sig);font-style:normal;font-weight:700;font-size:calc(23px*var(--k))}
+.toast b{display:block;font-size:calc(25px*var(--k));font-weight:600;line-height:1.2;letter-spacing:-.01em}
+.toast span{display:block;font-size:calc(20px*var(--k));color:var(--mut)}
+
+/* 01 · abertura: a segunda chamada da página, com as três entregas */
+.p1::after,.p3::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.72),rgba(0,0,0,.05) 46%,rgba(0,0,0,.94) 100%)}
+.p1 .outs{position:relative;z-index:2;margin-top:auto;display:flex;gap:14px}
+.p1 .outs div{flex:1;padding:calc(20px*var(--k)) calc(22px*var(--k));border-radius:20px;background:rgba(20,22,23,.84);border:1px solid #ffffff3d}
+.p1 .outs small{display:block;margin-bottom:8px;font:calc(17px*var(--k)) var(--m);color:#d1d3d3}
+.p1 .outs b{font-size:calc(28px*var(--k));line-height:1.18;font-weight:500;letter-spacing:-.015em}
+.p1 .footer{margin-top:calc(28px*var(--k))}.p1 .sub{margin-bottom:calc(22px*var(--k))}
+/* 02 · quem já empreende */
+.p2 .toast{left:28px;bottom:28px}
+.p2 .scene > img{object-position:50% 40%}
+/* 03 · quem quer começar */
+.p3 .bg{object-position:56% center}
+.p3 .eyebrow{margin-top:auto;color:#f1f1ee}
+.p3 .sub{position:relative;z-index:2;margin-top:calc(24px*var(--k));max-width:900px}
+.p3 .footer{margin-top:calc(32px*var(--k))}
+body.li .p3 .eyebrow{font-size:0;margin-top:auto}body.li .p3 h1{--hs:92px;margin-top:0}body.li .p3 .sub{margin-top:14px}body.li .p3 .footer{margin-top:20px}
+/* 04 · apoio */
+.p4 .scene > img{object-position:50% 42%}
+.p4 .toast.t1{right:28px;top:28px}.p4 .toast.t2{left:28px;bottom:28px}
+/* 05 · exemplo ilustrativo: três etapas e a página que nasce delas */
+.p5 .scene{display:grid;grid-template-columns:1fr 1fr;gap:22px;overflow:visible;border-radius:0}
+.p5 .steps{display:grid;gap:14px;align-content:stretch}
+.p5 .steps div{display:flex;flex-direction:column;justify-content:center;padding:calc(20px*var(--k)) calc(24px*var(--k));border:1px solid var(--line);border-radius:22px;background:#fff}
+.p5 .steps small{font:500 calc(19px*var(--k)) var(--m);color:var(--sig);letter-spacing:.03em}
+.p5 .steps b{margin-top:8px;font-size:calc(37px*var(--k));font-weight:600;letter-spacing:-.03em;line-height:1.12}
+.p5 .steps p{margin-top:10px;font-size:calc(25px*var(--k));line-height:1.3;color:var(--mut)}
+.p5 .page{display:flex;flex-direction:column;border-radius:26px;background:var(--dark);color:#fff;padding:calc(28px*var(--k)) calc(26px*var(--k));box-shadow:0 24px 50px rgba(0,0,0,.2);rotate:2deg}
+.p5 .page small{font:calc(19px*var(--k)) var(--m);line-height:1.35;color:var(--dmut);text-transform:uppercase;letter-spacing:.04em}
+.p5 .page b{margin-top:calc(16px*var(--k));font-size:calc(43px*var(--k));font-weight:600;letter-spacing:-.04em;line-height:1.05}
+.p5 .page ul{list-style:none;margin-top:auto;display:grid;gap:12px;font-size:calc(30px*var(--k));color:#f0f0ee}
+.p5 .page li{padding-top:12px;border-top:1px solid #ffffff33}
+.p5 .page span{align-self:flex-start;margin-top:calc(20px*var(--k));padding:calc(15px*var(--k)) calc(20px*var(--k));border-radius:999px;background:var(--sig);color:var(--dark);font-size:calc(21px*var(--k));font-weight:600;white-space:nowrap}
+/* 06 · o dia */
+.p6 .workday{flex:1;min-height:0;display:grid;grid-template-columns:calc(320px*var(--k)) 1fr;gap:calc(40px*var(--k));align-items:center;margin:calc(20px*var(--k)) 0}
+.p6 .calendar{background:var(--soft);color:var(--ink);border-radius:22px;overflow:hidden;text-align:center;rotate:-3deg}
+.p6 .calendar small{display:block;background:var(--sig);font:calc(20px*var(--k)) var(--m);padding:calc(14px*var(--k))}
+.p6 .calendar b{display:block;font-size:calc(184px*var(--k));font-weight:600;letter-spacing:-.07em;line-height:1.12}
+.p6 .calendar span{display:block;font:calc(18px*var(--k)) var(--m);padding-bottom:calc(20px*var(--k))}
+.p6 ul{list-style:none}
+.p6 li{padding:calc(22px*var(--k)) 0;border-bottom:1px solid #ffffff2e;font-size:calc(37px*var(--k));line-height:1.2;letter-spacing:-.02em}
+.p6 li small{display:block;margin-bottom:7px;font:500 calc(19px*var(--k)) var(--m);color:var(--sig);text-transform:uppercase;letter-spacing:.04em}
+/* 07 · rodada: a mesa da página, com os crachás e as etiquetas */
+.p7 .scene{display:grid;place-items:center;overflow:visible;border-radius:0;margin-bottom:calc(14px*var(--k))}
+.mesa{--mw:800px;position:relative;width:var(--mw);height:calc(var(--mw)*.7083);container-type:inline-size}
+body.li .mesa{--mw:580px}
+body.li .p5 .steps p{display:none}
+.mesa svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.mesa .fio{fill:none;stroke:var(--sig);stroke-width:7;stroke-linecap:round;stroke-dasharray:.1 19}
+.mesa .fio-luz{fill:none;stroke:var(--sig);stroke-width:14;stroke-linecap:round;opacity:.15}
+.badge{position:absolute;z-index:1;left:calc(var(--x)/12*1%);top:calc(var(--y)/8.5*1%);width:calc(var(--w)/12*1%);translate:-50% 0;rotate:var(--br,0deg);aspect-ratio:.9;font-size:calc(var(--w)/12*.1cqw);border-radius:1.35em;background:linear-gradient(170deg,#f8f8f6,#cfd0cc);color:var(--ink);padding:.95em 1em 1.25em;display:flex;flex-direction:column;align-items:center;text-align:center;box-shadow:0 1.9em 2.6em rgba(0,0,0,.55),inset 0 1px 0 #fff}
+.badge::before{content:"";flex:none;width:30%;height:.42em;border-radius:1em;background:#9a9b97}
+.badge span{display:block;margin-top:.3em;font-size:.8em;line-height:1.3;color:#4f5257;font-family:var(--m);text-transform:uppercase;letter-spacing:.06em}
+.badge .av{flex:none;display:grid;place-items:center;margin:auto 0;width:2.25em;height:2.25em;border-radius:50%;background:var(--ink);color:var(--sig);font-family:var(--f);font-weight:700;font-size:1.85em;line-height:1;letter-spacing:0}
+.badge b{font-size:1.38em;font-weight:600;letter-spacing:-.025em;line-height:1.15}
+.badge.voce{z-index:3;background:linear-gradient(168deg,#ff8058,var(--sig) 46%,#e9451c);color:var(--dark)}
+.badge.voce::before{background:rgba(14,15,17,.34)}.badge.voce span{color:#4d1706}.badge.voce .av{background:var(--dark)}
+.b1{--x:170;--y:150;--w:280;--br:-6deg}.b2{--x:600;--y:20;--w:280;--br:3deg}.b3{--x:1030;--y:150;--w:280;--br:5deg}.voce{--x:600;--y:530;--w:270;--br:-2deg}
+.elo{position:absolute;z-index:2;left:calc(var(--x)/12*1%);top:calc(var(--y)/8.5*1%);translate:-50% -50%;rotate:var(--br,0deg);white-space:nowrap;background:#fff;color:var(--ink);font-size:3.5cqw;font-weight:600;letter-spacing:-.01em;line-height:1;padding:.72em 1.1em;border-radius:999px;box-shadow:0 .7em 1.5em rgba(0,0,0,.5)}
+.e1{--x:322;--y:478;--br:-4deg}.e2{--x:600;--y:372;--br:2deg}.e3{--x:878;--y:478;--br:4deg}
+/* 08 · quem conduz */
+.p8 .scene{display:grid;grid-template-columns:1.05fr 1fr;gap:16px;overflow:visible;border-radius:0}
+.p8 .scene > div{position:relative;border-radius:24px;overflow:hidden;min-height:0}
+.p8 .scene img{display:block;width:100%;height:100%;object-fit:cover}
+.p8 .retrato img{object-position:50% 18%}
+.p8 .palcos{display:grid;grid-template-rows:1fr 1fr;gap:16px;overflow:visible!important;border-radius:0!important}
+.p8 .palcos > div{position:relative;border-radius:24px;overflow:hidden;min-height:0}
+.p8 .toast{left:20px;bottom:20px;right:20px}
+.p8 .nota{position:absolute;left:18px;bottom:18px;padding:calc(13px*var(--k)) calc(18px*var(--k));border-radius:16px;background:var(--sig);color:var(--dark);font-size:calc(21px*var(--k));line-height:1.2;font-weight:600}
+.p8 .nota b{display:block;font-size:calc(38px*var(--k));letter-spacing:-.04em;line-height:1}
+/* 09 · a conta: a notinha da página */
+.p9 .scene{display:grid;grid-template-columns:1.3fr 1fr;gap:calc(34px*var(--k));align-items:center;overflow:visible;border-radius:0}
+.orc-w{--k:.9;rotate:-2.5deg;filter:drop-shadow(0 26px 32px rgba(0,0,0,.55))}
+.orc{--z:10px;background:linear-gradient(172deg,#fbfbf9,#e6e6e2);color:var(--ink);border-radius:20px 20px 0 0;padding:calc(28px*var(--k)) calc(28px*var(--k)) calc(26px*var(--k) + var(--z));-webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - var(--z)) no-repeat,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/calc(2*var(--z)) var(--z) repeat-x;mask:linear-gradient(#000 0 0) top/100% calc(100% - var(--z)) no-repeat,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/calc(2*var(--z)) var(--z) repeat-x}
+.orc-tag{display:block;font:600 calc(18px*var(--k)) var(--m);letter-spacing:.08em;text-transform:uppercase;color:#5d6065}
+.orc-t{display:block;margin-top:6px;font-size:calc(26px*var(--k));font-weight:600;letter-spacing:-.025em;line-height:1.15}
+.orc dl{margin-top:calc(16px*var(--k));border-top:2px dashed #b4b5b0}
+.orc dl > div{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;padding-block:calc(13px*var(--k));border-bottom:2px dashed #b4b5b0}
+.orc dt{font-size:calc(26px*var(--k));font-weight:600;letter-spacing:-.015em;line-height:1.2}
+.orc dt small,.orc dd small{display:block;margin-top:3px;font-family:var(--f);font-size:calc(20px*var(--k));font-weight:400;letter-spacing:0;color:#4f5257;line-height:1.3}
+.orc dd{flex:none;text-align:right;font:600 calc(25px*var(--k)) var(--m);white-space:nowrap}
+.orc-total{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:calc(16px*var(--k));font-weight:600}
+.orc-total span{font-size:calc(22px*var(--k));white-space:nowrap}
+.orc-total b{font:700 calc(44px*var(--k)) var(--m);letter-spacing:-.03em;white-space:nowrap}
+.orc-obs{margin-top:6px;font-size:calc(21px*var(--k));color:#4f5257}
+.p9 .nos{background:var(--dark2);border-radius:24px;padding:calc(26px*var(--k))}
+.p9 .nos span{display:inline-block;background:var(--sig);color:var(--dark);font-size:calc(22px*var(--k));font-weight:600;line-height:1;padding:calc(9px*var(--k)) calc(14px*var(--k));border-radius:999px}
+.p9 .nos b{display:block;margin-top:calc(16px*var(--k));font-size:calc(46px*var(--k));font-weight:600;letter-spacing:-.045em;line-height:1}
+.p9 .nos em{display:block;margin-top:8px;font-style:normal;font-size:calc(27px*var(--k));font-weight:600;letter-spacing:-.02em}
+.p9 .nos small{display:block;margin-top:calc(12px*var(--k));font-size:calc(22px*var(--k));line-height:1.3;color:var(--dmut)}
+.p9 .scene .fine{margin-top:calc(16px*var(--k));padding-inline:4px;font-size:calc(25px*var(--k));color:#d0d2d2}
+body.li .p9 h1{--hs:84px}body.li .p9 .orc-w{--k:.82}body.li .p9 .orc dt small{display:none}body.li .p9 .sub{display:none}body.li .p9 .event{margin-top:0!important}body.li .p9 .scene{margin-bottom:calc(20px*var(--k))}
+/* 10 · garantia: o escudo da página */
+.p10 .shield{position:absolute;z-index:1;right:calc(36px*var(--k));top:calc(260px*var(--k));width:calc(330px*var(--k));filter:drop-shadow(0 34px 44px rgba(0,0,0,.22));rotate:6deg}
+.p10 .sub{margin-top:calc(40px*var(--k));max-width:calc(900px*var(--k));font-size:calc(34px*var(--k))}
+.p10 .fine{margin-top:calc(20px*var(--k));font-size:calc(25px*var(--k))}
+/* 11 · a oferta */
+.p11 .card{flex:1;min-height:0;display:flex;flex-direction:column;margin:calc(30px*var(--k)) 0 calc(26px*var(--k));padding:calc(32px*var(--k)) calc(36px*var(--k));border-radius:28px;background:#fff;color:var(--ink)}
+.p11 .card > small{font-size:calc(21px*var(--k));font-weight:500;color:var(--mut)}
+.p11 .save{align-self:flex-start;margin-top:calc(14px*var(--k));background:rgba(255,91,46,.13);color:#d8431a;font-weight:600;font-size:calc(21px*var(--k));padding:calc(9px*var(--k)) calc(15px*var(--k));border-radius:999px}
+.p11 .val{margin-top:calc(14px*var(--k));font-size:calc(150px*var(--k));font-weight:600;letter-spacing:-.055em;line-height:1}
+.p11 .val small{font-size:.36em;letter-spacing:-.01em;vertical-align:1.05em;margin-right:6px;font-weight:500}
+.p11 .val sup{font-size:.36em;vertical-align:1.3em;letter-spacing:-.01em}
+.p11 .how{margin-top:10px;font-size:calc(29px*var(--k))}.p11 .how b{font-weight:600}
+.p11 .alt{margin-top:4px;font-size:calc(25px*var(--k));color:var(--mut)}.p11 .alt b{color:var(--ink);font-weight:600}
+.p11 ul{list-style:none;margin-top:auto;padding-top:calc(20px*var(--k));border-top:1px solid var(--line);display:grid;gap:calc(17px*var(--k));font-size:calc(28px*var(--k));line-height:1.25}
+.p11 li{display:flex;gap:12px}.p11 li::before{content:'✓';color:var(--sig);font-weight:700}
+body.li .p11 li:nth-child(n+4){display:none}body.li .p11 .val{font-size:112px}body.li .p11 .save{display:none}
+.p11 .card + .footer{margin-top:0}
+/* 12 · dupla */
+.p12{padding:0}
+.p12 .top{padding:calc(52px*var(--k)) var(--pad);color:#fff}
+.p12 .bg{height:46%;object-position:50% 30%}
+.p12 .shade{position:absolute;top:0;left:0;right:0;height:46%;background:linear-gradient(180deg,#000a,transparent 55%)}
+.p12 .panel{position:relative;z-index:1;margin-top:auto;padding:calc(40px*var(--k)) var(--pad) calc(46px*var(--k));border-radius:32px 32px 0 0;background:var(--soft)}
+.p12 h1{margin-top:0;--hs:96px}
+.p12 .deal{display:flex;gap:calc(28px*var(--k));align-items:center;margin-top:calc(24px*var(--k));padding:calc(20px*var(--k)) 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.p12 .deal strong{font-size:calc(66px*var(--k));font-weight:600;color:var(--sig);letter-spacing:-.055em}
+.p12 .deal p{font-size:calc(26px*var(--k));line-height:1.3}.p12 .deal b{font-size:calc(33px*var(--k));letter-spacing:-.025em;font-weight:600}
+.p12 .fine{margin-top:calc(16px*var(--k));font-size:calc(24px*var(--k));color:var(--ink)}
+.p12 .event{margin-top:calc(20px*var(--k));font-size:calc(23px*var(--k))}
+</style>
+</head>
+<body>
+<!-- defs da mesa (compartilhados) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <radialGradient id="mTop" cx=".5" cy=".16" r=".86"><stop offset="0" stop-color="#4c4f56"/><stop offset=".5" stop-color="#2b2d32"/><stop offset="1" stop-color="#1c1d21"/></radialGradient>
+  <linearGradient id="mEdge" x1="0" x2="1"><stop offset="0" stop-color="#0a0b0c"/><stop offset=".5" stop-color="#202226"/><stop offset="1" stop-color="#0a0b0c"/></linearGradient>
+  <linearGradient id="mRim" x1="0" x2="1"><stop offset=".08" stop-color="#ff5b2e" stop-opacity="0"/><stop offset=".5" stop-color="#ff5b2e" stop-opacity=".9"/><stop offset=".92" stop-color="#ff5b2e" stop-opacity="0"/></linearGradient>
+  <linearGradient id="mHi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".2"/><stop offset=".5" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#fff" stop-opacity=".42"/></linearGradient>
+  <radialGradient id="mPool"><stop offset="0" stop-color="#ff5b2e" stop-opacity=".3"/><stop offset="1" stop-color="#ff5b2e" stop-opacity="0"/></radialGradient>
+  <filter id="mBlur" x="-30%" y="-300%" width="160%" height="700%"><feGaussianBlur stdDeviation="20"/></filter>
+  <clipPath id="mClip"><ellipse cx="600" cy="482" rx="450" ry="172"/></clipPath>
+</defs></svg>
+
+<section class="post p1 dark">
+  <img class="bg" src="../../../images/mulheres/p3.jpg" alt="" style="object-position:50% 43%">
+  <div class="top"><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div><span class="tag">IA na prática</span></div>
+  <h1>A ideia é sua.<br><em>O trabalho pesado<br>fica com a IA.</em></h1>
+  <div class="outs"><div><small>CONTEÚDO</small><b>Mês planejado,<br>legendas escritas</b></div><div><small>OFERTA</small><b>Página no ar,<br>com link</b></div><div><small>AJUDA PRA ESCREVER</small><b>Uma IA que conhece<br>o seu negócio</b></div></div>
+  <div class="footer"><p class="sub">Um dia de prática no seu projeto,<br>com gente do lado pra ajudar.</p><div class="event"><b>11/11/2026 · Hard Rock Café Curitiba</b></div><div class="cta-row"><span class="cta" data-li="Garanta sua vaga →">Sua vaga no link da bio →</span><span class="url">autonomia.vc/mulheres</span></div></div>
+</section>
+
+<section class="post p2">
+  <div class="top"><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div><span class="tag">Já tenho um negócio</span></div>
+  <h1 style="--hs:94px">Atende clientes.<br>Entrega o trabalho.<br><em>E a divulgação<br>fica pra depois?</em></h1>
+  <div class="scene"><img src="../../../images/mulheres/p1.jpg" alt=""><div class="toast"><i>/</i><div><b>Legenda de sexta</b><span>Escrita com a IA · agora</span></div></div></div>
+  <div class="footer"><p class="sub">Um dia pra planejar seu conteúdo, organizar<br>sua oferta e publicar sua página.</p><div class="event" style="margin-top:calc(16px*var(--k))"><b>11/11/2026 · Hard Rock Café Curitiba</b></div><div class="cta-row"><span class="cta" data-li="Traga seu negócio →">Sua vaga no link da bio →</span><span class="url">autonomia.vc/mulheres</span></div></div>
+</section>
+
+<section class="post p3 dark">
+  <img class="bg" src="../../../images/mulheres/hero.jpg" alt="">
+  <div class="top"><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div><span class="tag">Quero começar algo meu</span></div>
+  <p class="eyebrow">Seu ponto de partida é o que você sabe.</p>
+  <h1>Você sabe fazer.<br><em>Falta virar<br>um serviço?</em></h1>
+  <p class="sub">Com IA e orientação, você define o que vender,<br>pra quem e por quanto.</p>
+  <div class="footer"><div class="event"><b>11/11/2026 · Hard Rock Café Curitiba</b></div><div class="cta-row"><span class="cta" data-li="Dê o primeiro passo →">Comece pelo link da bio →</span><span class="url">autonomia.vc/mulheres</span></div></div>
+</section>
+
+<section class="post p4">
+  <div class="top"><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div><span class="tag">Nunca usou IA? Pode vir.</span></div>
+  <h1 style="--hs:98px">Você conhece<br>seu trabalho.<br><em>A gente ajuda<br>com a IA.</em></h1>
+  <div class="scene"><img src="../../../images/mulheres/calma.jpg" alt=""><div class="toast t1"><i>/</i><div><b>Monitora a caminho</b><span>Mesa 7 · agora</span></div></div><div class="toast t2"><i>/</i><div><b>Pronto! Deu certo.</b><span>Sua assistente foi criada ✓</span></div></div></div>
+  <div class="footer"><p class="sub">Monitoras o dia inteiro, etapa por etapa,<br>com uma IA gratuita.</p><div class="event" style="margin-top:calc(16px*var(--k))"><b>11/11/2026 · Hard Rock Café Curitiba</b></div><div class="cta-row"><span class="cta" data-li="Comece com ajuda →">Comece pelo link da bio →</span><span class="url">autonomia.vc/mulheres</span></div></div>
+</section>
+
+<section class="post p5">
+  <div class="top"><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div><span class="tag">Exemplo ilustrativo</span></div>
+  <p class="eyebrow">Imagine que você organiza ambientes</p>
+  <h1 style="--hs:100px">Veja como uma ideia<br><em>ganha forma.</em></h1>
+  <div class="scene">
+    <div class="steps"><div><small>01 / OFERTA</small><b>O serviço fica claro.</b><p>Pra quem é, o que inclui e um preço pra testar.</p></div><div><small>02 / CONTEÚDO</small><b>Você tem o que contar.</b><p>Temas do mês e legendas escritas.</p></div><div><small>03 / PÁGINA</small><b>A cliente tem onde entender.</b><p>Uma página simples, com link.</p></div></div>
+    <div class="page"><small>Seu nome · organização residencial</small><b>Mais praticidade começa pelo seu espaço.</b><ul><li>Para quem é</li><li>O que inclui</li><li>Seu preço</li></ul><span>Conversar sobre meu ambiente ↗</span></div>
+  </div>
+  <div class="footer"><p class="sub">É um exemplo. No dia 11, você faz isso<br>com o seu negócio.</p><div class="event" style="margin-top:calc(16px*var(--k))"><b>11/11/2026 · Hard Rock Café Curitiba</b></div><div class="cta-row"><span class="cta" data-li="Quero fazer no meu negócio →">Sua vaga no link da bio →</span><span class="url">autonomia.vc/mulheres</span></div></div>
+</section>
+
+<section class="post p6 dark">
+  <div class="top"><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div><span class="tag">8h às 18h30</span></div>
+  <h1>Uma quarta<br>reservada pro<br><em>seu negócio.</em></h1>
+  <div class="workday"><div class="calendar"><small>NOVEMBRO · 2026</small><b>11</b><span>QUARTA-FEIRA</span></div><ul><li><small>Manhã</small>Sua assistente e seus posts</li><li><small>Tarde</small>O que vender e a sua página</li><li><small>Fim do dia</small>Novos contatos</li></ul></div>
+  <div class="footer rule"><p class="sub" style="margin-bottom:calc(20px*var(--k))">Você passa o dia trabalhando no que trouxe,<br>com ajuda pra avançar.</p><div class="event"><b>Hard Rock Café Curitiba</b> · Almoço e cafés inclusos</div><div class="cta-row"><span class="cta" data-li="Reserve esse dia →">Reserve pelo link da bio →</span><span class="url">autonomia.vc/mulheres</span></div></div>
+</section>
+
+<section class="post p7 dark">
+  <div class="top"><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div><span class="tag">Sem palco, sem pressão</span></div>
+  <h1 style="--hs:92px">Seu próximo contato<br>pode estar<br><em>na mesma mesa.</em></h1>
+  <div class="scene"><div class="mesa">
+    <svg viewBox="0 0 1200 850">
+      <ellipse cx="600" cy="730" rx="450" ry="44" opacity=".55" filter="url(#mBlur)"/>
+      <ellipse cx="600" cy="708" rx="320" ry="13" fill="#ff5b2e" opacity=".3" filter="url(#mBlur)"/>
+      <path d="M150 482A450 172 0 0 0 1050 482V516A450 172 0 0 1 150 516Z" fill="url(#mEdge)"/>
+      <path d="M150 516A450 172 0 0 0 1050 516" fill="none" stroke="url(#mRim)" stroke-width="3"/>
+      <ellipse cx="600" cy="482" rx="450" ry="172" fill="url(#mTop)"/>
+      <g clip-path="url(#mClip)"><ellipse cx="600" cy="650" rx="330" ry="140" fill="url(#mPool)"/></g>
+      <ellipse cx="600" cy="482" rx="318" ry="121" fill="none" stroke="#fff" stroke-opacity=".07" stroke-width="2"/>
+      <ellipse cx="600" cy="482" rx="449" ry="171" fill="none" stroke="url(#mHi)" stroke-width="2.5"/>
+      <path class="fio-luz" d="M600 548C632 502 568 456 600 410"/><path class="fio" d="M600 548C632 502 568 456 600 410"/>
+      <path class="fio-luz" d="M600 550C560 530 520 514 470 502"/><path class="fio" d="M600 550C560 530 520 514 470 502"/>
+      <path class="fio-luz" d="M600 550C640 530 680 514 730 502"/><path class="fio" d="M600 550C640 530 680 514 730 502"/>
+    </svg>
+    <div class="badge b1"><span class="av">/</span><b>Moda</b><span>Loja online</span></div>
+    <div class="badge b2"><span class="av">/</span><b>Psicologia</b><span>Consultório</span></div>
+    <div class="badge b3"><span class="av">/</span><b>Confeitaria</b><span>Encomendas</span></div>
+    <div class="badge voce"><span class="av">/</span><b>Você</b><span>O que você faz</span></div>
+    <span class="elo e1">pode virar cliente</span><span class="elo e2">pode te indicar</span><span class="elo e3">pode virar parceira</span>
+  </div></div>
+  <div class="footer"><p class="sub">Uma hora de conversas rápidas, em grupos pequenos<br>e com roteiro. Ninguém fala pra sala inteira.</p><div class="event" style="margin-top:calc(16px*var(--k))"><b>11/11/2026 · Hard Rock Café Curitiba</b></div><div class="cta-row"><span class="cta" data-li="Faça parte da turma →">Faça parte pelo link da bio →</span><span class="url">autonomia.vc/mulheres</span></div></div>
+</section>
+
+<section class="post p8">
+  <div class="top"><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div><span class="tag">Quem conduz</span></div>
+  <h1 style="--hs:96px">Quem conduz<br>tem nota<br><em>9,6 de 10.</em></h1>
+  <div class="scene">
+    <div class="retrato"><img src="../../../images/gui-retrato-estudio-frente.jpg" alt=""><div class="toast"><i>/</i><div><b>Gui Zanoni</b><span>Seu facilitador no dia 11</span></div></div></div>
+    <div class="palcos"><div><img src="../../../images/gui-palco-plateia.jpg" alt=""><div class="nota"><b>+350</b>palestras e treinamentos</div></div><div><img src="../../../images/gui-palco-marca.jpg" alt=""><div class="nota"><b>Desde 2016</b>trabalhando com IA</div></div></div>
+  </div>
+  <div class="footer"><p class="sub">Nota média nas avaliações de 1.734 pessoas que<br>já fizeram os treinamentos do Gui Zanoni.</p><div class="event" style="margin-top:calc(16px*var(--k))"><b>11/11/2026 · Hard Rock Café Curitiba</b></div><div class="cta-row"><span class="cta" data-li="Garanta sua vaga →">Sua vaga no link da bio →</span><span class="url">autonomia.vc/mulheres</span></div></div>
+</section>
+
+<section class="post p9 dark">
+  <div class="top"><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div><span class="tag">Faça a conta</span></div>
+  <h1 style="--hs:94px">Quanto custaria<br><em>pagar alguém<br>pra fazer?</em></h1>
+  <div class="scene">
+    <div class="orc-w"><div class="orc"><span class="orc-tag">Exemplo de orçamento</span><b class="orc-t">Contratando cada profissional</b>
+      <dl><div><dt>Estrategista<small>define o que você vende e por quanto</small></dt><dd>R$ 1.500<small>todo mês</small></dd></div><div><dt>Produtor de conteúdo<small>planeja o mês e escreve os posts</small></dt><dd>R$ 1.000<small>todo mês</small></dd></div><div><dt>Web designer<small>cria e publica sua página</small></dt><dd>R$ 2.000<small>cada página</small></dd></div></dl>
+      <div class="orc-total"><span>No primeiro mês</span><b>R$ 4.500</b></div><p class="orc-obs">No mês seguinte, mais R$ 2.500.</p></div></div>
+    <div><div class="nos"><span>No AUTONOM/IA</span><b>R$ 1.167,30</b><em>no PIX, uma vez.</em><small>ou R$ 1.297 em até 10x no cartão</small></div><p class="fine">Valores de exemplo, com base no que esses profissionais costumam cobrar em 2026.</p></div>
+  </div>
+  <div class="footer"><p class="sub">Você mesma faz, com a equipe te ajudando na sala.<br>E aprende a repetir todo mês.</p><div class="event" style="margin-top:calc(16px*var(--k))"><b>11/11/2026 · Hard Rock Café Curitiba</b></div><div class="cta-row"><span class="cta" data-li="Garanta sua vaga →">Sua vaga no link da bio →</span><span class="url">autonomia.vc/mulheres</span></div></div>
+</section>
+
+<section class="post p10">
+  <div class="top"><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div><span class="tag">Pode experimentar</span></div>
+  <div class="shield" aria-hidden="true"><svg viewBox="0 0 300 356"><defs>
+    <linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbfbfa"/><stop offset=".45" stop-color="#c9cac6"/><stop offset=".55" stop-color="#e9e9e6"/><stop offset="1" stop-color="#8e908b"/></linearGradient>
+    <linearGradient id="se" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#7c7e79"/></linearGradient>
+    <linearGradient id="ss" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a61"/><stop offset=".5" stop-color="#ff5b2e"/><stop offset="1" stop-color="#b8300c"/></linearGradient></defs>
+    <path d="M150 6 L286 52 V170 C286 258 226 320 150 350 C74 320 14 258 14 170 V52 Z" fill="url(#se)"/>
+    <path d="M150 20 L272 61 V170 C272 250 218 306 150 334 C82 306 28 250 28 170 V61 Z" fill="url(#sg)"/>
+    <path d="M178 88 L118 268" stroke="url(#ss)" stroke-width="34" stroke-linecap="square"/>
+    <path d="M178 88 L118 268" stroke="rgba(255,255,255,.35)" stroke-width="6" stroke-linecap="square" transform="translate(-10,-3)"/></svg></div>
+  <p class="eyebrow">Garantia até o almoço</p>
+  <h1 style="--hs:112px">Experimente<br>a manhã.<br><em>Decida até<br>o almoço.</em></h1>
+  <p class="sub">Se até as <b>12h30</b> sentir que não é pra você,<br>avise a equipe na sala e receba<br><b>100% do valor de volta.</b></p>
+  <p class="fine">Imprevisto antes do evento? Reembolso integral até 09/11.</p>
+  <div class="footer rule"><div class="event"><b>11/11/2026 · Hard Rock Café Curitiba</b><br>Um dia de IA para aplicar no seu negócio.</div><div class="cta-row"><span class="cta" data-li="Garanta sua vaga →">Sua vaga no link da bio →</span><span class="url">autonomia.vc/mulheres</span></div></div>
+</section>
+
+<section class="post p11 dark">
+  <div class="top"><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div><span class="tag">Turma 1 · 11.11.2026</span></div>
+  <h1>Reserve um dia.<br><em>Leve trabalho feito.</em></h1>
+  <div class="card"><small>AUTONOM/IA Mulheres · Turma 1 · Curitiba</small><span class="save">À vista no PIX · economize R$ 129,70</span>
+    <div class="val"><small>R$</small>1.167<sup>,30</sup></div>
+    <p class="how">à vista no PIX, <b>com 10% de desconto</b></p><p class="alt">ou <b>R$ 1.297 em até 10x</b> de R$ 129,70 no cartão</p>
+    <ul><li>Conteúdo do mês planejado e legendas escritas</li><li>Oferta organizada, preço inicial e página publicada</li><li>Monitoras na sala pra te ajudar, das 8h às 18h30</li><li>Guias, modelos e plano de 30 dias pra continuar em casa</li><li>Almoço e cafés no Hard Rock, rodada de negócios</li></ul></div>
+  <div class="footer"><div class="event"><b>Hard Rock Café Curitiba</b> · Turma de até 50 participantes</div><div class="cta-row"><span class="cta" data-li="Garantir minha vaga →">Sua vaga no link da bio →</span><span class="url">autonomia.vc/mulheres</span></div></div>
+</section>
+
+<section class="post p12">
+  <img class="bg" src="../../../images/mulheres/tarde.jpg" alt=""><div class="shade"></div>
+  <div class="top"><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div><span class="tag">Aprendam juntas</span></div>
+  <div class="panel"><h1>Chama uma amiga.<br><em>Vem de dupla.</em></h1>
+    <div class="deal"><strong>−10%</strong><p>para cada uma, no PIX.<br><b>R$ 1.167,30 por pessoa</b></p></div>
+    <p class="fine">As duas vagas saem por R$ 2.334,60 no PIX.<br>No cartão, o desconto é de 8% para cada uma.</p>
+    <div class="event"><b>11/11/2026 · Hard Rock Café Curitiba</b><br>Cada uma trabalha no próprio projeto.</div>
+    <div class="cta-row"><span class="cta" data-li="Escolham “Comprar em dupla” →">Dupla no link da bio →</span><span class="url">autonomia.vc/mulheres</span></div></div>
+</section>
+
+<script>
+const q=new URLSearchParams(location.search), n=Math.min(12,Math.max(1,Number(q.get('p'))||1)), format=q.get('f')==='li'?'li':'ig';
+document.body.className=format;document.querySelector('.p'+n).classList.add('active');
+if(format==='li')document.querySelectorAll('[data-li]').forEach(el=>el.textContent=el.dataset.li);
+</script>
+</body>
+</html>
