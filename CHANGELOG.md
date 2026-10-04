@@ -7,6 +7,13 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
+## 2026-10-04 — A conta ganha seção própria e passa a listar três profissionais
+
+- O Gui gostou da notinha, mas dentro da seção do preço ela disputava atenção com o cartão. Virou seção própria (`#conta`, preta), entre a faixa de fotos e a garantia: a página alterna branco, preto, cinza claro e preto, e a seção do preço volta a ser só título e cartão.
+- A notinha passa a listar quem ela teria de contratar, como o Gui pediu: Estrategista R$ 500, Produtor de conteúdo R$ 800 todo mês e Web designer R$ 900, somando R$ 2.200 no primeiro mês. A ordem repete a do exemplo da página (oferta, conteúdo, página).
+- O valor do estrategista é exemplo, como os outros dois: cerca de quatro horas pelo piso de R$ 120 por hora dos guias de 2026 (por projeto, consultoria começa em R$ 2.000). Os três números seguem pendentes de confirmação do Gui.
+- Leitura com três personas: o nome do profissional sozinho não diz nada para duas delas; quem explica é a linha de baixo, que ficou. Trocadas por linguagem direta as palavras que travaram: "oferta" virou "o que você vende e por quanto", "legendas" virou "textos dos posts" e "feitos por você, com ajuda" virou "você mesma faz, passo a passo, com a equipe te ajudando na sala".
+
 ## 2026-10-04 — Sai o mapa de 50 lugares, entra a conta que responde ao "é caro"
 
 - As 50 bolinhas com uma em laranja, logo antes do preço, não acrescentavam nada ao texto de cima (o Gui achou pouco claro). Saíram, junto com a legenda. A turma de no máximo 50 continua dita no apoio, e o aviso "Restam X vagas" do cartão segue aparecendo quando faltarem 15.

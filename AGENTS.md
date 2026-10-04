@@ -57,11 +57,12 @@ Secrets necessários no GitHub: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
   assume (classe `.js`), mantém a deriva de uma volta por minuto e deixa arrastar
   para os dois lados com inércia. Com "reduzir movimento" não anda sozinha, mas
   continua arrastável. A volta sem emenda depende das duas cópias das dez fotos.
-- Bloco "a conta" no topo de `#investimento` (`.conta`): orçamento de exemplo em
-  formato de notinha contra o valor da inscrição. Os R$ 900 e R$ 800 são exemplo
-  (ponta de baixo do mercado em 2026) e precisam continuar marcados como exemplo.
-  O preço do evento aparece repetido na caixa `.conta-nos`: mudou o preço ou o
-  desconto do PIX, atualizar ali também.
+- Seção "a conta" (`#conta`, entre a faixa de fotos e a garantia): orçamento de
+  exemplo em formato de notinha, com os três profissionais que ela teria de
+  contratar, contra o valor da inscrição. Os valores (R$ 500, R$ 800 e R$ 900) são
+  exemplo, pela ponta de baixo do mercado em 2026, e precisam continuar marcados
+  como exemplo. O preço do evento aparece repetido na caixa `.conta-nos`: mudou o
+  preço ou o desconto do PIX, atualizar ali também.
 - Rodapé assinado "Desenvolvido por: skope.cc": o clique abre um contato curto que
   posta no mesmo `enviar.php` com `produto=Assinatura skope.cc` e chega em sites@skope.cc.
 - Lista de espera posta no `enviar.php` do guizanoni.com (CORS liberado);
