@@ -390,11 +390,38 @@ header.solid .nav-toggle{background:var(--soft);border-color:var(--line)}
 .creds span{font-size:13.5px;background:var(--soft);border-radius:999px;padding:8px 14px;color:var(--ink)}
 
 /* ---------- fundadoras + preço ---------- */
-.seats{display:grid;grid-template-columns:repeat(25,minmax(0,1fr));gap:6px;max-width:640px;margin:36px auto 0}
-.seats i{aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.14);display:block}
-.seats i.me{background:var(--sig);box-shadow:0 0 0 4px rgba(255,91,46,.25)}
-.seats-cap{margin-top:14px;font-size:14px;color:var(--dmut);text-align:center}
-@media(max-width:600px){.seats{grid-template-columns:repeat(10,minmax(0,1fr))}}
+/* a conta: orçamento de exemplo (pagando alguém pra fazer) ao lado do valor da inscrição */
+.conta{margin:clamp(40px,5vw,64px) auto 0;max-width:980px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);grid-template-areas:"orc h" "orc nos" "orc fine";column-gap:16px;row-gap:20px;align-items:start;text-align:left}
+.conta-h{grid-area:h;align-self:end}
+.conta-h h3{font-size:clamp(28px,3.4vw,40px);line-height:1.05;text-wrap:balance;letter-spacing:-.035em;color:#fff}
+.conta-h p{margin-top:14px;font-size:17px;color:var(--dmut);max-width:44ch}
+.orc-w{grid-area:orc;align-self:center;justify-self:center;width:min(100%,430px);rotate:-2.5deg;filter:drop-shadow(0 28px 34px rgba(0,0,0,.55));transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.orc-w:hover{transform:rotate(1.5deg) scale(1.02)}
+/* papel com a borda de baixo picotada, como uma notinha */
+.orc{--z:9px;background:linear-gradient(172deg,#fbfbf9,#e6e6e2);color:var(--ink);border-radius:18px 18px 0 0;padding:26px 26px calc(24px + var(--z));-webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - var(--z)) no-repeat,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/calc(2*var(--z)) var(--z) repeat-x;mask:linear-gradient(#000 0 0) top/100% calc(100% - var(--z)) no-repeat,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/calc(2*var(--z)) var(--z) repeat-x}
+.orc-tag{display:block;font-family:var(--m);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#5d6065}
+.orc-t{display:block;margin-top:6px;font-size:20px;font-weight:600;letter-spacing:-.02em;line-height:1.2}
+.orc dl{margin-top:18px;border-top:1.5px dashed #b4b5b0}
+.orc dl > div{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding-block:14px;border-bottom:1.5px dashed #b4b5b0}
+.orc dt{font-size:16.5px;font-weight:600;letter-spacing:-.01em;line-height:1.25}
+.orc dt small,.orc dd small{display:block;margin-top:3px;font-family:var(--f);font-size:13.5px;font-weight:400;letter-spacing:0;color:#5d6065;line-height:1.35}
+.orc dd{flex:none;text-align:right;font-family:var(--m);font-size:17px;font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+.orc-total{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:16px;font-weight:600}
+.orc-total span{font-size:16.5px}
+.orc-total b{font-family:var(--m);font-size:clamp(24px,2.6vw,30px);font-weight:700;letter-spacing:-.02em;white-space:nowrap;font-variant-numeric:tabular-nums}
+.orc-obs{margin-top:6px;font-size:14px;color:#5d6065}
+.conta-nos{grid-area:nos;background:var(--dark2);border-radius:22px;padding:22px 24px}
+.conta-nos span{display:inline-block;background:var(--sig);color:var(--dark);font-size:13.5px;font-weight:600;line-height:1;padding:7px 12px;border-radius:999px}
+.conta-nos b{display:block;margin-top:12px;font-size:clamp(24px,2.6vw,30px);font-weight:600;letter-spacing:-.03em;line-height:1.1;color:#fff}
+.conta-nos small{display:block;margin-top:4px;font-size:15px;color:var(--dmut)}
+.conta-nos p{margin-top:10px;font-size:16px;color:var(--dmut)}
+.conta-fine{grid-area:fine;font-size:13.5px;color:var(--dmut);padding-inline:6px}
+@media(max-width:900px){
+  .conta{grid-template-columns:1fr;grid-template-areas:"h" "orc" "nos" "fine";row-gap:24px;max-width:520px}
+  .conta-h{text-align:center}
+  .conta-h p{margin-inline:auto}
+  .orc-w{rotate:-1.5deg;width:min(100% - 12px,430px)}
+}
 .plan{margin:56px auto 0;max-width:980px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:16px;text-align:left}
 .pcard{background:#fff;color:var(--ink);border-radius:var(--r);padding:clamp(24px,3vw,36px);display:flex;flex-direction:column}
 .pcard .tag{font-size:14px;font-weight:500;color:var(--mut)}
@@ -1222,8 +1249,33 @@ section[id]{scroll-margin-top:84px}
     <span class="eyebrow">Turma 1 · 11.11.2026</span>
     <h2>Reserve um dia.<br/><span class="sl">Leve trabalho feito.</span></h2>
     <p class="lead">Sua inscrição inclui a prática, o acompanhamento e o kit para continuar. A turma tem <b>no máximo 50 participantes</b> para que as monitoras possam ajudar de perto.</p>
-    <div class="seats" id="seats" aria-hidden="true"></div>
-    <p class="seats-cap">50 lugares na turma. Um deles pode ser o seu.</p>
+
+    <!-- A CONTA (quebra da objeção de preço): quanto custaria pagar alguém pra fazer -->
+    <div class="conta">
+      <div class="conta-h">
+        <h3>Quanto custaria pagar alguém pra fazer?</h3>
+        <p>Só a página e o conteúdo do primeiro mês já passam do valor da inscrição. E a conta do conteúdo volta todo mês.</p>
+      </div>
+      <div class="orc-w">
+        <div class="orc">
+          <span class="orc-tag">Exemplo de orçamento</span>
+          <b class="orc-t">Pagando alguém pra fazer</b>
+          <dl>
+            <div><dt>Sua página no ar<small>feita por um profissional</small></dt><dd>R$&nbsp;900</dd></div>
+            <div><dt>Conteúdo do mês<small>alguém pra planejar e escrever as legendas</small></dt><dd>R$&nbsp;800<small>todo mês</small></dd></div>
+          </dl>
+          <div class="orc-total"><span>No primeiro mês</span><b>R$&nbsp;1.700</b></div>
+          <p class="orc-obs">No mês seguinte, mais R$&nbsp;800.</p>
+        </div>
+      </div>
+      <div class="conta-nos">
+        <span>No AUTONOM/IA</span>
+        <b>R$&nbsp;1.167,30 no PIX, uma vez.</b>
+        <small>ou R$&nbsp;1.297 em até 10x no cartão</small>
+        <p>Você sai com uma página simples no ar e o conteúdo do mês escrito, feitos por você, com ajuda do seu lado. E leva o passo a passo pra repetir todo mês, sem pagar ninguém.</p>
+      </div>
+      <p class="conta-fine">Valores de exemplo: usamos o preço mais baixo que esses profissionais costumam cobrar em 2026. Quem tem mais experiência cobra mais. Vale pedir um orçamento e comparar.</p>
+    </div>
 
     <div class="plan">
       <div class="pcard">
@@ -1874,12 +1926,6 @@ document.querySelectorAll('[role=tablist]').forEach(list => {
     });
   });
 });
-
-/* cadeiras da Turma 1 */
-(() => {
-  const s = document.getElementById('seats'); if (!s) return;
-  for (let i = 0; i < 50; i++) { const c = document.createElement('i'); if (i === 49) c.className = 'me'; s.appendChild(c); }
-})();
 
 /* ===== CHECKOUT (Asaas) =====
    O preço é sempre calculado no servidor (api/preco.php); aqui só mostramos.

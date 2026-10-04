@@ -7,6 +7,14 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
+## 2026-10-04 — Sai o mapa de 50 lugares, entra a conta que responde ao "é caro"
+
+- As 50 bolinhas com uma em laranja, logo antes do preço, não acrescentavam nada ao texto de cima (o Gui achou pouco claro). Saíram, junto com a legenda. A turma de no máximo 50 continua dita no apoio, e o aviso "Restam X vagas" do cartão segue aparecendo quando faltarem 15.
+- No lugar entrou a quebra da objeção de preço pedida pelo Gui: um orçamento de exemplo em formato de notinha, "Pagando alguém pra fazer" (página no ar R$ 900 + conteúdo do mês R$ 800 todo mês = R$ 1.700 no primeiro mês), ao lado da caixa "No AUTONOM/IA: R$ 1.167,30 no PIX, uma vez".
+- Os dois valores são exemplo e estão marcados assim. Vêm da ponta de baixo de guias de preço de 2026: página com texto básico por freelancer intermediário de R$ 900 a R$ 2.500; social media iniciante de R$ 800 a R$ 1.500 por mês. Falta o Gui confirmar ou trocar os números.
+- Duas rodadas com três personas. Ajustes que saíram delas: o título deixou de ser "Parece caro? Faça a conta." (soou papo de vendedor) e virou pergunta; a caixa passou a mostrar o mesmo preço do cartão (PIX grande, 10x embaixo) para não haver dois preços brigando; "usando uma IA gratuita" saiu daqui porque assustava quem nunca usou IA; a letra miúda diz de onde vem o exemplo e convida a comparar.
+- Limite que as leituras mostraram: a conta amolece o "é caro", mas pesa menos para quem nunca pagaria alguém por isso.
+
 ## 2026-10-04 — Faixa de fotos "Na estrada" pode ser arrastada para os dois lados
 
 - A faixa era só uma animação: andava sozinha, pausava no hover e não deixava voltar nem avançar. Com as animações desligadas no Windows (PC do Gui) ficava parada, mostrando só as primeiras fotos.
