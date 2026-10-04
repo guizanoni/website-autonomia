@@ -405,9 +405,9 @@ header.solid .nav-toggle{background:var(--soft);border-color:var(--line)}
 .orc dt{font-size:clamp(16.5px,1.4vw,18.5px);font-weight:600;letter-spacing:-.01em;line-height:1.25}
 .orc dt small,.orc dd small{display:block;margin-top:3px;text-wrap:balance;font-family:var(--f);font-size:13.5px;font-weight:400;letter-spacing:0;color:#5d6065;line-height:1.35}
 .orc dd{flex:none;text-align:right;font-family:var(--m);font-size:clamp(17px,1.4vw,19px);font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
-.orc-total{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:16px;font-weight:600}
-.orc-total span{font-size:16.5px}
-.orc-total b{font-family:var(--m);font-size:clamp(26px,2.8vw,36px);font-weight:700;letter-spacing:-.02em;white-space:nowrap;font-variant-numeric:tabular-nums}
+.orc-total{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:2px 16px;margin-top:16px;font-weight:600}
+.orc-total span{font-size:16.5px;white-space:nowrap}
+.orc-total b{margin-left:auto;font-family:var(--m);font-size:clamp(26px,2.8vw,36px);font-weight:700;letter-spacing:-.02em;white-space:nowrap;font-variant-numeric:tabular-nums}
 .orc-obs{margin-top:6px;font-size:14px;color:#5d6065}
 .conta-nos{grid-area:nos;margin-top:8px;background:var(--dark2);border-radius:22px;padding:24px 26px}
 .conta-nos span{display:inline-block;background:var(--sig);color:var(--dark);font-size:13.5px;font-weight:600;line-height:1;padding:7px 12px;border-radius:999px}
@@ -421,6 +421,11 @@ header.solid .nav-toggle{background:var(--soft);border-color:var(--line)}
   .conta-h .lead{margin-inline:auto}
   .orc-w{rotate:-1.5deg;width:min(100% - 12px,470px)}
   .conta-nos{margin-top:0}
+}
+@media(max-width:400px){
+  .orc{padding-inline:18px}
+  .orc dl > div{gap:10px}
+  .orc dd{font-size:16px}
 }
 .plan{margin:56px auto 0;max-width:980px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:16px;text-align:left}
 .pcard{background:#fff;color:var(--ink);border-radius:var(--r);padding:clamp(24px,3vw,36px);display:flex;flex-direction:column}
@@ -1224,19 +1229,19 @@ section[id]{scroll-margin-top:84px}
     <div class="conta-h">
       <span class="eyebrow">Faça a conta</span>
       <h2>Quanto custaria <span class="sl">pagar alguém pra fazer?</span></h2>
-      <p class="lead">Contratando um profissional para cada coisa, só o primeiro mês já passa do valor da inscrição. E a conta do conteúdo volta todo mês.</p>
+      <p class="lead">Contratando um profissional para cada coisa, só o primeiro mês custa mais de três vezes o valor da inscrição. E dois deles você paga de novo todo mês.</p>
     </div>
     <div class="orc-w">
       <div class="orc">
         <span class="orc-tag">Exemplo de orçamento</span>
         <b class="orc-t">Contratando cada profissional</b>
         <dl>
-          <div><dt>Estrategista<small>pra definir o que você vende e por quanto</small></dt><dd>R$&nbsp;500</dd></div>
-          <div><dt>Produtor de conteúdo<small>pra planejar o mês e escrever os textos dos posts</small></dt><dd>R$&nbsp;800<small>todo mês</small></dd></div>
-          <div><dt>Web designer<small>pra criar e publicar sua página</small></dt><dd>R$&nbsp;900</dd></div>
+          <div><dt>Estrategista<small>pra definir o que você vende e por quanto</small></dt><dd>R$&nbsp;1.500<small>todo mês</small></dd></div>
+          <div><dt>Produtor de conteúdo<small>pra planejar o mês e escrever os textos dos posts</small></dt><dd>R$&nbsp;1.000<small>todo mês</small></dd></div>
+          <div><dt>Web designer<small>pra criar e publicar sua página</small></dt><dd>R$&nbsp;2.000<small>cada página</small></dd></div>
         </dl>
-        <div class="orc-total"><span>No primeiro mês</span><b>R$&nbsp;2.200</b></div>
-        <p class="orc-obs">No mês seguinte, mais R$&nbsp;800.</p>
+        <div class="orc-total"><span>No primeiro mês</span><b>R$&nbsp;4.500</b></div>
+        <p class="orc-obs">No mês seguinte, mais R$&nbsp;2.500.</p>
       </div>
     </div>
     <div class="conta-nos">
@@ -1245,7 +1250,7 @@ section[id]{scroll-margin-top:84px}
       <small>ou R$&nbsp;1.297 em até 10x no cartão</small>
       <p>Você sai sabendo o que vender e por quanto, com os textos do mês escritos e uma página simples no ar. Você mesma faz, passo a passo, com a equipe te ajudando na sala. E aprende a repetir todo mês, sem pagar ninguém.</p>
     </div>
-    <p class="conta-fine">Valores de exemplo: usamos o preço mais baixo que esses profissionais costumam cobrar em 2026. Quem tem mais experiência cobra mais. Vale pedir um orçamento e comparar.</p>
+    <p class="conta-fine">Valores de exemplo, com base no que esses profissionais costumam cobrar em 2026. Quem tem mais experiência cobra mais. Vale pedir um orçamento e comparar.</p>
   </div>
 </section>
 

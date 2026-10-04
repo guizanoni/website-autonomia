@@ -7,6 +7,11 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
+## 2026-10-04 — A conta passa a usar os valores de mercado indicados pelo Gui
+
+- Os valores de exemplo da notinha estavam baixos demais (eu tinha usado o piso de cada faixa). O Gui passou os números: Estrategista R$ 1.500 todo mês, Produtor de conteúdo R$ 1.000 todo mês e Web designer R$ 2.000 por página. O primeiro mês soma R$ 4.500 e o seguinte, mais R$ 2.500.
+- O apoio passa a dizer que o primeiro mês custa mais de três vezes a inscrição e que dois dos profissionais são pagos de novo todo mês. A letra miúda deixou de dizer "o preço mais baixo" (não seria mais verdade) e diz que os valores têm base no que esses profissionais costumam cobrar em 2026.
+
 ## 2026-10-04 — A conta ganha seção própria e passa a listar três profissionais
 
 - O Gui gostou da notinha, mas dentro da seção do preço ela disputava atenção com o cartão. Virou seção própria (`#conta`, preta), entre a faixa de fotos e a garantia: a página alterna branco, preto, cinza claro e preto, e a seção do preço volta a ser só título e cartão.

@@ -59,9 +59,10 @@ Secrets necessários no GitHub: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
   continua arrastável. A volta sem emenda depende das duas cópias das dez fotos.
 - Seção "a conta" (`#conta`, entre a faixa de fotos e a garantia): orçamento de
   exemplo em formato de notinha, com os três profissionais que ela teria de
-  contratar, contra o valor da inscrição. Os valores (R$ 500, R$ 800 e R$ 900) são
-  exemplo, pela ponta de baixo do mercado em 2026, e precisam continuar marcados
-  como exemplo. O preço do evento aparece repetido na caixa `.conta-nos`: mudou o
+  contratar, contra o valor da inscrição. Os valores foram definidos pelo Gui
+  (estrategista R$ 1.500 por mês, produtor de conteúdo R$ 1.000 por mês, web
+  designer R$ 2.000 por página) e precisam continuar marcados como exemplo. A
+  soma e o "mais de três vezes" do apoio dependem deles e do preço da inscrição. O preço do evento aparece repetido na caixa `.conta-nos`: mudou o
   preço ou o desconto do PIX, atualizar ali também.
 - Rodapé assinado "Desenvolvido por: skope.cc": o clique abre um contato curto que
   posta no mesmo `enviar.php` com `produto=Assinatura skope.cc` e chega em sites@skope.cc.
