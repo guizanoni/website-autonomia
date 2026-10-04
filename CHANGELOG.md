@@ -7,6 +7,14 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
+## 2026-10-04 — Vitrine de posts consolidada: 24 posts, com autor e moldura
+
+- As duas revisões feitas em paralelo (ChatGPT na pasta principal, Claude em `revisao2/`) viram uma coleção só em `/social/posts-conversao/`. Os posts do Claude passam a ser os de 13 a 24; `legendas.md` reúne as 24 legendas com a linha “Criação” de cada uma, e os moldes do Claude ficam em `posts-claude.html`.
+- A vitrine mostra os 24 por tema, do conceito à inscrição, com as duas versões de cada argumento lado a lado. O texto de apoio de cada post diz quem criou (Claude ou ChatGPT) e há filtro por autor.
+- Cada arte ganha uma moldura: fundo neutro em volta e contorno do tamanho exato da imagem, porque as artes claras se confundiam com o fundo da página e não dava para ver onde o post terminava.
+- `revisao2/` deixa de ser vitrine e só redireciona para a geral.
+- A arte e a legenda da dupla do Claude (post 24) voltam a abrir pelos 8% no cartão, que é o desconto exclusivo da dupla; os 10% no PIX valem para qualquer inscrição.
+
 ## 2026-10-04 — Coleção de posts refeita a partir do conceito atual da edição Mulheres
 
 - Revisados os dez posts e acrescentados dois: orçamento ilustrativo versus aprender a fazer com IA, e continuidade com kit vitalício/plano de 30 dias. A campanha passa a partir de “A ideia é sua. O trabalho pesado fica com a IA.”, prática no próprio projeto e monitoras na sala.

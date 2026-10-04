@@ -12,7 +12,8 @@
 :root{--ink:#191c1f;--mut:#64696c;--soft:#f4f4f0;--line:#dcded8;--sig:#ff5b2e;--dark:#101113;--f:'Geist',system-ui,sans-serif;--m:'Geist Mono',monospace}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-padding-top:160px}body{font-family:var(--f);background:var(--soft);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}button,a,select,summary{-webkit-tap-highlight-color:transparent}button,select{font:inherit}a{color:inherit}button,a,summary,select{outline-offset:5px}a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible{outline:3px solid #cc3c13}button{cursor:pointer}.wrap{max-width:1320px;margin:0 auto;padding:0 32px}
 header{background:var(--dark);color:#fff}.head-row{padding:28px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;border-bottom:1px solid #ffffff26}.logo{font-size:25px;font-weight:600;letter-spacing:-.055em;white-space:nowrap}.logo i{font-style:normal;color:var(--sig)}.visit{font-size:14px;text-decoration:none;color:#e1e2e2;display:inline-flex;align-items:center;gap:14px}.visit:hover{color:var(--sig)}.hero{display:flex;justify-content:space-between;align-items:end;gap:36px;padding:46px 0 48px}.eyebrow{font:12px var(--m);text-transform:uppercase;letter-spacing:.07em;color:#b9bcbc;margin-bottom:16px}h1{font-size:clamp(38px,5vw,64px);line-height:1.05;letter-spacing:-.055em;font-weight:500}h1 em{font-style:normal;color:var(--sig)}.lead{max-width:590px;color:#c3c6c6;font-size:17px;margin-top:20px}.edition{min-width:180px;border-left:1px solid #ffffff30;padding-left:26px;color:#c3c6c6;font-size:14px}.edition b{display:block;font-size:20px;color:#fff;font-weight:500;margin-bottom:6px}.edition span{display:block;margin-top:14px;font:11px var(--m);text-transform:uppercase}
-.toolbar{position:sticky;top:0;z-index:5;background:#f4f4f0f5;backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}.tools{padding-top:19px;padding-bottom:19px;display:flex;justify-content:space-between;gap:20px;align-items:center}.seg{display:flex;gap:4px;background:#fff;border:1px solid var(--line);padding:4px;border-radius:999px}.seg button{font-size:14px;font-weight:500;padding:10px 20px;border:0;border-radius:999px;background:transparent;color:var(--mut);white-space:nowrap}.seg button[aria-pressed=true]{background:var(--dark);color:#fff}.filter{display:flex;align-items:center;gap:12px;color:var(--mut);font-size:13px}.filter select{font-size:14px;color:var(--ink);padding:12px 34px 12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;max-width:100%}.collection-head{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:27px 0 18px}.collection-head p{font-size:14px;color:var(--mut)}.collection-head strong{font-weight:500;color:var(--ink)}.new-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--sig);margin-right:7px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;align-items:start;padding-bottom:45px}.post{min-width:0;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;scroll-margin-top:16px}.art-link{display:block;position:relative;text-decoration:none;background:#e4e5e1}.art-link img{display:block;width:100%;height:auto}.art-link:focus-visible{outline-offset:-5px}.zoom{position:absolute;right:12px;bottom:12px;background:#ffffffed;color:var(--ink);border-radius:999px;font-size:12px;padding:7px 12px;opacity:0;transition:opacity .15s}.art-link:hover .zoom,.art-link:focus .zoom{opacity:1}.content{padding:20px}.meta{display:flex;justify-content:space-between;align-items:center;gap:10px;font:11px var(--m);letter-spacing:.035em;text-transform:uppercase;color:var(--mut)}.fresh{font:500 11px var(--f);color:#9d2e0d;background:#fff0e9;border-radius:999px;padding:3px 9px}h2{font-size:23px;font-weight:600;letter-spacing:-.035em;line-height:1.15;margin:11px 0 9px;min-height:53px}.angle{font-size:13px;color:var(--mut);min-height:40px}.actions{display:flex;gap:9px;margin:19px 0 17px}.btn{display:flex;align-items:center;justify-content:center;gap:7px;font-size:13px;font-weight:600;line-height:1.2;text-decoration:none;padding:13px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);flex:1;white-space:nowrap}.btn.primary{background:var(--sig);border-color:var(--sig);color:var(--dark)}.btn:hover{filter:brightness(.95)}.btn.ok{background:#def1e5;border-color:#def1e5;color:#155c30}details{border-top:1px solid var(--line);padding-top:13px}summary{cursor:pointer;font-size:13px;font-weight:500;color:var(--mut);list-style:none;display:flex;justify-content:space-between;align-items:center}summary::-webkit-details-marker{display:none}summary::after{content:'+';font-size:20px;line-height:1}details[open] summary::after{content:'−'}.caption{font-size:14px;line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere;padding:17px 0 0;color:#454a4c}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--dark);color:#fff;border-radius:14px;padding:13px 20px;max-width:calc(100% - 32px);width:max-content;z-index:10;font-size:14px;box-shadow:0 8px 30px #0003}.toast:empty{display:none}.loading{padding:40px 0;grid-column:1/-1}footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--mut);font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:24px}footer p{max-width:620px}footer a{text-underline-offset:3px}.source-links{display:flex;gap:20px;white-space:nowrap}
+.toolbar{position:sticky;top:0;z-index:5;background:#f4f4f0f5;backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}.tools{padding-top:19px;padding-bottom:19px;display:flex;justify-content:space-between;gap:20px;align-items:center}.seg{display:flex;gap:4px;background:#fff;border:1px solid var(--line);padding:4px;border-radius:999px}.seg button{font-size:14px;font-weight:500;padding:10px 20px;border:0;border-radius:999px;background:transparent;color:var(--mut);white-space:nowrap}.seg button[aria-pressed=true]{background:var(--dark);color:#fff}.filter{display:flex;align-items:center;gap:12px;color:var(--mut);font-size:13px}.filter select{font-size:14px;color:var(--ink);padding:12px 34px 12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;max-width:100%}.collection-head{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:27px 0 18px}.collection-head p{font-size:14px;color:var(--mut)}.collection-head strong{font-weight:500;color:var(--ink)}.new-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--sig);margin-right:7px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;align-items:start;padding-bottom:45px}.post{min-width:0;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;scroll-margin-top:16px}.art-link{display:block;position:relative;text-decoration:none;background:#d9dad5;padding:18px}.art-link img{display:block;width:100%;height:auto;outline:1px solid rgba(0,0,0,.34);box-shadow:0 12px 26px -10px rgba(0,0,0,.45)}
+.by{font-weight:600;color:var(--ink);white-space:nowrap}.art-link:focus-visible{outline-offset:-5px}.zoom{position:absolute;right:30px;bottom:30px;background:#ffffffed;color:var(--ink);border-radius:999px;font-size:12px;padding:7px 12px;opacity:0;transition:opacity .15s}.art-link:hover .zoom,.art-link:focus .zoom{opacity:1}.content{padding:20px}.meta{display:flex;justify-content:space-between;align-items:center;gap:10px;font:11px var(--m);letter-spacing:.035em;text-transform:uppercase;color:var(--mut)}.fresh{font:500 11px var(--f);color:#9d2e0d;background:#fff0e9;border-radius:999px;padding:3px 9px}h2{font-size:23px;font-weight:600;letter-spacing:-.035em;line-height:1.15;margin:11px 0 9px;min-height:53px}.angle{font-size:13px;color:var(--mut);min-height:40px}.actions{display:flex;gap:9px;margin:19px 0 17px}.btn{display:flex;align-items:center;justify-content:center;gap:7px;font-size:13px;font-weight:600;line-height:1.2;text-decoration:none;padding:13px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);flex:1;white-space:nowrap}.btn.primary{background:var(--sig);border-color:var(--sig);color:var(--dark)}.btn:hover{filter:brightness(.95)}.btn.ok{background:#def1e5;border-color:#def1e5;color:#155c30}details{border-top:1px solid var(--line);padding-top:13px}summary{cursor:pointer;font-size:13px;font-weight:500;color:var(--mut);list-style:none;display:flex;justify-content:space-between;align-items:center}summary::-webkit-details-marker{display:none}summary::after{content:'+';font-size:20px;line-height:1}details[open] summary::after{content:'−'}.caption{font-size:14px;line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere;padding:17px 0 0;color:#454a4c}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--dark);color:#fff;border-radius:14px;padding:13px 20px;max-width:calc(100% - 32px);width:max-content;z-index:10;font-size:14px;box-shadow:0 8px 30px #0003}.toast:empty{display:none}.loading{padding:40px 0;grid-column:1/-1}footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--mut);font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:24px}footer p{max-width:620px}footer a{text-underline-offset:3px}.source-links{display:flex;gap:20px;white-space:nowrap}
 @media(max-width:1100px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{align-items:center}.edition{min-width:150px}.content{padding:22px}}
 @media(max-width:640px){.wrap{padding-left:18px;padding-right:18px}.head-row{padding:22px 0}.logo{font-size:22px}.visit{font-size:12px;gap:5px}.hero{padding:30px 0 32px;display:block}.edition{display:none}.lead{font-size:15px;margin-top:16px}.tools{flex-wrap:wrap;gap:12px;padding-top:12px;padding-bottom:12px}.seg{width:100%}.seg button{flex:1;padding:10px 12px}.filter{width:100%;justify-content:space-between}.filter select{padding:8px 26px 8px 12px;max-width:75%}.collection-head{align-items:start;padding:22px 0 16px}.collection-head p{font-size:12px}.grid{grid-template-columns:1fr;gap:22px}.content{padding:20px}h2{min-height:0}.angle{min-height:0}.btn{font-size:14px}.footer-row{flex-direction:column;gap:18px}.source-links{white-space:normal;flex-wrap:wrap}.zoom{opacity:1}html{scroll-padding-top:180px}}
 @media(max-width:360px){.actions{flex-direction:column}.head-row{gap:10px}.visit{font-size:11px}.logo{font-size:21px}}
@@ -20,105 +21,212 @@ header{background:var(--dark);color:#fff}.head-row{padding:28px 0;display:flex;j
 </style>
 </head>
 <body>
-<header><div class="wrap"><div class="head-row"><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div><a class="visit" href="https://autonomia.vc/mulheres/">Ver inscrição <span aria-hidden="true">↗</span></a></div><div class="hero"><div><p class="eyebrow">Vitrine de posts · edição mulheres</p><h1>A ideia é sua.<br><em>Agora, nos posts.</em></h1><p class="lead">12 posts sobre colocar a IA para trabalhar no seu negócio, com gente do lado para ajudar. Artes e legendas prontas: escolha a rede, copie o texto e baixe a imagem.</p></div><div class="edition"><b>12 posts · 24 artes</b>Conceito atual do site<br>Instagram + LinkedIn<span>Revisado em 04.10.2026</span></div></div></div></header>
-<div class="toolbar"><div class="wrap tools"><div class="seg" role="group" aria-label="Formato da rede"><button type="button" data-rede="instagram" aria-pressed="true">Instagram · 4:5</button><button type="button" data-rede="linkedin" aria-pressed="false">LinkedIn · 1:1</button></div><div class="filter"><label for="filter">Mostrar</label><select id="filter"><option value="all">Todos os posts</option><option value="photos">Com fotos de mulheres</option><option value="concept">Conceito e experiência</option><option value="audience">Para quem é</option><option value="new">Novos temas</option><option value="decision">Oferta e objeções</option></select></div></div></div>
-<main class="wrap"><div class="collection-head"><p id="count" aria-live="polite">Carregando os posts…</p><p><span class="new-dot"></span>Do conceito à inscrição</p></div><div class="grid" id="lista" aria-busy="true"><p class="loading">Preparando a vitrine…</p></div><noscript><p>Ative o JavaScript para usar os filtros e copiar as legendas. Você também pode abrir <a href="legendas.md">todas as legendas</a> e os <a href="posts.html?p=1&f=ig">moldes das artes</a>.</p></noscript></main>
-<footer><div class="wrap footer-row"><p>Evento: 11/11/2026 · Hard Rock Café Curitiba.<br>Artes em PNG: Instagram 1080 × 1350 · LinkedIn 1080 × 1080.<br>Fotos ilustrativas. Condições comerciais alinhadas à <a href="https://autonomia.vc/mulheres/">página de inscrição</a>.</p><div class="source-links"><a href="legendas.md">Todas as legendas</a><a href="posts.html?p=1&f=ig">Moldes das artes</a></div></div></footer>
+<header><div class="wrap"><div class="head-row"><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div><a class="visit" href="https://autonomia.vc/mulheres/">Ver inscrição <span aria-hidden="true">↗</span></a></div><div class="hero"><div><p class="eyebrow">Vitrine de posts · edição mulheres</p><h1>A ideia é sua.<br><em>Agora, nos posts.</em></h1><p class="lead">24 posts sobre colocar a IA para trabalhar no seu negócio, com gente do lado para ajudar. Duas coleções reunidas por tema: 12 do ChatGPT e 12 do Claude. Escolha a rede, copie o texto e baixe a imagem.</p></div><div class="edition"><b>24 posts · 48 artes</b>12 do ChatGPT · 12 do Claude<br>Instagram + LinkedIn<span>Consolidado em 04.10.2026</span></div></div></div></header>
+<div class="toolbar"><div class="wrap tools"><div class="seg" role="group" aria-label="Formato da rede"><button type="button" data-rede="instagram" aria-pressed="true">Instagram · 4:5</button><button type="button" data-rede="linkedin" aria-pressed="false">LinkedIn · 1:1</button></div><div class="filter"><label for="filter">Mostrar</label><select id="filter"><option value="all">Todos os posts</option><option value="claude">Criados pelo Claude</option><option value="chatgpt">Criados pelo ChatGPT</option><option value="photos">Com fotos de mulheres</option><option value="concept">Conceito e experiência</option><option value="audience">Para quem é</option><option value="new">Novos temas</option><option value="decision">Oferta e objeções</option></select></div></div></div>
+<main class="wrap"><div class="collection-head"><p id="count" aria-live="polite">Carregando os posts…</p><p><span class="new-dot"></span>Por tema, do conceito à inscrição</p></div><div class="grid" id="lista" aria-busy="true"><p class="loading">Preparando a vitrine…</p></div><noscript><p>Ative o JavaScript para usar os filtros e copiar as legendas. Você também pode abrir <a href="legendas.md">todas as legendas</a> e os moldes das artes (<a href="posts.html?p=1&f=ig">ChatGPT</a> e <a href="posts-claude.html?p=1&f=ig">Claude</a>).</p></noscript></main>
+<footer><div class="wrap footer-row"><p>Evento: 11/11/2026 · Hard Rock Café Curitiba.<br>Artes em PNG: Instagram 1080 × 1350 · LinkedIn 1080 × 1080.<br>Fotos ilustrativas. Condições comerciais alinhadas à <a href="https://autonomia.vc/mulheres/">página de inscrição</a>.</p><div class="source-links"><a href="legendas.md">Todas as legendas</a><a href="posts.html?p=1&f=ig">Moldes ChatGPT</a><a href="posts-claude.html?p=1&f=ig">Moldes Claude</a></div></div></footer>
 <div class="toast" id="status" role="status" aria-live="polite"></div>
 <script>
 // legendas.md é a fonte única dos textos; os PNGs são renderizados de posts.html.
-const VERSION='20261004-conceito-v1', REDES={instagram:'Instagram',linkedin:'LinkedIn'};
+const VERSION='20261004-consolidado', REDES={instagram:'Instagram',linkedin:'LinkedIn'};
 const META={
   "1": {
     "angle": "Conceito central",
     "note": "A ideia é sua. Você faz com IA e orientação.",
     "photo": true,
     "concept": true,
-    "alt": "Mulher sorrindo ao ar livre. Chamada: A ideia é sua. O trabalho pesado fica com a IA. Cartões de conteúdo planejado, oferta e página publicada."
+    "alt": "Mulher sorrindo ao ar livre. Chamada: A ideia é sua. O trabalho pesado fica com a IA. Cartões de conteúdo planejado, oferta e página publicada.",
+    "autor": "ChatGPT"
   },
   "2": {
     "angle": "Garantia até o almoço",
     "note": "Experimente a manhã e decida até as 12h30.",
     "decision": true,
-    "alt": "Arte preta e laranja: Experimente a manhã. Decida até o almoço. Reembolso integral mediante aviso à equipe até as 12h30 do evento."
+    "alt": "Arte preta e laranja: Experimente a manhã. Decida até o almoço. Reembolso integral mediante aviso à equipe até as 12h30 do evento.",
+    "autor": "ChatGPT"
   },
   "3": {
     "angle": "Inscrição e investimento",
     "note": "Entregas, apoio e preço no PIX em primeiro plano.",
     "decision": true,
-    "alt": "Arte clara: Reserve um dia. Leve trabalho feito. Conteúdo planejado, oferta organizada e página publicada. R$ 1.167,30 no PIX ou R$ 1.297 em até 10x no cartão."
+    "alt": "Arte clara: Reserve um dia. Leve trabalho feito. Conteúdo planejado, oferta organizada e página publicada. R$ 1.167,30 no PIX ou R$ 1.297 em até 10x no cartão.",
+    "autor": "ChatGPT"
   },
   "4": {
     "angle": "Começar do zero",
     "note": "Acesso, prática e ajuda sem exigir experiência com IA.",
     "audience": true,
     "decision": true,
-    "alt": "Arte clara: Nunca usou IA? Comece aqui. Monitoras ajudam no notebook e uma IA gratuita basta para as atividades."
+    "alt": "Arte clara: Nunca usou IA? Comece aqui. Monitoras ajudam no notebook e uma IA gratuita basta para as atividades.",
+    "autor": "ChatGPT"
   },
   "5": {
     "angle": "Convite em dupla",
     "note": "Cada uma com seu projeto; condições para duas vagas.",
     "photo": true,
     "decision": true,
-    "alt": "Mulheres com notebooks. Combine com uma amiga. PIX: R$ 1.167,30 por pessoa. Cartão: R$ 1.193,24 por pessoa. Descontos não acumulam."
+    "alt": "Mulheres com notebooks. Combine com uma amiga. PIX: R$ 1.167,30 por pessoa. Cartão: R$ 1.193,24 por pessoa. Descontos não acumulam.",
+    "autor": "ChatGPT"
   },
   "6": {
     "angle": "Um dia de prática",
     "note": "A sequência do dia: conteúdo, oferta, página e contatos.",
     "concept": true,
-    "alt": "Arte preta com calendário de 11 de novembro de 2026. Uma quarta reservada para o seu negócio. Manhã, tarde e encerramento organizados por atividades."
+    "alt": "Arte preta com calendário de 11 de novembro de 2026. Uma quarta reservada para o seu negócio. Manhã, tarde e encerramento organizados por atividades.",
+    "autor": "ChatGPT"
   },
   "7": {
     "angle": "Para quem já empreende",
     "note": "Um dia para cuidar da divulgação do negócio atual.",
     "photo": true,
     "audience": true,
-    "alt": "Mulher trabalhando em uma cafeteria. Você atende. Você entrega. E a divulgação? Notificação: conteúdo do mês com temas planejados e legendas escritas."
+    "alt": "Mulher trabalhando em uma cafeteria. Você atende. Você entrega. E a divulgação? Notificação: conteúdo do mês com temas planejados e legendas escritas.",
+    "autor": "ChatGPT"
   },
   "8": {
     "angle": "Para quem quer começar",
     "note": "Da experiência à primeira oferta para apresentar e testar.",
     "photo": true,
     "audience": true,
-    "alt": "Retrato de uma mulher. Você sabe fazer. Vamos dar forma à sua ideia? Primeira oferta, preço inicial e página para apresentar e testar."
+    "alt": "Retrato de uma mulher. Você sabe fazer. Vamos dar forma à sua ideia? Primeira oferta, preço inicial e página para apresentar e testar.",
+    "autor": "ChatGPT"
   },
   "9": {
     "angle": "Apoio presencial",
     "note": "Você conhece o negócio; a equipe ajuda durante a prática.",
     "photo": true,
     "concept": true,
-    "alt": "Mulheres com notebooks. Você conhece seu trabalho. A gente ajuda com a IA. Notificação: Travou? Levanta a mão. Uma monitora vem até você."
+    "alt": "Mulheres com notebooks. Você conhece seu trabalho. A gente ajuda com a IA. Notificação: Travou? Levanta a mão. Uma monitora vem até você.",
+    "autor": "ChatGPT"
   },
   "10": {
     "angle": "Rodada de negócios",
     "note": "Conversas em grupos pequenos e contatos para continuar.",
     "photo": true,
     "concept": true,
-    "alt": "Mulheres conversando à mesa. Seu próximo contato pode estar na mesma mesa. Rodada de negócios e possibilidades de clientes, parcerias e indicações."
+    "alt": "Mulheres conversando à mesa. Seu próximo contato pode estar na mesma mesa. Rodada de negócios e possibilidades de clientes, parcerias e indicações.",
+    "autor": "ChatGPT"
   },
   "11": {
     "angle": "A conta do investimento",
     "note": "O orçamento ilustrativo do site e a proposta de aprender a fazer.",
     "decision": true,
     "new": true,
-    "alt": "Arte preta com uma notinha de orçamento ilustrativo: estratégia R$ 1.500 por mês, conteúdo R$ 1.000 por mês e página R$ 2.000, total R$ 4.500 no primeiro mês. Encontro: R$ 1.167,30 no PIX para aprender a fazer com IA."
+    "alt": "Arte preta com uma notinha de orçamento ilustrativo: estratégia R$ 1.500 por mês, conteúdo R$ 1.000 por mês e página R$ 2.000, total R$ 4.500 no primeiro mês. Encontro: R$ 1.167,30 no PIX para aprender a fazer com IA.",
+    "autor": "ChatGPT"
   },
   "12": {
     "angle": "Depois do encontro",
     "note": "Kit com acesso vitalício, plano de 30 dias e grupo da turma.",
     "concept": true,
     "new": true,
-    "alt": "Arte clara: O encontro acaba. A autonomia continua. Kit de IA com assistentes, pedidos prontos, guias e plano de 30 dias, com acesso vitalício."
+    "alt": "Arte clara: O encontro acaba. A autonomia continua. Kit de IA com assistentes, pedidos prontos, guias e plano de 30 dias, com acesso vitalício.",
+    "autor": "ChatGPT"
+  },
+  "13": {
+    "angle": "Conceito central",
+    "note": "A segunda chamada da página e as três entregas do dia.",
+    "photo": true,
+    "concept": true,
+    "alt": "Mulher sorrindo; chamada “A ideia é sua. O trabalho pesado fica com a IA.” e as entregas: conteúdo do mês, página no ar e uma IA que conhece o negócio.",
+    "autor": "Claude"
+  },
+  "14": {
+    "angle": "Para quem já empreende",
+    "note": "Fala com quem tem negócio e deixa a divulgação por último.",
+    "photo": true,
+    "audience": true,
+    "alt": "Arte clara: “Atende clientes. Entrega o trabalho. E a divulgação fica pra depois?”, com foto de uma mulher trabalhando em uma cafeteria e a notificação “Legenda de sexta, escrita com a IA”.",
+    "autor": "Claude"
+  },
+  "15": {
+    "angle": "Para quem quer começar",
+    "note": "Fala com quem quer transformar o que sabe em um serviço.",
+    "photo": true,
+    "audience": true,
+    "alt": "Retrato de mulher de cabelos grisalhos; “Você sabe fazer. Falta virar um serviço?”.",
+    "autor": "Claude"
+  },
+  "16": {
+    "angle": "Apoio presencial",
+    "note": "Para quem nunca usou IA: monitoras, etapa por etapa, IA gratuita.",
+    "photo": true,
+    "concept": true,
+    "decision": true,
+    "alt": "Arte clara: “Você conhece seu trabalho. A gente ajuda com a IA.”, com foto de duas mulheres com notebooks e as notificações “Monitora a caminho” e “Pronto! Deu certo.”.",
+    "autor": "Claude"
+  },
+  "17": {
+    "angle": "Exemplo do trabalho",
+    "note": "Mostra, com um exemplo, o que sai do dia: oferta, conteúdo e página.",
+    "concept": true,
+    "new": true,
+    "alt": "Arte clara, exemplo ilustrativo de organização residencial: três etapas (oferta, conteúdo, página) ao lado de uma página de vendas simples.",
+    "autor": "Claude"
+  },
+  "18": {
+    "angle": "Um dia de prática",
+    "note": "A agenda do dia, para quem acha que não pode tirar uma quarta.",
+    "concept": true,
+    "decision": true,
+    "alt": "Arte preta com calendário de 11 de novembro de 2026 e a agenda: manhã (assistente e posts), tarde (o que vender e a página) e fim do dia (novos contatos).",
+    "autor": "Claude"
+  },
+  "19": {
+    "angle": "Rodada de negócios",
+    "note": "A rodada com a mesa e os crachás da página.",
+    "concept": true,
+    "alt": "Arte preta: “Seu próximo contato pode estar na mesma mesa.”, com uma mesa redonda e crachás de Moda, Psicologia, Confeitaria e Você, com as etiquetas “pode virar cliente”, “pode te indicar” e “pode virar parceira”.",
+    "autor": "Claude"
+  },
+  "20": {
+    "angle": "Quem conduz",
+    "note": "Quem conduz, pela nota que os alunos dos treinamentos anteriores deram.",
+    "photo": true,
+    "concept": true,
+    "new": true,
+    "alt": "Arte clara: “Quem conduz tem nota 9,6 de 10.”, com retrato de Gui Zanoni, fotos de palco, mais de 350 palestras e treinamentos e “desde 2016 trabalhando com IA”.",
+    "autor": "Claude"
+  },
+  "21": {
+    "angle": "A conta do investimento",
+    "note": "Responde ao “é caro” com a notinha de orçamento da página.",
+    "decision": true,
+    "alt": "Arte preta: “Quanto custaria pagar alguém pra fazer?”, com uma notinha de exemplo (estrategista R$ 1.500, produtor de conteúdo R$ 1.000, web designer R$ 2.000; R$ 4.500 no primeiro mês) ao lado de “No AUTONOM/IA: R$ 1.167,30 no PIX, uma vez”.",
+    "autor": "Claude"
+  },
+  "22": {
+    "angle": "Garantia até o almoço",
+    "note": "Responde à dúvida de investir e não se identificar, com o escudo da página.",
+    "decision": true,
+    "alt": "Arte clara com um escudo: “Experimente a manhã. Decida até o almoço.” Reembolso de 100% avisando a equipe até 12h30.",
+    "autor": "Claude"
+  },
+  "23": {
+    "angle": "Inscrição e investimento",
+    "note": "A oferta completa: preço, o que inclui e o tamanho da turma.",
+    "decision": true,
+    "alt": "Arte preta: “Reserve um dia. Leve trabalho feito.”, com cartão de preço: R$ 1.167,30 à vista no PIX ou R$ 1.297 em até 10x, e a lista do que está incluso.",
+    "autor": "Claude"
+  },
+  "24": {
+    "angle": "Convite em dupla",
+    "note": "Convite para compartilhar com a amiga ou a sócia.",
+    "photo": true,
+    "decision": true,
+    "alt": "Mulheres reunidas com notebooks; “Chama uma amiga. Vem de dupla.” 8% de desconto para cada uma no cartão, R$ 1.193,24 por pessoa; no PIX vale o desconto de 10% de toda inscrição.",
+    "autor": "Claude"
   }
 };
-const ORDER=[1,7,8,9,4,6,10,12,11,2,5,3];
+// por tema, do conceito à inscrição: as duas versões de cada argumento ficam lado a lado
+const ORDER=[1,13,7,14,8,15,4,9,16,17,6,18,10,19,20,11,21,2,22,3,23,5,24,12];
 let rede='instagram', filter='all', posts=[], noticeTimer;
 const list=document.getElementById('lista');
 function escapeHTML(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function parse(md){return md.split(/^## /m).slice(1).map(block=>{const header=block.split('\n')[0].match(/^Post (\d+) · (.+)$/);if(!header||!META[header[1]])throw Error('Post inválido');const post={n:Number(header[1]),title:header[2],captions:{},...META[header[1]]};block.split(/^### /m).slice(1).forEach(part=>{const network=part.split('\n')[0].trim().toLowerCase();post.captions[network]=part.slice(part.indexOf('\n')).replace(/\n---\s*$/,'').trim()});if(!post.captions.instagram||!post.captions.linkedin)throw Error('Legenda ausente');return post})}
-function render(){const visible=posts.filter(p=>filter==='all'||(filter==='photos'&&p.photo)||(filter==='concept'&&p.concept)||(filter==='audience'&&p.audience)||(filter==='new'&&p.new)||(filter==='decision'&&p.decision));const height=rede==='instagram'?1350:1080;
-  list.innerHTML=visible.map((p,i)=>{const png=`post-${p.n}-${rede}.png?v=${VERSION}`, preview=`previews/post-${p.n}-${rede}.webp?v=${VERSION}`;return `<article class="post" id="post-${p.n}" aria-labelledby="title-${p.n}"><a class="art-link" href="${png}" target="_blank" rel="noopener" aria-label="Ampliar arte do post ${p.n}"><img src="${preview}" alt="${escapeHTML(p.alt)}" width="1080" height="${height}" loading="${i<3?'eager':'lazy'}" decoding="async"><span class="zoom" aria-hidden="true">Ampliar ↗</span></a><div class="content"><div class="meta"><span>Post ${String(p.n).padStart(2,'0')} · ${REDES[rede]}</span>${p.new?'<span class="fresh">Novo tema</span>':''}</div><h2 id="title-${p.n}">${escapeHTML(p.title)}</h2><p class="angle">${escapeHTML(p.note)}</p><div class="actions"><button class="btn primary" type="button" data-copy="${p.n}" aria-label="Copiar legenda do post ${p.n}">Copiar legenda</button><a class="btn" href="${png}" download="post-${p.n}-${rede}.png" aria-label="Baixar imagem do post ${p.n}">Baixar PNG <span aria-hidden="true">↓</span></a></div><details><summary>Ver legenda <span class="sr-only">do post ${p.n}</span></summary><div class="caption" id="caption-${p.n}">${escapeHTML(p.captions[rede])}</div></details></div></article>`}).join('');
-  document.getElementById('count').innerHTML=`<strong>${visible.length} de ${posts.length} posts</strong> · ${REDES[rede]} · ${filter==='photos'?'com fotos':filter==='concept'?'conceito e experiência':filter==='audience'?'para quem é':filter==='new'?'novos temas':filter==='decision'?'oferta e objeções':'coleção completa'}`;
+function render(){const visible=posts.filter(p=>filter==='all'||(filter==='claude'&&p.autor==='Claude')||(filter==='chatgpt'&&p.autor==='ChatGPT')||(filter==='photos'&&p.photo)||(filter==='concept'&&p.concept)||(filter==='audience'&&p.audience)||(filter==='new'&&p.new)||(filter==='decision'&&p.decision));const height=rede==='instagram'?1350:1080;
+  list.innerHTML=visible.map((p,i)=>{const png=`post-${p.n}-${rede}.png?v=${VERSION}`, preview=`previews/post-${p.n}-${rede}.webp?v=${VERSION}`;return `<article class="post" id="post-${p.n}" aria-labelledby="title-${p.n}"><a class="art-link" href="${png}" target="_blank" rel="noopener" aria-label="Ampliar arte do post ${p.n}"><img src="${preview}" alt="${escapeHTML(p.alt)}" width="1080" height="${height}" loading="${i<3?'eager':'lazy'}" decoding="async"><span class="zoom" aria-hidden="true">Ampliar ↗</span></a><div class="content"><div class="meta"><span>${escapeHTML(p.angle)} · Post ${String(p.n).padStart(2,'0')}</span>${p.new?'<span class="fresh">Novo tema</span>':''}</div><h2 id="title-${p.n}">${escapeHTML(p.title)}</h2><p class="angle">${escapeHTML(p.note)} <b class="by by-${p.autor.toLowerCase()}">Criado por ${p.autor}.</b></p><div class="actions"><button class="btn primary" type="button" data-copy="${p.n}" aria-label="Copiar legenda do post ${p.n}">Copiar legenda</button><a class="btn" href="${png}" download="post-${p.n}-${rede}.png" aria-label="Baixar imagem do post ${p.n}">Baixar PNG <span aria-hidden="true">↓</span></a></div><details><summary>Ver legenda <span class="sr-only">do post ${p.n}</span></summary><div class="caption" id="caption-${p.n}">${escapeHTML(p.captions[rede])}</div></details></div></article>`}).join('');
+  document.getElementById('count').innerHTML=`<strong>${visible.length} de ${posts.length} posts</strong> · ${REDES[rede]} · ${filter==='claude'?'criados pelo Claude':filter==='chatgpt'?'criados pelo ChatGPT':filter==='photos'?'com fotos':filter==='concept'?'conceito e experiência':filter==='audience'?'para quem é':filter==='new'?'novos temas':filter==='decision'?'oferta e objeções':'coleção completa'}`;
   list.setAttribute('aria-busy','false');
 }
 function notice(message){clearTimeout(noticeTimer);document.getElementById('status').textContent=message;noticeTimer=setTimeout(()=>document.getElementById('status').textContent='',4500)}

@@ -31,7 +31,7 @@ No Instagram: abertura curta, parágrafos breves, lista com setas quando útil e
 
 ## Padrões operacionais e limites
 
-- Identidade visual e moldes: `posts-conversao/posts.html`; vitrine: `posts-conversao/index.html`.
+- Identidade visual e moldes: `posts-conversao/posts.html` (posts 1 a 12, ChatGPT) e `posts-conversao/posts-claude.html` (posts 13 a 24, Claude; `?p=1` é o post 13); vitrine: `posts-conversao/index.html`.
 - Artes para Instagram (1080×1350) e LinkedIn (1080×1080), com texto legível e descrição de imagem na vitrine.
 - Nunca inventar depoimentos, retorno financeiro, horas economizadas, resultados de alunas ou vagas restantes. Não prometer ferramentas pagas como requisito.
 - Ao anunciar conteúdo, explicitar planejamento e legendas; não prometer um mês de artes ou vídeos finalizados. A assistente ajuda a escrever para a participante revisar; a atividade não inclui atendimento automático no WhatsApp. A oferta e o preço inicial ainda serão testados no mercado.
@@ -59,6 +59,12 @@ Referências de método: [leitura na web, NN/g](https://www.nngroup.com/articles
 Hipótese principal de objeção: não saber por onde começar a aplicar IA no próprio negócio. O popup responde com apoio de monitoras, prática, uma ferramenta gratuita e garantia até o almoço. Chamada: “Comece com ajuda. Use no seu negócio.”; CTA: “Quero aproveitar agora”, ligado à inscrição.
 
 A hipótese é apoiada pela [pesquisa Sebrae/FGV IBRE/Google, divulgada em janeiro de 2026](https://agenciasebrae.com.br/dados/pequenos-negocios-abracam-a-inteligencia-artificial-para-otimizar-o-tempo-e-inovar/), que identifica falta de orientação e dificuldade de aplicação entre as barreiras. Não é uma medição da objeção mais frequente das visitantes desta página. Evitar afirmar que pequenos negócios são os que mais ganham com IA ou prometer vantagem competitiva garantida. A abordagem de [exit intent da NN/g](https://www.nngroup.com/articles/exit-intent-good-ux/) orienta oferecer apoio e destacar políticas úteis, com saída clara e sem mensagens que constranjam quem fecha.
+
+## Vitrine de conversão — consolidação de 04/10/2026
+
+A vitrine reúne 24 posts em um lugar só: os doze desta revisão (1 a 12, criados pelo ChatGPT) e os doze da revisão feita em paralelo pelo Claude (13 a 24). Cada cartão diz no texto de apoio quem criou, a arte aparece dentro de uma moldura para o limite da imagem ficar visível e há filtro por autor. A ordem é por tema, do conceito à inscrição, com as duas versões de cada argumento lado a lado: 1, 13, 7, 14, 8, 15, 4, 9, 16, 17, 6, 18, 10, 19, 20, 11, 21, 2, 22, 3, 23, 5, 24, 12. Temas que só uma coleção tem: exemplo do trabalho (17) e quem conduz (20), do Claude; depois do encontro (12), do ChatGPT. A antiga pasta `revisao2/` só redireciona para a vitrine.
+
+Aprendizados das leituras com personas na coleção do Claude: “oferta”, “assistente de IA” e “kit de IA” travam a leitura (trocados por “serviço”, “uma IA que conhece o seu negócio” e “guias e modelos”); “rodada de negócios” soa networking forçado para quem é tímida; o post de autoridade convence mais abrindo pela nota dos alunos que pelo número de palestras.
 
 ## Vitrine de conversão — revisão de 04/10/2026
 
