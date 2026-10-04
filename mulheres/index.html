@@ -596,13 +596,21 @@ footer .bot{justify-content:flex-start;align-items:center}
 .pcard .alt{margin-top:6px;font-size:15px;color:var(--mut)}
 .pcard .alt b{color:var(--ink);font-weight:600}
 /* na estrada: faixa de fotos rolando */
-.road{padding-bottom:clamp(56px,8vw,96px);overflow:hidden}
+.road{position:relative;padding-bottom:clamp(56px,8vw,96px);overflow:hidden}
 .marq{margin-top:44px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
-.marq-track{display:flex;gap:14px;width:max-content;animation:marq 60s linear infinite}
+.marq-track{display:flex;gap:14px;width:max-content;animation:marq 60s linear infinite;will-change:transform}
+/* com JS a faixa anda pelo script e pode ser arrastada para os dois lados (mouse, dedo ou rolagem lateral) */
+.marq.js{cursor:grab;touch-action:pan-y pinch-zoom;-webkit-user-select:none;user-select:none}
+.marq.js .marq-track{animation:none}
+.marq.js.drag{cursor:grabbing}
 .marq:hover .marq-track{animation-play-state:paused}
-.marq img{height:clamp(150px,17vw,220px);width:auto;border-radius:18px;object-fit:cover;transition:filter .35s;filter:saturate(.95)}
+.marq img{height:clamp(150px,17vw,220px);width:auto;border-radius:18px;object-fit:cover;transition:filter .35s;filter:saturate(.95);-webkit-user-drag:none}
 .marq:hover img{filter:saturate(.5) brightness(.75)}
-.marq img:hover{filter:none}
+.marq img:hover,.marq.drag img{filter:none}
+/* etiqueta que acompanha o cursor até a primeira arrastada */
+.marq-hint{position:absolute;left:0;top:0;z-index:3;pointer-events:none;white-space:nowrap;padding:11px 17px;border-radius:999px;background:var(--sig);color:var(--dark);font-size:14.5px;font-weight:600;line-height:1;box-shadow:0 10px 22px -8px rgba(0,0,0,.5);translate:var(--hx,0) var(--hy,0);opacity:0;scale:.6;transition:opacity .2s,scale .35s cubic-bezier(.16,1,.3,1)}
+.marq-hint.on{opacity:1;scale:1}
+.marq-hint.on.hold{scale:.84}
 @keyframes marq{to{transform:translateX(-50%)}}
 
 /* ===== checkout ===== */
@@ -1174,11 +1182,11 @@ section[id]{scroll-margin-top:84px}
   </div>
   <div class="marq" aria-hidden="true">
     <div class="marq-track">
-      <img src="/images/palcos/p01.webp" alt="" loading="lazy"/><img src="/images/palcos/p02.webp" alt="" loading="lazy"/><img src="/images/palcos/p03.webp" alt="" loading="lazy"/><img src="/images/palcos/p04.webp" alt="" loading="lazy"/><img src="/images/palcos/p05.webp" alt="" loading="lazy"/>
-      <img src="/images/palcos/p06.webp" alt="" loading="lazy"/><img src="/images/palcos/p07.webp" alt="" loading="lazy"/><img src="/images/palcos/p08.webp" alt="" loading="lazy"/><img src="/images/palcos/p09.webp" alt="" loading="lazy"/><img src="/images/palcos/p10.webp" alt="" loading="lazy"/>
+      <img src="/images/palcos/p01.webp" alt="" width="560" height="315" loading="lazy" draggable="false"/><img src="/images/palcos/p02.webp" alt="" width="560" height="373" loading="lazy" draggable="false"/><img src="/images/palcos/p03.webp" alt="" width="560" height="315" loading="lazy" draggable="false"/><img src="/images/palcos/p04.webp" alt="" width="560" height="315" loading="lazy" draggable="false"/><img src="/images/palcos/p05.webp" alt="" width="560" height="315" loading="lazy" draggable="false"/>
+      <img src="/images/palcos/p06.webp" alt="" width="559" height="373" loading="lazy" draggable="false"/><img src="/images/palcos/p07.webp" alt="" width="560" height="315" loading="lazy" draggable="false"/><img src="/images/palcos/p08.webp" alt="" width="560" height="373" loading="lazy" draggable="false"/><img src="/images/palcos/p09.webp" alt="" width="560" height="315" loading="lazy" draggable="false"/><img src="/images/palcos/p10.webp" alt="" width="560" height="315" loading="lazy" draggable="false"/>
     
-      <img src="/images/palcos/p01.webp" alt="" loading="lazy"/><img src="/images/palcos/p02.webp" alt="" loading="lazy"/><img src="/images/palcos/p03.webp" alt="" loading="lazy"/><img src="/images/palcos/p04.webp" alt="" loading="lazy"/><img src="/images/palcos/p05.webp" alt="" loading="lazy"/>
-      <img src="/images/palcos/p06.webp" alt="" loading="lazy"/><img src="/images/palcos/p07.webp" alt="" loading="lazy"/><img src="/images/palcos/p08.webp" alt="" loading="lazy"/><img src="/images/palcos/p09.webp" alt="" loading="lazy"/><img src="/images/palcos/p10.webp" alt="" loading="lazy"/>
+      <img src="/images/palcos/p01.webp" alt="" width="560" height="315" loading="lazy" draggable="false"/><img src="/images/palcos/p02.webp" alt="" width="560" height="373" loading="lazy" draggable="false"/><img src="/images/palcos/p03.webp" alt="" width="560" height="315" loading="lazy" draggable="false"/><img src="/images/palcos/p04.webp" alt="" width="560" height="315" loading="lazy" draggable="false"/><img src="/images/palcos/p05.webp" alt="" width="560" height="315" loading="lazy" draggable="false"/>
+      <img src="/images/palcos/p06.webp" alt="" width="559" height="373" loading="lazy" draggable="false"/><img src="/images/palcos/p07.webp" alt="" width="560" height="315" loading="lazy" draggable="false"/><img src="/images/palcos/p08.webp" alt="" width="560" height="373" loading="lazy" draggable="false"/><img src="/images/palcos/p09.webp" alt="" width="560" height="315" loading="lazy" draggable="false"/><img src="/images/palcos/p10.webp" alt="" width="560" height="315" loading="lazy" draggable="false"/>
     </div>
   </div>
 </section>
@@ -1516,6 +1524,92 @@ const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)
     if (es[0].isIntersecting) { mesa.classList.add('on'); io.disconnect(); }
   }, { threshold: .4 });
   io.observe(mesa);
+})();
+
+/* Na estrada: a faixa de fotos anda sozinha e também vai para os dois lados no arrasto,
+   com inércia ao soltar. Com "reduzir movimento" ela fica parada, mas continua arrastável. */
+(() => {
+  const marq = document.querySelector('.marq'), track = marq && marq.querySelector('.marq-track');
+  if (!track || !window.PointerEvent) return;
+  const imgs = track.querySelectorAll('img');
+  let period = 0, drift = 0, x = 0, v = 0, raf = 0, last = 0, px = 0, pt = 0, moved = 0;
+  let dragging = false, hover = false, visible = false;
+
+  // period = distância entre uma foto e a cópia dela: é onde a faixa dá a volta sem emenda
+  const measure = () => { period = imgs[imgs.length / 2].offsetLeft - imgs[0].offsetLeft; drift = reduce ? 0 : period / 60; };
+  const render = () => { if (period) track.style.transform = `translate3d(${-(((x % period) + period) % period)}px,0,0)`; };
+  const target = () => (hover || !visible ? 0 : drift);
+  const frame = now => {
+    if (dragging) { raf = 0; return; }
+    const dt = Math.min((now - last) / 1000, .05); last = now;
+    v += (target() - v) * (1 - Math.exp(-dt / .45));
+    x += v * dt; render();
+    raf = dragging || !visible || (Math.abs(v) < 2 && !target()) ? 0 : requestAnimationFrame(frame);
+  };
+  const kick = () => { if (!raf && visible && !dragging) { last = performance.now(); raf = requestAnimationFrame(frame); } };
+
+  marq.classList.add('js');
+  measure();
+  if ('ResizeObserver' in window) new ResizeObserver(() => { measure(); render(); }).observe(track);
+  else addEventListener('resize', () => { measure(); render(); });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(es => {
+      visible = es[0].isIntersecting;
+      if (visible) imgs.forEach(img => { img.loading = 'eager'; });  // quem arrasta para trás não espera foto carregar
+      kick();
+    }, { rootMargin: '300px' }).observe(marq);
+  } else { visible = true; kick(); }
+
+  // etiqueta "arraste" no cursor (só com mouse), até a pessoa arrastar a primeira vez
+  let hint = null, learned = false;
+  if (matchMedia('(hover:hover) and (pointer:fine)').matches) {
+    hint = document.createElement('span');
+    hint.className = 'marq-hint'; hint.setAttribute('aria-hidden', 'true'); hint.textContent = '← arraste →';
+    marq.parentNode.appendChild(hint);
+  }
+  const place = e => {
+    const r = marq.parentNode.getBoundingClientRect(), w = hint.offsetWidth;
+    const left = e.clientX + 16 + w > r.right ? e.clientX - 16 - w : e.clientX + 16;
+    hint.style.setProperty('--hx', (left - r.left) + 'px');
+    hint.style.setProperty('--hy', (e.clientY - r.top + 20) + 'px');
+  };
+
+  marq.addEventListener('pointerdown', e => {
+    if (e.pointerType === 'mouse' && e.button) return;
+    dragging = true; v = 0; moved = 0; px = e.clientX; pt = e.timeStamp;
+    cancelAnimationFrame(raf); raf = 0;
+    marq.classList.add('drag'); if (hint) hint.classList.add('hold');
+    try { marq.setPointerCapture(e.pointerId); } catch (err) {}
+  });
+  marq.addEventListener('pointermove', e => {
+    if (e.pointerType === 'mouse') {
+      hover = true;
+      if (hint && !learned) { place(e); hint.classList.add('on'); }
+    }
+    if (!dragging) return;
+    const dx = e.clientX - px, dt = Math.max(e.timeStamp - pt, 1);
+    x -= dx; moved += Math.abs(dx);
+    v = v * .6 + (-dx / dt * 1000) * .4;
+    px = e.clientX; pt = e.timeStamp; render();
+  });
+  const drop = e => {
+    if (!dragging) return;
+    dragging = false; marq.classList.remove('drag');
+    if (e.type !== 'pointerup' || e.timeStamp - pt > 90) v = 0;   // parou antes de soltar: não desliza
+    v = Math.max(-3500, Math.min(3500, v));
+    if (hint) { hint.classList.remove('hold'); if (moved > 24) { learned = true; hint.classList.remove('on'); } }
+    kick();
+  };
+  marq.addEventListener('pointerup', drop);
+  marq.addEventListener('pointercancel', drop);
+  marq.addEventListener('lostpointercapture', drop);
+  marq.addEventListener('pointerleave', () => { hover = false; if (hint) hint.classList.remove('on'); kick(); });
+  marq.addEventListener('dragstart', e => e.preventDefault());
+  // rolagem lateral do touchpad (ou Shift + rodinha) também leva a faixa
+  marq.addEventListener('wheel', e => {
+    if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+    e.preventDefault(); x += e.deltaX; v = 0; render(); kick();
+  }, { passive: false });
 })();
 
 /* Navegação: seção ativa e menu compacto, sem interferir no checkout. */

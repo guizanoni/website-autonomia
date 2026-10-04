@@ -53,6 +53,10 @@ Secrets necessários no GitHub: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
   quando um crachá muda de lugar. A cena parada já é a completa, porque é ela que
   aparece com "reduzir movimento" (caso do PC do Gui); entrada e fios correndo
   são só reforço.
+- Faixa de fotos "Na estrada" (`.marq`): sem JS é a animação CSS; com JS o script
+  assume (classe `.js`), mantém a deriva de uma volta por minuto e deixa arrastar
+  para os dois lados com inércia. Com "reduzir movimento" não anda sozinha, mas
+  continua arrastável. A volta sem emenda depende das duas cópias das dez fotos.
 - Rodapé assinado "Desenvolvido por: skope.cc": o clique abre um contato curto que
   posta no mesmo `enviar.php` com `produto=Assinatura skope.cc` e chega em sites@skope.cc.
 - Lista de espera posta no `enviar.php` do guizanoni.com (CORS liberado);

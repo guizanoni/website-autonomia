@@ -7,6 +7,13 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
+## 2026-10-04 — Faixa de fotos "Na estrada" pode ser arrastada para os dois lados
+
+- A faixa era só uma animação: andava sozinha, pausava no hover e não deixava voltar nem avançar. Com as animações desligadas no Windows (PC do Gui) ficava parada, mostrando só as primeiras fotos.
+- Agora dá para arrastar com o mouse ou o dedo, para a esquerda e para a direita, com inércia ao soltar e volta sem emenda. Rolagem lateral do touchpad (ou Shift + rodinha) também leva a faixa. No celular, o dedo na vertical continua rolando a página.
+- No computador, uma etiqueta laranja "← arraste →" acompanha o cursor até a primeira arrastada. A faixa segue andando sozinha na mesma velocidade e pausa sob o mouse; com "reduzir movimento" fica parada, mas arrastável. Sem JavaScript vale a animação antiga.
+- Conferido por simulação de mouse e toque em 1512×900 e 390 px, com e sem movimento, sem erros de JavaScript.
+
 ## 2026-10-03 — Rodada de negócios vira uma mesa redonda com os crachás ligados a você
 
 - No computador a cena antiga (cinco crachás pequenos soltos sobre uma faixa escura) parecia perdida e não dizia o que era a seção. Agora há uma mesa redonda com três participantes em volta (Moda, Psicologia, Confeitaria) e o crachá "Você" em laranja na frente. Um fio pontilhado liga você a cada uma, com a etiqueta do que ela pode virar: "pode virar cliente", "pode te indicar", "pode virar parceira", as três saídas que a chamada já prometia.
