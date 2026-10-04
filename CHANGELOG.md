@@ -7,6 +7,13 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
+## 2026-10-04 — Coleção de posts refeita a partir do conceito atual da edição Mulheres
+
+- Revisados os dez posts e acrescentados dois: orçamento ilustrativo versus aprender a fazer com IA, e continuidade com kit vitalício/plano de 30 dias. A campanha passa a partir de “A ideia é sua. O trabalho pesado fica com a IA.”, prática no próprio projeto e monitoras na sala.
+- Recriadas as 24 artes (Instagram 4:5 e LinkedIn quadrado) e as 24 legendas. Fotografias do site, molduras e notificações aproximam as peças da LP. Mapa de 50 lugares removido; PIX priorizado, com cartão, dupla e garantia coerentes com as condições atuais.
+- Vitrine ordenada do conceito à inscrição, com filtros por conceito/experiência, público, fotos, condições e novos temas. Prévias leves e versões de cache renovadas para acompanhar as artes e legendas.
+- Conferidos tamanhos, textos, imagens, fontes, limites de legenda e composição dos dois formatos. Perfil editorial atualizado. Landing page e checkout preservados.
+
 ## 2026-10-04 — A conta passa a usar os valores de mercado indicados pelo Gui
 
 - Os valores de exemplo da notinha estavam baixos demais (eu tinha usado o piso de cada faixa). O Gui passou os números: Estrategista R$ 1.500 todo mês, Produtor de conteúdo R$ 1.000 todo mês e Web designer R$ 2.000 por página. O primeiro mês soma R$ 4.500 e o seguinte, mais R$ 2.500.

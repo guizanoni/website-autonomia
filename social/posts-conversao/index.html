@@ -20,33 +20,105 @@ header{background:var(--dark);color:#fff}.head-row{padding:28px 0;display:flex;j
 </style>
 </head>
 <body>
-<header><div class="wrap"><div class="head-row"><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div><a class="visit" href="https://autonomia.vc/mulheres/">Ver inscrição <span aria-hidden="true">↗</span></a></div><div class="hero"><div><p class="eyebrow">Vitrine de posts · edição mulheres</p><h1>Mais identificação.<br><em>Mais motivos para vir.</em></h1><p class="lead">10 posts com artes e legendas para convidar mulheres a colocar a IA em prática. Escolha a rede, copie o texto e baixe a imagem.</p></div><div class="edition"><b>4 novos posts</b>6 artes com fotos<br>Instagram + LinkedIn<span>Atualizado em 03.10.2026</span></div></div></div></header>
-<div class="toolbar"><div class="wrap tools"><div class="seg" role="group" aria-label="Formato da rede"><button type="button" data-rede="instagram" aria-pressed="true">Instagram · 4:5</button><button type="button" data-rede="linkedin" aria-pressed="false">LinkedIn · 1:1</button></div><div class="filter"><label for="filter">Mostrar</label><select id="filter"><option value="all">Todos os posts</option><option value="photos">Com fotos de mulheres</option><option value="new">Novos posts</option><option value="decision">Oferta e objeções</option></select></div></div></div>
-<main class="wrap"><div class="collection-head"><p id="count" aria-live="polite">Carregando os posts…</p><p><span class="new-dot"></span>Novos posts primeiro</p></div><div class="grid" id="lista" aria-busy="true"><p class="loading">Preparando a vitrine…</p></div><noscript><p>Ative o JavaScript para usar os filtros e copiar as legendas. Você também pode abrir <a href="legendas.md">todas as legendas</a> e os <a href="posts.html?p=7&f=ig">moldes das artes</a>.</p></noscript></main>
-<footer><div class="wrap footer-row"><p>Artes em PNG: Instagram 1080 × 1350 · LinkedIn 1080 × 1080.<br>Fotos ilustrativas. Condições comerciais alinhadas à <a href="https://autonomia.vc/mulheres/">página de inscrição</a>.</p><div class="source-links"><a href="legendas.md">Todas as legendas</a><a href="posts.html?p=7&f=ig">Moldes das artes</a></div></div></footer>
+<header><div class="wrap"><div class="head-row"><div class="logo">autonom<i>.</i>ia<i>/</i>mulheres</div><a class="visit" href="https://autonomia.vc/mulheres/">Ver inscrição <span aria-hidden="true">↗</span></a></div><div class="hero"><div><p class="eyebrow">Vitrine de posts · edição mulheres</p><h1>A ideia é sua.<br><em>Agora, nos posts.</em></h1><p class="lead">12 posts sobre colocar a IA para trabalhar no seu negócio, com gente do lado para ajudar. Artes e legendas prontas: escolha a rede, copie o texto e baixe a imagem.</p></div><div class="edition"><b>12 posts · 24 artes</b>Conceito atual do site<br>Instagram + LinkedIn<span>Revisado em 04.10.2026</span></div></div></div></header>
+<div class="toolbar"><div class="wrap tools"><div class="seg" role="group" aria-label="Formato da rede"><button type="button" data-rede="instagram" aria-pressed="true">Instagram · 4:5</button><button type="button" data-rede="linkedin" aria-pressed="false">LinkedIn · 1:1</button></div><div class="filter"><label for="filter">Mostrar</label><select id="filter"><option value="all">Todos os posts</option><option value="photos">Com fotos de mulheres</option><option value="concept">Conceito e experiência</option><option value="audience">Para quem é</option><option value="new">Novos temas</option><option value="decision">Oferta e objeções</option></select></div></div></div>
+<main class="wrap"><div class="collection-head"><p id="count" aria-live="polite">Carregando os posts…</p><p><span class="new-dot"></span>Do conceito à inscrição</p></div><div class="grid" id="lista" aria-busy="true"><p class="loading">Preparando a vitrine…</p></div><noscript><p>Ative o JavaScript para usar os filtros e copiar as legendas. Você também pode abrir <a href="legendas.md">todas as legendas</a> e os <a href="posts.html?p=1&f=ig">moldes das artes</a>.</p></noscript></main>
+<footer><div class="wrap footer-row"><p>Evento: 11/11/2026 · Hard Rock Café Curitiba.<br>Artes em PNG: Instagram 1080 × 1350 · LinkedIn 1080 × 1080.<br>Fotos ilustrativas. Condições comerciais alinhadas à <a href="https://autonomia.vc/mulheres/">página de inscrição</a>.</p><div class="source-links"><a href="legendas.md">Todas as legendas</a><a href="posts.html?p=1&f=ig">Moldes das artes</a></div></div></footer>
 <div class="toast" id="status" role="status" aria-live="polite"></div>
 <script>
 // legendas.md é a fonte única dos textos; os PNGs são renderizados de posts.html.
-const VERSION='20261003-dupla8', REDES={instagram:'Instagram',linkedin:'LinkedIn'};
+const VERSION='20261004-conceito-v1', REDES={instagram:'Instagram',linkedin:'LinkedIn'};
 const META={
-  1:{angle:'Do projeto às entregas do dia',note:'Mostra o que a participante desenvolve com IA.',photo:true,alt:'Mulher sorrindo; chamada “Sua ideia merece sair do papel. Com você.” e entregas de conteúdo, oferta e página.'},
-  2:{angle:'Garantia até o almoço',note:'Responde à dúvida sobre investir e não se identificar.',decision:true,alt:'Arte preta e laranja: “Não é pra você? Seu dinheiro volta.” Reembolso integral mediante aviso à equipe até 12h30.'},
-  3:{angle:'Primeira turma + investimento',note:'Apresenta o formato, o que está incluso e os valores.',decision:true,alt:'Arte clara com 50 assentos ilustrados, capacidade da turma, parcelas de R$ 129,70 e preço no PIX de R$ 1.167,30.'},
-  4:{angle:'Começar do zero',note:'Explica o apoio para quem nunca usou IA.',decision:true,alt:'Arte clara: “Nunca usou IA? Pode vir.” Monitoras no notebook e atividades com uma IA gratuita.'},
-  5:{angle:'Convite em dupla',note:'Um convite para compartilhar com a amiga ou a sócia.',photo:true,decision:true,alt:'Mulheres reunidas com notebooks; “Chama uma amiga. Vem de dupla.” Preços para duas vagas no cartão e no PIX.'},
-  6:{angle:'Tempo para executar',note:'Conecta o encontro às tarefas que estão sendo adiadas.',decision:true,alt:'Arte preta com calendário de 11 de novembro de 2026 e tarefas de conteúdo, oferta e página de vendas.'},
-  7:{angle:'Rotina de quem empreende',note:'IA aplicada às tarefas que dependem da dona do negócio.',photo:true,new:true,alt:'Mulher trabalhando em uma cafeteria; “Seu negócio tem você. Agora pode ter IA.” Aplicações em respostas, legendas e ideias.'},
-  8:{angle:'Primeira oferta / transição',note:'A experiência profissional como começo de um negócio.',photo:true,new:true,alt:'Retrato de mulher de cabelos grisalhos; “Sua experiência. Seu próximo negócio.” Oferta, preço inicial e página para divulgar.'},
-  9:{angle:'Aprender com apoio',note:'Mostra como a participante recebe ajuda durante a prática.',photo:true,new:true,alt:'Duas mulheres com notebooks; “Você não precisa começar sozinha.” Destaque para apoio de monitoras.'},
-  10:{angle:'Conexões entre mulheres',note:'Apresenta a rodada de negócios e a troca de contatos.',photo:true,new:true,alt:'Mulheres conversando à mesa; “Seu próximo contato pode estar na mesa ao lado.” Prática com IA e rodada de negócios.'}
+  "1": {
+    "angle": "Conceito central",
+    "note": "A ideia é sua. Você faz com IA e orientação.",
+    "photo": true,
+    "concept": true,
+    "alt": "Mulher sorrindo ao ar livre. Chamada: A ideia é sua. O trabalho pesado fica com a IA. Cartões de conteúdo planejado, oferta e página publicada."
+  },
+  "2": {
+    "angle": "Garantia até o almoço",
+    "note": "Experimente a manhã e decida até as 12h30.",
+    "decision": true,
+    "alt": "Arte preta e laranja: Experimente a manhã. Decida até o almoço. Reembolso integral mediante aviso à equipe até as 12h30 do evento."
+  },
+  "3": {
+    "angle": "Inscrição e investimento",
+    "note": "Entregas, apoio e preço no PIX em primeiro plano.",
+    "decision": true,
+    "alt": "Arte clara: Reserve um dia. Leve trabalho feito. Conteúdo planejado, oferta organizada e página publicada. R$ 1.167,30 no PIX ou R$ 1.297 em até 10x no cartão."
+  },
+  "4": {
+    "angle": "Começar do zero",
+    "note": "Acesso, prática e ajuda sem exigir experiência com IA.",
+    "audience": true,
+    "decision": true,
+    "alt": "Arte clara: Nunca usou IA? Comece aqui. Monitoras ajudam no notebook e uma IA gratuita basta para as atividades."
+  },
+  "5": {
+    "angle": "Convite em dupla",
+    "note": "Cada uma com seu projeto; condições para duas vagas.",
+    "photo": true,
+    "decision": true,
+    "alt": "Mulheres com notebooks. Combine com uma amiga. PIX: R$ 1.167,30 por pessoa. Cartão: R$ 1.193,24 por pessoa. Descontos não acumulam."
+  },
+  "6": {
+    "angle": "Um dia de prática",
+    "note": "A sequência do dia: conteúdo, oferta, página e contatos.",
+    "concept": true,
+    "alt": "Arte preta com calendário de 11 de novembro de 2026. Uma quarta reservada para o seu negócio. Manhã, tarde e encerramento organizados por atividades."
+  },
+  "7": {
+    "angle": "Para quem já empreende",
+    "note": "Um dia para cuidar da divulgação do negócio atual.",
+    "photo": true,
+    "audience": true,
+    "alt": "Mulher trabalhando em uma cafeteria. Você atende. Você entrega. E a divulgação? Notificação: conteúdo do mês com temas planejados e legendas escritas."
+  },
+  "8": {
+    "angle": "Para quem quer começar",
+    "note": "Da experiência à primeira oferta para apresentar e testar.",
+    "photo": true,
+    "audience": true,
+    "alt": "Retrato de uma mulher. Você sabe fazer. Vamos dar forma à sua ideia? Primeira oferta, preço inicial e página para apresentar e testar."
+  },
+  "9": {
+    "angle": "Apoio presencial",
+    "note": "Você conhece o negócio; a equipe ajuda durante a prática.",
+    "photo": true,
+    "concept": true,
+    "alt": "Mulheres com notebooks. Você conhece seu trabalho. A gente ajuda com a IA. Notificação: Travou? Levanta a mão. Uma monitora vem até você."
+  },
+  "10": {
+    "angle": "Rodada de negócios",
+    "note": "Conversas em grupos pequenos e contatos para continuar.",
+    "photo": true,
+    "concept": true,
+    "alt": "Mulheres conversando à mesa. Seu próximo contato pode estar na mesma mesa. Rodada de negócios e possibilidades de clientes, parcerias e indicações."
+  },
+  "11": {
+    "angle": "A conta do investimento",
+    "note": "O orçamento ilustrativo do site e a proposta de aprender a fazer.",
+    "decision": true,
+    "new": true,
+    "alt": "Arte preta com uma notinha de orçamento ilustrativo: estratégia R$ 1.500 por mês, conteúdo R$ 1.000 por mês e página R$ 2.000, total R$ 4.500 no primeiro mês. Encontro: R$ 1.167,30 no PIX para aprender a fazer com IA."
+  },
+  "12": {
+    "angle": "Depois do encontro",
+    "note": "Kit com acesso vitalício, plano de 30 dias e grupo da turma.",
+    "concept": true,
+    "new": true,
+    "alt": "Arte clara: O encontro acaba. A autonomia continua. Kit de IA com assistentes, pedidos prontos, guias e plano de 30 dias, com acesso vitalício."
+  }
 };
+const ORDER=[1,7,8,9,4,6,10,12,11,2,5,3];
 let rede='instagram', filter='all', posts=[], noticeTimer;
 const list=document.getElementById('lista');
 function escapeHTML(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function parse(md){return md.split(/^## /m).slice(1).map(block=>{const header=block.split('\n')[0].match(/^Post (\d+) · (.+)$/);if(!header||!META[header[1]])throw Error('Post inválido');const post={n:Number(header[1]),title:header[2],captions:{},...META[header[1]]};block.split(/^### /m).slice(1).forEach(part=>{const network=part.split('\n')[0].trim().toLowerCase();post.captions[network]=part.slice(part.indexOf('\n')).replace(/\n---\s*$/,'').trim()});if(!post.captions.instagram||!post.captions.linkedin)throw Error('Legenda ausente');return post})}
-function render(){const visible=posts.filter(p=>filter==='all'||(filter==='photos'&&p.photo)||(filter==='new'&&p.new)||(filter==='decision'&&p.decision));const height=rede==='instagram'?1350:1080;
-  list.innerHTML=visible.map((p,i)=>{const png=`post-${p.n}-${rede}.png?v=${VERSION}`, preview=`previews/post-${p.n}-${rede}.webp?v=${VERSION}`;return `<article class="post" id="post-${p.n}" aria-labelledby="title-${p.n}"><a class="art-link" href="${png}" target="_blank" rel="noopener" aria-label="Ampliar arte do post ${p.n}"><img src="${preview}" alt="${escapeHTML(p.alt)}" width="1080" height="${height}" loading="${i<3?'eager':'lazy'}" decoding="async"><span class="zoom" aria-hidden="true">Ampliar ↗</span></a><div class="content"><div class="meta"><span>Post ${String(p.n).padStart(2,'0')} · ${REDES[rede]}</span>${p.new?'<span class="fresh">Novo</span>':''}</div><h2 id="title-${p.n}">${escapeHTML(p.title)}</h2><p class="angle">${escapeHTML(p.note)}</p><div class="actions"><button class="btn primary" type="button" data-copy="${p.n}" aria-label="Copiar legenda do post ${p.n}">Copiar legenda</button><a class="btn" href="${png}" download="post-${p.n}-${rede}.png" aria-label="Baixar imagem do post ${p.n}">Baixar PNG <span aria-hidden="true">↓</span></a></div><details><summary>Ver legenda <span class="sr-only">do post ${p.n}</span></summary><div class="caption" id="caption-${p.n}">${escapeHTML(p.captions[rede])}</div></details></div></article>`}).join('');
-  document.getElementById('count').innerHTML=`<strong>${visible.length} de ${posts.length} posts</strong> · ${REDES[rede]} · ${filter==='photos'?'com fotos':filter==='new'?'novos':filter==='decision'?'oferta e objeções':'coleção completa'}`;
+function render(){const visible=posts.filter(p=>filter==='all'||(filter==='photos'&&p.photo)||(filter==='concept'&&p.concept)||(filter==='audience'&&p.audience)||(filter==='new'&&p.new)||(filter==='decision'&&p.decision));const height=rede==='instagram'?1350:1080;
+  list.innerHTML=visible.map((p,i)=>{const png=`post-${p.n}-${rede}.png?v=${VERSION}`, preview=`previews/post-${p.n}-${rede}.webp?v=${VERSION}`;return `<article class="post" id="post-${p.n}" aria-labelledby="title-${p.n}"><a class="art-link" href="${png}" target="_blank" rel="noopener" aria-label="Ampliar arte do post ${p.n}"><img src="${preview}" alt="${escapeHTML(p.alt)}" width="1080" height="${height}" loading="${i<3?'eager':'lazy'}" decoding="async"><span class="zoom" aria-hidden="true">Ampliar ↗</span></a><div class="content"><div class="meta"><span>Post ${String(p.n).padStart(2,'0')} · ${REDES[rede]}</span>${p.new?'<span class="fresh">Novo tema</span>':''}</div><h2 id="title-${p.n}">${escapeHTML(p.title)}</h2><p class="angle">${escapeHTML(p.note)}</p><div class="actions"><button class="btn primary" type="button" data-copy="${p.n}" aria-label="Copiar legenda do post ${p.n}">Copiar legenda</button><a class="btn" href="${png}" download="post-${p.n}-${rede}.png" aria-label="Baixar imagem do post ${p.n}">Baixar PNG <span aria-hidden="true">↓</span></a></div><details><summary>Ver legenda <span class="sr-only">do post ${p.n}</span></summary><div class="caption" id="caption-${p.n}">${escapeHTML(p.captions[rede])}</div></details></div></article>`}).join('');
+  document.getElementById('count').innerHTML=`<strong>${visible.length} de ${posts.length} posts</strong> · ${REDES[rede]} · ${filter==='photos'?'com fotos':filter==='concept'?'conceito e experiência':filter==='audience'?'para quem é':filter==='new'?'novos temas':filter==='decision'?'oferta e objeções':'coleção completa'}`;
   list.setAttribute('aria-busy','false');
 }
 function notice(message){clearTimeout(noticeTimer);document.getElementById('status').textContent=message;noticeTimer=setTimeout(()=>document.getElementById('status').textContent='',4500)}
@@ -55,7 +127,7 @@ async function copy(button){const post=posts.find(p=>p.n===Number(button.dataset
 document.querySelectorAll('[data-rede]').forEach(button=>button.addEventListener('click',()=>{if(rede===button.dataset.rede)return;rede=button.dataset.rede;document.querySelectorAll('[data-rede]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));render()}));
 document.getElementById('filter').addEventListener('change',e=>{filter=e.target.value;render()});
 list.addEventListener('click',e=>{const button=e.target.closest('[data-copy]');if(button)copy(button)});
-fetch('legendas.md?v='+VERSION).then(r=>{if(!r.ok)throw Error('Falha ao carregar');return r.text()}).then(md=>{posts=parse(md).sort((a,b)=>Number(Boolean(b.new))-Number(Boolean(a.new))||a.n-b.n);render();if(/^#post-\d+$/.test(location.hash)){const target=document.getElementById(location.hash.slice(1));if(target)target.scrollIntoView()}}).catch(()=>{list.setAttribute('aria-busy','false');list.innerHTML='<p class="loading">Não foi possível carregar a vitrine. <a href="legendas.md">Abra todas as legendas</a> ou recarregue a página.</p>';document.getElementById('count').textContent='Vitrine indisponível no momento.'});
+fetch('legendas.md?v='+VERSION).then(r=>{if(!r.ok)throw Error('Falha ao carregar');return r.text()}).then(md=>{posts=parse(md).sort((a,b)=>ORDER.indexOf(a.n)-ORDER.indexOf(b.n));render();if(/^#post-\d+$/.test(location.hash)){const target=document.getElementById(location.hash.slice(1));if(target)target.scrollIntoView()}}).catch(()=>{list.setAttribute('aria-busy','false');list.innerHTML='<p class="loading">Não foi possível carregar a vitrine. <a href="legendas.md">Abra todas as legendas</a> ou recarregue a página.</p>';document.getElementById('count').textContent='Vitrine indisponível no momento.'});
 </script>
 </body>
 </html>
