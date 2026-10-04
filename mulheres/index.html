@@ -309,17 +309,68 @@ header.solid .nav-toggle{background:var(--soft);border-color:var(--line)}
 .shield{width:min(360px,80%);margin-inline:auto;aspect-ratio:.84;position:relative;filter:drop-shadow(0 40px 50px rgba(0,0,0,.22))}
 .shield svg{width:100%;height:100%}
 
-/* ---------- rodada (preto, crachás 3D) ---------- */
+/* ---------- rodada (preto, mesa redonda com crachás) ---------- */
 .round{overflow:hidden;padding-bottom:0}
-.rail-wrap{position:relative;height:clamp(300px,36vw,440px);margin-top:48px}
-.rail{position:absolute;left:-10%;right:-10%;bottom:-30px;height:62%;border-radius:60px 60px 0 0;background:linear-gradient(180deg,#5b5e64 0%,#2a2c30 18%,#141518 60%);box-shadow:inset 0 3px 0 rgba(255,255,255,.35),inset 0 -2px 0 rgba(255,91,46,.6);transform:perspective(900px) rotateX(38deg);transform-origin:50% 100%}
-.badge{position:absolute;width:clamp(120px,13vw,160px);aspect-ratio:.72;border-radius:18px;background:linear-gradient(170deg,#f6f6f4,#cfd0cc);color:var(--ink);padding:14px;display:flex;flex-direction:column;box-shadow:0 30px 40px rgba(0,0,0,.55),inset 0 1px 0 #fff;animation:float 6s ease-in-out infinite}
-.badge::before{content:"";width:34%;height:6px;border-radius:6px;background:#9a9b97;margin:0 auto 12px}
-.badge .av{width:44px;height:44px;border-radius:50%;background:var(--ink);display:grid;place-items:center;color:var(--sig);font-weight:700;font-size:20px}
-.badge b{margin-top:auto;font-size:15px;font-weight:600;letter-spacing:-.02em;line-height:1.2}
-.badge span{font-size:12px;color:var(--mut);font-family:var(--m);text-transform:uppercase;letter-spacing:.06em}
-@keyframes float{50%{transform:translateY(-14px) rotate(var(--br,0deg))}}
-.round .cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:40px;text-align:left}
+/* a cena é medida nas unidades do desenho (o viewBox do svg): 1200×740 no desktop, 600×830 até 900px.
+   --x/--y/--w de cada crachá e etiqueta ficam nessas unidades e viram % aqui; mexeu no viewBox, mexe em --cw/--ch */
+.mesa{--cw:12;--ch:7.4;--em:.078;position:relative;width:min(100%,max(78vw,860px),150vh,1400px);aspect-ratio:1200/740;margin:clamp(12px,2vw,28px) auto 0;container-type:inline-size}
+.mesa svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.mesa .mesa-defs{width:0;height:0}
+.mesa-m{display:none}
+.m-sig{fill:var(--sig)}
+.s-sig{stop-color:var(--sig)}
+.fio{fill:none;stroke:var(--sig);stroke-width:4.5;stroke-linecap:round;stroke-dasharray:.1 14;animation:fio 1.6s linear infinite}
+.fio-luz{fill:none;stroke:var(--sig);stroke-width:13;stroke-linecap:round;opacity:.14}
+.pouso{fill:#fff}
+.f,.elo{transition:opacity .25s}
+@keyframes fio{to{stroke-dashoffset:-14.1}}
+@keyframes fio-m{to{stroke-dashoffset:-19.1}}
+.badge{position:absolute;z-index:1;left:calc(var(--x)/var(--cw)*1%);top:calc(var(--y)/var(--ch)*1%);width:calc(var(--w)/var(--cw)*1%);translate:-50% 0;rotate:var(--br,0deg);aspect-ratio:.9;font-size:15px;font-size:calc(var(--w)/var(--cw)*var(--em)*1cqw);border-radius:1.35em;background:linear-gradient(170deg,#f8f8f6,#cfd0cc);color:var(--ink);padding:.95em 1em 1.25em;display:flex;flex-direction:column;align-items:center;text-align:center;box-shadow:0 1.9em 2.6em rgba(0,0,0,.55),inset 0 1px 0 #fff;animation:float 6s ease-in-out infinite}
+.badge::before{content:"";flex:none;width:30%;height:.42em;border-radius:1em;background:#9a9b97}
+.badge span{display:block;margin-top:.3em;font-size:max(.8em,9.5px);line-height:1.3;color:#4f5257;font-family:var(--m);text-transform:uppercase;letter-spacing:.06em}
+.badge .av{flex:none;display:grid;place-items:center;margin:auto 0;width:2.25em;height:2.25em;border-radius:50%;background:var(--ink);color:var(--sig);font-family:var(--f);font-weight:700;font-size:2.3em;line-height:1;letter-spacing:0;box-shadow:inset 0 0 0 .09em rgba(255,255,255,.1)}
+.badge b{font-size:1.38em;font-weight:600;letter-spacing:-.025em;line-height:1.15}
+.badge.voce{z-index:3;background:linear-gradient(168deg,#ff8058,var(--sig) 46%,#e9451c);color:var(--dark);box-shadow:0 2em 3em rgba(0,0,0,.62),inset 0 1px 0 rgba(255,255,255,.5)}
+.badge.voce::before{background:rgba(14,15,17,.34)}
+.badge.voce span{color:#4d1706}
+.badge.voce .av{background:var(--dark);color:var(--sig)}
+.b1{--x:186;--y:182;--w:205;--br:-6deg;animation-delay:-1s}
+.b2{--x:552;--y:22;--w:205;--br:3deg;animation-delay:-3s}
+.b3{--x:1022;--y:166;--w:205;--br:5deg;animation-delay:-2s}
+.voce{--x:610;--y:462;--w:232;--br:-2deg}
+@keyframes float{50%{transform:translateY(-.55em)}}
+/* o que cada contato pode virar: etiqueta pousada no fio */
+.elo{position:absolute;z-index:2;left:calc(var(--x)/var(--cw)*1%);top:calc(var(--y)/var(--ch)*1%);translate:-50% -50%;rotate:var(--br,0deg);white-space:nowrap;background:#fff;color:var(--ink);font-size:14px;font-size:clamp(12px,1.32cqw,17px);font-weight:600;letter-spacing:-.01em;line-height:1;padding:.72em 1.1em;border-radius:999px;box-shadow:0 .7em 1.5em rgba(0,0,0,.5)}
+.e1{--x:428;--y:404;--br:-5deg}
+.e2{--x:562;--y:340;--br:2deg}
+.e3{--x:782;--y:402;--br:5deg}
+/* entrada: os fios e as etiquetas chegam um por um quando a mesa aparece (só com JS e movimento ligado) */
+.mesa.arm:not(.on) .f,.mesa.arm:not(.on) .elo{opacity:0}
+.mesa.on .f{animation:fio-in .6s ease-out backwards}
+.mesa.on .elo{animation:elo-in .75s cubic-bezier(.16,1,.3,1) backwards}
+.mesa.on .f2,.mesa.on .e2{animation-delay:.3s}
+.mesa.on .f3,.mesa.on .e3{animation-delay:.6s}
+@keyframes fio-in{from{opacity:0}}
+@keyframes elo-in{from{opacity:0;scale:.6}}
+/* até 900px: cena compacta, com a etiqueta presa na base de cada crachá */
+@media(max-width:900px){
+  .mesa{--cw:6;--ch:8.3;--em:.1;width:min(100%,520px);aspect-ratio:600/830}
+  .mesa-d{display:none}
+  .mesa-m{display:block}
+  .fio{stroke-width:8;stroke-dasharray:.1 19;animation-name:fio-m}
+  .fio-luz{stroke-width:20;opacity:.2}
+  .badge{padding:.8em .7em 1.15em}
+  .badge .av{font-size:1.9em}
+  .b1{--x:98;--y:236;--w:190}
+  .b2{--x:300;--y:88;--w:190}
+  .b3{--x:502;--y:224;--w:190}
+  .voce{--x:300;--y:558;--w:222}
+  .elo{font-size:clamp(12px,3.5cqw,16px)}
+  .e1{--x:128;--y:466}
+  .e2{--x:295;--y:318}
+  .e3{--x:472;--y:454}
+}
+.round .cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:clamp(28px,4vw,56px);padding-block:36px 80px;border-top:1px solid rgba(255,255,255,.12);text-align:left}
 .round .cols b{display:block;font-size:19px;font-weight:600;margin-bottom:4px;letter-spacing:-.02em}
 .round .cols p{color:var(--dmut);font-size:16px}
 @media(max-width:760px){.round .cols{grid-template-columns:1fr}}
@@ -496,7 +547,13 @@ footer .bot{justify-content:flex-start;align-items:center}
   .caps small.more{opacity:1;transform:translate(-50%,0)}
 }
 .badge{cursor:default;transition:box-shadow .3s}
-.badge:hover{animation-play-state:paused;transform:translateY(-22px) scale(1.07)!important;box-shadow:0 40px 60px rgba(0,0,0,.6),0 0 0 3px var(--sig)}
+.badge:hover{animation-play-state:paused;transform:translateY(-.9em) scale(1.05)!important;box-shadow:0 2.6em 3.6em rgba(0,0,0,.6),0 0 0 3px var(--sig)}
+.badge.voce:hover{box-shadow:0 2.6em 3.6em rgba(0,0,0,.6),0 0 0 3px #fff}
+/* passar o mouse numa participante acende o fio e a etiqueta dela */
+@media(hover:hover) and (pointer:fine){
+  .mesa:has(.b1:hover) .e1,.mesa:has(.b2:hover) .e2,.mesa:has(.b3:hover) .e3{background:var(--sig);color:var(--dark)}
+  .mesa:has(.b1:hover) :is(.f,.elo):not(.f1,.e1),.mesa:has(.b2:hover) :is(.f,.elo):not(.f2,.e2),.mesa:has(.b3:hover) :is(.f,.elo):not(.f3,.e3){opacity:.3}
+}
 .panel li{transition:transform .25s}
 .panel li:hover{transform:translateX(6px)}
 .laptop img,.guide-ph img{transition:transform .9s cubic-bezier(.2,.8,.2,1)}
@@ -520,12 +577,6 @@ footer .bot{justify-content:flex-start;align-items:center}
 .swa svg{width:22px;height:22px}
 @media(max-width:860px){.wa{display:none}}
 @media(max-width:700px){
-  .badge{width:104px;padding:12px}
-  .badge .av{width:34px;height:34px;font-size:16px}
-  .rail-wrap .badge:nth-child(5),.rail-wrap .badge:nth-child(6){display:none}
-  .rail-wrap .badge:nth-child(2){left:3%!important;bottom:30%!important}
-  .rail-wrap .badge:nth-child(3){left:calc(50% - 52px)!important;bottom:46%!important}
-  .rail-wrap .badge:nth-child(4){left:auto!important;right:3%!important;bottom:28%!important}
   .ui .lbl,.ui .chip{display:none!important}
   .ui .big{font-size:17px;letter-spacing:-.02em}
 }
@@ -1026,23 +1077,68 @@ section[id]{scroll-margin-top:84px}
   </div>
 </section>
 
-<!-- RODADA (preto, crachás) -->
+<!-- RODADA (preto, mesa redonda com crachás) -->
 <section class="round dk">
   <div class="wrap center">
     <span class="eyebrow">Das 17h às 18h</span>
     <h2>Seu próximo contato<br/><span class="sl">pode estar na mesma mesa.</span></h2>
     <p class="lead">Rodada de negócios é uma hora de conversas rápidas pra você contar o que faz e conhecer quem pode virar cliente, parceira ou te indicar. Quem conduz é uma empreendedora convidada.</p>
-    <div class="rail-wrap" aria-hidden="true">
-      <div class="rail"></div>
-      <div class="badge" style="left:6%;bottom:36%;--br:-6deg;transform:rotate(-6deg);animation-delay:-1s"><span class="av">/</span><b>Moda</b><span>Loja online</span></div>
-      <div class="badge" style="left:26%;bottom:48%;--br:4deg;transform:rotate(4deg);animation-delay:-3s"><span class="av">/</span><b>Psicologia</b><span>Consultório</span></div>
-      <div class="badge" style="left:calc(50% - 75px);bottom:30%;--br:-2deg;transform:rotate(-2deg)"><span class="av">/</span><b>Você</b><span>Sua ambição</span></div>
-      <div class="badge" style="right:24%;bottom:50%;--br:5deg;transform:rotate(5deg);animation-delay:-2s"><span class="av">/</span><b>Confeitaria</b><span>Encomendas</span></div>
-      <div class="badge" style="right:5%;bottom:34%;--br:-4deg;transform:rotate(-4deg);animation-delay:-4s"><span class="av">/</span><b>Consultoria</b><span>Carreira</span></div>
+    <div class="mesa" aria-hidden="true">
+      <svg class="mesa-defs" focusable="false"><defs>
+        <radialGradient id="mTop" cx=".5" cy=".16" r=".86"><stop offset="0" stop-color="#4c4f56"/><stop offset=".5" stop-color="#2b2d32"/><stop offset="1" stop-color="#1c1d21"/></radialGradient>
+        <linearGradient id="mEdge" x1="0" x2="1"><stop offset="0" stop-color="#0a0b0c"/><stop offset=".5" stop-color="#202226"/><stop offset="1" stop-color="#0a0b0c"/></linearGradient>
+        <linearGradient id="mRim" x1="0" x2="1"><stop class="s-sig" offset=".08" stop-opacity="0"/><stop class="s-sig" offset=".5" stop-opacity=".9"/><stop class="s-sig" offset=".92" stop-opacity="0"/></linearGradient>
+        <linearGradient id="mHi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".2"/><stop offset=".5" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#fff" stop-opacity=".42"/></linearGradient>
+        <radialGradient id="mPool"><stop class="s-sig" offset="0" stop-opacity=".3"/><stop class="s-sig" offset="1" stop-opacity="0"/></radialGradient>
+        <filter id="mBlur" x="-30%" y="-300%" width="160%" height="700%"><feGaussianBlur stdDeviation="20"/></filter>
+        <filter id="mBlurS" x="-40%" y="-200%" width="180%" height="500%"><feGaussianBlur stdDeviation="9"/></filter>
+        <clipPath id="mClipD"><ellipse cx="600" cy="372" rx="424" ry="152"/></clipPath>
+        <clipPath id="mClipM"><ellipse cx="300" cy="472" rx="284" ry="144"/></clipPath>
+      </defs></svg>
+      <svg class="mesa-d" viewBox="0 0 1200 740" focusable="false">
+        <ellipse cx="600" cy="590" rx="430" ry="40" opacity=".55" filter="url(#mBlur)"/>
+        <ellipse class="m-sig" cx="600" cy="566" rx="300" ry="12" opacity=".3" filter="url(#mBlur)"/>
+        <path d="M176 372A424 152 0 0 0 1024 372V402A424 152 0 0 1 176 402Z" fill="url(#mEdge)"/>
+        <path d="M176 402A424 152 0 0 0 1024 402" fill="none" stroke="url(#mRim)" stroke-width="2.5"/>
+        <ellipse cx="600" cy="372" rx="424" ry="152" fill="url(#mTop)"/>
+        <g clip-path="url(#mClipD)">
+          <ellipse cx="610" cy="520" rx="300" ry="120" fill="url(#mPool)"/>
+          <ellipse cx="214" cy="410" rx="104" ry="15" opacity=".5" filter="url(#mBlurS)"/>
+          <ellipse cx="556" cy="258" rx="98" ry="13" opacity=".5" filter="url(#mBlurS)"/>
+          <ellipse cx="1004" cy="396" rx="104" ry="15" opacity=".5" filter="url(#mBlurS)"/>
+        </g>
+        <ellipse cx="600" cy="372" rx="300" ry="107" fill="none" stroke="#fff" stroke-opacity=".07" stroke-width="1.5"/>
+        <ellipse cx="600" cy="372" rx="423" ry="151" fill="none" stroke="url(#mHi)" stroke-width="2"/>
+        <g class="f f1"><path class="fio-luz" d="M610 486C500 452 404 360 312 398"/><path class="fio" d="M610 486C500 452 404 360 312 398"/><circle class="pouso" cx="312" cy="398" r="5.5"/></g>
+        <g class="f f2"><path class="fio-luz" d="M610 486C642 410 524 356 560 282"/><path class="fio" d="M610 486C642 410 524 356 560 282"/><circle class="pouso" cx="560" cy="282" r="5.5"/></g>
+        <g class="f f3"><path class="fio-luz" d="M610 486C706 452 812 360 900 388"/><path class="fio" d="M610 486C706 452 812 360 900 388"/><circle class="pouso" cx="900" cy="388" r="5.5"/></g>
+      </svg>
+      <svg class="mesa-m" viewBox="0 0 600 830" focusable="false">
+        <ellipse cx="300" cy="648" rx="270" ry="30" opacity=".55" filter="url(#mBlur)"/>
+        <ellipse class="m-sig" cx="300" cy="640" rx="180" ry="9" opacity=".3" filter="url(#mBlur)"/>
+        <path d="M16 472A284 144 0 0 0 584 472V494A284 144 0 0 1 16 494Z" fill="url(#mEdge)"/>
+        <path d="M16 494A284 144 0 0 0 584 494" fill="none" stroke="url(#mRim)" stroke-width="2.5"/>
+        <ellipse cx="300" cy="472" rx="284" ry="144" fill="url(#mTop)"/>
+        <g clip-path="url(#mClipM)">
+          <ellipse cx="300" cy="606" rx="220" ry="104" fill="url(#mPool)"/>
+        </g>
+        <ellipse cx="300" cy="472" rx="200" ry="100" fill="none" stroke="#fff" stroke-opacity=".07" stroke-width="1.5"/>
+        <ellipse cx="300" cy="472" rx="283" ry="143" fill="none" stroke="url(#mHi)" stroke-width="2"/>
+        <g class="f f1"><path class="fio-luz" d="M300 584C262 566 214 526 176 486"/><path class="fio" d="M300 584C262 566 214 526 176 486"/></g>
+        <g class="f f2"><path class="fio-luz" d="M300 584C328 512 274 420 300 334"/><path class="fio" d="M300 584C328 512 274 420 300 334"/></g>
+        <g class="f f3"><path class="fio-luz" d="M300 584C338 566 386 522 424 478"/><path class="fio" d="M300 584C338 566 386 522 424 478"/></g>
+      </svg>
+      <div class="badge b1"><span class="av">/</span><b>Moda</b><span>Loja online</span></div>
+      <div class="badge b2"><span class="av">/</span><b>Psicologia</b><span>Consultório</span></div>
+      <div class="badge b3"><span class="av">/</span><b>Confeitaria</b><span>Encomendas</span></div>
+      <div class="badge voce"><span class="av">/</span><b>Você</b><span>O que você faz</span></div>
+      <span class="elo e1">pode virar cliente</span>
+      <span class="elo e2">pode te indicar</span>
+      <span class="elo e3">pode virar parceira</span>
     </div>
   </div>
   <div class="wrap">
-    <div class="cols" style="padding-block:40px 80px">
+    <div class="cols">
       <div><b>Sem palco, sem pressão</b><p>Conversas curtas, em grupos pequenos, com roteiro. Ninguém precisa falar pra sala inteira.</p></div>
       <div><b>Conversa livre no fim</b><p>Depois tem foto oficial da turma, brinde e tempo pra trocar telefone com calma.</p></div>
       <div><b>O grupo continua</b><p>A turma segue junta num grupo de WhatsApp, pra trocar indicação, parceria e cliente.</p></div>
@@ -1410,6 +1506,17 @@ const CFG = {
 
 const track = (ev, data) => { if (typeof fbq === 'function') fbq('track', ev, data || {}); };
 const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Rodada: fios e etiquetas entram um por um quando a mesa aparece na tela. */
+(() => {
+  const mesa = document.querySelector('.mesa');
+  if (!mesa || reduce || !('IntersectionObserver' in window)) return;
+  mesa.classList.add('arm');
+  const io = new IntersectionObserver(es => {
+    if (es[0].isIntersecting) { mesa.classList.add('on'); io.disconnect(); }
+  }, { threshold: .4 });
+  io.observe(mesa);
+})();
 
 /* Navegação: seção ativa e menu compacto, sem interferir no checkout. */
 (() => {

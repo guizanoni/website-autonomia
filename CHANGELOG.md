@@ -7,6 +7,14 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
+## 2026-10-03 — Rodada de negócios vira uma mesa redonda com os crachás ligados a você
+
+- No computador a cena antiga (cinco crachás pequenos soltos sobre uma faixa escura) parecia perdida e não dizia o que era a seção. Agora há uma mesa redonda com três participantes em volta (Moda, Psicologia, Confeitaria) e o crachá "Você" em laranja na frente. Um fio pontilhado liga você a cada uma, com a etiqueta do que ela pode virar: "pode virar cliente", "pode te indicar", "pode virar parceira", as três saídas que a chamada já prometia.
+- Crachás maiores, com desenho de crachá de evento (marca, nome, área). A cena cresce com a janela e cabe na altura da tela; até 900 px entra uma composição compacta, com a etiqueta presa na base de cada crachá.
+- Mudanças de texto: saiu o crachá "Consultoria · Carreira" (ficou uma etiqueta por participante) e o rótulo "Sua ambição" do crachá "Você" virou "O que você faz". Chamada, apoio e as três colunas de baixo não mudaram.
+- Com "reduzir movimento" ligado a cena aparece completa e parada. Com movimento, fios e etiquetas entram um por um e os pontos correm de você para cada contato; passar o mouse numa participante acende o fio dela.
+- Conferido em 320, 360, 390, 768, 901, 1024, 1366×650, 1512×900 e 1920×1080, com e sem movimento, sem erros de JavaScript. Duas rodadas de leitura com três personas do público.
+
 ## 2026-10-03 — Assinatura "Desenvolvido por: skope.cc" com contato no rodapé
 
 - Rodapé ganha a assinatura ao lado do copyright, à esquerda, longe do botão do WhatsApp. Clicar abre um formulário curto no próprio lugar (nome, WhatsApp e mensagem), que fecha com Esc ou clique fora.

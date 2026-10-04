@@ -46,6 +46,13 @@ Secrets necessários no GitHub: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
 - `CFG` no topo do `<script>` concentra o que muda por turma: data, links de
   checkout (individual/dupla), códigos de convite (hash SHA-256 → link),
   `soldOut` (vira lista de espera) e o endpoint da lista.
+- Seção da rodada de negócios (`.round` → `.mesa`): mesa redonda desenhada em SVG
+  (um para desktop, outro até 900 px) com crachás e etiquetas em HTML por cima.
+  As posições ficam em unidades do viewBox (`--x/--y/--w` em `.b1`–`.b3`, `.voce`
+  e `.e1`–`.e3`); os fios (`.f1`–`.f3`) são paths do SVG e precisam acompanhar
+  quando um crachá muda de lugar. A cena parada já é a completa, porque é ela que
+  aparece com "reduzir movimento" (caso do PC do Gui); entrada e fios correndo
+  são só reforço.
 - Rodapé assinado "Desenvolvido por: skope.cc": o clique abre um contato curto que
   posta no mesmo `enviar.php` com `produto=Assinatura skope.cc` e chega em sites@skope.cc.
 - Lista de espera posta no `enviar.php` do guizanoni.com (CORS liberado);
