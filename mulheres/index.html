@@ -1539,8 +1539,8 @@ document.querySelectorAll('.js-wa').forEach(a => {
       if (!el.offsetHeight) return sum;
       const s=getComputedStyle(el);return sum+el.offsetHeight+parseFloat(s.marginTop)+parseFloat(s.marginBottom);
     },parseFloat(style.paddingTop)+parseFloat(style.paddingBottom));
-    // Monitores muito altos não criam um vão vazio abaixo da oferta.
-    const H=Math.max(Math.ceil(required),Math.min(V,1120));
+    // A abertura ocupa a janela inteira, também em monitores altos: com a cena presa, um teto de altura deixava uma faixa branca embaixo da foto.
+    const H=Math.max(Math.ceil(required),V);
     const visible=Math.min(H,V),readOverflow=Math.max(0,H-V);
     stage.style.setProperty('--pin-height',H+'px');
     // Curso preso: cobre a transição de 1,1 s e um respiro para ver os três cards.
