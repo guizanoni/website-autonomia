@@ -192,7 +192,9 @@ header.solid .nav-toggle{background:var(--soft);border-color:var(--line)}
 .caps{position:absolute;z-index:5;left:0;right:0;opacity:var(--capso,0);pointer-events:none}
 .caps span{position:absolute;text-align:center;font-size:15px;font-weight:600;transform:translateX(-50%);white-space:nowrap}
 .caps span small{display:block;font-weight:400;font-size:13.5px;color:var(--mut)}
-.scrollcue{position:absolute;z-index:5;left:50%;bottom:18px;transform:translateX(-50%);color:#fff;font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:calc(var(--txo,1) * .8)}
+.scrollcue{position:absolute;z-index:5;left:50%;bottom:18px;transform:translateX(-50%);color:#fff;font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:calc(var(--txo,1) * .9);display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.scrollcue svg{width:14px;height:14px;animation:cue 1.6s cubic-bezier(.4,0,.2,1) infinite}
+@keyframes cue{0%,100%{transform:translateY(-2px)}50%{transform:translateY(3px)}}
 /* sem animação: layout estático dos três cards */
 .stage.static{height:auto}
 .stage.static .stage-pin{position:relative;height:auto;overflow:visible}
@@ -785,7 +787,7 @@ section[id]{scroll-margin-top:84px}
       <h2>A ideia é sua.<br/><span class="sl">O trabalho pesado fica com a IA.</span></h2>
       <p>Em um dia, você sai com um mês de conteúdo planejado, sua página no ar e uma assistente de IA que conhece o seu negócio.</p>
     </div>
-    <span class="scrollcue" aria-hidden="true">Role</span>
+    <span class="scrollcue" aria-hidden="true">Veja o que você leva <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4v12m-5-5 5 5 5-5"/></svg></span>
   </div>
 </section>
 
@@ -1917,6 +1919,12 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.clas
       mobileTimer = setTimeout(() => { if (scrollY <= innerHeight * .65) show('mobile-return'); }, 650);
     }
   }, {passive:true});
+  // Abre sozinho 3 s depois do acesso (pedido do Gui, 03/10/2026); se a aba estiver em segundo plano, abre quando ela voltar.
+  function timed() {
+    if (document.visibilityState === 'visible') show('timed');
+    else document.addEventListener('visibilitychange', () => setTimeout(() => show('timed'), 400), {once:true});
+  }
+  if (!preview) setTimeout(timed, 3100);
   if (preview) availabilityReady.then(() => show('preview', true));
 })();
 

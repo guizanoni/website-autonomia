@@ -7,6 +7,12 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
+## 2026-10-03 — Popup abre sozinho aos 3 segundos e "Role" vira convite
+
+- O convite passa a abrir sozinho 3 s depois do acesso, além dos gatilhos de saída. Continua valendo uma exibição a cada sete dias por navegador e o silêncio para quem já começou a compra. `?popup=saida` segue mostrando sem contar exposição.
+- A dica de rolagem da abertura troca "Role" por "Veja o que você leva" com seta.
+- Etiqueta laranja do hover dos cards ampliada; segunda chamada reescrita ("A ideia é sua. O trabalho pesado fica com a IA.").
+
 ## 2026-10-03 — Popup de saída armado 3 segundos após o acesso
 
 - A espera mínima antes de o convite de saída poder aparecer cai de 20 s (computador) e 25 s (celular) para 3 s, a pedido do Gui, para alcançar quem sai rápido. Gatilhos e limite de uma exibição a cada sete dias continuam iguais.
