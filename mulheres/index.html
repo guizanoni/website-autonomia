@@ -393,6 +393,27 @@ footer .top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;a
 footer .top p{font-size:clamp(22px,2.6vw,30px);font-weight:600;letter-spacing:-.03em;color:#fff;max-width:20ch;line-height:1.15}
 footer .bot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;border-top:1px solid rgba(255,255,255,.12);padding-top:22px}
 footer a{color:#fff}
+/* assinatura de quem fez o site: fica à esquerda (o botão do WhatsApp mora à direita) e abre um contato curto no próprio lugar */
+footer .bot{justify-content:flex-start;align-items:center}
+.sig{position:relative}
+.sig-btn{font:inherit;color:inherit;background:none;border:0;padding:6px 0;cursor:pointer}
+.sig-btn b{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.35);transition:text-decoration-color .2s}
+.sig-btn:hover b,.sig-btn[aria-expanded="true"] b{text-decoration-color:var(--sig)}
+.sig-pop{position:absolute;z-index:30;left:0;bottom:calc(100% + 10px);width:min(320px,calc(100vw - 40px));display:grid;gap:10px;padding:18px;border-radius:18px;background:#fff;color:var(--ink);box-shadow:0 18px 50px rgba(0,0,0,.35);transform-origin:0 100%;animation:sigIn .28s cubic-bezier(.16,1,.3,1)}
+.sig-pop[hidden]{display:none}
+@keyframes sigIn{from{opacity:0;transform:translateY(8px) scale(.97)}}
+.sig-pop p{font-size:15px;font-weight:600;line-height:1.3;margin-bottom:2px}
+.sig-pop label{display:grid;gap:4px;font-size:12.5px;font-weight:500;color:var(--mut)}
+.sig-pop input,.sig-pop textarea{font:400 16px/1.35 var(--f);color:var(--ink);width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;resize:none}
+.sig-pop input:focus,.sig-pop textarea:focus{outline:2px solid var(--sig);outline-offset:1px;border-color:transparent}
+.sig-pop .sig-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.sig-pop button{font:600 15px var(--f);padding:12px 16px;border:0;border-radius:999px;background:var(--ink);color:#fff;cursor:pointer;transition:background .2s}
+.sig-pop button:hover{background:#000}
+.sig-pop button:disabled{opacity:.6;cursor:default}
+.sig-msg{font-size:13px;line-height:1.35;color:var(--mut);min-height:0}
+.sig-msg:empty{display:none}
+.sig-msg.err{color:#c0341a}
+@media(max-width:600px){footer .bot{position:relative}.sig{position:static}.sig-pop{width:min(340px,100%);bottom:calc(100% - 12px)}}
 
 /* ---------- barra fixa (mobile) ---------- */
 .sticky{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:60;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 10px 10px 18px;border-radius:999px;transform:translateY(150%);transition:transform .3s;box-shadow:0 10px 30px rgba(0,0,0,.25)}
@@ -1183,6 +1204,18 @@ section[id]{scroll-margin-top:84px}
     </div>
     <div class="bot">
       <span>© 2026 AUTONOM/IA</span>
+      <span class="sig">
+        <button class="sig-btn" id="sigBtn" type="button" aria-expanded="false" aria-controls="sigPop">Desenvolvido por: <b>skope.cc</b></button>
+        <form class="sig-pop" id="sigPop" hidden novalidate aria-label="Contato com a skope.cc">
+          <p>Quer um site como este? Fale com a skope.cc.</p>
+          <label>Nome<input name="nome" type="text" autocomplete="name" maxlength="120" required/></label>
+          <label>WhatsApp com DDD<input name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" maxlength="40" required/></label>
+          <label>Mensagem<textarea name="mensagem" rows="3" maxlength="2000" required></textarea></label>
+          <input class="sig-hp" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true"/>
+          <button type="submit">Enviar</button>
+          <div class="sig-msg" id="sigMsg" role="status"></div>
+        </form>
+      </span>
     </div>
   </div>
 </footer>
@@ -1930,6 +1963,47 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.clas
   }
   if (!preview) setTimeout(timed, 3100);
   if (preview) availabilityReady.then(() => show('preview', true));
+})();
+
+/* Assinatura skope.cc: contato curto que abre no próprio rodapé e vai por e-mail (enviar.php do guizanoni.com → sites@skope.cc). */
+(() => {
+  const btn = document.getElementById('sigBtn'), pop = document.getElementById('sigPop'), msg = document.getElementById('sigMsg');
+  if (!btn || !pop) return;
+  const send = pop.querySelector('button[type=submit]');
+  function toggle(open, focus = true) {
+    pop.hidden = !open;
+    btn.setAttribute('aria-expanded', String(open));
+    if (open) pop.elements.nome.focus({preventScroll:true});
+    else if (focus) btn.focus({preventScroll:true});
+  }
+  btn.addEventListener('click', () => toggle(pop.hidden));
+  document.addEventListener('click', event => { if (!pop.hidden && !event.target.closest('.sig')) toggle(false, false); });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && !pop.hidden) { event.stopPropagation(); toggle(false); } });
+  function say(text, error = false) { msg.textContent = text; msg.classList.toggle('err', error); }
+  pop.addEventListener('submit', async event => {
+    event.preventDefault();
+    const f = pop.elements, nome = f.nome.value.trim(), whats = f.whatsapp.value.trim(), mensagem = f.mensagem.value.trim();
+    if (!nome) { say('Escreva seu nome.', true); f.nome.focus(); return; }
+    if (whats.replace(/\D/g, '').length < 10) { say('Informe o WhatsApp com DDD.', true); f.whatsapp.focus(); return; }
+    if (!mensagem) { say('Escreva sua mensagem.', true); f.mensagem.focus(); return; }
+    const data = new FormData();
+    data.append('produto', 'Assinatura skope.cc');
+    data.append('origem', location.host + location.pathname);
+    data.append('nome', nome); data.append('whatsapp', whats); data.append('mensagem', mensagem);
+    data.append('website', f.website.value);
+    send.disabled = true; say('Enviando...');
+    try {
+      const r = await fetch(CFG.waitlistEndpoint, {method:'POST', body:data});
+      const j = await r.json();
+      if (!j.ok) throw new Error(j.msg || '');
+      pop.reset();
+      say('Recebido. A skope.cc responde no seu WhatsApp.');
+      send.textContent = 'Enviado';
+    } catch (error) {
+      send.disabled = false;
+      say('Não foi possível enviar agora. Tente de novo ou escreva para sites@skope.cc.', true);
+    }
+  });
 })();
 
 /* barra fixa no mobile depois do hero; some na seção de preço */

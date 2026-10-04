@@ -46,6 +46,8 @@ Secrets necessários no GitHub: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
 - `CFG` no topo do `<script>` concentra o que muda por turma: data, links de
   checkout (individual/dupla), códigos de convite (hash SHA-256 → link),
   `soldOut` (vira lista de espera) e o endpoint da lista.
+- Rodapé assinado "Desenvolvido por: skope.cc": o clique abre um contato curto que
+  posta no mesmo `enviar.php` com `produto=Assinatura skope.cc` e chega em sites@skope.cc.
 - Lista de espera posta no `enviar.php` do guizanoni.com (CORS liberado);
   nenhuma credencial neste repo, que é **público**.
 - `/v2` e `/v3` — variantes antigas do bootcamp de empresas (fora de uso).

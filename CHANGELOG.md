@@ -7,6 +7,12 @@ Formato: `YYYY-MM-DD — resumo`. Commits são em pt-BR.
 
 ---
 
+## 2026-10-03 — Assinatura "Desenvolvido por: skope.cc" com contato no rodapé
+
+- Rodapé ganha a assinatura ao lado do copyright, à esquerda, longe do botão do WhatsApp. Clicar abre um formulário curto no próprio lugar (nome, WhatsApp e mensagem), que fecha com Esc ou clique fora.
+- O envio usa o `enviar.php` do guizanoni.com, que ganhou um caminho próprio para `produto=Assinatura skope.cc`: dispensa e-mail e entrega em sites@skope.cc. Nenhuma credencial neste repo.
+- Também nesta rodada: abertura ocupa a janela inteira em monitores altos e o cartão do facilitador ganhou botão de seguir no Instagram.
+
 ## 2026-10-03 — Popup abre sozinho aos 3 segundos e "Role" vira convite
 
 - O convite passa a abrir sozinho 3 s depois do acesso, além dos gatilhos de saída. Continua valendo uma exibição a cada sete dias por navegador e o silêncio para quem já começou a compra. `?popup=saida` segue mostrando sem contar exposição.
